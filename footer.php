@@ -60,9 +60,9 @@ footer .mobile label {
 					<div class="col-12">
 						<label>Services</label>
 						<ul>
-							<li><a href="#">Managed IT Services</a></li>
-							<li><a href="#">Cybersecurity Solutions</a></li>
-							<li><a href="#">Cloud Backup and Disaster Recovery Services</a></li>
+							<li><a href="managed-it-services">Managed IT Services</a></li>
+							<li><a href="cybersecurity-solutions">Cybersecurity Solutions</a></li>
+							<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
 							<li><a href="#">CISO Advisory Service</a></li>
 						</ul>
 					</div>
@@ -77,7 +77,7 @@ footer .mobile label {
 				</div>
 				<div class="col-2">
 					<div class="col-12">
-						<img style="width:150px;" loading="lazy" src="<?php echo $r; ?>media/lw.svg" />
+						<img style="width:150px;" loading="lazy" src="media/lw.svg" />
 					</div>
 				</div>
 			</div>
@@ -89,14 +89,14 @@ footer .mobile label {
 				<div class="col-12">
 					<label>Company</label>
 					<ul>
-						<li><a href="/about">About Us</a></li>
-						<li><a href="/resources">Resources</a></li>
+						<li><a href="about">About Us</a></li>
+						<li><a href="resources">Resources</a></li>
 					</ul>
 				</div>
 				<div class="col-12">
 					<label>Support</label>
 					<ul>
-						<li><a href="/lets-talk">Contact Us</a></li>
+						<li><a href="lets-talk">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -104,10 +104,10 @@ footer .mobile label {
 				<div class="col-12">
 					<label>Services</label>
 					<ul>
-						<li><a href="#">Managed IT Services</a></li>
-						<li><a href="#">Cybersecurity Solutions</a></li>
-						<li><a href="#">Cloud Backup and Disaster Recovery Services</a></li>
-						<li><a href="#">CISO Advisory Service</a></li>
+						<li><a href="managed-it-services">Managed IT Services</a></li>
+						<li><a href="cybersecurity-solutions">Cybersecurity Solutions</a></li>
+						<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
+						<li><a href="cisoaas">CISO Advisory Service</a></li>
 					</ul>
 				</div>
 			</div>
