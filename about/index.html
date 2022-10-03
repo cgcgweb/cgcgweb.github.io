@@ -1,487 +1,723 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<link rel="icon" href="https://cgcg.biz/wp-content/uploads/2020/02/favicon.png" sizes="32x32" />
-</head>
-<body>
-<style>
-html {
-	scroll-behavior: smooth;
-} 
-body {
-	margin: 0;
-	overflow-x:hidden;
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-	width:100vw;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;} 
-.col-2d4 {width: 20%;}
-[class*="col-"] {float: left;}
-.row {
-	width:100%;
-	padding-right:3%;
-	padding-left:3%;
-}
-* {
-	box-sizing:border-box;
-}
-@media screen and (max-width:900px) {
-	[class*="col-"] {
-		width: 100%;
-	}
-	.row.header {
-		padding: 0;
-	}
-	.desktop {display:none !important;}
-	nav .menu {
-		padding: 40px;
-		min-width: 101vw;
-		text-align: center;
-		padding-left: 0;
-		padding-right: 0;
-		background-color: #F0F8FC;
-	}
-}
-@media screen and (min-width:900px) {
-	.mobile {display:none !important;}
-	nav .menu {
-		padding: 40px;
-		min-width: 60%;
-		text-align: center;
-	}
-	.dropdown-content {position:absolute;left:25%;}
-}
-nav {overflow:hidden;}
-.nav {
-	text-decoration:none; color:black;
-}
-.nav.forbes {
-	float: right;
-}
-nav div {
-	float: left;
-}
+    <head>
+        <title>Cyber Guardian - Managed IT and Cyber Security Provider in Kingston, NY</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        body {
+            background-color:#F2F2F2;
+            color:#2B354E;
+            font-family: n, Arial;
+            margin:0;
+            box-sizing: border-box;
+            overflow-x:hidden;
+        }
+        body * {
+            box-sizing: border-box;
+        }
+        @font-face {
+			font-family: 'n';
+			font-display:swap;
+			src: url('../n.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('../n.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../n.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('../n.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('../n.woff2') format('svg'); /* Legacy iOS */
+		}
+        @font-face {
+			font-family: 'L';
+			font-display:swap;
+			src: url('../L.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('../L.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../L.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('../L.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('../L.woff2') format('svg'); /* Legacy iOS */
+		}
+        .light {
+            font-family: l, 'Open Sans', Arial !important;
+        }
+        .col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;} 
+		[class*="col-"] {
+			float: left;
+			box-sizing:border-box;
+		}
+        @media screen and (max-width:900px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+            .d {
+                display: none;
+            }
+            h1 {
+                font-size: 34px;
+            }
+            .first a svg {
+                position: relative;
+                left: calc(50% - 25px);
+                top: 48px;
+                transform: rotate(90deg);
+            }
+            h2 {
+                font-size: 32px;
+                margin-bottom: 0;
+                margin-top:12px;
+            }
+            .section.first {
+                overflow: hidden;
+                width: 85%;
+            }
+            .right {
+                position: absolute;
+                right: 24px;
+                top: 24px;
+            }
+            .mission .line + .col-9 p {
+                padding-left: 0 !important;
+            }
+            .first .arrowlink p {
+                position: absolute;
+                left: calc(50vw - 70px);
+                margin-top: 0;
+            }
+            .serviceSingle.secTop {
+                width: 100%;
+            }
+        }
+        @media screen and (min-width:900px) {
+            .m {
+                display: none;
+            }
+            h1 {
+                font-size: min(74px, 4vw);
+                margin-top:0;
+            }
+            h2 {
+                font-size: 36px;
+                margin-bottom: 0;
+                margin-top:12px;
+            }
+            .section.first {
+                overflow: visible;
+                width: 75%;
+            }
+            .right {
+                position: absolute;
+                right: 5%;
+                top: 0;
+            }
+            .serviceSingle a, .serviceSingle h2, .serviceSingle p {
+                max-width: 90%;
+            }
+        }
+        .serviceSingle.secTop p {
+            font-size: 24px;
+        }
+        .section {
+            overflow: hidden;
+            display: block;
+            width: 75%;
+            margin: 0 auto;
+            padding-bottom:48px;
+        }
+        .first p {
+            font-size: 24px;
+            font-family: 'Open Sans', Arial;
+        }
+        p {
+            font-family: 'Open Sans', Arial;
+            font-size: 20px;
+        }
+        .arrowlink span, .arrowlink p, .arrowlink svg {
+            vertical-align: middle;
+            margin-right:16px;
+        }
+        
+        .menu {
+            min-height: 20vh;
+        }
+        .left {
+            position: absolute;
+            left: 12.5%;
+            top: 24px;
+        }
+        .nav {
+            position: absolute;
+            left: 30%;
+            top: 28px;
+            font-size: 22px;
+        }
+        .section.first {
+            overflow:hidden;
+        }
+        .section.first .serviceSingle {
+            margin-bottom: 48px;
+        }
+        
+        a {
+            color: #2B354E;
+            text-decoration: none;
+        }
+        .nav a {
+            padding-right: 32px;
+        }
+        .line {
+            border-bottom: 8px solid white;
+            overflow: hidden;
+            height: 24px;
+        }
+        .e {
+            height: 1px;
+        }
+        img {
+            max-width: 100%;
+        }
+        p.bold {
+            font-weight: bold;
+        }
+        .serviceSingle p {
+            font-size:18px;
+        }
+        .section {
+            margin-bottom: 48px;
+        }
+        .person {
+            margin: 0 auto;
+            width: 250px;
+        }
 
-nav .logo {
-  padding: 20px;
-}
+        .personImg img {
+            width: 250px;
+            border-radius: 50%;
+            height: 250px;
+            object-fit: cover;
+        }
 
-nav .logo.eagle {
-	width: 100%;
-	padding: 0;
-	position: absolute;
-	text-align: center;
-	top: 16px;
-}
-.eagle .nav.logo {
-	width: 33%;
-}
+        .personImg::before {
+            position: absolute;
+            content: '';
+            background-image: url('../m/el.svg');
+            width: 250px;
+            height: 250px;
+            z-index: -1;
+            margin-left: 19px;
+            transform: rotate(104deg);
+            margin-top: -10px;
+        }
 
-.menu .nav {
-	margin: 1vw;
-}
-.dropdown {
-  position: relative;
-}
-.dropdown-content {
-	display: none;
-	background-color: #E5E5E5;
-	overflow: auto;
-	z-index: 1;
-	padding-top: 16px;
-}
-.dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.show {display: inline;}
-#dropper a {
-	color: #757575 !important;
-	font-weight: bold;
-}
-.green {
-	color:#2DD8A3;
-}
-.blue {
-	color:#0166A3;
-}
-.spacer {
-	margin-top:24px;
-}
-.gray {
-	color:gray;
-}
-img {
-	max-width:100% !important;
-}
-</style>
-
-<div class="row header">
-<nav>
-<div class="logo"><img class="nav logo" src="../media/CGCG.svg"/></div>
-<div class="logo eagle mobile"><img class="nav logo" src="../media/ex.svg"/></div>
-<div class="menu">
-	<a class="nav navlink" href="../">home</a>
-	<a class="nav navlink" href="../about">about</a>
-	<a class="nav navlink" id="sopener" onclick="drop()" href="#">services ▼</a>
-	<a class="nav navlink" href="../resources">resources</a>
-	<a class="nav navlink" href="../lets-talk">contact</a>	
-	<br>
-	<div id="dropper" class="dropdown-content">
-		<div style="width:50%">
-			<span class="sh">Managed Services:</span>
-			<a href="../managed-it-services">Managed IT Services</a>
-			<a href="../cybersecurity-solutions">Cybersecurity Solutions</a>
-			<a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery</a>
-			<a href="../reputation-management">Reputation Management</a>
-		</div>
-		<div style="width:50%">
-			<span class="sh">Advisory Services:</span>
-			<a href="../cisoaas">CISOaaS</a>
-			<a href="../ctoas">CTOaS</a>
-			<a href="../cioas">CIOaS</a>
-			<a href="../socas">SOCaS</a>
-			<a href="../private-digital-investigations">Private Digital Investigations</a>
-		</div>
-	</div>
-</div>
-<img class="nav forbes desktop" src="../media/Forbes.svg"/>
-</nav>
-
-<script>
-function drop() {
-  document.getElementById("dropper").classList.toggle("show");
-  if(document.getElementById("sopener").innerText == "services ▼") {
-	  document.getElementById("sopener").innerText = "services ▲"
-  }else {
-	  document.getElementById("sopener").innerText = "services ▼"
-  }
-}
-
-</script>
-</div>
-
-
-<style>
-h1 {
-	color:#0166A3;
-	font-size:max(3vw, 24px);
-}
-p {font-size:18px;}
-li {
-	list-style-position:inside;
-}
-li::marker {color: #2DD8A3; font-size:18px;}
-.values li::marker {color: #2DD8A3; font-size:24px;}
-.w25 {
-width: 25%;
-}
-.w75 {
-width: 75%;
-}
-.team .w25 span {transform: rotate(-90deg);display: block;width: 160px;margin-top: 48px;margin-left: -36px;font-weight:bold;font-size:21px;}
-.values ul {padding-left: 0;}
-.mixed {display:flex;margin-bottom:16px;}
-.mixed img {width:20%; float:left; display:flex;align-items:center;padding:8px;}
-.mixed span{width:80%; float:right; font-size:18px; padding-top:5px;display:flex; align-items:center; padding-left:16px;}
-.reason {text-align:center;}
-.reason p {padding:10px;}
-.requestMorebtn {
-	background-color: #2DD8A3;
-	padding: 12px;
-	width: 100% !important;
-	display: inline-block;
-	text-align: center;
-	font-size: 21px;
-	text-decoration: none;
-	color: white;
-	border-radius: 5px;
-}
-.help a {width:100%;display:inline-block;padding:10px;}
-.help a img {width:100%;}
-.input.text.col-12, .input.phone.col-12, .input.email.col-12, textarea.input {
-	padding: 12px;
-	border-radius: 5px;
-	border: 3px solid gray;
-}
-.team .col-3 {
-	min-height: 280px;
-}
-.input.container {padding:10px;}
-</style>
-<div class="row main" style="padding-left:0; padding-top:10px;">
-	<div class="col-3 desktop" style="position:fixed;">
-		<img class="col-12" src="../media/le.svg"/>
-		<div class="smc" style="position: relative;display: block;float: left;margin:24px;">
-			<a href="https://www.facebook.com/CGCGLLC/" class="smi"><img src="../media/vfb.svg"/></a>
-			<a href="https://www.instagram.com/cyberguardianconsulting/" class="smi"><img src="../media/vig.svg"/></a>
-			<a href="https://www.linkedin.com/company/cyber-guardian-consulting-group-llc-/" class="smi"><img src="../media/vli.svg"/></a>
-			<a href="https://twitter.com/CyberGuardianCG" style="margin-left: -3px;" class="smi"><img src="../media/vtw.svg"/></a>
-		</div>
-	</div>
-	<style>.smi {display: block;}</style>
-	<div class="col-3 desktop" style="overflow: hidden;height: 1px;"></div>
-	<div class="col-9" style="padding-left:3%;">
-		<h1 style="color:#0166A3;">About</h1>
-		<div class="proactive col-10">
-			<h2 class="green" style="font-size:max(2vw, 22px);">proactive technology solutions</h2>
-			<p>Cyber Guardian recognizes the common frustrations when dealing with some IT service providers. We pride ourselves on our customer service and support skills and work hard to eliminate problems like:</p>
-			<br>
-			<div>
-				<div class="col-12">
-					<div class="col-6 mixed"><ul><li>IT companies offering services they don’t fully understand with overpromising and under delivering, creating a very real problem.</li></ul></div>
-					<div class="col-6 mixed"><ul><li>IT companies can have high-turnover and low morale which bleeds into the level of service given to the client.</li></ul></div>
-				</div>
-				<div class="col-12">
-					<div class="col-6 mixed"><ul><li>IT companies with bad internal policy that can lead to breaches and attacks on their own system which can carry over to the client.</li></ul></div>
-					<div class="col-6 mixed"><ul><li>IT companies often give clients invoices with no explanation of what they have done or where their money is going.</li></ul></div>
-				</div>
-				
-			</div>
-		</div>
-		<div class="team col-10">
-			<h2 class="green" style="font-size:max(2vw, 22px);">our team</h2>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Nick Martin</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://cgcg.biz/media/nm.jpeg" />
-					<span class="col-12">CEO</span>
-				</div>
-			</div>
-			
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Mo Abdelalim</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://cgcg.biz/media/team/mo.jpg" />
-					<span class="col-12">Director of Engineering - Web</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Jordan Mesches</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://cgcg.biz/media/team/jordan.png" />
-					<span class="col-12">Guardian Engineer II</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Mark Brayman</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://cgcg.biz/media/team/mark.jpg" />
-					<span class="col-12">Ops Supervisor</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Nicole Shakarishvili</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/nicole.png" />
-					<span class="col-12">UI/UX Architect</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Matthew Pisano</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/matt.jpg" />
-					<span class="col-12">Guardian Engineer I</span>
-				</div>
-			</div>
-			
-			
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Isaiah Pratt</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/isaiah.jpg" />
-					<span class="col-12">Executive Assistant</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Caleb Rogers</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/caleb.jpg" />
-					<span class="col-12">Guardian Analyst I</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Bruno Rocha</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/bruno.jpg" />
-					<span class="col-12">Network Administrator</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Angel Rojas</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/angelr.jpg" />
-					<span class="col-12">Guardian Analyst I</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Niklas Hallstein</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/nicklas.jpg" />
-					<span class="col-12">Guardian Engineer I</span>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="w25" style="float:left;"><span style="transform: rotate(-90deg);display: block;width: 300%;margin-top: calc(100% + 28px);margin-left: -60px;">Carson Parks</span></div>
-				<div class="w75" style="float:right;">
-					<img class="col-12" src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,w_500,h_500,ret_img/https://cgcg.biz/media/team/carsonp.jpg" />
-					<span class="col-12">Guardian Analyst I</span>
-				</div>
-			</div>
-		</div>
-		<div class="beliefs col-10">
-			<h2 class="green" style="font-size:max(2vw, 22px);">what do we believe in</h2>
-			<h3>Here Are Our Five Core Values:</h3>
-			<div class="col-12 values">
-				<div class="col-2d4"><ul><li>Transparency</li></ul></div>
-				<div class="col-2d4"><ul><li>Integrity</li></ul></div>
-				<div class="col-2d4"><ul><li>Usability</li></ul></div>
-				<div class="col-2d4"><ul><li>Suitability</li></ul></div>
-				<div class="col-2d4"><ul><li>Value</li></ul></div>
-			</div>
-			<p>All of our services provide a conduit towards our most important goal: protecting your business from hackers and malware thieves who want to steal information, change or destroy data, extort money, or simply disrupt your operations.</p>
-			<div class="desktop col-12 spacer"></div>
-		</div>
-	</div>
-</div>
-<style>
-.third {
-	width: 32% !important;
-	padding:15px;
-	display:inline-grid;
-}
-footer ul, footer p, footer a {
-    padding: 0;
-    list-style-type: none;
-	color:white !important;
-	text-decoration:none;
-}
-footer .mobile label {
-	color:#2DD8A3;
-}
-footer .desktop label, footer .desktop p, footer .desktop a {
-	color:white;
-}
-footer .desktop label {
-	font-size: 21px;
-}
-input {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-footer .desktop .col-2 {
-	padding: 10px;
-}
-footer .mobile li, footer .mobile p {
-	font-size: 14px !important;
-}
-footer .mobile label {
-	font-weight: bold;
-}
-</style>
-<footer>
-	<div class="col-12 desktop" style="margin-top: 20px;background-color: #5E5E5E;padding-top:20px;">
-		<div class="footer col-12">
-			<div class="footer col-12">
-				<div class="col-2"><br></div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Company</label>
-						<ul>
-							<li><a href="../about">About Us</a></li>
-							<li><a href="../resources">Resources</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Support</label>
-						<ul>
-							<li><a href="../lets-talk">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Services</label>
-						<ul>
-							<li><a href="../managed-it-services">Managed IT Services</a></li>
-							<li><a href="../cybersecurity-solutions">Cybersecurity Solutions</a></li>
-							<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
-							<li><a href="../cisoaas">CISO Advisory Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Contact</label>
-						<p style="font-weight:200;">Main Office:</p>
-						<p><a href="#">63 John Street #3, Kingston, NY 12401</a></p>
-						<p><a href="#">hello@cgcg.biz<br>845 - 444 - 8273</a></p>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<img style="width:150px;" loading="lazy" src="../media/lw.svg" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-12 mobile" style="margin-top: 20px;background-color: #0166A3;">
-		<div class="footer">
-			<div class="third">
-				<div class="col-12">
-					<label>Company</label>
-					<ul>
-						<li><a href="../about">About Us</a></li>
-						<li><a href="../resources">Resources</a></li>
-					</ul>
-				</div>
-				<div class="col-12">
-					<label>Support</label>
-					<ul>
-						<li><a href="../lets-talk">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="third">
-				<div class="col-12">
-					<label>Services</label>
-					<ul>
-						<li><a href="../managed-it-services">Managed IT Services</a></li>
-						<li><a href="../cybersecurity-solutions">Cybersecurity Solutions</a></li>
-						<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
-						<li><a href="../cisoaas">CISO Advisory Service</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="third">
-				<div class="col-12">
-					<label>Contact</label>
-					<p style="font-weight:200;">Main Office:</p>
-					<p><a href="#">63 John Street #3, Kingston, NY 12401</a></p>
-					<p><a href="mailto:hello@cgcg.biz">hello@cgcg.biz<br>845 - 444 - 8273</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-</body>
-
+        .name p {
+            font-family: n;
+            font-weight: lighter;
+            font-size: 24px;
+            text-align: center;
+            color: #2B354E;
+            margin-bottom: 10px;
+        }
+        .title p {
+            font-size: 20px;
+            text-align: center;
+            color: #7D7D7D;
+            margin-top: 3px !important;
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <div class="left">
+                <a href="https://cgcg.biz">
+                    <img src="../m/logodark.svg" />
+                </a>
+            </div>
+            <div class="nav d">
+                <a href="../services/">Services</a>
+                <a href="../about/">Company</a>
+                <a href="../resources/">Resources</a>
+                <a href="../portfolio/">Portfolio</a>
+                <a href="../lets-talk/">Contact</a>
+            </div>
+            <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
+        </div>
+        <div class="section first">
+            <div class="col-6 m">
+                <img src="../m/e2.svg" />
+            </div>
+            <div class="col-6">
+                <h1>About</h1>
+                <div class="serviceSingle secTop">
+                    <p class="light">Cyber Guardian Consulting Group was established in 2013 to offer next-generation security, software & hardware solutions to our clients. Our service combines cutting edge security protocols, proactive maintenance, remote patching updates for your operating systems & any installed 3rd party software, along with custom tailored hardware support.</p>
+                </div>
+            </div>
+            <div class="col-6 d">
+                <img src="../m/e2.svg" />
+            </div>
+        </div>
+        <div class="section">
+            <div class="col-12">
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/nm.jpg" />
+                        </div>
+                        <div class="name"><p>Nick Martin</p></div>
+                        <div class="title"><p>CEO</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/mo.jpg" />
+                        </div>
+                        <div class="name"><p>Mo Abdelalim</p></div>
+                        <div class="title"><p>Director of Engineering - Web</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/jordan.png" />
+                        </div>
+                        <div class="name"><p>Jordan Mesches</p></div>
+                        <div class="title"><p>Guardian Engineer (Lead)</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/mark.jpg" />
+                        </div>
+                        <div class="name"><p>Mark Brayman</p></div>
+                        <div class="title"><p>Ops Supervisor</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/nicole.png" />
+                        </div>
+                        <div class="name"><p>Nicole Shakarishvili</p></div>
+                        <div class="title"><p>UI/UX Architect</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/matt.jpg" />
+                        </div>
+                        <div class="name"><p>Matthew Pisano</p></div>
+                        <div class="title"><p>Guardian Engineer I</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/isaiah.jpg" />
+                        </div>
+                        <div class="name"><p>Isaiah Pratt</p></div>
+                        <div class="title"><p>Executive Assistant</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/michael.png" />
+                        </div>
+                        <div class="name"><p>Michael Nkadi</p></div>
+                        <div class="title"><p>Network Architect</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/angelr.jpg" />
+                        </div>
+                        <div class="name"><p>Angel Rojas</p></div>
+                        <div class="title"><p>Guardian Analyst I</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/nicklas.jpg" />
+                        </div>
+                        <div class="name"><p>Niklas Hallstein</p></div>
+                        <div class="title"><p>Guardian Engineer I</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/bruno.jpg" />
+                        </div>
+                        <div class="name"><p>Bruno Rocha</p></div>
+                        <div class="title"><p>Network Administrator</p></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="person">
+                        <div class="personImg">
+                            <img src="../m/team/holder.jpg" />
+                        </div>
+                        <div class="name"><p>Madan Manjunath</p></div>
+                        <div class="title"><p>Contract Administrator</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section contact">
+            <div class="col-6">
+                <a href="tel:+18454448273"><h2>845-444-8273</h2></a>
+                <p class="bold">63 John Street #3 <br>Kingston, NY 12401</p>
+                <a href="mailto:hello@cgcg.biz">hello@cgcg.biz</a>
+            </div>
+            <div class="col-6">
+                <form>
+                    <input type="text" name="bname" placeholder="Business Name" />
+                    <input type="tel" name="phone" placeholder="Phone" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="message" placeholder="Message" />
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+        </div>
+        <div class="burgerMenu" style="display:none;">
+            <img onclick="burger()" class="close" src="../m/close.svg" />
+            <img class="bueagle" src="../m/bueagle.svg" />
+            <div class="bnav">
+                <a class="bold" href="https://cgcg.biz">Home</a>
+                <a href="../services/">Services</a>
+                <a href="../about/">Company</a>
+                <a href="../resources/">Resources</a>
+                <a href="../portfolio/">Portfolio</a>
+                <a href="../lets-talk/">Contact</a>
+            </div>
+            <img class="forbesMobile" src="../m/forbesMobile.svg" />
+        </div>
+        <style>
+            .bnav .bold {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .burgerMenu {
+                display: block;
+                overflow: hidden;
+                width: 100vw;
+                position: absolute;
+                top: 0;
+                background:#f2f2f2;
+                height:100vh;
+            }
+            .close {
+                top: 24px;
+                right: 24px;
+                position: absolute;
+            }
+            .bueagle {
+                width: 50%;
+                margin-top: 24px;
+            }
+            .forbesMobile {
+                position: absolute;
+                bottom: 0;
+                right:0;
+            }
+            .bnav a {
+                width: 100%;
+                display: block;
+                font-size: 30px;
+                color: #2B354E;
+            }
+            .bnav {
+                width: 50%;
+                position: absolute;
+                right: 64px;
+                top: 20vh;
+                z-index: 5;
+            }
+            .bnav a:not(.bold) {
+                text-decoration: underline;
+            }
+        </style>
+        <script>function burger(){"none"==document.querySelector(".burgerMenu").style.display?document.querySelector(".burgerMenu").style.display="block":document.querySelector(".burgerMenu").style.display="none"}</script>
+        <div class="section footer">
+            <div class="col-3">
+                <a href="#"><p class="bold">Home</p></a>
+                <a href="/about">About CGCG</a>
+                <a href="#">Team</a>
+                <a href="#">Clients</a>
+                <a href="#">Career</a>
+            </div>
+            <div class="col-3">
+                <a href="#"><p class="bold">Services</p></a>
+                <a href="#">Managed IT Services</a>
+                <a href="#">Cybersecurity Solutions</a>
+                <a href="#">Cloud Backup and Disaster Recovery</a>
+                <a href="#">Reputation Management</a>
+            </div>
+            <div class="col-3">
+                <a href="#">CISOaaS</a>
+                <a href="#">CTOaS</a>
+                <a href="#">CIOaS</a>
+                <a href="#">SOCaS</a>
+                <a href="#">Private Digital Investigations</a>
+            </div>
+            <div class="col-3 e"></div>
+            <div class="col-12">
+                <div class="col-3">
+                    <a href="#"><p class="bold">FAQ</p></a>
+                </div>
+                <div class="col-3">
+                    <a href="#"><p class="bold">Resources</p></a>
+                </div>
+                <div class="col-3">
+                    <a href="#"><p class="bold">Contact</p></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            h3 {
+                font-size:64px;
+                margin-bottom:0;
+            }
+            .helpspot p {
+                width: 67%;
+            }
+            .helpspot .arrowLink p, .whymanaged .arrowLink p{
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 12px;
+                font-size: 30px;
+                margin-top: 0;
+                width: calc(100% - 118px);
+            }
+            .helpspot .arrowLink, .whymanaged .arrowLink{
+                margin-top: 32px;
+            }
+            .helpspot.hs2 {
+                margin-left: -20%;
+                margin-top: 20%;
+            }
+            .whymanaged .arrowLink p {
+                margin-top:25px;
+            }
+            .section.whymanaged {
+                margin-bottom: 80px;
+            }
+            .section.stats .col-4 {
+                padding: 10px 0;
+            }
+            .section.stats h2 {
+                margin-top: 0;
+            }
+            .stats .large {
+                width: 60%;
+            }
+            .testimonials {
+                min-height: 500px;
+            }
+            .testimonial {
+                overflow: hidden;
+                clear: both;
+                position: absolute;
+            }
+            .testimonial .line {
+                border-bottom: 3px solid #fff;
+            }
+            .testimonial .bold, .testimonial .large {
+                margin-top: 8px;
+                margin-left: 3px;
+            }
+            .testimonials img {
+                margin-left: -120px;
+            }
+            .section.whymanaged img {
+                max-width: 100%;
+            }
+            .testimonial > p {
+                font-size: 38px;
+                line-height: 40px;
+            }
+            .section.partners p {
+                margin-top: 8px;
+                margin-left: 12px;
+            }
+            .t1 {
+                animation: d1 20s infinite;
+            }
+            .t2 {
+                animation: d2 20s infinite;
+            }
+            @keyframes d1 {
+                0% {opacity: 0.1;}
+                10% {opacity: 0.8;}
+                50% {opacity: 1;}
+                60% {opacity: 0.1}
+                100% {opacity: 0;}
+            }
+            @keyframes d2 {
+                0% {opacity: 0;}
+                50% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+            .section.contact h2 {
+                font-size: 55px;
+                color: #2B354E;
+            }
+            .section.contact {
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+                background: #fff;
+            }
+            form {
+                display: block;
+                text-align: center;
+            }
+            .section.contact, .section.contact a {
+                color: #2B354E;
+            }
+            input {
+                width: 80%;
+                border: 0;
+                height: 48px;
+                color: black;
+                opacity: 1;
+                font-family: 'Open Sans', Arial;
+                font-size: 24px;
+                border-bottom: 1px solid black;
+                margin-bottom: 6px;
+            }
+            .section.partners {
+                padding-bottom:25px;
+            }
+            .section.footer p, .section.footer a {
+                width: 100%;
+                display: block;
+                margin-top: 0;
+                margin-bottom:5px;
+            }
+            .section.footer {
+                background-color: black;
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+            }
+            .section.footer .col-12 {
+                margin-top: 24px;
+            }
+            .line + [class*="col-"] p {
+                font-size: 24px;
+            }
+            .section.footer a {
+                color: #fff;
+            }
+            @media screen and (max-width:900px) {
+                h3 {
+                    font-size: 32px;
+                }
+                div.helpspot {
+                    padding: 32px;
+                    margin: 0 !important;
+                }
+                .helpspot p, .whymanaged .arrowLink p {
+                    width: 100%;
+                }
+                .helpspot svg, .whymanaged svg {
+                    transform: translateX(-25%) translateY(-10%) scale(0.5);
+                    float: left;
+                }
+                .section.wehelp .col-12 {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                    float: unset;
+                }
+                .helpspot .arrowLink p, .whymanaged .arrowLink p {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: 0;
+                    font-size: 18px;
+                    margin-top: 0;
+                    width: calc(100% - 104px);
+                }
+                .whymanaged .arrowLink p {
+                    margin-top: 20px;
+                }
+                .section.wehelp .col-12 h2 {
+                    padding: 36px;
+                }
+                .section.wehelp .col-12 h2 br {
+                    display: none;
+                }
+                .section.wehelp {
+                    background: url('m/h4.svg');
+                    background-position: 100% 0%;
+                }
+                .stats .large {
+                    width: 100%;
+                }
+                .testimonial > p {
+                    font-size: 32px;
+                    line-height: 30px;
+                }
+                .section.quote {
+                    width: 100%;
+                    padding: 2% 10%;
+                }
+                .testimonials {
+                    min-height: 880px;
+                }
+                .testimonial {
+                    max-width:80vw;
+                }
+                .testimonials img {
+                    margin-left:-50px;
+                }
+                .section.contact h2 {
+                    font-size: 34px;
+                }
+                form {
+                    text-align: left;
+                }
+                input {
+                   width: 100%;
+                }
+                .section.footer .col-3 {
+                    margin-bottom: 18px;
+                }
+                .section.partners p {
+                    margin-left: 0;
+                }
+                .section.contact .col-6 {
+                    margin-bottom: 48px;
+                }
+            }
+            .section.footer a {
+                font-family: 'Open Sans', Arial;
+            }
+            .section.footer a p.bold {
+                font-size: 26px;
+            }
+            .section.contact p.bold {
+                font-size: 26px;
+            }
+            .section.contact {
+                padding-top: 64px;
+            }
+        </style>
+    </body>
 </html>

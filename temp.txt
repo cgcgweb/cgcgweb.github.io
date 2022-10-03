@@ -1,0 +1,23 @@
+Data
+Data architecture, database design, data analysis.
+
+Cloud
+Cloud-born infrastructure, cloud scalability and performance and planning your IaaS, PaaS and SaaS solutions.
+
+Hiring
+Recruitment of the best professional developers and promotion of business growth.
+
+Quality
+Ensuring the quality of your final product.
+
+Agility
+Ensuring your software development process follows most recent agility standards.
+
+Strategy
+Desining, planning and executing your short-term and long-term technological strategy.
+
+Documentation
+Managing your organization's software documentation lifecycle.
+
+Sponsorship & partnership
+Finding new potentials to maximize your business profit.

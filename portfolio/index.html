@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cyber Guardian - Managed IT and Cyber Security Provider in Kingston, NY</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        body {
+            background-color:#F2F2F2;
+            color:#2B354E;
+            font-family: n, Arial;
+            margin:0;
+            box-sizing: border-box;
+            overflow-x:hidden;
+        }
+        body * {
+            box-sizing: border-box;
+        }
+        @font-face {
+			font-family: 'n';
+			font-display:swap;
+			src: url('../n.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('../n.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../n.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('../n.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('../n.woff2') format('svg'); /* Legacy iOS */
+		}
+        @font-face {
+			font-family: 'L';
+			font-display:swap;
+			src: url('../L.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('../L.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../L.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('../L.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('../L.woff2') format('svg'); /* Legacy iOS */
+		}
+        .light {
+            font-family: l, 'Open Sans', Arial;
+        }
+        .col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;} 
+		[class*="col-"] {
+			float: left;
+			box-sizing:border-box;
+		}
+        @media screen and (max-width:900px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+            .d {
+                display: none;
+            }
+            h1 {
+                font-size: 34px;
+            }
+            .first a svg {
+                position: relative;
+                left: calc(50% - 25px);
+                top: 48px;
+                transform: rotate(90deg);
+            }
+            h2 {
+                font-size: 32px;
+                margin-bottom: 0;
+                margin-top:12px;
+            }
+            .section.first {
+                overflow: hidden;
+                width: 85%;
+            }
+            .right {
+                position: absolute;
+                right: 24px;
+                top: 24px;
+            }
+            .mission .line + .col-9 p {
+                padding-left: 0 !important;
+            }
+            .first .arrowlink p {
+                position: absolute;
+                left: calc(50vw - 70px);
+                margin-top: 0;
+            }
+            .serviceSingle.secTop {
+                width: 100%;
+            }
+            .serviceSingle p + a img {
+                width: 180px;
+            }
+            
+        }
+        @media screen and (min-width:900px) {
+            .m {
+                display: none;
+            }
+            h1 {
+                font-size: min(74px, 4vw);
+            }
+            h2 {
+                font-size: min(5vw, 92px);
+                margin-bottom: 0;
+                margin-top:12px;
+            }
+            .section.first {
+                overflow: visible;
+                width: 75%;
+            }
+            .right {
+                position: absolute;
+                right: 5%;
+                top: 0;
+            }
+            .serviceSingle.secTop {
+                width: 67%;
+            }
+            .serviceSingle a, .serviceSingle h2, .serviceSingle p {
+                max-width: 90%;
+            }
+            .section.construction, .section.communitycenter {
+                overflow: visible;
+            }
+            .section.construction .col-6.d {
+                margin-top:-250px;
+            }
+        }
+        .section {
+            overflow: hidden;
+            display: block;
+            width: 75%;
+            margin: 0 auto;
+            padding-bottom:48px;
+        }
+        .first p {
+            font-size: 24px;
+            font-family: 'Open Sans', Arial;
+        }
+        p {
+            font-family: 'Open Sans', Arial;
+            font-size: 20px;
+        }
+        .arrowlink span, .arrowlink p, .arrowlink svg {
+            vertical-align: middle;
+            margin-right:16px;
+        }
+        
+        .menu {
+            min-height: 20vh;
+        }
+        .left {
+            position: absolute;
+            left: 12.5%;
+            top: 24px;
+        }
+        .nav {
+            position: absolute;
+            left: 30%;
+            top: 28px;
+            font-size: 22px;
+        }
+        .section.first {
+            overflow:hidden;
+        }
+        .section.first .serviceSingle {
+            margin-bottom: 64px;
+        }
+        a {
+            color: #2B354E;
+            text-decoration: none;
+        }
+        .nav a {
+            padding-right: 32px;
+        }
+        .line {
+            border-bottom: 8px solid white;
+            overflow: hidden;
+            height: 24px;
+        }
+        .e {
+            height: 1px;
+        }
+        img {
+            max-width: 100%;
+        }
+        p.bold {
+            font-weight: bold;
+        }
+        .serviceSingle p {
+            font-size:18px;
+            font-family: l, 'Open Sans', Arial;
+        }
+        
+    </style>
+    <body>
+        <div class="menu">
+            <div class="left">
+                <img src="../m/logodark.svg" />
+            </div>
+            <div class="nav d">
+                <a href="../services/">Services</a>
+                <a href="../about/">Company</a>
+                <a href="#">Resources</a>
+                <a href="#">Portfolio</a>
+                <a href="../lets-talk/">Contact</a>
+            </div>
+            <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
+        </div>
+        <div class="section first">
+            <div class="col-6">
+                <h1>Portfolio</h1>
+                <p>More detailed information about how we help New York businesses succeed with their technology.</p>
+            </div>
+            <div class="col-6">
+                <img src="../m/p1.svg" />
+            </div>
+        </div>
+        <div class="section construction">
+            <div class="col-12 basicInfo">
+                <div class="col-6 d">
+                    <img src="../m/p2.svg" />
+                </div>
+                <div class="col-6">
+                    <div class="businessInfo">
+                        <h2>Construction & Design firm</h2>
+                        <div class="col-6 bsize">
+                            <h2>L</h2>
+                            <p>Business size</p>
+                        </div>
+                        <div class="col-6 bdesc">
+                            <p>The client is a large-sized modular construction and design firm with offices in three states, and employees throughout the world who work remotely and have a large manufacturing plant.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 m">
+                    <img loading="lazy" src="../m/p2.svg" />
+                </div>
+            </div>
+            <div class="col-12 issues">
+                <h2>Issues</h2>
+                <div class="col-4">
+                    <img src="../m/ps.svg" />
+                    <h4>Cybersecurity</h4>
+                </div>
+                <div class="col-4">
+                    <img src="../m/p2s.svg" />
+                    <h4>Lackluster technical team</h4>
+                    <p class="light">Handing over managing of IT services to CGCGC will ensure you a high efficiency and timely improvement of your IT environment and processes within it. </p>
+                </div>
+                <div class="col-4">
+                    <img src="../m/p2si.svg" />
+                    <h4>No proactive cybersecurity measures in place.</h4>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-12 proposal">
+                <h2>Proposed Solution</h2>
+                <div class="objective">
+                    <img src="../m/ps.svg" />
+                    <h4>Make a change to their IT structure and support.</h4>
+                </div>
+                <p>We took on the management of all their IT functions in their Manhattan office and <b>provided co-managed support</b> with the client's Technology Department in their office/manufacturing plant, acting as a Tier IV Helpdesk.<br>
+                    We offered a <b>range of endpoint protection, network upgrading</b> and generally consulted on ways to make their network better connected for a smoother workflow. We also put together a <b>cloud-based backup plan in the case of a disaster. </b></p>
+            </div>
+            <div class="col-12 results">
+                <h2>Results</h2>
+                <div class="col-6 resultpoints">
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>New network setup</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Next-generation Firewall</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>New products for better team interactions</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Multi-layered system to prevent spam</p>
+                    </div>
+                </div>
+                <div class="col-6 resultdesc">
+                    <p>After onboarding, the client was set up with a new network, next-generation firewall, remote management, and endpoint detection software. When phishing emails spiked, we deployed a multi-layered system to prevent spam, spoofing, and other business email compromise attacks. In addition, we began to manage all aspects of the IT structure and implemented new products that allowed for better team interaction and connectivity.  </p>
+                </div>
+            </div>
+        </div>
+        <div class="section communitycenter">
+            <div class="col-12 basicInfo">
+                <div class="col-6">
+                    <div class="businessInfo">
+                        <h2>Community Center</h2>
+                        <div class="col-6 bsize">
+                            <h2>M</h2>
+                            <p>Business size</p>
+                        </div>
+                        <div class="col-6 bdesc">
+                            <p>The client is a popular community center focused on providing an educational outlet through artistic expression for people of all ages. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="../m/p3.svg" />
+                </div>
+            </div>
+            <div class="col-12 issues">
+                <h2>Issues</h2>
+                <p>Recently, they were given the opportunity to move into a brand-new space as part of a revitalization initiative. The client approached Cyber Guardian Consulting Group (CGCG) to plan and install the IT infrastructure, requesting state-of-the-art technology to accompany their new space.</p>
+            </div>
+            <div class="col-3">&nbsp;</div>
+            <div class="col-9 proposal">
+                <h2>Proposed Solution</h2>
+                <div class="col-5">
+                    <div class="objectivealt">
+                        <img src="../m/ps.svg" />
+                        <h4>Developing a cutting-edge network plan</h4>
+                        <p>Based on what our client was looking for, we developed a plan encapsulating everything from door access control and cloud managed cameras to endpoint protection and a next generation firewall.  
+                           <br>We were able to eliminate redundant electrical runs by incorporating power over ethernet wherever possible.</p>
+                    </div>
+                </div>
+                <div class="col-1">&nbsp;</div>
+                <div class="col-5">
+                    <div class="objectivealt">
+                        <img src="../m/ps.svg" />
+                        <h4>Building IT Structure</h4>
+                        <p>Working with the architect, electrician, general contractor and other groups, we helped to adapt the building plans in order to meet our client’s IT needs and desires.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">&nbsp;</div>
+            <div class="col-9 results">
+                <h2>Results</h2>
+                <div class="col-6 resultpoints">
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>New network setup</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Next-generation Firewall</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Stayed within budget</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Brought access drops to each location</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Eliminated redundant electrical runs</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>expanded the ethernet to all locations</p>
+                    </div>
+                </div>
+                <div class="col-6 resultdesc">
+                    <p>From the beginning, the client was satisfied with our ability to be flexible and work closely with their team in order to stick to their projected completion time when change orders were submitted. We were able to adapt quickly and accordingly.<br>
+                        Additionally, we helped them stay within budget while actualizing their vision for a next-generation experience.<br>
+                        The client was impressed with our ability to coordinate between teams by making sure that the project was moving forward at a pace in line with and then exceeding their expectations. Throughout this project we have developed lasting relationships with all the teams involved and are excited to take on more projects within the non-profit and community-support sectors. </p>
+                </div>
+            </div>
+        </div>
+        <div class="section construction realestate">
+            <div class="col-12 basicInfo">
+                <div class="col-6 d">
+                    <img src="../m/p4.svg" />
+                </div>
+                <div class="col-6">
+                    <div class="businessInfo">
+                        <h2>Real Estate Firm</h2>
+                        <div class="col-6 bsize">
+                            <h2>L</h2>
+                            <p>Business size</p>
+                        </div>
+                        <div class="col-6 bdesc">
+                            <p>A leading Hudson Valley real estate company of nearly ten offices faced unnecessary IT costs associated with their previous managed IT provider and a total lack of cyber security and vulnerability management. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 m">
+                    <img loading="lazy" src="../m/p2.svg" />
+                </div>
+            </div>
+            <div class="col-12 issues">
+                <h2>Issues</h2>
+                <div class="col-4">
+                    <img src="../m/ps.svg" />
+                    <h4>Cybersecurity</h4>
+                </div>
+                <div class="col-4">
+                    <img src="../m/p2s.svg" />
+                    <h4>Lackluster technical team</h4>
+                    <p class="light">Handing over managing of IT services to CGCGC will ensure you a high efficiency and timely improvement of your IT environment and processes within it. </p>
+                </div>
+                <div class="col-4">
+                    <img src="../m/p2si.svg" />
+                    <h4>No proactive cybersecurity measures in place.</h4>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-12 proposal">
+                <h2>Proposed Solution</h2>
+                <div class="objective">
+                    <img src="../m/ps.svg" />
+                    <h4>Make a change to their IT structure and support.</h4>
+                </div>
+                <p>We took on the management of all their IT functions in their Manhattan office and <b>provided co-managed support</b> with the client's Technology Department in their office/manufacturing plant, acting as a Tier IV Helpdesk.<br>
+                    We offered a <b>range of endpoint protection, network upgrading</b> and generally consulted on ways to make their network better connected for a smoother workflow. We also put together a <b>cloud-based backup plan in the case of a disaster. </b></p>
+            </div>
+            <div class="col-12 results">
+                <h2>Results</h2>
+                <div class="col-6 resultpoints">
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>New network setup</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Next-generation Firewall</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>New products for better team interactions</p>
+                    </div>
+                    <div class="resultsinglepoint">
+                        <img src="../m/ps.svg" />
+                        <p>Multi-layered system to prevent spam</p>
+                    </div>
+                </div>
+                <div class="col-6 resultdesc">
+                    <p>After onboarding, the client was set up with a new network, next-generation firewall, remote management, and endpoint detection software. When phishing emails spiked, we deployed a multi-layered system to prevent spam, spoofing, and other business email compromise attacks. In addition, we began to manage all aspects of the IT structure and implemented new products that allowed for better team interaction and connectivity.  </p>
+                </div>
+            </div>
+        </div>
+        <div class="burgerMenu" style="display:none;">
+            <img onclick="burger()" class="close" src="../m/close.svg" />
+            <img class="bueagle" src="../m/bueagle.svg" />
+            <div class="bnav">
+                <a class="bold" href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Company</a>
+                <a href="#">Resources</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </div>
+            <img class="forbesMobile" src="../m/forbesMobile.svg" />
+        </div>
+        <style>
+            .bnav .bold {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .burgerMenu {
+                display: block;
+                overflow: hidden;
+                width: 100vw;
+                position: absolute;
+                top: 0;
+                background:#f2f2f2;
+                height:100vh;
+            }
+            .close {
+                top: 24px;
+                right: 24px;
+                position: absolute;
+            }
+            .bueagle {
+                width: 50%;
+                margin-top: 24px;
+            }
+            .forbesMobile {
+                position: absolute;
+                bottom: 0;
+                right:0;
+            }
+            .bnav a {
+                width: 100%;
+                display: block;
+                font-size: 30px;
+                color: #2B354E;
+            }
+            .bnav {
+                width: 50%;
+                position: absolute;
+                right: 64px;
+                top: 20vh;
+                z-index: 5;
+            }
+            .bnav a:not(.bold) {
+                text-decoration: underline;
+            }
+        </style>
+        <script>function burger(){"none"==document.querySelector(".burgerMenu").style.display?document.querySelector(".burgerMenu").style.display="block":document.querySelector(".burgerMenu").style.display="none"}</script>
+        <div class="section footer">
+            <div class="col-3">
+                <a href="#"><p class="bold">Home</p></a>
+                <a href="/about">About CGCG</a>
+                <a href="#">Team</a>
+                <a href="#">Clients</a>
+                <a href="#">Career</a>
+            </div>
+            <div class="col-3">
+                <a href="#"><p class="bold">Services</p></a>
+                <a href="#">Managed IT Services</a>
+                <a href="#">Cybersecurity Solutions</a>
+                <a href="#">Cloud Backup and Disaster Recovery</a>
+                <a href="#">Reputation Management</a>
+            </div>
+            <div class="col-3">
+                <a href="#">CISOaaS</a>
+                <a href="#">CTOaS</a>
+                <a href="#">CIOaS</a>
+                <a href="#">SOCaS</a>
+                <a href="#">Private Digital Investigations</a>
+            </div>
+            <div class="col-3 e"></div>
+            <div class="col-12">
+                <div class="col-3">
+                    <a href="#"><p class="bold">FAQ</p></a>
+                </div>
+                <div class="col-3">
+                    <a href="#"><p class="bold">Resources</p></a>
+                </div>
+                <div class="col-3">
+                    <a href="#"><p class="bold">Contact</p></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            h3 {
+                font-size:64px;
+                margin-bottom:0;
+            }
+            .helpspot p {
+                width: 67%;
+            }
+            .helpspot .arrowLink p, .whymanaged .arrowLink p{
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 12px;
+                font-size: 30px;
+                margin-top: 0;
+                width: calc(100% - 118px);
+            }
+            .helpspot .arrowLink, .whymanaged .arrowLink{
+                margin-top: 32px;
+            }
+            .helpspot.hs2 {
+                margin-left: -20%;
+                margin-top: 20%;
+            }
+            .whymanaged .arrowLink p {
+                margin-top:25px;
+            }
+            .section.whymanaged {
+                margin-bottom: 80px;
+            }
+            .section.stats .col-4 {
+                padding: 10px 0;
+            }
+            .section.stats h2 {
+                margin-top: 0;
+            }
+            .stats .large {
+                width: 60%;
+            }
+            .testimonials {
+                min-height: 500px;
+            }
+            .testimonial {
+                overflow: hidden;
+                clear: both;
+                position: absolute;
+            }
+            .testimonial .line {
+                border-bottom: 3px solid #fff;
+            }
+            .testimonial .bold, .testimonial .large {
+                margin-top: 8px;
+                margin-left: 3px;
+            }
+            .testimonials img {
+                margin-left: -120px;
+            }
+            .section.whymanaged img {
+                max-width: 100%;
+            }
+            .testimonial > p {
+                font-size: 38px;
+                line-height: 40px;
+            }
+            .section.partners p {
+                margin-top: 8px;
+                margin-left: 12px;
+            }
+            .t1 {
+                animation: d1 20s infinite;
+            }
+            .t2 {
+                animation: d2 20s infinite;
+            }
+            @keyframes d1 {
+                0% {opacity: 0.1;}
+                10% {opacity: 0.8;}
+                50% {opacity: 1;}
+                60% {opacity: 0.1}
+                100% {opacity: 0;}
+            }
+            @keyframes d2 {
+                0% {opacity: 0;}
+                50% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+            .section.contact h2 {
+                font-size: 55px;
+                color: #2B354E;
+            }
+            .section.contact {
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+                background: #fff;
+            }
+            form {
+                display: block;
+                text-align: center;
+            }
+            .section.contact, .section.contact a {
+                color: #2B354E;
+            }
+            input {
+                width: 80%;
+                border: 0;
+                height: 48px;
+                color: black;
+                opacity: 1;
+                font-family: 'Open Sans', Arial;
+                font-size: 24px;
+                border-bottom: 1px solid black;
+                margin-bottom: 6px;
+            }
+            .section.partners {
+                padding-bottom:25px;
+            }
+            .section.footer p, .section.footer a {
+                width: 100%;
+                display: block;
+                margin-top: 0;
+                margin-bottom:5px;
+            }
+            .section.footer {
+                background-color: black;
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+            }
+            .section.footer .col-12 {
+                margin-top: 24px;
+            }
+            .line + [class*="col-"] p {
+                font-size: 24px;
+            }
+            .section.footer a {
+                color: #fff;
+            }
+            @media screen and (max-width:900px) {
+                h3 {
+                    font-size: 32px;
+                }
+                div.helpspot {
+                    padding: 32px;
+                    margin: 0 !important;
+                }
+                .helpspot p, .whymanaged .arrowLink p {
+                    width: 100%;
+                }
+                .helpspot svg, .whymanaged svg {
+                    transform: translateX(-25%) translateY(-10%) scale(0.5);
+                    float: left;
+                }
+                .section.wehelp .col-12 {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                    float: unset;
+                }
+                .helpspot .arrowLink p, .whymanaged .arrowLink p {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: 0;
+                    font-size: 18px;
+                    margin-top: 0;
+                    width: calc(100% - 104px);
+                }
+                .whymanaged .arrowLink p {
+                    margin-top: 20px;
+                }
+                .section.wehelp .col-12 h2 {
+                    padding: 36px;
+                }
+                .section.wehelp .col-12 h2 br {
+                    display: none;
+                }
+                .section.wehelp {
+                    background: url('m/h4.svg');
+                    background-position: 100% 0%;
+                }
+                .stats .large {
+                    width: 100%;
+                }
+                .testimonial > p {
+                    font-size: 32px;
+                    line-height: 30px;
+                }
+                .section.quote {
+                    width: 100%;
+                    padding: 2% 10%;
+                }
+                .testimonials {
+                    min-height: 880px;
+                }
+                .testimonial {
+                    max-width:80vw;
+                }
+                .testimonials img {
+                    margin-left:-50px;
+                }
+                .section.contact h2 {
+                    font-size: 34px;
+                }
+                form {
+                    text-align: left;
+                }
+                input {
+                   width: 100%;
+                }
+                .section.footer .col-3 {
+                    margin-bottom: 18px;
+                }
+                .section.partners p {
+                    margin-left: 0;
+                }
+                .section.contact .col-6 {
+                    margin-bottom: 48px;
+                }
+            }
+            .section.footer a {
+                font-family: 'Open Sans', Arial;
+            }
+            .section.footer a p.bold {
+                font-size: 26px;
+            }
+            .section.contact p.bold {
+                font-size: 26px;
+            }
+            .section.contact {
+                padding-top: 64px;
+            }
+
+            /* Dedicated */
+            .construction .issues, .construction .proposal, .construction .results {
+                max-width: max(1200px, 85%);
+                float: right;
+            }
+            .businessInfo {
+                overflow: hidden;
+            }
+            .col-6.bsize {
+                text-align: center;
+            }
+            .col-12.issues {
+                background-color: #F8F8F8;
+                padding: 32px;
+                padding-top: 0;
+            }
+            .construction .issues, .construction .proposal, .construction .results {
+                max-width: max(1200px, 90%);
+                padding:32px;
+            }
+            .col-12.issues h2 {
+                margin-top: -64px;
+                margin-bottom: 48px;
+            }
+            .issues h2, .proposal h2, .results h2 {
+                font-size: 64px;
+            }
+            h4 {
+                font-size: 32px;
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+            .col-12.issues .col-4 {
+                padding-right: 10%;
+            }
+            .objective {
+                display: block;
+                overflow: hidden;
+            }
+
+            .objective img {
+                float: left;
+                margin-top: 8px;
+            }
+            .objective h4 {
+                float: left;
+                margin-left: 12px;
+                width: 80%;
+            }
+            .resultsinglepoint {
+                float: left;
+                width: 50%;
+            }
+            .resultsinglepoint p {
+                font-size: 19px;
+                font-family: 'Open Sans', Arial;
+            }
+            .resultsinglepoint {
+                padding-right: 15%;
+            }
+            .issues {
+                margin-top:72px;
+                margin-bottom: 72px;
+            }
+            .results h2 {
+                margin-bottom:64px;
+            }
+            .communitycenter .issues {
+                background:none;
+            }
+            .communitycenter .issues h2 {
+                margin-top:-36px;
+            }
+            .communitycenter .col-12.basicInfo, .realestate .col-12.basicInfo {
+                margin-top: 70px;
+            }
+            @media screen and (max-width:900px) {
+                .issues h2, .proposal h2, .results h2 {
+                    font-size: 48px;
+                }
+                .construction .issues, .construction .proposal, .construction .results {
+                    padding:0;
+                }
+                .col-12.issues {
+                    padding: 5px;
+                    text-align: center;
+                    background: none;
+                }
+            }
+            @media screen and (min-width:1300px) {
+                .issues {
+                    max-width: calc(max(1200px, 90%) + 32px);
+                    position: relative;
+                }
+                .col-12.issues::before {
+                    position: absolute;
+                    background-color: #F8F8F8;
+                    content: '';
+                    width: 512px;
+                    right: -500px;
+                    z-index: -1;
+                    height: 100%;
+                    top:0;
+                    padding-left:105%;
+                }
+                .col-6.resultdesc p {
+                    width: 75%;
+                }
+                .section.communitycenter .issues p {
+                    width: 70%;
+                    padding-left: 10%;
+                }
+            }
+            @media screen and (min-width:900px) {
+                .realestate.construction.section .col-6 {
+                    margin-top:25px;
+                }
+                .realestate.construction.section .proposal p {
+                    width: 80%;
+                    float:right;
+                }
+            }
+
+        </style>
+    </body>
+</html>

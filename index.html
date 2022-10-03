@@ -1,461 +1,785 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<link rel="icon" href="https://cgcg.biz/wp-content/uploads/2020/02/favicon.png" />
-</head>
-<body>
-<style>
-html {
-	scroll-behavior: smooth;
-} 
-body {
-	margin: 0;
-	overflow-x:hidden;
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-	width:100vw;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;} 
-.col-2d4 {width: 20%;}
-[class*="col-"] {float: left;}
-.row {
-	width:100%;
-	padding-right:3%;
-	padding-left:3%;
-}
-* {
-	box-sizing:border-box;
-}
-@media screen and (max-width:900px) {
-	[class*="col-"] {
-		width: 100%;
-	}
-	.row.header {
-		padding: 0;
-	}
-	.desktop {display:none !important;}
-	nav .menu {
-		padding: 40px;
-		min-width: 101vw;
-		text-align: center;
-		padding-left: 0;
-		padding-right: 0;
-		background-color: #F0F8FC;
-	}
-}
-@media screen and (min-width:900px) {
-	.mobile {display:none !important;}
-	nav .menu {
-		padding: 40px;
-		min-width: 60%;
-		text-align: center;
-	}
-	.dropdown-content {position:absolute;left:25%;}
-}
-nav {overflow:hidden;}
-.nav {
-	text-decoration:none; color:black;
-}
-.nav.forbes {
-	float: right;
-}
-nav div {
-	float: left;
-}
+    <head>
+        <title>Cyber Guardian - Managed IT and Cyber Security Provider in Kingston, NY</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        body {
+            background-color:#2B354E;
+            color:#fff;
+            font-family: n, Arial;
+            margin:0;
+            box-sizing: border-box;
+            overflow-x:hidden;
+        }
+        body * {
+            box-sizing: border-box;
+        }
+        @font-face {
+			font-family: 'n';
+			font-display:swap;
+			src: url('n.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('n.woff2') format('woff2'), /* Super Modern Browsers */
+			url('n.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('n.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('n.woff2') format('svg'); /* Legacy iOS */
+		}
+        @font-face {
+			font-family: 'L';
+			font-display:swap;
+			src: url('L.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('L.woff2') format('woff2'), /* Super Modern Browsers */
+			url('L.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('L.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('L.woff2') format('svg'); /* Legacy iOS */
+		}
+        .light {
+            font-family: l, 'Open Sans', Arial;
+        }
+        .col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;} 
+		[class*="col-"] {
+			float: left;
+			box-sizing:border-box;
+		}
+        @media screen and (max-width:900px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+            .d {
+                display: none;
+            }
+            h1 {
+                font-size: 34px;
+            }
+            .first a svg {
+                position: relative;
+                left: calc(50% - 25px);
+                top: 48px;
+                transform: rotate(90deg);
+            }
+            h2 {
+                font-size: 40px;
+                margin-bottom: 0;
+            }
+            .section.first {
+                overflow: hidden;
+                width: 85%;
+            }
+            .right {
+                position: absolute;
+                right: 24px;
+                top: 24px;
+            }
+            .mission .line + .col-9 p {
+                padding-left: 0 !important;
+            }
+            .first .arrowlink p {
+                position: absolute;
+                left: calc(50vw - 70px);
+                margin-top: 0;
+            }
+        }
+        @media screen and (min-width:900px) {
+            .m {
+                display: none;
+            }
+            h1 {
+                font-size: min(74px, 4vw);
+            }
+            .first img {
+                max-width: 140%;
+                margin-left:-40px;
+            }
+            h2 {
+                font-size: 92px;
+                margin-bottom: 0;
+            }
+            .section.first {
+                overflow: visible;
+                width: 75%;
+            }
+            .right {
+                position: absolute;
+                right: 5%;
+                top: 0;
+            }
+        }  
+        .section {
+            overflow: hidden;
+            display: block;
+            width: 75%;
+            margin: 0 auto;
+            padding-bottom:48px;
+        }
+        .first p {
+            font-size: 24px;
+            font-family: 'Open Sans', Arial;
+        }
+        p {
+            font-family: 'Open Sans', Arial;
+            font-size: 20px;
+        }
+        .arrowlink p {
+            display: inline-block;
+            color: white;
+            font-size: 34px;
+        }
+        .arrowlink span, .arrowlink p, .arrowlink svg {
+            vertical-align: middle;
+            margin-right:16px;
+        }
+        
+        .menu {
+            min-height: 20vh;
+        }
+        .left {
+            position: absolute;
+            left: 12.5%;
+            top: 24px;
+        }
+        .nav {
+            position: absolute;
+            left: 30%;
+            top: 28px;
+            font-size: 22px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .nav a {
+            padding-right: 48px;
+        }
+        .line {
+            border-bottom: 8px solid white;
+            overflow: hidden;
+            height: 24px;
+        }
 
-nav .logo {
-  padding: 20px;
-}
+        .mission .line + .col-9 p {
+            margin-top: 0;
+            padding: 12px;
+        }
+        
+        .e {
+            height: 1px;
+        }
+        .mission img {
+            max-width: 100%;
+        }
+        .missionItem {
+            padding: 0 12px;
+        }
+        .missionItem img {
+            height: 200px;
+            width: 250px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+        }
+        p.bold {
+            font-weight: bold;
+        }
+        .light {
+            font-family: l, 'Open Sans', Arial;
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <div class="left">
+                <a href="https://cgcg.biz">
+                    <img src="m/l.svg" />
+                </a>
+            </div>
+            <div class="nav d">
+                <a href="/services/">Services</a>
+                <a href="/about/">Company</a>
+                <a href="/resources/">Resources</a>
+                <a href="/portfolio/">Portfolio</a>
+                <a href="/lets-talk/">Contact</a>
+            </div>
+            <div class="right"><img class="d" src="m/f.svg" /><img onclick="burger()" class="m" src="m/bu.svg" /></div>
+        </div>
+        <div class="section first">
+            <div class="col-6">
+                <h1>SOLUTIONS<br>DESIGNED TO<br>LET YOUR<br>BUSINESS THRIVE</h1>
+                <p class="d">Comprehensive solutions for small and medium-sized businesses. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p>
+                <img src="m/e.svg" class="m" />
+                <div class="arrowlink">
+                    <a href="#">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" width="50" height="50"><circle cx="25" cy="25" r="25" fill="#fff"/><path fill="#375E74" d="M40.2 25.7c.4-.4.4-1 0-1.4l-6.4-6.4a1 1 0 0 0-1.4 1.4l5.7 5.7-5.7 5.7a1 1 0 0 0 1.4 1.4l6.4-6.4ZM11 26h28.5v-2H11v2Z"/></svg></span><p>Services</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 d">
+                <img src="m/e.svg" />
+            </div>
+        </div>
+        <div class="section mission">
+            <div class="col-12">
+                <h2>Mission</h2>
+                <div class="col-3 line"></div>
+                <div class="col-9"><p>CGCG is a security-first Managed IT and Advisory Firm that implements proactive, lightweight, and inexpensive proprietary solutions that meet and exceed business and security requirements. Our cutting-edge technology leverages vast amounts of metadata, machine learning, mathematics, and data science algorithms, as well as some of the best minds in the IT industry – keeping companies running efficiently and their data secure.</p></div>
+                <div class="col-3 e"></div>
+                <div class="col-9">
+                    <div class="col-4 missionItem">
+                        <img src="m/h1.svg" loading="lazy">
+                        <p class="bold">Adaptable Solutions</p>
+                        <p class="light">Scalable model that provides a personal solution for every client.</p>
+                    </div>
+                    <div class="col-4 missionItem">
+                        <img src="m/h2.svg" loading="lazy">
+                        <p class="bold">24/7 Monitoring</p>
+                        <p class="light">Assistance for your business, at any time of the day or night.</p>
+                    </div>
+                    <div class="col-4 missionItem">
+                        <img src="m/h3.svg" loading="lazy">
+                        <p class="bold">Solitary Protection</p>
+                        <p class="light">CGCG 7-Layer Cyber Armor System™</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burgerMenu" style="display:none;">
+            <img onclick="burger()" class="close" src="m/close.svg" />
+            <img class="bueagle" src="m/bueagle.svg" />
+            <div class="bnav">
+                <a class="bold" href="#">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/about/">Company</a>
+                <a href="/resources/">Resources</a>
+                <a href="/portfolio/">Portfolio</a>
+                <a href="/lets-talk/">Contact</a>
+            </div>
+            <img class="forbesMobile" src="m/forbesMobile.svg" />
+        </div>
+        <style>
+            .bnav .bold {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .burgerMenu {
+                display: block;
+                overflow: hidden;
+                width: 100vw;
+                position: absolute;
+                top: 0;
+                background:#f2f2f2;
+                height:100vh;
+            }
+            .close {
+                top: 24px;
+                right: 24px;
+                position: absolute;
+            }
+            .bueagle {
+                width: 50%;
+                margin-top: 24px;
+            }
+            .forbesMobile {
+                position: absolute;
+                bottom: 0;
+                right:0;
+            }
+            .bnav a {
+                width: 100%;
+                display: block;
+                font-size: 30px;
+                color: #2B354E;
+            }
+            .bnav {
+                width: 50%;
+                position: absolute;
+                right: 64px;
+                top: 20vh;
+                z-index: 5;
+            }
+            .bnav a:not(.bold) {
+                text-decoration: underline;
+            }
+        </style>
+        <script>function burger(){"none"==document.querySelector(".burgerMenu").style.display?document.querySelector(".burgerMenu").style.display="block":document.querySelector(".burgerMenu").style.display="none"}</script>
+        <div class="section wehelp">
+            <div class="col-12">
+                <h2>We help to solve a <br>variaty of business <br>challenges</h2>
+            </div>
+            <div class="col-7 d" style="max-height:1700px;">
+                <img src="m/h4.svg" loading="lazy">
+            </div>
+            <div class="col-5">
+                <div class="helpspot hs1">
+                    <h3>Leading<br>your company<br>through every<br>stage</h3>
+                    <p  class="light">Our objective is to deeply understand the challenges organizations face in their day-to-day operations.</p>
+                    <div class="col-12 line"></div>
+                    <div class="col-12">
+                        <div class="arrowLink">
+                            <a href="#">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100"><circle cx="50" cy="50.5" r="50" fill="#F2F2F2"/><path fill="#2B354E" d="M76 51.6c.6-.6.6-1.6 0-2.2L66.6 40a1.5 1.5 0 1 0-2.1 2.1l8.5 8.5-8.5 8.5a1.5 1.5 0 1 0 2.1 2.1l9.6-9.5ZM27 52h48v-3H27v3Z"/></svg></span><p>See how CGCG significantly optimized iBUILT’s operations and security posture.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="helpspot hs2">
+                    <h3>Continuous Audit – Zero Trust</h3>
+                    <p  class="light">A methodology for controlling and preventing most cyberthreats that was developed by CGCG.<br>
+                        A continuous audit of enterprise security helps to monitor the status and receive a report and statistics from all levels of enterprise security.
+                        As a result of the implementation of our unique methodology, you will receive analytics and an assessment of the status of all levels of security on a daily basis, monitor the dynamics and weaknesses of the company's cyber defense, and more – we provide you peace of mind as you focus on what's important.</p>
+                    <div class="col-12 line"></div>
+                    <div class="col-12">
+                        <div class="arrowLink">
+                            <a href="#">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100"><circle cx="50" cy="50.5" r="50" fill="#F2F2F2"/><path fill="#2B354E" d="M76 51.6c.6-.6.6-1.6 0-2.2L66.6 40a1.5 1.5 0 1 0-2.1 2.1l8.5 8.5-8.5 8.5a1.5 1.5 0 1 0 2.1 2.1l9.6-9.5ZM27 52h48v-3H27v3Z"/></svg></span><p>See how CGCG helped Town of Marbletown protect against a cyberattack.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section whymanaged">
+            <div class="col-6">
+                <h2>Why <span style="color: #F2C94C;">Managed IT</span> is important</h2>
+                <p  class="light">Whether you have employees on-site handling IT or not – working with CGCG ensures an efficient and rapid improvement of your IT environment and processes within it. We frequently work with and augment in-place teams and have a proven track record of improving metrics that matter the most to companies. </p>
+                <div class="line"></div>
+                <div class="col-12">
+                    <div class="arrowLink">
+                        <a href="#">
+                            <span></span><svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100"><circle cx="50" cy="50.5" r="50" fill="#F2F2F2"/><path fill="#2B354E" d="M76 51.6c.6-.6.6-1.6 0-2.2L66.6 40a1.5 1.5 0 1 0-2.1 2.1l8.5 8.5-8.5 8.5a1.5 1.5 0 1 0 2.1 2.1l9.6-9.5ZM27 52h48v-3H27v3Z"/></svg><p>Read more</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 d">
+                <img src="m/h5.svg" loading="lazy" />
+            </div>
+        </div>
+        <div class="section stats">
+            <div class="col-12 line"></div>
+            <div class="col-4">
+                <h2>$30B</h2>
+                <p class="large light">Combined valuation of companies we saved from cyberatacks</p>
+            </div>
+            <div class="col-4">
+                <h2>$<span>20</span>M</h2>
+                <p class="large light">Lost from cyberthreats everyday</p>
+            </div>
+            <div class="col-4">
+                <h2 id="threatsCounter">200,000</h2>
+                <script>
+                    
+                    function it() {
+                        document.getElementById('threatsCounter').innerText = "";
+                        var d = new Date(2022, 9, 2, 22, 00, 00, 00); 
+                        var n = new Date(); 
+                        var ss = Math.floor(n / 1000) - Math.floor(d / 1000);
+                        var out = 200000 + (ss * 2);
+                        document.getElementById('threatsCounter').innerText = out.toLocaleString();
+                    }
 
-nav .logo.eagle {
-	width: 100%;
-	padding: 0;
-	position: absolute;
-	text-align: center;
-	top: 16px;
-}
-.eagle .nav.logo {
-	width: 33%;
-}
+                    setInterval(it, 2000);
+                </script>
+                <p class="large light">Threats Stopped</p>
+            </div>
+        </div>
+        <div class="section quote">
+            <div class="col-4 e"></div>
+            <div class="col-8">
+                <div class="testimonials">
+                    <img src="m/h6.svg" loading="lazy" />
+                    <div class="testimonial t1">
+                        <p>If you want complete security – this is the team. I’ve had thousands of potential security breaches and have NEVER been hacked. They have next generation solutions that span a wide spectrum.</p>
+                        <div class="col-1 line"></div>
+                        <div class="col-7">
+                            <p class="bold">Win Morrison</p>
+                            <p class="large">Win Morrison Realty</p>
+                        </div>
+                        <div class="col-4">← 1/2 →</div>
+                    </div>
+                    <div class="testimonial t2">
+                        <p>CGCG has saved my companies money and time with their aptitude for a unique approach to I.T. - all while keeping us secure from threats and hackers. We see the work they do today as a must-have with the problematic nature of how viruses like ransomware, etc.. can damage a successful business.</p>
+                        <div class="col-1 line"></div>
+                        <div class="col-7">
+                            <p class="bold">Robert Pollock</p>
+                            <p class="large">Owner: Buttermilk Falls Inn & Frida's Bakery</p>
+                        </div>
+                        <div class="col-4">← 2/2 →</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section partners">
+            <div class="col-12">
+                <h2>Partners</h2>
+            </div>
+            <div class="col-2 line"></div>
+            <div class="col-10">
+                <p>When you're part of Cyber Guardian, we are part of your team.</p>
+            </div>
+            <div class="col-10">
+                <img src="m/h7.svg" loading="lazy" class="d" />
+                <img src="m/h7m.svg" loading="lazy" class="m" />
+            </div>
+        </div>
+        <div class="section contact">
+            <div class="col-6">
+                <a href="tel:+18454448273"><h2>845-444-8273</h2></a>
+                <p class="bold">63 John Street #3 <br>Kingston, NY 12401</p>
+                <a href="mailto:hello@cgcg.biz">hello@cgcg.biz</a>
+            </div>
+            <div class="col-6">
+                <form>
+                    <input type="text" name="bname" placeholder="Business Name" />
+                    <input type="tel" name="phone" placeholder="Phone" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="message" placeholder="Message" />
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+        </div>
+        <div class="section footer">
+            <div class="col-3">
+                <a href="https://cgcg.biz/"><p class="bold">Home</p></a>
+                <a href="/about">About CGCG</a>
+                <a href="/about/">Team</a>
+                <a href="/portfolio/">Clients</a>
+            </div>
+            <div class="col-3">
+                <a href="/services/"><p class="bold">Services</p></a>
+                <a href="/managed-it-services/">Managed IT Services</a>
+                <a href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+                <a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery</a>
+                <a href="/reputation-management/">Reputation Management</a>
+            </div>
+            <div class="col-3">
+                <a href="/cisoaas/">CISOaaS</a>
+                <a href="/ctoas/">CTOaS</a>
+                <a href="/cioas/">CIOaS</a>
+                <a href="/socas/">SOCaS</a>
+                <a href="/private-digital-investigations/">Private Digital Investigations</a>
+            </div>
+            <div class="col-3 e"></div>
+            <div class="col-12">
+                <div class="col-3">
+                    <a href="#"><p class="bold">FAQ</p></a>
+                </div>
+                <div class="col-3">
+                    <a href="/resources/"><p class="bold">Resources</p></a>
+                </div>
+                <div class="col-3">
+                    <a href="/lets-talk/"><p class="bold">Contact</p></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            .wehelp .col-7 {
+                position: relative;
+                top: -25vh;
+                z-index: -1;
+            }
+            .section.wehelp {   
+                margin: 0;   
+                width: 100%; 
+                padding-bottom: 0;
+            } 
+            .section.wehelp .col-12 {   
+                width: 75%;   
+                margin: 0 auto;   
+                display: block;   
+                float: unset; 
+            }
+            .col-5 div.helpspot .col-12 {
+                margin: 0;
+            }
+            h3 {
+                font-size:64px;
+                margin-bottom:0;
+            }
+            .helpspot p {
+                width: 67%;
+            }
+            .helpspot .arrowLink p, .whymanaged .arrowLink p{
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 12px;
+                font-size: 30px;
+                margin-top: 0;
+                width: calc(100% - 118px);
+            }
+            .helpspot .arrowLink, .whymanaged .arrowLink{
+                margin-top: 32px;
+            }
+            .helpspot.hs2 {
+                margin-left: -20%;
+                margin-top: 20%;
+            }
+            .whymanaged .arrowLink p {
+                margin-top:25px;
+            }
+            .section.whymanaged {
+                margin-bottom: 80px;
+            }
+            .section.stats .col-4 {
+                padding: 10px 0;
+            }
+            .section.stats h2 {
+                margin-top: 0;
+            }
+            .stats .large {
+                width: 60%;
+            }
+            .testimonials {
+                min-height: 500px;
+            }
+            .testimonial {
+                overflow: hidden;
+                clear: both;
+                position: absolute;
+            }
+            .testimonial .line {
+                border-bottom: 3px solid #fff;
+            }
+            .testimonial .bold, .testimonial .large {
+                margin-top: 8px;
+                margin-left: 3px;
+            }
+            .testimonials img {
+                margin-left: -120px;
+            }
+            .section.whymanaged img {
+                max-width: 100%;
+            }
+            .testimonial > p {
+                font-size: 38px;
+                line-height: 40px;
+            }
+            .section.partners p {
+                margin-top: 8px;
+                margin-left: 12px;
+            }
+            .t1 {
+                animation: d1 10s infinite;
+            }
+            .t2 {
+                animation: d2 10s infinite;
+            }
+            @keyframes d1 {
+                0% {opacity: 0.1;}
+                10% {opacity: 0.9;}
+                50% {opacity: 1;}
+                60% {opacity: 0}
+                100% {opacity: 0;}
+            }
+            @keyframes d2 {
+                0% {opacity: 0;}
+                50% {opacity: 0;}
+                60% {opacity:1;}
+                90% {opacity:0.9}
+                100% {opacity: 0;}
+            }
+            .section.contact h2 {
+                font-size: 55px;
+                color: #2B354E;
+            }
+            .section.contact {
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+                background: #fff;
+            }
+            form {
+                display: block;
+                text-align: center;
+            }
+            .section.contact, .section.contact a {
+                color: #2B354E;
+            }
+            input {
+                width: 80%;
+                border: 0;
+                height: 48px;
+                color: black;
+                opacity: 1;
+                font-family: 'Open Sans', Arial;
+                font-size: 24px;
+                border-bottom: 1px solid black;
+                margin-bottom: 6px;
+            }
+            .section.partners {
+                padding-bottom:25px;
+            }
+            .section.footer p, .section.footer a {
+                width: 100%;
+                display: block;
+                margin-top: 0;
+                margin-bottom:5px;
+            }
+            .section.footer {
+                background-color: black;
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+            }
+            .section.footer .col-12 {
+                margin-top: 24px;
+            }
+            .line + [class*="col-"] p {
+                font-size: 24px;
+            }
+            @media screen and (max-width:900px) {
+                h3 {
+                    font-size: 44px;
+                }
+                div.helpspot {
+                    padding: 32px;
+                    margin: 0 !important;
+                }
+                .helpspot p, .whymanaged .arrowLink p {
+                    width: 100%;
+                }
+                .helpspot svg, .whymanaged svg {
+                    transform: translateX(-25%) translateY(-10%) scale(0.5);
+                    float: left;
+                }
+                .section.wehelp .col-12 {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                    float: unset;
+                }
+                .helpspot .arrowLink p, .whymanaged .arrowLink p {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: 0;
+                    font-size: 18px;
+                    margin-top: 0;
+                    width: calc(100% - 104px);
+                }
+                .whymanaged .arrowLink p {
+                    margin-top: 20px;
+                }
+                .section.wehelp .col-12 h2 {
+                    padding: 36px;
+                }
+                .section.wehelp .col-12 h2 br {
+                    display: none;
+                }
+                .section.wehelp {
+                    background: url('m/h4.svg');
+                    background-position: 100% 0%;
+                }
+                .stats .large {
+                    width: 100%;
+                }
+                .testimonial > p {
+                    font-size: 32px;
+                    line-height: 30px;
+                }
+                .section.quote {
+                    width: 100%;
+                    padding: 2% 10%;
+                }
+                .testimonials {
+                    min-height: 880px;
+                }
+                .testimonial {
+                    max-width:80vw;
+                }
+                .testimonials img {
+                    margin-left:-50px;
+                }
+                .section.contact h2 {
+                    font-size: 34px;
+                }
+                form {
+                    text-align: left;
+                }
+                input {
+                   width: 100%;
+                }
+                .section.footer .col-3 {
+                    margin-bottom: 18px;
+                }
+                .section.partners p {
+                    margin-left: 0;
+                }
+                .section.contact .col-6 {
+                    margin-bottom: 48px;
+                }
+            }
+            /* CSS Fixes */
+            @media screen and (min-width:900px) {
 
-.menu .nav {
-	margin: 1vw;
-}
-.dropdown {
-  position: relative;
-}
-.dropdown-content {
-	display: none;
-	background-color: #E5E5E5;
-	overflow: auto;
-	z-index: 1;
-	padding-top: 16px;
-}
-.dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.show {display: inline;}
-#dropper a {
-	color: #757575 !important;
-	font-weight: bold;
-}
-.green {
-	color:#2DD8A3;
-}
-.blue {
-	color:#0166A3;
-}
-.spacer {
-	margin-top:24px;
-}
-.gray {
-	color:gray;
-}
-img {
-	max-width:100% !important;
-}
-</style>
+                .col-4.missionItem .bold {
+                    font-size: 32px;
+                    font-weight: bolder;
+                }
+                .col-4.missionItem p, .helpspot h3 + p, .section.whymanaged h2 + p {
+                    font-size: 24px;
+                    font-weight: lighter;
+                }
+                .section.stats .line {
+                    margin-bottom: 48px;
+                }
+                .section.wehelp .col-7.d img {
+                    width: 80%;
+                }
 
-<div class="row header">
-<nav>
-<div class="logo"><img class="nav logo" src="media/CGCG.svg"/></div>
-<div class="logo eagle mobile"><img class="nav logo" src="media/ex.svg"/></div>
-<div class="menu">
-	<a class="nav navlink" href="">home</a>
-	<a class="nav navlink" href="about">about</a>
-	<a class="nav navlink" id="sopener" onclick="drop()" href="#">services ▼</a>
-	<a class="nav navlink" href="resources">resources</a>
-	<a class="nav navlink" href="lets-talk">contact</a>	
-	<br>
-	<div id="dropper" class="dropdown-content">
-		<div style="width:50%">
-			<span class="sh">Managed Services:</span>
-			<a href="managed-it-services">Managed IT Services</a>
-			<a href="cybersecurity-solutions">Cybersecurity Solutions</a>
-			<a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery</a>
-			<a href="reputation-management">Reputation Management</a>
-		</div>
-		<div style="width:50%">
-			<span class="sh">Advisory Services:</span>
-			<a href="cisoaas">CISOaaS</a>
-			<a href="ctoas">CTOaS</a>
-			<a href="cioas">CIOaS</a>
-			<a href="socas">SOCaS</a>
-			<a href="private-digital-investigations">Private Digital Investigations</a>
-		</div>
-	</div>
-</div>
-<img class="nav forbes desktop" src="media/Forbes.svg"/>
-</nav>
+                .section.whymanaged {
+                    margin-top: -100px;
+                }
+                .section.whymanaged .col-6.d img {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: block;
+                }
+                .testimonial > p {
+                    max-width: 90%;
+                }
+                .col-4.missionItem p:not(.bold) {
+                    width: 80%;
+                }
+                .section.whymanaged .col-6.d img {
+                    margin-top: 66px;
+                }
+                .section.stats h2 {
+                    font-size: 78px;
+                }
 
-<script>
-function drop() {
-  document.getElementById("dropper").classList.toggle("show");
-  if(document.getElementById("sopener").innerText == "services ▼") {
-	  document.getElementById("sopener").innerText = "services ▲"
-  }else {
-	  document.getElementById("sopener").innerText = "services ▼"
-  }
-}
-
-</script>
-</div>
-
-
-<style>
-h1 {
-	color:#0166A3;
-	font-size:max(3vw, 24px);
-}
-p {font-size:18px;}
-.mixed {display:flex;margin-bottom:16px;}
-.mixed img {width:20%; float:left; display:flex;align-items:center;padding:8px;}
-.mixed span{width:80%; float:right; font-size:18px; padding-top:5px;display:flex; align-items:center; padding-left:16px;}
-.reason {text-align:center;}
-.reason p {padding:10px;}
-.requestMorebtn {
-	background-color: #2DD8A3;
-	padding: 10px;
-	width: 100% !important;
-	display: inline-block;
-	text-align: center;
-	font-size: 21px;
-	text-decoration: none;
-	color: white;
-	border-radius: 5px;
-	float: right;
-}
-.help a {width:100%;display:inline-block;padding:10px;}
-.help a img {width:100%;}
-.input.text.col-12, .input.phone.col-12, .input.email.col-12, textarea.input {
-	padding: 12px;
-	border-radius: 5px;
-	border: 3px solid gray;
-}
-.input.container {padding:10px;}
-.smi {
-	display: block;
-}
-.input.text.col-12, .input.phone.col-12, .input.email.col-12, textarea.input {
-	padding: 18px;
-	border-radius: 5px;
-	border: none;
-	background-color: #F0F8FC;
-}
-.input.container {padding:10px;padding-left:0;}
-
-.input::placeholder {
-	font-size: 18px;
-	font-weight: lighter;
-	color: #000000 !important;
-	opacity: 1;
-}
-textarea.input::placeholder {
-	font-weight: normal;
-	font-family: 'Open Sans', Arial;
-}
-.submitbutton {
-	background-color: #0166A3;
-	width:120px;
-	float:right;
-	display: inline-block;
-	text-align: center;
-	font-size: 21px;
-	text-decoration: none;
-	color: white;
-	border-radius: 5px;
-	padding:10px;
-}
-</style>
-<div class="row main" style="padding-left:0; padding-top:10px;">
-	<div class="col-3 desktop" style="position:fixed;">
-		<img class="col-12" src="media/le.svg"/>
-		<div class="smc" style="position: relative;display: block;float: left;margin:24px;">
-			<a href="https://www.facebook.com/CGCGLLC/" class="smi"><img src="media/vfb.svg"/></a>
-			<a href="https://www.instagram.com/cyberguardianconsulting/" class="smi"><img src="media/vig.svg"/></a>
-			<a href="https://www.linkedin.com/company/cyber-guardian-consulting-group-llc-/" class="smi"><img src="media/vli.svg"/></a>
-			<a href="https://twitter.com/CyberGuardianCG" style="margin-left: -3px;" class="smi"><img src="media/vtw.svg"/></a>
-		</div>
-	</div>
-	<style>.smi {display: block;}</style>
-	<div class="col-3 desktop" style="overflow: hidden;height: 1px;"></div>
-	<div class="col-9" style="padding-left:3%;">
-		<img src="media/m.svg" style="width:100%;height: 33.3%;" />
-		<h1 style="color:#0166A3;">Cybersecurity and IT Services</h1>
-		<div class="mission col-10">
-			<h2 class="green" style="font-size:max(2vw, 22px);">our mission</h2>
-			<h3>To Create a Complete IT Solution Designed to Help Your Business Thrive</h3>
-			<p>We’re a security-first Managed IT and Cybersecurity Consultancy that keeps your business and network safe and healthy so you can perform your work unimpeded and worry-free.</p>
-			<h3 class="blue">How we stand above competition</h3>
-			<br>
-			<div>
-				<div class="col-4 mixed"><img loading="lazy" src="media/protection.svg" /><span>Our Proprietary CGCG 7-Layer Cyber Armor System ™</span></div>
-				<div class="col-4 mixed"><img loading="lazy" src="media/team.svg" /><span>Our Hand Picked Team</span></div>
-				<div class="col-4 mixed"><img loading="lazy" src="media/ni3.svg" /><span>Client Relationship Management</span></div>
-				<div class="desktop col-12 spacer"></div>
-				<div class="col-4 mixed"><img loading="lazy" src="media/setting.svg" /><span>Scalable Model with Granular Control</span></div>
-				<div class="col-4 mixed"><img loading="lazy" src="media/scale.svg" /><span>Highly Adaptable Technology Solutions</span></div>
-				<div class="col-4 mixed"><img loading="lazy" src="media/ni6.svg" /><span>Savings & Productivity Byproducts</span></div>
-			</div>
-		</div>
-		<div class="partner col-10">
-			<h2 class="green" style="font-size:max(2vw, 22px);">what makes us a <br> great business partner</h2>
-			<p>We take your business as seriously as your technology and believe that your peace of mind is our most important product. Here at Cyber Guardian, we achieve that goal using the three business-technology principles we were founded on:</p>
-			<div class="desktop col-12 spacer"></div>
-			<div>
-				<div class="col-4 reason"><img loading="lazy" src="media/tech.svg" /><br><h3 class="blue">Technology</h3><p>We always deliver the best possible solution that will grow and evolve with your business.</p></div>
-				<div class="col-4 reason"><img loading="lazy" src="media/partnership.svg" /><br><h3 class="blue">Partnership</h3><p>We are the trusted business partner you can rely on for solutions that make sense.</p></div>
-				<div class="col-4 reason"><img loading="lazy" src="media/value.svg" /><br><h3 class="blue">Value</h3><p>We always optimize your technology to bring the best return on investment.</p></div>
-				<div class="col-12">
-					<div class="col-12">
-						<a href="/lets-talk" class="requestMorebtn">Request More Information</a> 
-					</div>
-					<div class="col-12">
-						<p class="gray">Our established plans might not be for everyone, but we will work with you to find a solution that fits. Request a call with one of our team members to discuss how we can help your organization with managed IT and cybersecurity services.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="help col-10">
-			<h2 class="green" style="font-size:max(2vw, 22px);">how we help</h2>
-			<h3>We Offer Comprehensive IT and Security Solutions</h3>
-			<p>Our cybersecurity and technology experts are ever vigilant in finding new ways to boost productivity and protect our clients. We can help your business by providing managed IT services, cybersecurity services, or both.</p>
-			<div class="col-12">
-				<div class="col-6"><a href="#"><img loading="lazy"  src="media/managedservices.svg" /></a></div>
-				<div class="col-6"><a href="#"><img loading="lazy" src="media/cybersecurity.svg" /></a></div>
-			</div>
-		</div>
-		<div class="col-10 testmonials">
-			<h2 class="green" style="font-size:max(2vw, 22px);">testimonials</h2>
-			<p class="gray">Sometimes our clients can explain the value we provide even better than we can. Here is what a few other organizations have had to say about their experience partnering with Cyber Guardian Consulting Group:</p>
-			<div class="col-12">
-				<div class="col-12"><a href="#"><img loading="lazy" src="media/testm.svg" /></a></div>
-			</div>
-		</div>
-		<div class="col-10 ourpartners">
-			<h2 class="green" style="font-size:max(2vw, 22px);">our partners</h2>
-			<div class="col-12"><img loading="lazy" src="media/nour.svg" /></div>
-		</div>
-		<div class="col-10 contacthome">
-			<h2 class="green" style="font-size:max(2vw, 22px);">we are here to help</h2>
-			<h3>Forget about Long-Term Contracts and Pushy Sales Tactics</h3>
-			<p>If this sounds like the approach to cybersecurity and managed IT solutions that you've been looking for, terrific - fill out the contact form or <b>call us at 845-444-8273</b> today to schedule a consultation with one of senior team members today.</p>
-			<div class="col-12">
-				<form action="" method="POST">
-					<div class="input container col-6"><input type="text" placeholder="First Name" class="input text col-12" name="fname" /> </div>
-					<div class="input container col-6"><input type="text" placeholder="Last Name" class="input text col-12" name="lname" /> </div>
-					<div class="input container col-12"><input type="text" placeholder="Business Name" class="input text col-12" name="bname" /> </div>
-					<div class="input container col-6"><input type="tel" placeholder="Phone Number" class="input phone col-12" name="phone" /> </div>
-					<div class="input container col-6"><input type="email" placeholder="Business Email" class="input email col-12" name="email" /> </div>
-					<div class="input container col-12"><textarea placeholder="How can we help?"  name="message" row="4" class="col-12 input" /></textarea></div>
-					<div class="input container col-12"><input type="submit" class="submitbutton" value="send" /> </div>
-				</form>
-			</div>
-		</div>
-		<script>
-			window.onscroll = function() {
-				document.forms[0].action = "https://cgnew.wpengine.com/apis/cgcg/form/home/";
-			}
-		</script>
-	</div>
-</div>
-</body>
-<style>
-.third {
-	width: 32% !important;
-	padding:15px;
-	display:inline-grid;
-}
-footer ul, footer p, footer a {
-    padding: 0;
-    list-style-type: none;
-	color:white !important;
-	text-decoration:none;
-}
-footer .mobile label {
-	color:#2DD8A3;
-}
-footer .desktop label, footer .desktop p, footer .desktop a {
-	color:white;
-}
-footer .desktop label {
-	font-size: 21px;
-}
-input {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-footer .desktop .col-2 {
-	padding: 10px;
-}
-footer .mobile li, footer .mobile p {
-	font-size: 14px !important;
-}
-footer .mobile label {
-	font-weight: bold;
-}
-</style>
-<footer>
-	<div class="col-12 desktop" style="margin-top: 20px;background-color: #5E5E5E;padding-top:20px;">
-		<div class="footer col-12">
-			<div class="footer col-12">
-				<div class="col-2"><br></div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Company</label>
-						<ul>
-							<li><a href="/about">About Us</a></li>
-							<li><a href="/resources">Resources</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Support</label>
-						<ul>
-							<li><a href="/lets-talk">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Services</label>
-						<ul>
-							<li><a href="managed-it-services">Managed IT Services</a></li>
-							<li><a href="cybersecurity-solutions">Cybersecurity Solutions</a></li>
-							<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
-							<li><a href="cisoaas">CISO Advisory Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Contact</label>
-						<p style="font-weight:200;">Main Office:</p>
-						<p><a href="#">63 John Street #3, Kingston, NY 12401</a></p>
-						<p><a href="#">hello@cgcg.biz<br>845 - 444 - 8273</a></p>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<img style="width:150px;" loading="lazy" src="media/lw.svg" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-12 mobile" style="margin-top: 20px;background-color: #0166A3;">
-		<div class="footer">
-			<div class="third">
-				<div class="col-12">
-					<label>Company</label>
-					<ul>
-						<li><a href="about">About Us</a></li>
-						<li><a href="resources">Resources</a></li>
-					</ul>
-				</div>
-				<div class="col-12">
-					<label>Support</label>
-					<ul>
-						<li><a href="lets-talk">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="third">
-				<div class="col-12">
-					<label>Services</label>
-					<ul>
-						<li><a href="managed-it-services">Managed IT Services</a></li>
-						<li><a href="cybersecurity-solutions">Cybersecurity Solutions</a></li>
-						<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
-						<li><a href="cisoaas">CISO Advisory Service</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="third">
-				<div class="col-12">
-					<label>Contact</label>
-					<p style="font-weight:200;">Main Office:</p>
-					<p><a href="#">63 John Street #3, Kingston, NY 12401</a></p>
-					<p><a href="mailto:hello@cgcg.biz">hello@cgcg.biz<br>845 - 444 - 8273</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+            }
+            
+            .section.footer a {
+                font-family: 'Open Sans', Arial;
+            }
+            .section.footer a p.bold {
+                font-size: 26px;
+            }
+            .section.contact p.bold {
+                font-size: 26px;
+            }
+            .section.contact {
+                padding-top: 64px;
+            }
+            .section.partners {
+                margin-bottom: 48px;
+            }
+            @media screen and (min-width:900px) and (max-width: 1500px) {
+                .section.whymanaged {
+                    margin-top: -50px;
+                }
+            }
+        </style>
+    </body>
 </html>
