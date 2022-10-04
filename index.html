@@ -313,6 +313,10 @@
             }
         </style>
         <script>function burger(){"none"==document.querySelector(".burgerMenu").style.display?document.querySelector(".burgerMenu").style.display="block":document.querySelector(".burgerMenu").style.display="none"}</script>
+        <script>document.querySelector('.first .arrowlink a').onclick = function(e) {
+            e.preventDefault();
+            document.querySelector('.mission').scrollIntoView();
+        }</script>
         <div class="section wehelp">
             <div class="col-12">
                 <h2>We help to solve a <br>variaty of business <br>challenges</h2>
