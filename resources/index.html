@@ -636,8 +636,8 @@
                 <h3>Enter your contact information to download</h3>
                 <p class="light">Don't worry; We won't spam your inbox!</p>
                 <form>
-                    <input type="text" name="name" placeholder="Name" id="m1name" />
-                    <input type="email" name="email" placeholder="Email" id="m1email" />
+                    <input required type="text" name="name" placeholder="Name" id="m1name" />
+                    <input required type="email" name="email" placeholder="Email" id="m1email" />
                     <input type="button" value="Download" id="m1d2" />
                 </form>
             </div>
@@ -684,10 +684,12 @@
             document.querySelector('#m1d2').onclick = processDownload2;
 
             function processDownload1() {
-                downloadURI("../dl/Understanding Outsourced  IT PRICING.pdf", "Understanding Outsourced  IT PRICING.pdf")
+                downloadURI("../dl/Understanding Outsourced  IT PRICING.pdf", "Understanding Outsourced  IT PRICING.pdf");
+                document.querySelector('#modal1 .modal-content').innerHTML = "<h3>Thank you!</h3><p>Your Download will start in a few seconds!</p>"
             }
             function processDownload2() {
-
+                
+                downloadURI("../dl/PROTECT YOUR BUSINESS.pdf", "PROTECT YOUR BUSINESS.pdf");
             }
             function downloadURI(uri, name) {
                 var link = document.createElement("a");
