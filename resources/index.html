@@ -617,16 +617,49 @@
             .modal-content {
                 background-color:#2B354E;
             }
+            .modal input {
+                color: white;
+                opacity: 1;
+                filter: none;
+                }
+
+                .modal-content > * {
+                padding-left: 10%;
+                margin-left: 0 !important;
+                }
+
+                .modal form, .modal form * {
+                text-align: left;
+                }
+
+                .modal form {
+                margin-left: 20% !important;
+                }
+
+                .modal-content {
+                background: url('../m/dl1.svg') no-repeat;
+                background-color: #2b354e;
+                background-size: 60px;
+                background-position: bottom left;
+                }
+
+                #m1d1, #m1d2 {
+                border: 1px solid white;
+                text-align: center;
+                font-size: 26px;
+                }
+
         </style>
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h3>Enter your contact information to download</h3>
                 <p class="light">Don't worry; We won't spam your inbox!</p>
-                <form>
+                <form action="https://cgnew.wpengine.com/apis/cgcg/form/resources/" target="dummy1">
                     <input type="text" name="name" placeholder="Name" id="m1name" />
                     <input type="email" name="email" placeholder="Email" id="m1email" />
-                    <input type="button" value="Download" id="m1d1" />
+                    <input type="hidden" name="dl" value="Pricing Guide" />
+                    <input type="submit" value="Download" id="m1d1" />
                 </form>
             </div>
         </div>
@@ -636,16 +669,28 @@
                 <h3>Enter your contact information to download</h3>
                 <p class="light">Don't worry; We won't spam your inbox!</p>
                 <form>
-                    <input required type="text" name="name" placeholder="Name" id="m1name" />
-                    <input required type="email" name="email" placeholder="Email" id="m1email" />
-                    <input type="button" value="Download" id="m1d2" />
+                    <input required type="text" name="name" placeholder="Name" id="m2name" />
+                    <input required type="email" name="email" placeholder="Email" id="m2email" />
+                    <input type="hidden" name="dl" value="Three Steps" />
+                    <input type="submit" value="Download" id="m1d2" />
                 </form>
             </div>
         </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Thank you!</h3>
+                <p class="light" style="color:#fff">Your download will start shortly.</p>
+                
+            </div>
+        </div>
+        <iframe name="dummy1" id="dummy1" style="display: none;"></iframe>
+        <iframe name="dummy2" id="dummy2" style="display: none;"></iframe>
         <script>
             var ActiveModal = 0;
             var modal1 = document.getElementById('modal1');
             var modal2 = document.getElementById('modal2');
+            var modal3 = document.getElementById('modal3');
             function switchModal1() {
                 if(modal1.style.display == "block") {
                     modal1.style.display = "none";
@@ -668,6 +713,17 @@
                     return true;
                 }
             }
+            function switchModal3() {
+                if(modal3.style.display == "block") {
+                    modal3.style.display = "none";
+                    return false;
+                }
+                else {
+                    modal3.style.display = "block";
+                    ActiveModal = 3;
+                    return true;
+                }
+            }
             window.onclick = function(event) {
                 if (event.target == modal1) {
                     switchModal1();
@@ -678,6 +734,7 @@
             }
             document.querySelector('#modal1 .close').onclick = switchModal1;
             document.querySelector('#modal2 .close').onclick = switchModal2;
+            document.querySelector('#modal3 .close').onclick = switchModal3;
             document.querySelector('#dl1btn1').onclick = document.querySelector('#dl1btn2').onclick = switchModal1;
             document.querySelector('#dl2btn1').onclick = document.querySelector('#dl2btn2').onclick = switchModal2;
             document.querySelector('#m1d1').onclick = processDownload1;
@@ -685,11 +742,20 @@
 
             function processDownload1() {
                 downloadURI("../dl/Understanding Outsourced  IT PRICING.pdf", "Understanding Outsourced  IT PRICING.pdf");
-                document.querySelector('#modal1 .modal-content').innerHTML = "<h3>Thank you!</h3><p>Your Download will start in a few seconds!</p>"
+                switchModal1();
+                switchModal3();
+                var clientName = document.getElementById('m1name').value;
+                var clientEmail = document.getElementById('m1email').value;
+                registerLead(clientName, clientEmail);
             }
             function processDownload2() {
                 
                 downloadURI("../dl/PROTECT YOUR BUSINESS.pdf", "PROTECT YOUR BUSINESS.pdf");
+                switchModal2();
+                switchModal3();
+                var clientName = document.getElementById('m2name').value;
+                var clientEmail = document.getElementById('m2email').value;
+                registerLead(clientName, clientEmail);
             }
             function downloadURI(uri, name) {
                 var link = document.createElement("a");
@@ -698,6 +764,13 @@
                 document.body.appendChild(link);
                 link.click();
                 link.remove();
+            }
+
+            function registerLead(name, email) {
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", "https://cgnew.wpengine.com/apis/cgcg/form/resources/?name="+name+"&email="+email, false ); // false for synchronous request
+                xmlHttp.send();
+                return xmlHttp.responseText;
             }
         </script>
     </body>
