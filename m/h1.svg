@@ -1,4 +1,16 @@
-<svg width="274" height="246" viewBox="0 0 274 246" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="151" cy="123" r="122.5" stroke="white"/>
-<circle cx="123" cy="123" r="122.5" stroke="white" stroke-dasharray="10 10"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="anim2Circles" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 800 800" style="white-space: pre;">
+    <style>
+@keyframes Circle_mo { 0% { offset-distance: 0%; animation-timing-function: cubic-bezier(0.539,0,0.667,1); } 25% { offset-distance: 50%; } 54.575% { offset-distance: 50%; animation-timing-function: cubic-bezier(0.565,0,0.667,1); } 75.825% { offset-distance: 100%; } 100% { offset-distance: 100%; } }
+    </style>
+    <g id="C_Dotted" transform="translate(360,400)">
+        <g id="Group-1" opacity="1">
+            <path id="Ellipse-Path-1" fill="none" d="M0,-348C192.195,-348,348,-192.195,348,0C348,192.195,192.195,348,0,348C-192.195,348,-348,192.195,-348,0C-348,-192.195,-192.195,-348,0,-348Z" stroke="#ffffff" stroke-opacity="1" stroke-width="2" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="10 10"/>
+        </g>
+    </g>
+    <g id="Circle" style="animation: 4s linear infinite both Circle_mo; offset-path: path('M360,400C373.295,400,426.476,400,439.771,400C439.771,400,439.771,400,439.771,400C426.476,400,373.295,400,360,400L360,400'); offset-rotate: 0deg;">
+        <g id="Group-1-2" opacity="1">
+            <path id="Ellipse-Path-1-2" fill="none" d="M0,-348C192.195,-348,348,-192.195,348,0C348,192.195,192.195,348,0,348C-192.195,348,-348,192.195,-348,0C-348,-192.195,-192.195,-348,0,-348Z" stroke="#ffffff" stroke-opacity="1" stroke-width="3" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter"/>
+        </g>
+    </g>
 </svg>
