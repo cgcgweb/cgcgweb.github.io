@@ -1,4 +1,16 @@
-<svg width="592" height="592" viewBox="0 0 592 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="296" cy="296" r="295.5" stroke="#F2C94C"/>
-<path d="M572.952 135.634C572.952 156.918 555.87 174.163 534.809 174.163C513.749 174.163 496.667 156.918 496.667 135.634C496.667 114.351 513.749 97.1055 534.809 97.1055C555.87 97.1055 572.952 114.351 572.952 135.634Z" fill="#F2C94C" stroke="#F2C94C"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="animOrbit" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 800 800" style="white-space: pre;">
+    <style>
+@keyframes ball_t { 0% { transform: translate(400px,400px) rotate(0deg); } 99.575% { transform: translate(400px,400px) rotate(360deg); } 100% { transform: translate(400px,400px) rotate(360deg); } }
+    </style>
+    <g id="circle" transform="translate(400,400)">
+        <g id="Group-1" opacity="1">
+            <path id="Path-1" fill="none" d="M0,-318C175.627,-318,318,-175.627,318,0C318,175.627,175.627,318,0,318C-175.627,318,-318,175.627,-318,0C-318,-175.627,-175.627,-318,0,-318Z" stroke="#f2c94c" stroke-opacity="1" stroke-width="2" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter"/>
+        </g>
+    </g>
+    <g id="ball" transform="translate(400,400)" style="animation: 4s linear infinite both ball_t;">
+        <g id="Group-1-2" opacity="1">
+            <path id="Path-1-2" fill="none" d="M0,-318C175.627,-318,318,-175.627,318,0C318,175.627,175.627,318,0,318C-175.627,318,-318,175.627,-318,0C-318,-175.627,-175.627,-318,0,-318Z" stroke="#f2c94c" stroke-opacity="1" stroke-width="80" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="miter" stroke-dasharray="0 2000" stroke-dashoffset="0"/>
+        </g>
+    </g>
 </svg>
