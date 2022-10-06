@@ -198,7 +198,7 @@
             width: 250px;
         }
 
-        .personImg img {
+        .personImg img, picture img, picture source {
             width: 250px;
             border-radius: 50%;
             height: 250px;
@@ -332,7 +332,11 @@
                 <div class="col-3">
                     <div class="person">
                         <div class="personImg">
-                            <img src="https://cgcg.biz/m/team/michael.png" />
+                            <picture>
+                                <source type="image/avif" srcset="https://cgcg.biz/m/team/avif/michael.avif">
+                                <img alt="Did that not work?" src="https://cgcg.biz/m/team/michael.png">
+                              </picture>
+                            <img src="" />
                         </div>
                         <div class="name"><p>Michael Nkadi</p></div>
                         <div class="title"><p>Network Architect</p></div>
