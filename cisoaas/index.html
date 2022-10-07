@@ -320,7 +320,8 @@
                 <a href="mailto:hello@cgcg.biz">hello@cgcg.biz</a>
             </div>
             <div class="col-6">
-                <form>
+                <form action="https://cgnew.wpengine.com/apis/cgcg/form/home/" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" />
                     <input type="text" name="bname" placeholder="Business Name" />
                     <input type="tel" name="phone" placeholder="Phone" />
                     <input type="email" name="email" placeholder="Email" />
@@ -591,6 +592,12 @@
             .section.contact {
                 padding-top: 64px;
                 background-color:#fff;
+            }
+            input[type="submit"] {
+                -webkit-appearance: none !important;
+                -moz-appearance: none !important;
+                appearance: none !important;
+                background-color: #f2f2f2 !important;
             }
         </style>
     </body>
