@@ -1,352 +1,613 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-
-</head>
-<body>
-<style>
-html {
-	scroll-behavior: smooth;
-} 
-body {
-	margin: 0;
-	overflow-x:hidden;
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-	width:100vw;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;} 
-.col-2d4 {width: 20%;}
-[class*="col-"] {float: left;}
-.row {
-	width:100%;
-	padding-right:3%;
-	padding-left:3%;
-}
-* {
-	box-sizing:border-box;
-}
-@media screen and (max-width:900px) {
-	[class*="col-"] {
-		width: 100%;
-	}
-	.row.header {
-		padding: 0;
-	}
-	.desktop {display:none !important;}
-	nav .menu {
-		padding: 40px;
-		min-width: 101vw;
-		text-align: center;
-		padding-left: 0;
-		padding-right: 0;
-		background-color: #F0F8FC;
-	}
-}
-@media screen and (min-width:900px) {
-	.mobile {display:none !important;}
-	nav .menu {
-		padding: 40px;
-		min-width: 60%;
-		text-align: center;
-	}
-	.dropdown-content {position:absolute;left:25%;}
-}
-nav {overflow:hidden;}
-.nav {
-	text-decoration:none; color:black;
-}
-.nav.forbes {
-	float: right;
-}
-nav div {
-	float: left;
-}
-
-nav .logo {
-  padding: 20px;
-}
-
-nav .logo.eagle {
-	width: 100%;
-	padding: 0;
-	position: absolute;
-	text-align: center;
-	top: 16px;
-}
-.eagle .nav.logo {
-	width: 33%;
-}
-
-.menu .nav {
-	margin: 1vw;
-}
-.dropdown {
-  position: relative;
-}
-.dropdown-content {
-	display: none;
-	background-color: #E5E5E5;
-	overflow: auto;
-	z-index: 1;
-	padding-top: 16px;
-}
-.dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.show {display: inline;}
-#dropper a {
-	color: #757575 !important;
-	font-weight: bold;
-}
-.green {
-	color:#2DD8A3;
-}
-.blue {
-	color:#0166A3;
-}
-.spacer {
-	margin-top:24px;
-}
-.gray {
-	color:gray;
-}
-img {
-	max-width:100% !important;
-}
-</style>
-
-<div class="row header">
-<nav>
-<div class="logo"><img class="nav logo" src="../media/CGCG.svg"/></div>
-<div class="logo eagle mobile"><img class="nav logo" src="../media/ex.svg"/></div>
-<div class="menu">
-	<a class="nav navlink" href="../">home</a>
-	<a class="nav navlink" href="../about">about</a>
-	<a class="nav navlink" id="sopener" onclick="drop()" href="#">services ▼</a>
-	<a class="nav navlink" href="../resources">resources</a>
-	<a class="nav navlink" href="../lets-talk">contact</a>	
-	<br>
-	<div id="dropper" class="dropdown-content">
-		<div style="width:50%">
-			<span class="sh">Managed Services:</span>
-			<a href="../managed-it-services">Managed IT Services</a>
-			<a href="../cybersecurity-solutions">Cybersecurity Solutions</a>
-			<a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery</a>
-			<a href="../reputation-management">Reputation Management</a>
-		</div>
-		<div style="width:50%">
-			<span class="sh">Advisory Services:</span>
-			<a href="../cisoaas">CISOaaS</a>
-			<a href="../ctoas">CTOaS</a>
-			<a href="../cioas">CIOaS</a>
-			<a href="../socas">SOCaS</a>
-			<a href="../private-digital-investigations">Private Digital Investigations</a>
-		</div>
-	</div>
-</div>
-<img class="nav forbes desktop" src="../media/Forbes.svg"/>
-</nav>
-
-<script>
-function drop() {
-  document.getElementById("dropper").classList.toggle("show");
-  if(document.getElementById("sopener").innerText == "services ▼") {
-	  document.getElementById("sopener").innerText = "services ▲"
-  }else {
-	  document.getElementById("sopener").innerText = "services ▼"
-  }
-}
-
-</script>
-</div>
-
-
-<style>
-h1 {
-	color:#0166A3;
-	font-size:max(3vw, 24px);
-}
-p {font-size:18px;}
-li {
-	list-style-position:inside;
-}
-li::marker {color: #2DD8A3; font-size:18px;}
-.casestudies img, .otherresources img {padding:10px;}
-.mixed {display:flex;margin-bottom:16px;}
-.mixed img {width:20%; float:left; display:flex;align-items:center;padding:8px;}
-.mixed span{width:80%; float:right; font-size:18px; padding-top:5px;display:flex; align-items:center; padding-left:16px;}
-.reason {text-align:center;}
-.reason p {padding:10px;}
-.requestMorebtn {
-	background-color: #2DD8A3;
-	padding: 12px;
-	width: 100% !important;
-	display: inline-block;
-	text-align: center;
-	font-size: 21px;
-	text-decoration: none;
-	color: white;
-	border-radius: 5px;
-}
-.help a {width:100%;display:inline-block;padding:10px;}
-.help a img {width:100%;}
-.input.text.col-12, .input.phone.col-12, .input.email.col-12, textarea.input {
-	padding: 12px;
-	border-radius: 5px;
-	border: 3px solid gray;
-}
-.input.container {padding:10px;}
-</style>
-<div class="row main" style="padding-left:0; padding-top:10px;">
-	<div class="col-3 desktop" style="position:fixed;"><img class="col-12" src="../media/beagle.svg"/></div>
-	<div class="col-3 desktop" style="overflow: hidden;height: 1px;"></div>
-	<div class="col-9" style="padding-left:3%;">
-		<h1 style="color:#0166A3;">Thank You!</h1>
-		<div class="proactive col-10">
-			<h2 id="Message" class="green">Thank you for reaching out. A team member will be in contact shortly.</h2>
-		</div>
-	</div>
-</div>
-
-<style>
-.third {
-	width: 32% !important;
-	padding:15px;
-	display:inline-grid;
-}
-footer ul, footer p, footer a {
-    padding: 0;
-    list-style-type: none;
-	color:white !important;
-	text-decoration:none;
-}
-footer .mobile label {
-	color:#2DD8A3;
-}
-footer .desktop label, footer .desktop p, footer .desktop a {
-	color:white;
-}
-footer .desktop label {
-	font-size: 21px;
-}
-input {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-footer .desktop .col-2 {
-	padding: 10px;
-}
-footer .mobile li, footer .mobile p {
-	font-size: 14px !important;
-}
-footer .mobile label {
-	font-weight: bold;
-}
-</style>
-<footer>
-	<div class="col-12 desktop" style="margin-top: 20px;background-color: #5E5E5E;padding-top:20px;">
-		<div class="footer col-12">
-			<div class="footer col-12">
-				<div class="col-2"><br></div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Company</label>
-						<ul>
-							<li><a href="../about">About Us</a></li>
-							<li><a href="../resources">Resources</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Support</label>
-						<ul>
-							<li><a href="../lets-talk">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Services</label>
-						<ul>
-							<li><a href="../managed-it-services">Managed IT Services</a></li>
-							<li><a href="../cybersecurity-solutions">Cybersecurity Solutions</a></li>
-							<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
-							<li><a href="../cisoaas">CISO Advisory Service</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<label>Contact</label>
-						<p style="font-weight:200;">Main Office:</p>
-						<p><a href="#">63 John Street #3, Kingston, NY 12401</a></p>
-						<p><a href="#">hello@cgcg.biz<br>845 - 444 - 8273</a></p>
-					</div>
-				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<img style="width:150px;" loading="lazy" src="../media/lw.svg" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-12 mobile" style="margin-top: 20px;background-color: #0166A3;">
-		<div class="footer">
-			<div class="third">
-				<div class="col-12">
-					<label>Company</label>
-					<ul>
-						<li><a href="../about">About Us</a></li>
-						<li><a href="../resources">Resources</a></li>
-					</ul>
-				</div>
-				<div class="col-12">
-					<label>Support</label>
-					<ul>
-						<li><a href="../lets-talk">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="third">
-				<div class="col-12">
-					<label>Services</label>
-					<ul>
-						<li><a href="../managed-it-services">Managed IT Services</a></li>
-						<li><a href="../cybersecurity-solutions">Cybersecurity Solutions</a></li>
-						<li><a target="_blank" href="https://filescience.io">Cloud Backup and Disaster Recovery Services</a></li>
-						<li><a href="../cisoaas">CISO Advisory Service</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="third">
-				<div class="col-12">
-					<label>Contact</label>
-					<p style="font-weight:200;">Main Office:</p>
-					<p><a href="#">63 John Street #3, Kingston, NY 12401</a></p>
-					<p><a href="mailto:hello@cgcg.biz">hello@cgcg.biz<br>845 - 444 - 8273</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-</body>
-
+    <head>
+        <title>Cyber Guardian - Managed IT and Cyber Security Provider in Kingston, NY</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        body {
+            background-color:#F2F2F2;
+            color:#2B354E;
+            font-family: n, Arial;
+            margin:0;
+            box-sizing: border-box;
+            overflow-x:hidden;
+        }
+        body * {
+            box-sizing: border-box;
+        }
+        @font-face {
+			font-family: 'n';
+			font-display:swap;
+			src: url('../n.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('../n.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../n.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('../n.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('../n.woff2') format('svg'); /* Legacy iOS */
+		}
+        @font-face {
+			font-family: 'L';
+			font-display:swap;
+			src: url('../L.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('../L.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../L.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('../L.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('../L.woff2') format('svg'); /* Legacy iOS */
+		}
+        .light {
+            font-family: l, 'Open Sans', Arial !important;
+        }
+        .col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;} 
+		[class*="col-"] {
+			float: left;
+			box-sizing:border-box;
+		}
+        @media screen and (max-width:900px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+            .d {
+                display: none;
+            }
+            h1 {
+                font-size: 34px;
+            }
+            .first a svg {
+                position: relative;
+                left: calc(50% - 25px);
+                top: 48px;
+                transform: rotate(90deg);
+            }
+            h2 {
+                font-size: 32px;
+                margin-bottom: 0;
+                margin-top:12px;
+            }
+            .section.first {
+                overflow: hidden;
+                width: 85%;
+            }
+            .right {
+                position: absolute;
+                right: 24px;
+                top: 24px;
+            }
+            .mission .line + .col-9 p {
+                padding-left: 0 !important;
+            }
+            .first .arrowlink p {
+                position: absolute;
+                left: calc(50vw - 70px);
+                margin-top: 0;
+            }
+            .serviceSingle.secTop {
+                width: 100%;
+            }
+        }
+        @media screen and (min-width:900px) {
+            .m {
+                display: none;
+            }
+            h1 {
+                font-size: min(74px, 4vw);
+            }
+            h2 {
+                font-size: 36px;
+                margin-bottom: 0;
+                margin-top:12px;
+            }
+            .section.first {
+                overflow: visible;
+                width: 75%;
+            }
+            .right {
+                position: absolute;
+                right: 5%;
+                top: 0;
+            }
+            .section.first h1, .section.first p {
+                padding-left:48px;
+            }
+            .section.first h1 {
+                margin-top:12px;
+            }
+        }  
+        .section {
+            overflow: hidden;
+            display: block;
+            width: 75%;
+            margin: 0 auto;
+            padding-bottom:48px;
+        }
+        .first p {
+            font-size: 24px;
+            font-family: 'Open Sans', Arial;
+        }
+        p {
+            font-family: 'Open Sans', Arial;
+            font-size: 20px;
+        }
+        .arrowlink span, .arrowlink p, .arrowlink svg {
+            vertical-align: middle;
+            margin-right:16px;
+        }
+        
+        .menu {
+            min-height: 20vh;
+        }
+        .left {
+            position: absolute;
+            left: 12.5%;
+            top: 24px;
+        }
+        .nav {
+            position: absolute;
+            left: 30%;
+            top: 28px;
+            font-size: 22px;
+        }
+        .section.first {
+            overflow:hidden;
+        }
+        .section.first .serviceSingle {
+            margin-bottom: 48px;
+        }
+        a {
+            color: #2B354E;
+            text-decoration: none;
+        }
+        .nav a {
+            padding-right: 32px;
+        }
+        .line {
+            border-bottom: 8px solid white;
+            overflow: hidden;
+            height: 24px;
+        }
+        .e {
+            height: 1px;
+        }
+        img {
+            max-width: 100%;
+        }
+        p.bold {
+            font-weight: bold;
+        }
+        .mitservice::before {
+            position: absolute;
+            opacity: 0.2;
+            margin-left: -32px;
+            font-size: 64px;
+            color: #375E74;
+            font-family: 'Open Sans', Arial;
+            font-weight: bolder;
+            line-height: 32px;
+            z-index: -1;
+        }
+        .mitservice1::before {
+            content: '01';
+        }
+        .mitservice2::before {
+            content: '02';
+        }
+        .mitservice3::before {
+            content: '03';
+        }
+        .mitservice4::before {
+            content: '04';
+        }
+        .mitservice5::before {
+            content: '05';
+        }
+        .mitservice6::before {
+            content: '06';
+        }
+        .mitservice {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .mitservice ul li {
+            font-size: 19px;
+            font-weight: light;
+            font-family: 'Open Sans', Arial;
+        }
+        .mitservice {
+            margin-top: 48px;
+        }
+        .backupsolutions h2 {
+            font-size:56px;
+        }
+        .cstsocas {
+            max-width:500px;
+        }
+        .mitservice p, .mitservice ul li {
+            font-family: L;
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <div class="left">
+                <a href="https://cgcg.biz">
+                    <img src="../m/logodark.svg" />
+                </a>
+            </div>
+            <div class="nav d">
+                <a href="../services/">Services</a>
+                <a href="../about/">Company</a>
+                <a href="../resources/">Resources</a>
+                <a href="../portfolio/">Portfolio</a>
+                <a href="../lets-talk/">Contact</a>
+            </div>
+            <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
+        </div>
+        <div class="section first">
+            <div class="col-12" style="text-align: center !important;">
+                <h1>Thank you for contacting us!</h1>
+                <p>We will get back to you soon.</p>
+            </div>
+        </div>
+        <div class="burgerMenu" style="display:none;">
+            <img onclick="burger()" class="close" src="../m/close.svg" />
+            <img class="bueagle" src="../m/bu1.svg" />
+            <div class="bnav">
+                <a class="bold" href="https://cgcg.biz">Home</a>
+                <div class="bus">
+                    <a href="../services/">Services</a><span onclick="ardown()" id="drop">▼</span>
+                </div>
+                <div class="slist" style="display:none">
+                    <a href="../cioas/">CIOaaS</a>
+                    <a href="../cisoaas/">CISOaaS</a>
+                    <a href="../CTOas/">CTOaaS</a>
+                    <a href="../socas/">SOCaaS</a>
+                    <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
+                    <a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
+                    <a href="../private-digital-investigations/">Private Digital Investigations</a>
+                    <a href="https://filescience.io">Cloud-to-Cloud Backup</a>
+                    <a href="https://switchboard-plus.com/">Business Phones</a>
+                </div>
+                <a href="../about/">Company</a>
+                <a href="../resources/">Resources</a>
+                <a href="../portfolio/">Portfolio</a>
+                <a href="../lets-talk/">Contact</a>
+            </div>
+            <img class="forbesMobile" src="../m/bforbes.svg" />
+        </div>
+        <style>
+            .bnav .bold {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .bnav a {
+                font-family: 'Open Sans', Arial, sans-serif;
+                text-decoration: none !important;
+                font-size: 22px !important;
+                line-height: 30px;
+            }
+            .burgerMenu {
+                display: block;
+                overflow: hidden;
+                width: 90vw;
+                position: absolute;
+                top: 0;
+                background:#f2f2f2;
+                height:100vh;
+                left:0;
+            }
+            .close {
+                top: 24px;
+                right: 24px;
+                position: absolute;
+            }
+            .bueagle {
+                width: 25%;
+                margin: 32px;
+            }
+            .forbesMobile {
+                position: absolute;
+                width: 25%;
+                right: 32px;
+                bottom: 72px;
+            }
+            .bnav a {
+                width: 100%;
+                display: block;
+                font-size: 30px;
+                color: #2B354E;
+            }
+            .bnav {
+                width: 85%;
+                position: absolute;
+                left: 32px;
+                top: 20vh;
+                z-index: 5;
+            }
+            .bnav a:not(.bold) {
+                text-decoration: underline;
+            }
+            #drop {
+                color: #2B354E;
+                line-height: 30px;
+                font-size: 22px;
+                float:left;
+            }
+            .bus a {
+                width: 100px;
+                float: left;
+            }
+            .bus, .slist {
+                overflow: hidden;
+            }
+            .slist {
+                margin-left: 32px;
+            }
+            .slickIn {
+                animation-name: slickIn;
+                animation-duration: 1s;
+                animation-fill-mode:forwards;
+            }
+            .slickOut {
+                animation-name: slickOut;
+                animation-duration: 1s;
+                animation-fill-mode:forwards;
+            }
+            @keyframes slickIn {
+                from {left:-90vw;}
+                to {left:0;}
+            }
+            @keyframes slickOut {
+                from {left:0;}
+                to {left:-90vw;}
+            }
+        </style>
+        <script>
+            function burger(){
+                if("none"==document.querySelector(".burgerMenu").style.display) {
+                    document.querySelector(".burgerMenu").style.display="block";
+                    document.querySelector(".burgerMenu").classList.remove("slickOut");
+                    document.querySelector(".burgerMenu").classList.add("slickIn");
+                }else {
+                    document.querySelector(".burgerMenu").classList.remove("slickIn");
+                    document.querySelector(".burgerMenu").classList.add("slickOut");
+                    setTimeout(function () {document.querySelector(".burgerMenu").style.display="none";}, 1000);
+                }
+            }
+            function ardown() {
+                if(document.querySelector(".slist").style.display=="none") {
+                    document.querySelector(".slist").style.display="block";
+                    document.querySelector("#drop").innerText = "▲";
+                }else {
+                    document.querySelector(".slist").style.display="none";
+                    document.querySelector("#drop").innerText = "▼";
+                }
+            }
+        </script>
+        <style>
+            .section.contact {
+                padding-bottom:64px !important;
+                background-color: white;
+            }
+            .packages .col-4 img {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .bold.nexa {
+                font-family: n;
+                font-size:32px;
+            }
+            .nexa + p {
+                width:80%;
+            }
+        </style>
+        <div class="section footer">
+            <div class="col-3">
+                <a href="https://cgcg.biz"><p class="bold">Home</p></a>
+                <a href="../about">About CGCG</a>
+                <a href="../about/">Team</a>
+                <a href="../portfolio/">Clients</a>
+            </div>
+            <div class="col-3">
+                <a href="../services/"><p class="bold">Services</p></a>
+                <a href="../managed-it-services/">Managed IT Services</a>
+                <a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
+                <a href="https://filescience.io" target="_blank">Cloud Backup and Disaster Recovery</a>
+                <a href="../reputation-management/">Reputation Management</a>
+            </div>
+            <div class="col-3">
+                <a href="../cisoaas/">CISOaaS</a>
+                <a href="../ctoas/">CTOaaS</a>
+                <a href="../cioas/">CIOaaS</a>
+                <a href="../socas/">SOCaaS</a>
+                <a href="../private-digital-investigations/">Private Digital Investigations</a>
+                <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
+            </div>
+            <div class="col-3 e"></div>
+            <div class="col-12">
+                <div class="col-3">
+                    <a href="../resources/"><p class="bold">Resources</p></a>
+                </div>
+                <div class="col-3">
+                    <a href="../lets-talk/"><p class="bold">Contact</p></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            .section.backupsolutions .col-6 img {
+                width: 80%;
+                margin: 0 10%;
+            }
+            h3 {
+                font-size:64px;
+                margin-bottom:0;
+            }
+            .t1 {
+                animation: d1 20s infinite;
+            }
+            .t2 {
+                animation: d2 20s infinite;
+            }
+            @keyframes d1 {
+                0% {opacity: 0.1;}
+                10% {opacity: 0.8;}
+                50% {opacity: 1;}
+                60% {opacity: 0.1}
+                100% {opacity: 0;}
+            }
+            @keyframes d2 {
+                0% {opacity: 0;}
+                50% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+            .section.contact h2 {
+                font-size: 55px;
+                color: #2B354E;
+            }
+            .section.contact {
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+            }
+            form {
+                display: block;
+                text-align: center;
+            }
+            .section.contact, .section.contact a {
+                color: #2B354E;
+            }
+            input {
+                width: 80%;
+                border: 0;
+                height: 48px;
+                color: black;
+                opacity: 1;
+                font-family: 'Open Sans', Arial;
+                font-size: 24px;
+                border-bottom: 1px solid black;
+                margin-bottom: 6px;
+                -webkit-appearance: none;
+            }
+            .section.partners {
+                padding-bottom:25px;
+            }
+            .section.footer p, .section.footer a {
+                width: 100%;
+                display: block;
+                margin-top: 0;
+                margin-bottom:5px;
+            }
+            .section.footer {
+                background-color: black;
+                padding: 2% 12.5%;
+                margin: 0;
+                width: 100%;
+            }
+            .section.footer .col-12 {
+                margin-top: 24px;
+            }
+            .line + [class*="col-"] p {
+                font-size: 24px;
+            }
+            .section.footer a {
+                color: #fff;
+            }
+            @media screen and (max-width:900px) {
+                h3 {
+                    font-size: 32px;
+                }
+                div.helpspot {
+                    padding: 32px;
+                    margin: 0 !important;
+                }
+                .helpspot p, .whymanaged .arrowLink p {
+                    width: 100%;
+                }
+                .helpspot svg, .whymanaged svg {
+                    transform: translateX(-25%) translateY(-10%) scale(0.5);
+                    float: left;
+                }
+                .section.wehelp .col-12 {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                    float: unset;
+                }
+                .helpspot .arrowLink p, .whymanaged .arrowLink p {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: 0;
+                    font-size: 18px;
+                    margin-top: 0;
+                    width: calc(100% - 104px);
+                }
+                .whymanaged .arrowLink p {
+                    margin-top: 20px;
+                }
+                .section.wehelp .col-12 h2 {
+                    padding: 36px;
+                }
+                .section.contact h2 {
+                    font-size: 34px;
+                }
+                form {
+                    text-align: left;
+                }
+                input {
+                   width: 100%;
+                }
+                .section.footer .col-3 {
+                    margin-bottom: 18px;
+                }
+                .section.contact .col-6 {
+                    margin-bottom: 48px;
+                }
+                .packages .col-4 img {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+                .section.backupsolutions {
+                    margin: 0;
+                    width: 100%;
+                    padding: 2% 15%;
+                }
+                .col-5.cloudimg.m {
+                    margin-left: -10%;
+                    max-width: unset;
+                    width: 128%;
+                }
+                
+            }
+            input {
+                    background-color: transparent;
+            }
+            .section.footer a {
+                font-family: 'Open Sans', Arial;
+            }
+            .section.footer a p.bold {
+                font-size: 26px;
+            }
+            .section.contact p.bold {
+                font-size: 26px;
+            }
+            .section.contact {
+                padding-top: 64px;
+            }
+            input[type="submit"] {
+                -webkit-appearance: none !important;
+                -moz-appearance: none !important;
+                appearance: none !important;
+                background-color: #f2f2f2 !important;
+            }
+        </style>
+    </body>
 </html>
