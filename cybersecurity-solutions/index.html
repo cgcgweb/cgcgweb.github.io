@@ -232,6 +232,21 @@
         .mitservice p, .mitservice ul li {
             font-family: L;
         }
+        .navdservices {
+            position: absolute;
+            background-color: #2B354E;
+            border: 2px solid #f2f2f2;
+            padding: 15px;
+            display: none;
+        }
+        .navdservices a {
+            width: 100%;
+            display: block;
+            line-height: 33px;
+        }
+        #navservices:hover + .navdservices, .navdservices:hover {
+            display: block !important;
+        }
     </style>
     <body>
         <div class="menu">
@@ -241,7 +256,19 @@
                 </a>
             </div>
             <div class="nav d">
-                <a href="../services/">Services</a>
+                <a id="navservices" href="/services/">Services</a>
+                <div class="navdservices">
+                    <a href="../managed-it-services/">Managed IT Services</a>
+                    <a href="../cioas/">CIOaaS</a>
+                    <a href="../cisoaas/">CISOaaS</a>
+                    <a href="../CTOas/">CTOaaS</a>
+                    <a href="../socas/">SOCaaS</a>
+                    <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
+                    <a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
+                    <a href="../private-digital-investigations/">Private Digital Investigations</a>
+                    <a href="https://filescience.io">Cloud-to-Cloud Backup</a>
+                    <a href="https://switchboard-plus.com/">Business Phone</a>
+                </div>
                 <a href="../about/">Company</a>
                 <a href="../resources/">Resources</a>
                 <a href="../portfolio/">Portfolio</a>
