@@ -271,30 +271,49 @@
         </div>
         <div class="burgerMenu" style="display:none;">
             <img onclick="burger()" class="close" src="m/close.svg" />
-            <img class="bueagle" src="m/bueagle.svg" />
+            <img class="bueagle" src="m/bu1.svg" />
             <div class="bnav">
                 <a class="bold" href="https://cgcg.biz">Home</a>
-                <a href="/services/">Services</a>
+                <div class="bus">
+                    <a href="/services/">Services</a><span onclick="ardown()" id="drop">▼</span>
+                </div>
+                <div class="slist" style="display:none">
+                    <a href="/cioas/">CIOaS</a>
+                    <a href="/cisoaas/">CISOaaS</a>
+                    <a href="/CTOas/">CTOas</a>
+                    <a href="/socas/">SOCaS</a>
+                    <a href="/low-voltage-cabling/">Low Voltage Cabling</a>
+                    <a href="/cisoaas/">CISOaaS</a>
+                    <a href="/CTOas/">CTOas</a>
+                    <a href="/socas/">SOCaS</a>
+                </div>
                 <a href="/about/">Company</a>
                 <a href="/resources/">Resources</a>
                 <a href="/portfolio/">Portfolio</a>
                 <a href="/lets-talk/">Contact</a>
             </div>
-            <img class="forbesMobile" src="m/forbesMobile.svg" />
+            <img class="forbesMobile" src="m/bforbes.svg" />
         </div>
         <style>
             .bnav .bold {
                 font-size: 24px;
                 font-weight: bold;
             }
+            .bnav a {
+                font-family: 'Open Sans', Arial, sans-serif;
+                text-decoration: none !important;
+                font-size: 22px !important;
+                line-height: 30px;
+            }
             .burgerMenu {
                 display: block;
                 overflow: hidden;
-                width: 100vw;
+                width: 90vw;
                 position: absolute;
                 top: 0;
                 background:#f2f2f2;
                 height:100vh;
+                left:0;
             }
             .close {
                 top: 24px;
@@ -302,13 +321,14 @@
                 position: absolute;
             }
             .bueagle {
-                width: 50%;
-                margin-top: 24px;
+                width: 25%;
+                margin: 32px;
             }
             .forbesMobile {
                 position: absolute;
-                bottom: 0;
-                right:0;
+                width: 25%;
+                left: 32px;
+                bottom: 32px;
             }
             .bnav a {
                 width: 100%;
@@ -317,17 +337,72 @@
                 color: #2B354E;
             }
             .bnav {
-                width: 50%;
+                width: 85%;
                 position: absolute;
-                right: 64px;
+                left: 32px;
                 top: 20vh;
                 z-index: 5;
             }
             .bnav a:not(.bold) {
                 text-decoration: underline;
             }
+            #drop {
+                color: #2B354E;
+                line-height: 30px;
+                font-size: 22px;
+                float:left;
+            }
+            .bus a {
+                width: 100px;
+                float: left;
+            }
+            .bus, .slist {
+                overflow: hidden;
+            }
+            .slist {
+                margin-left: 32px;
+            }
+            .slickIn {
+                animation-name: slickIn;
+                animation-duration: 2s;
+                animation-fill-mode:forwards;
+            }
+            .slickOut {
+                animation-name: slickOut;
+                animation-duration: 2s;
+                animation-fill-mode:forwards;
+            }
+            @keyframes slickIn {
+                from {left:-90vw;}
+                to {left:0;}
+            }
+            @keyframes slickOut {
+                from {left:0;}
+                to {left:-90vw;}
+            }
         </style>
-        <script>function burger(){"none"==document.querySelector(".burgerMenu").style.display?document.querySelector(".burgerMenu").style.display="block":document.querySelector(".burgerMenu").style.display="none"}</script>
+        <script>
+            function burger(){
+                if("none"==document.querySelector(".burgerMenu").style.display) {
+                    document.querySelector(".burgerMenu").style.display="block";
+                    document.querySelector(".burgerMenu").classList.remove("slickOut");
+                    document.querySelector(".burgerMenu").classList.add("slickIn");
+                }else {
+                    document.querySelector(".burgerMenu").classList.remove("slickIn");
+                    document.querySelector(".burgerMenu").classList.add("slickOut");
+                    setTimeout(function () {document.querySelector(".burgerMenu").style.display="none";}, 2000);
+                }
+            }
+            function ardown() {
+                if(document.querySelector(".slist").style.display=="none") {
+                    document.querySelector(".slist").style.display="block";
+                    document.querySelector("#drop").innerText = "▲";
+                }else {
+                    document.querySelector(".slist").style.display="none";
+                    document.querySelector("#drop").innerText = "▼";
+                }
+            }
+        </script>
         <script>document.querySelector('.first .arrowlink a').onclick = function(e) {
             e.preventDefault();
             document.querySelector('.mission').scrollIntoView();
