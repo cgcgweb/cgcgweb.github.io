@@ -415,6 +415,24 @@
                 from {opacity: 0;}
                 to {opacity:1; }
             }
+            @keyframes dualFill {
+                from {
+                    border-width: 24px 24px 0vh 0vw;
+                }
+                to {
+                    border-width: 24px 24px 93vh 156vw;
+                }
+            }
+            .dualFill {
+                border: solid #2B354E;
+                box-sizing: revert-layer;
+                top:0;
+                right: 0;
+                background-color: #2B354E;
+                animation: dualFill;
+                animation-duration: 3s;;
+                animation-fill-mode: forwards;
+            }
             .fadeIn {
                 animation:fadeIn;
                 animation-duration:3s;
@@ -427,6 +445,8 @@
                     document.querySelector(".burgerMenu").classList.remove("slickOut");
                     document.querySelector(".burgerMenu").classList.add("slickIn");
                     document.querySelector(".burgerMenu .bnav").classList.add("fadeIn");
+                    //document.querySelector(".burgerMenu .bnav").classList.add("fadeIn");
+                    //document.querySelector(".burgerMenu .close").classList.add("dualFill");
                 }else {
                     document.querySelector(".burgerMenu").classList.remove("slickIn");
                     document.querySelector(".burgerMenu").classList.add("slickOut");
