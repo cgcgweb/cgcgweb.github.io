@@ -1,5 +1,5 @@
 <svg cache-id="fbc0c93385b14e95a3c066421ecb9a9e" id="eL6mKEoM8Ws1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 274 246" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
 <style><![CDATA[
-#eL6mKEoM8Ws2_to {animation: eL6mKEoM8Ws2_to__to 1000ms linear 100 normal forwards}@keyframes eL6mKEoM8Ws2_to__to { 0% {transform: translate(123px,123px)} 100% {transform: translate(151px,123px)}} #eL6mKEoM8Ws2 {animation: eL6mKEoM8Ws2_f_o 1000ms linear 100 normal forwards}@keyframes eL6mKEoM8Ws2_f_o { 0% {fill-opacity: 0} 100% {fill-opacity: 1}}
+#eL6mKEoM8Ws2_to {animation: eL6mKEoM8Ws2_to__to 1500ms linear 100 normal forwards}@keyframes eL6mKEoM8Ws2_to__to { 0% {transform: translate(123px,123px)} 100% {transform: translate(151px,123px)}} #eL6mKEoM8Ws2 {animation: eL6mKEoM8Ws2_f_o 1500ms linear 100 normal forwards}@keyframes eL6mKEoM8Ws2_f_o { 0% {fill-opacity: 0} 100% {fill-opacity: 1}}
 ]]></style>
 <g id="eL6mKEoM8Ws2_to" transform="translate(123,123)"><circle id="eL6mKEoM8Ws2" r="122.5" transform="translate(0,0)" fill="#fff" fill-opacity="0" stroke="#fff"/></g><circle r="122.5" transform="translate(123 123)" fill="none" stroke="#fff" stroke-dasharray="10,10"/></svg>
