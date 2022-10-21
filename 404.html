@@ -5,10 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
     </head>
+    <script>
+        c = window.location.href;
+        l = c.toLowerCase();
+        if (c != l) {
+            location.replace(l);
+        }
+    </script>
     <style>
         body {
-            background-color:#F2F2F2;
-            color:#2B354E;
+            background-color:#2B354E;
+            color:#fff;
             font-family: n, Arial;
             margin:0;
             box-sizing: border-box;
@@ -165,7 +172,7 @@
             margin-bottom: 48px;
         }
         a {
-            color: #2B354E;
+            color: #fff;
             text-decoration: none;
         }
         .nav a {
@@ -196,44 +203,16 @@
             line-height: 32px;
             z-index: -1;
         }
-        .mitservice1::before {
-            content: '01';
+        .homebutton a {
+            border: 1px solid white;
+            border-radius: 15px;
+            max-width: 150px;
+            font-size: 27px;
+            padding: 10px 41px;
+            text-align: center;
         }
-        .mitservice2::before {
-            content: '02';
-        }
-        .mitservice3::before {
-            content: '03';
-        }
-        .mitservice4::before {
-            content: '04';
-        }
-        .mitservice5::before {
-            content: '05';
-        }
-        .mitservice6::before {
-            content: '06';
-        }
-        .mitservice {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .mitservice ul li {
-            font-size: 19px;
-            font-weight: light;
-            font-family: 'Open Sans', Arial;
-        }
-        .mitservice {
-            margin-top: 48px;
-        }
-        .backupsolutions h2 {
-            font-size:56px;
-        }
-        .cstsocas {
-            max-width:500px;
-        }
-        .mitservice p, .mitservice ul li {
-            font-family: L;
+        .homebutton {
+            text-align: center;
         }
         .navdservices {
             position: absolute;
@@ -287,8 +266,8 @@
         </div>
         <div class="section first" style="min-height:50vh">
             <div class="col-12" style="text-align: center !important;">
-                <h1>Thank you for contacting us!</h1>
-                <p>We will get back to you soon.</p>
+                <h1>404 NOT FOUND</h1>
+                <p class="homebutton"><a href="https://cgcg.biz">Home</a></p>
             </div>
         </div>
         <div class="burgerMenu" style="display:none;">
