@@ -120,7 +120,12 @@
                 display: none;
             }
             h1 {
-                font-size: min(74px, 4vw);
+                font-size: min(65px, 3.2vw);
+                margin: 24px auto !important;
+            }
+            .first h1 + p {
+                margin: 12px auto !important;
+                max-width: 620px;
             }
             h2 {
                 font-size: min(5vw, 92px);
@@ -230,6 +235,9 @@
         #navservices:hover + .navdservices, .navdservices:hover {
             display: block !important;
         }
+        .section.first .col-12 {
+            text-align: center !important;
+        }
     </style>
     <body>
         <div class="menu">
@@ -265,12 +273,9 @@
             <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
         </div>
         <div class="section first">
-            <div class="col-6">
+            <div class="col-12">
                 <h1>Selected Agglomeration</h1>
                 <p>A brief overview of select opportunities we were fortunate enough to be able to participate in.</p>
-            </div>
-            <div class="col-6">
-                <img src="../m/pm.svg" />
             </div>
         </div>
         <div class="section construction">
