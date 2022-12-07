@@ -119,7 +119,8 @@
                 display: none;
             }
             h1 {
-                font-size: min(74px, 4vw);
+                font-size: min(65px, 3.2vw);
+                margin:24px auto !important;
             }
             h2 {
                 font-size: 36px;
@@ -295,6 +296,9 @@
         input:focus {
             outline: none !important;
         }
+        .first .col-12 {
+            text-align: center;
+        }
     </style>
     <body>
         <div class="menu">
@@ -330,10 +334,15 @@
             <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
         </div>
         <div class="section first">
-            
-            <div class="col-6">
+            <div class="col-12">
                 <h1>Resources</h1>
                 <p>We have spent a lot of time thinking about IT and bad actors. Our guide for small and medium business owners gives a deep look into <b>IT pricing</b> and a roadmap on <b>how to keep your business protected against 90% of cyber attacks.</b></p>
+            </div>
+        </div>
+        <div class="section first">
+            
+            <div class="col-6">
+                
                 <div class="dl1sec d">
                     <h2 class="rtitle">IT Pricing Guide</h2>
                     <a id="dl1btn1" href="#"><img src="../m/dlb.svg" /></a>
