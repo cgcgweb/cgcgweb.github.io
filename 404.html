@@ -5,16 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
     </head>
-    <script nonce="a34g29914">
-        document.querySelector('.right .m').onclick = burger;
-            document.querySelector('.close').onclick = burger;
-            document.querySelector('#drop').onclick = ardown;
-        c = window.location.href;
-        l = c.toLowerCase();
-        if (c != l) {
-            location.replace(l);
-        }
-    </script>
     <style>
         body {
             background-color:#2B354E;
@@ -393,6 +383,14 @@
             }
         </style>
         <script nonce="a34g29914">
+            document.querySelector('.right .m').onclick = burger;
+            document.querySelector('.close').onclick = burger;
+            document.querySelector('#drop').onclick = ardown;
+            c = window.location.href;
+            l = c.toLowerCase();
+            if (c != l) {
+                location.replace(l);
+            }
             function burger(){
                 if("none"==document.querySelector(".burgerMenu").style.display) {
                     document.querySelector(".burgerMenu").style.display="block";
