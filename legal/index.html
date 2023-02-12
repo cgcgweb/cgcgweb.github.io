@@ -163,6 +163,9 @@ img {
 </nav>
 
 <script nonce="a34g29914">
+	document.querySelector('.right .m').onclick = burger;
+            document.querySelector('.close').onclick = burger;
+            document.querySelector('#drop').onclick = ardown;
 function drop() {
   document.getElementById("dropper").classList.toggle("show");
   if(document.getElementById("sopener").innerText == "services ▼") {

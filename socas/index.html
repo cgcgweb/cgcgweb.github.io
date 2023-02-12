@@ -508,6 +508,9 @@
             }
         </style>
         <script nonce="a34g29914">
+            document.querySelector('.right .m').onclick = burger;
+            document.querySelector('.close').onclick = burger;
+            document.querySelector('#drop').onclick = ardown;
             function burger(){
                 if("none"==document.querySelector(".burgerMenu").style.display) {
                     document.querySelector(".burgerMenu").style.display="block";
