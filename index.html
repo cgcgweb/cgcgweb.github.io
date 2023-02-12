@@ -456,6 +456,16 @@
             }
         </style>
         <script nonce="a34g2">
+            function it() {
+                        document.getElementById('threatsCounter').innerText = "";
+                        var d = new Date(2022, 9, 2, 22, 00, 00, 00); 
+                        var n = new Date(); 
+                        var ss = Math.floor(n / 1000) - Math.floor(d / 1000);
+                        var out = 200000 + (ss * 2);
+                        document.getElementById('threatsCounter').innerText = out.toLocaleString();
+                    }
+
+                    setInterval(it, 2000);
             function burger(){
                 if("none"==document.querySelector(".burgerMenu").style.display) {
                     document.querySelector(".burgerMenu").style.display="block";
@@ -551,19 +561,7 @@
             </div>
             <div class="col-4">
                 <h2 id="threatsCounter">200,000</h2>
-                <script nonce="a34g2">
-                    
-                    function it() {
-                        document.getElementById('threatsCounter').innerText = "";
-                        var d = new Date(2022, 9, 2, 22, 00, 00, 00); 
-                        var n = new Date(); 
-                        var ss = Math.floor(n / 1000) - Math.floor(d / 1000);
-                        var out = 200000 + (ss * 2);
-                        document.getElementById('threatsCounter').innerText = out.toLocaleString();
-                    }
-
-                    setInterval(it, 2000);
-                </script>
+                
                 <p class="large light">threats prevented</p>
             </div>
         </div>
