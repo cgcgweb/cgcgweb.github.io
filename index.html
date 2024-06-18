@@ -496,6 +496,18 @@
                     document.querySelector("#drop").innerText = "▼";
                 }
             }
+			
+			 document.addEventListener('DOMContentLoaded', (event) => {
+				const form = document.getElementById('f1');
+				const submitButton = document.getElementById('subf1')
+
+				form.addEventListener('submit', (event) => {
+				  submitButton.disabled = true;
+				  setTimeout(() => {
+					submitButton.disabled = false;
+				  }, 20000); // 20 seconds
+				});
+			  });
         </script>
         
         <div class="section wehelp">
@@ -618,13 +630,13 @@
                 <a href="mailto:hello@cgcg.biz">hello@cgcg.biz</a>
             </div>
             <div class="col-6">
-                <form action="https://cgnew.wpengine.com/apis/cgcg/form/home/" method="POST">
+                <form id="f1" action="https://cgnew.wpengine.com/apis/cgcg/form/home/" method="POST">
                     <input type="text" aria-label="Your Name" name="name" placeholder="Your Name" />
                     <input type="text" aria-label="Business Name" name="bname" placeholder="Business Name" />
                     <input type="tel" aria-label="Phone" name="phone" placeholder="Phone" />
                     <input type="email" aria-label="Email" name="email" placeholder="Email" />
                     <input type="text" aria-label="Your Message" name="message" placeholder="Message" />
-                    <input type="submit" value="Send" />
+                    <input type="submit" value="Send" id="subf1" />
                 </form>
             </div>
         </div>
