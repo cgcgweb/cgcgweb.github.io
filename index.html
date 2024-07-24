@@ -632,14 +632,14 @@
                 <a href="mailto:hello@cgcg.biz">hello@cgcg.biz</a>
             </div>
             <div class="col-6">
-                <form id="f1" action="https://cgnew.wpengine.com/apis/cgcg/form/home/" method="POST">
+                <form id="f1" onsubmit="bts.disabled = true; return true;" action="https://cgnew.wpengine.com/apis/cgcg/form/home/" method="POST">
                     <input type="text" aria-label="Your Name" name="name" placeholder="Your Name" />
                     <input type="text" aria-label="Business Name" name="bname" placeholder="Business Name" />
                     <input type="tel" aria-label="Phone" name="phone" placeholder="Phone" />
                     <input type="email" aria-label="Email" name="email" placeholder="Email" />
                     <input type="text" aria-label="Your Message" name="message" placeholder="Message" />
 					<input type="text" aria-label="Company Size" name="companysize" placeholder="Company Size" style="display:none !important" />
-                    <input type="submit" value="Send" id="subf1" />
+                    <input type="submit" name="bts" value="Send" id="subf1" />
                 </form>
             </div>
         </div>
