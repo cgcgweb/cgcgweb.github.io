@@ -314,12 +314,12 @@
             </div>
         </div>
         <div class="burgerMenu" style="display:none;">
-            <img class="close" src="m/close.svg" />
-            <img class="bueagle" src="m/bu1.svg" />
+            <img class="close" src="m/X.svg" />
+            <img class="bueagle" src="m/cgcg.svg" />
             <div class="bnav">
                 <a class="bold" href="https://cgcg.biz">Home</a>
                 <div class="bus">
-                    <a href="/services/">Services</a><span id="drop">▼</span>
+                    <a href="/services/">Services</a><span id="drop">+</span>
                 </div>
                 <div class="slist" style="display:none">
                     <a href="/managed-it-services/">Managed IT Services</a>
@@ -344,7 +344,10 @@
                 <a href="/portfolio/">Portfolio</a>
                 <a href="/lets-talk/">Contact</a>
             </div>
-            <img class="forbesMobile" src="m/bforbes.svg" />
+            <div class="sml">
+                <a class="sml_li">LinkedIn</a>
+            </div>
+            <img class="forbesMobile" src="m/forbes.svg" />
         </div>
         <style>
             .bnav .bold {
@@ -354,8 +357,9 @@
             .bnav a {
                 font-family: 'Open Sans', Arial, sans-serif;
                 text-decoration: none !important;
-                font-size: 20px !important;
-                line-height: 30px;
+                font-family: 'N','Open Sans', Arial, sans-serif;
+                font-size: 30px !important;
+                line-height: 48px;
             }
             .burgerMenu {
                 display: block;
@@ -379,8 +383,8 @@
             .forbesMobile {
                 position: absolute;
                 width: 25%;
-                top: 12px;
-                right: 33%;
+                bottom: 32px;
+                right: 32px;
             }
             .bnav a {
                 width: 100%;
@@ -388,6 +392,18 @@
                 font-size: 30px;
                 color: #fff;
             }
+            
+            .sml {
+                max-width: 259px;
+                position: absolute;
+                bottom: 25px;
+                left: 25px;
+            }
+
+            .sml a {
+                font-size: 24px;
+            }
+
             .bnav {
                 width: 85%;
                 position: absolute;
@@ -400,13 +416,19 @@
             }
             #drop {
                 color: #fff;
-                line-height: 30px;
-                font-size: 22px;
                 float:left;
+                line-height: 50px;
+                font-size: 52px;
+                padding-left: 12px;
+            }
+            .slist a {
+                font-size: 20px !important;
+                line-height: 26px;
             }
             .bus a {
-                width: 100px;
+                width: auto;
                 float: left;
+                max-width: 180px;
             }
             .bus, .slist {
                 overflow: hidden;
@@ -481,71 +503,49 @@
                     setInterval(it, 2000);
 
 
-
-
-
-
-
-
-
-
-
-
-
                     function burger() {
-    const burgerMenu = document.querySelector(".burgerMenu");
-    const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a");
-    const isHidden = burgerMenu.style.display === "none";
+                        const burgerMenu = document.querySelector(".burgerMenu");
+                        const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
+                        const isHidden = burgerMenu.style.display === "none";
 
-    if (isHidden) {
-        burgerMenu.style.display = "block";
-        burgerMenu.classList.remove("slickOut");
-        burgerMenu.classList.add("slickIn");
-        document.querySelector(".burgerMenu .bnav").classList.add("fadeIn");
+                        if (isHidden) {
+                            burgerMenu.style.display = "block";
+                            burgerMenu.classList.remove("slickOut");
+                            burgerMenu.classList.add("slickIn");
+                            document.querySelector(".burgerMenu .bnav").classList.add("fadeIn");
 
-        // Start the stretch and blur effect (scaleX from 20 to 1, scaleY from 0.6 to 1, blur from 10px to 0px)
-        menuContents.forEach(element => {
-            element.style.transition = "transform 0.8s ease, filter 1.2s ease, border 0.4s ease-in"; // Smooth transition for both scaling and blurring over 1 second
-            element.style.transform = "scaleX(20) scaleY(2)"; // Start with width at 20x and height at 0.6
-            element.style.filter = "blur(16px)"; // Start with a 10px blur
-            element.style.border = "12px solid white";
-        });
+                            // Start the stretch and blur effect (scaleX from 20 to 1, scaleY from 0.6 to 1, blur from 10px to 0px)
+                            menuContents.forEach(element => {
+                                element.style.transition = "transform 0.8s ease, filter 1.2s ease, border 0.4s ease-in"; // Smooth transition for both scaling and blurring over 1 second
+                                element.style.transform = "scaleX(20) scaleY(2)"; // Start with width at 20x and height at 0.6
+                                element.style.filter = "blur(16px)"; // Start with a 10px blur
+                                element.style.border = "12px solid white";
+                            });
 
-        // Shrink to normal size and clear the blur after a brief delay
-        setTimeout(() => {
-            menuContents.forEach(element => {
-                element.style.transform = "scaleX(1) scaleY(1)"; // Shrink to normal width and height
-                element.style.filter = "blur(0px)"; // Remove the blur
-                element.style.border = "0px solid white";
-            });
-        }, 100); // Small delay to ensure the initial stretched and blurry effect is noticeable
+                            // Shrink to normal size and clear the blur after a brief delay
+                            setTimeout(() => {
+                                menuContents.forEach(element => {
+                                    element.style.transform = "scaleX(1) scaleY(1)"; // Shrink to normal width and height
+                                    element.style.filter = "blur(0px)"; // Remove the blur
+                                    element.style.border = "0px solid white";
+                                });
+                            }, 100); // Small delay to ensure the initial stretched and blurry effect is noticeable
 
-    } else {
-        burgerMenu.classList.remove("slickIn");
-        burgerMenu.classList.add("slickOut");
-        setTimeout(() => {
-            burgerMenu.style.display = "none";
-        }, 1000);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
+                        } else {
+                            burgerMenu.classList.remove("slickIn");
+                            burgerMenu.classList.add("slickOut");
+                            setTimeout(() => {
+                                burgerMenu.style.display = "none";
+                            }, 1000);
+                        }
+                    }
             function ardown() {
                 if(document.querySelector(".slist").style.display=="none") {
                     document.querySelector(".slist").style.display="block";
-                    document.querySelector("#drop").innerText = "▲";
+                    document.querySelector("#drop").innerText = "+";
                 }else {
                     document.querySelector(".slist").style.display="none";
-                    document.querySelector("#drop").innerText = "▼";
+                    document.querySelector("#drop").innerText = "+";
                 }
             }
 			
