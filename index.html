@@ -438,21 +438,21 @@
             }
             .slickIn {
                 animation-name: slickIn;
-                animation-duration: 0.5s;
+                animation-duration: 0.3s;
                 animation-fill-mode:forwards;
             }
             .slickOut {
                 animation-name: slickOut;
-                animation-duration: 0.5s;
+                animation-duration: 0.3s;
                 animation-fill-mode:forwards;
             }
             @keyframes slickIn {
-                from {left:-100vw;}
-                to {left:0;}
+                from {opacity:0;}
+                to {opacity:1;}
             }
             @keyframes slickOut {
-                from {left:0;}
-                to {left:-100vw;}
+                from {opacity:1;}
+                to {opacity:0;}
             }
             @keyframes fadeIn {
                 from {opacity: 0;}
