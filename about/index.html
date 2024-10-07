@@ -589,7 +589,7 @@
                 <a href="/lets-talk/">Contact</a>
             </div>
             <div class="sml">
-                <a class="sml_li">LinkedIn</a>
+                <a href="https://www.linkedin.com/company/cyber-guardian-consulting-group-llc-" class="sml_li">LinkedIn</a>
             </div>
             <img class="forbesMobile" src="../m/forbes.svg" />
         </div>
@@ -682,21 +682,21 @@
             }
             .slickIn {
                 animation-name: slickIn;
-                animation-duration: 0.5s;
+                animation-duration: 0.3s;
                 animation-fill-mode:forwards;
             }
             .slickOut {
                 animation-name: slickOut;
-                animation-duration: 0.5s;
+                animation-duration: 0.3s;
                 animation-fill-mode:forwards;
             }
             @keyframes slickIn {
-                from {left:-100vw;}
-                to {left:0;}
+                from {opacity:0;}
+                to {opacity:1;}
             }
             @keyframes slickOut {
-                from {left:0;}
-                to {left:-100vw;}
+                from {opacity:1;}
+                to {opacity:0;}
             }
             @keyframes fadeIn {
                 from {opacity: 0;}
@@ -735,18 +735,6 @@
             document.querySelector('.right .m').onclick = burger;
             document.querySelector('.close').onclick = burger;
             document.querySelector('#drop').onclick = ardown;
-            function it() {
-                        document.getElementById('threatsCounter').innerText = "";
-                        var d = new Date(2022, 9, 2, 22, 00, 00, 00); 
-                        var n = new Date(); 
-                        var ss = Math.floor(n / 1000) - Math.floor(d / 1000);
-                        var out = 200000 + (ss * 2);
-                        document.getElementById('threatsCounter').innerText = out.toLocaleString();
-                    }
-
-                    setInterval(it, 2000);
-
-
                     function burger() {
                         const burgerMenu = document.querySelector(".burgerMenu");
                         const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
