@@ -396,152 +396,85 @@
             </div>
         </div>
         <div class="burgerMenu" style="display:none;">
-            <img onclick="burger()" class="close" src="../m/close.svg" />
-            <img class="bueagle" src="../m/bu1.svg" />
+            <img class="close" src="../m/X.svg" />
+            <img class="bueagle" src="../m/cgcg.svg" />
             <div class="bnav">
                 <a class="bold" href="https://cgcg.biz">Home</a>
                 <div class="bus">
-                    <a href="../services/">Services</a><span onclick="ardown()" id="drop">▼</span>
+                    <a href="/services/">Services</a><span id="drop">+</span>
                 </div>
                 <div class="slist" style="display:none">
-                    <a href="../managed-it-services/">Managed IT Services</a>
-                    <a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
-                    <a href="../socas/">SOCaaS</a>
-                    <a href="../cioas/">CIOaaS</a>
-                    <a href="../ctoas/">CTOaaS</a>
-                    <a href="../cisoaas/">CISOaaS</a>
+                    <a href="/managed-it-services/">Managed IT Services</a>
+                    <a href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+                    <a href="/socas/">SOCaaS</a>
+                    <a href="/cioas/">CIOaaS</a>
+                    <a href="/ctoas/">CTOaaS</a>
+                    <a href="/cisoaas/">CISOaaS</a>
                     <a target="_blank" href="https://filescience.io">Cloud-to-Cloud Backup</a>
                     <a target="_blank" href="https://switchboard-plus.com/">Business Phone</a>
-                    <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
-                    <a href="../app-development/">App Development</a>
-                    <a href="../door-access-control/">Door Access Control</a>
-                    <a href="../NaaS/">Network-as-a-service</a>
-                    <a href="../cloud-based-security-cameras/">Cloud-Based Security Cameras</a>
-                    <a href="../recycling-charity/">Recycling & Charity</a>
-                    <a href="../reputation-management/">Reputation Management</a>
-                    <a href="../private-digital-investigations/">Private Digital Investigations</a>
+                    <a href="/low-voltage-cabling/">Low Voltage Cabling</a>
+                    <a href="/app-development/">App Development</a>
+                    <a href="/door-access-control/">Door Access Control</a>
+                    <a href="/NaaS/">Network-as-a-service</a>
+                    <a href="/cloud-based-security-cameras/">Cloud-Based Security Cameras</a>
+                    <a href="/recycling-charity/">Recycling & Charity</a>
+                    <a href="/reputation-management/">Reputation Management</a>
+                    <a href="/private-digital-investigations/">Private Digital Investigations</a>
                 </div>
-                <a href="../about/">Company</a>
-                <a href="../resources/">Resources</a>
-                <a href="../portfolio/">Portfolio</a>
-                <a href="../lets-talk/">Contact</a>
+                <a href="/about/">Company</a>
+                <a href="/resources/">Resources</a>
+                <a href="/portfolio/">Portfolio</a>
+                <a href="/lets-talk/">Contact</a>
             </div>
-            <img class="forbesMobile" src="../m/bforbes.svg" />
+            <div class="sml">
+                <a href="https://www.linkedin.com/company/cyber-guardian-consulting-group-llc-" class="sml_li">LinkedIn</a>
+            </div>
+            <img class="forbesMobile" src="../m/forbes.svg" />
         </div>
         <style>
-			.bold.dpin img {
-				width: 32px;
-				display: inline-block;
-				margin-bottom: -8px;
-			}
-            .bnav .bold {
-                font-size: 24px;
-                font-weight: bold;
-            }
-            .bnav a {
-                font-family: 'Open Sans', Arial, sans-serif;
-                text-decoration: none !important;
-                font-size: 20px !important;
-                line-height: 30px;
-            }
-            .burgerMenu {
-                display: block;
-                overflow: hidden;
-                width: 90vw;
-                position: absolute;
-                top: 0;
-                background:#f2f2f2;
-                height:100vh;
-                left:0;
-            }
-            .close {
-                top: 24px;
-                right: 24px;
-                position: absolute;
-            }
-            .bueagle {
-                width: 25%;
-                margin: 32px;
-            }
-            .forbesMobile {
-                position: absolute;
-                width: 25%;
-                top: 12px;
-                right: 33%;
-            }
-            .bnav a {
-                width: 100%;
-                display: block;
-                font-size: 30px;
-                color: #2B354E;
-            }
-            .bnav {
-                width: 85%;
-                position: absolute;
-                left: 32px;
-                top: 15vh;
-                z-index: 5;
-            }
-            .bnav a:not(.bold) {
-                text-decoration: underline;
-            }
-            #drop {
-                color: #2B354E;
-                line-height: 30px;
-                font-size: 22px;
-                float:left;
-            }
-            .bus a {
-                width: 100px;
-                float: left;
-            }
-            .bus, .slist {
-                overflow: hidden;
-            }
-            .slist {
-                margin-left: 32px;
-            }
-            .slickIn {
-                animation-name: slickIn;
-                animation-duration: 1s;
-                animation-fill-mode:forwards;
-            }
-            .slickOut {
-                animation-name: slickOut;
-                animation-duration: 1s;
-                animation-fill-mode:forwards;
-            }
-            @keyframes slickIn {
-                from {left:-90vw;}
-                to {left:0;}
-            }
-            @keyframes slickOut {
-                from {left:0;}
-                to {left:-90vw;}
-            }
+            .bnav .bold{   font-size:24px;   font-weight:bold;   }   .bnav a{   font-family:'Open Sans',Arial,sans-serif;   text-decoration:none !important;   font-family:'N','Open Sans',Arial,sans-serif;   font-size:30px !important;   line-height:48px;   }   .burgerMenu{   display:block;   overflow:hidden;   width:100vw;   position:absolute;   top:0;   background:#000;   height:100vh;   left:0;   }   .close{   top:24px;   right:24px;   position:absolute;   }   .bueagle{   width:25%;   margin:32px;   }   .forbesMobile{   position:absolute;   width:25%;   bottom:32px;   right:32px;   }   .bnav a{   width:100%;   display:block;   font-size:30px;   color:#fff;   }     .sml{   max-width:259px;   position:absolute;   bottom:25px;   left:25px;   }   .sml a{   font-size:24px;   color:#fff;   }   .bnav{   width:85%;   position:absolute;   left:32px;   top:15vh;   z-index:5;   }   .bnav a:not(.bold){   text-decoration:underline;   }  #drop{   color:#fff;   float:left;   line-height:50px;   font-size:52px;   padding-left:12px;   }   .slist a{   font-size:20px !important;   line-height:26px;   }   .bus a{   width:auto;   float:left;   max-width:180px;   }   .bus,.slist{   overflow:hidden;   }   .slist{   margin-left:32px;   }   .slickIn{   animation-name:slickIn;   animation-duration:0.3s;   animation-fill-mode:forwards;   }   .slickOut{   animation-name:slickOut;   animation-duration:0.3s;   animation-fill-mode:forwards;   }  @keyframes slickIn{   from{opacity:0;}   to{opacity:1;}   }  @keyframes slickOut{   from{opacity:1;}   to{opacity:0;}   }  @keyframes fadeIn{   from{opacity:0;}   to{opacity:1;}   }  @keyframes dualFill{   from{    border-width:24px 24px 0vh 0vw;   }   to{    border-width:24px 24px 93vh 156vw;   }   }   .dualFill{   border:solid #2B354E;   box-sizing:revert-layer;   top:0;   right:0;   background-color:#2B354E;   animation:dualFill;   animation-duration:3s;;   animation-fill-mode:forwards;   }   .fadeIn{   animation:fadeIn;   animation-duration:3s;   }   .burgerMenu .bnav a,.burgerMenu img,.burgerMenu .bnav p{   transition:transform 1s ease-in;   }
         </style>
         <script nonce="a34g29914">
             document.querySelector('.right .m').onclick = burger;
             document.querySelector('.close').onclick = burger;
             document.querySelector('#drop').onclick = ardown;
-            function burger(){
-                if("none"==document.querySelector(".burgerMenu").style.display) {
-                    document.querySelector(".burgerMenu").style.display="block";
-                    document.querySelector(".burgerMenu").classList.remove("slickOut");
-                    document.querySelector(".burgerMenu").classList.add("slickIn");
-                }else {
-                    document.querySelector(".burgerMenu").classList.remove("slickIn");
-                    document.querySelector(".burgerMenu").classList.add("slickOut");
-                    setTimeout(function () {document.querySelector(".burgerMenu").style.display="none";}, 1000);
+            function burger() {
+                const burgerMenu = document.querySelector(".burgerMenu");
+                const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
+                const isHidden = burgerMenu.style.display === "none";
+                if (isHidden) {
+                    burgerMenu.style.display = "block";
+                    burgerMenu.classList.remove("slickOut");
+                    burgerMenu.classList.add("slickIn");
+                    document.querySelector(".burgerMenu .bnav").classList.add("fadeIn");
+                    menuContents.forEach(element => { // Start the stretch and blur effect (scaleX from 20 to 1, scaleY from 0.6 to 1, blur from 10px to 0px)
+                        element.style.transition = "transform 0.8s ease, filter 1.2s ease, border 0.4s ease-in"; // Smooth transition for both scaling and blurring over 1 second
+                        element.style.transform = "scaleX(20) scaleY(2)"; // Start with width at 20x and height at 0.6
+                        element.style.filter = "blur(16px)"; // Start with a 10px blur
+                        element.style.border = "12px solid white";
+                    });
+                    setTimeout(() => { // Shrink to normal size and clear the blur after a brief delay
+                        menuContents.forEach(element => {
+                            element.style.transform = "scaleX(1) scaleY(1)"; // Shrink to normal width and height
+                            element.style.filter = "blur(0px)"; // Remove the blur
+                            element.style.border = "0px solid white";
+                        });
+                    }, 100); // Small delay to ensure the initial stretched and blurry effect is noticeable
+                } else {
+                    burgerMenu.classList.remove("slickIn");
+                    burgerMenu.classList.add("slickOut");
+                        setTimeout(() => {
+                            burgerMenu.style.display = "none";
+                        }, 1000);
                 }
             }
             function ardown() {
                 if(document.querySelector(".slist").style.display=="none") {
                     document.querySelector(".slist").style.display="block";
-                    document.querySelector("#drop").innerText = "▲";
+                    document.querySelector("#drop").innerText = "+";
                 }else {
                     document.querySelector(".slist").style.display="none";
-                    document.querySelector("#drop").innerText = "▼";
+                    document.querySelector("#drop").innerText = "+";
                 }
             }
         </script>
