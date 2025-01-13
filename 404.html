@@ -20,20 +20,20 @@
         @font-face {
 			font-family: 'n';
 			font-display:swap;
-			src: url('/n.woff2') format('embedded-opentype'), /* Internet Explorer */
-			url('/n.woff2') format('woff2'), /* Super Modern Browsers */
-			url('/n.woff2') format('woff'), /* Pretty Modern Browsers */
-			url('/n.woff2')  format('truetype'), /* Safari, Android, iOS */
-			url('/n.woff2') format('svg'); /* Legacy iOS */
+			src: url('n.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('n.woff2') format('woff2'), /* Super Modern Browsers */
+			url('n.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('n.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('n.woff2') format('svg'); /* Legacy iOS */
 		}
         @font-face {
 			font-family: 'L';
 			font-display:swap;
-			src: url('/L.woff2') format('embedded-opentype'), /* Internet Explorer */
-			url('/L.woff2') format('woff2'), /* Super Modern Browsers */
-			url('/L.woff2') format('woff'), /* Pretty Modern Browsers */
-			url('/L.woff2')  format('truetype'), /* Safari, Android, iOS */
-			url('/L.woff2') format('svg'); /* Legacy iOS */
+			src: url('L.woff2') format('embedded-opentype'), /* Internet Explorer */
+			url('L.woff2') format('woff2'), /* Super Modern Browsers */
+			url('L.woff2') format('woff'), /* Pretty Modern Browsers */
+			url('L.woff2')  format('truetype'), /* Safari, Android, iOS */
+			url('L.woff2') format('svg'); /* Legacy iOS */
 		}
         .light {
             font-family: l, 'Open Sans', Arial !important;
@@ -207,20 +207,23 @@
         .homebutton {
             text-align: center;
         }
-        .navdservices {
+        .navdservices, .navdabout {
             position: absolute;
             background-color: #2B354E;
             border: 2px solid #f2f2f2;
             padding: 15px;
             display: none;
         }
-        .navdservices a {
+        .navdservices a, .navdabout a {
             width: 100%;
             display: block;
             line-height: 33px;
             color: #fff;
         }
-        #navservices:hover + .navdservices, .navdservices:hover {
+        .navdabout {
+            left:118px;
+        }
+        #navservices:hover + .navdservices, .navdservices:hover, #navabout:hover + .navdabout, .navdabout:hover {
             display: block !important;
         }
         .bold.dpin img {
@@ -231,7 +234,7 @@
         <div class="menu">
             <div class="left">
                 <a href="https://cgcg.biz">
-                    <img src="/m/logodark.svg" />
+                    <img src="m/logodark.svg" />
                 </a>
             </div>
             <div class="nav d">
@@ -253,13 +256,17 @@
                     <a href="/reputation-management/">Reputation Management</a>
                     <a href="/private-digital-investigations/">Private Digital Investigations</a>
                 </div>
-                <a href="/about/">Company</a>
+                <a id="navabout" href="/about/">Company</a>
+                <div class="navdabout">
+                    <a href="/about/">Company</a>
+                    <a href="/resources/">Resources</a>
+                    <a href="/careers/">Careers</a>
+                </div>
                 <a href="/trust">Trust</a>
-                <a href="/resources/">Resources</a>
                 <a href="/portfolio/">Portfolio</a>
                 <a href="/lets-talk/">Contact</a>
             </div>
-            <div class="right"><img class="d" src="/m/f.svg" /><img onclick="burger()" class="m" src="/m/bud.svg" /></div>
+            <div class="right"><img class="d" src="m/f.svg" /><img onclick="burger()" class="m" src="m/bud.svg" /></div>
         </div>
         <div class="section first" style="min-height:50vh">
             <div class="col-12" style="text-align: center !important;">
@@ -268,8 +275,8 @@
             </div>
         </div>
         <div class="burgerMenu" style="display:none;">
-            <img class="close" src="../m/X.svg" />
-            <img class="bueagle" src="../m/cgcg.svg" />
+            <img class="close" src="m/X.svg" />
+            <img class="bueagle" src="m/cgcg.svg" />
             <div class="bnav">
                 <a class="bold" href="https://cgcg.biz">Home</a>
                 <div class="bus">
@@ -302,7 +309,7 @@
             <div class="sml">
                 <a href="https://www.linkedin.com/company/cyber-guardian-consulting-group-llc-" class="sml_li">LinkedIn</a>
             </div>
-            <img class="forbesMobile" src="../m/forbes.svg" />
+            <img class="forbesMobile" src="m/forbes.svg" />
         </div>
         <style>
             .bnav .bold{   font-size:24px;   font-weight:bold;   }   .bnav a{   font-family:'Open Sans',Arial,sans-serif;   text-decoration:none !important;   font-family:'N','Open Sans',Arial,sans-serif;   font-size:30px !important;   line-height:48px;   }   .burgerMenu{   display:block;   overflow:hidden;   width:100vw;   position:absolute;   top:0;   background:#000;   height:100vh;   left:0;   }   .close{   top:24px;   right:24px;   position:absolute;   }   .bueagle{   width:25%;   margin:32px;   }   .forbesMobile{   position:absolute;   width:25%;   bottom:32px;   right:32px;   }   .bnav a{   width:100%;   display:block;   font-size:30px;   color:#fff;   }     .sml{   max-width:259px;   position:absolute;   bottom:25px;   left:25px;   }   .sml a{   font-size:24px;   color:#fff;   }   .bnav{   width:85%;   position:absolute;   left:32px;   top:15vh;   z-index:5;   }   .bnav a:not(.bold){   text-decoration:underline;   }  #drop{   color:#fff;   float:left;   line-height:50px;   font-size:52px;   padding-left:12px;   }   .slist a{   font-size:20px !important;   line-height:26px;   }   .bus a{   width:auto;   float:left;   max-width:180px;   }   .bus,.slist{   overflow:hidden;   }   .slist{   margin-left:32px;   }   .slickIn{   animation-name:slickIn;   animation-duration:0.3s;   animation-fill-mode:forwards;   }   .slickOut{   animation-name:slickOut;   animation-duration:0.3s;   animation-fill-mode:forwards;   }  @keyframes slickIn{   from{opacity:0;}   to{opacity:1;}   }  @keyframes slickOut{   from{opacity:1;}   to{opacity:0;}   }  @keyframes fadeIn{   from{opacity:0;}   to{opacity:1;}   }  @keyframes dualFill{   from{    border-width:24px 24px 0vh 0vw;   }   to{    border-width:24px 24px 93vh 156vw;   }   }   .dualFill{   border:solid #2B354E;   box-sizing:revert-layer;   top:0;   right:0;   background-color:#2B354E;   animation:dualFill;   animation-duration:3s;;   animation-fill-mode:forwards;   }   .fadeIn{   animation:fadeIn;   animation-duration:3s;   }   .burgerMenu .bnav a,.burgerMenu img,.burgerMenu .bnav p{   transition:transform 1s ease-in;   }
