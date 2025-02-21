@@ -577,8 +577,9 @@
       }))
     </script>
     <div class="section wehelp">
-      <div class="col-12 news_section">
-        <h2 class="news_title">These prominent news outlets are buzzing about us and our products!</h2>
+      <!--<div class="col-12 news_section">
+        <h2 class="news_title d">These prominent news outlets are buzzing about us and our products!</h2>
+        <h2 class="news_title m">Media Highlights</h2>
         <div class="news_subtitle">
           <h3>“Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365”</h3>
         </div>
@@ -594,7 +595,68 @@
         <div class="news">
             <a href="https://partners.time.com/partners/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/?prx_t=2KYJAObptA9k0PA&utm_campaign=216036&ntv_ui=83889e86-5d18-40c6-ab96-7813610d958b&ntv_ht=31C2ZwA"><img src="m/time.svg" loading="lazy" alt="Time Magazine" height="378" width="353"></a>
         </div>
+      </div>-->
+
+
+      <div class="col-12 news_section">
+        <h2 class="news_title d">These prominent news outlets are buzzing about us and our products!</h2>
+        <h2 class="news_title m">Media Highlights</h2>
+        <div class="news_subtitle">
+          <h3>“Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365”</h3>
+        </div>
+        
+        <!-- New carousel wrapper -->
+        <div class="news_carousel_wrapper">
+          <div class="news_carousel">
+            <!-- Original set -->
+            <div class="news">
+              <a target="_blank" href="https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/">
+                <img src="m/usa-today.svg" loading="lazy" alt="USA Today" height="378" width="353">
+              </a>
+            </div>
+            <div class="news">
+              <a target="_blank" href="https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901">
+                <img src="m/jpost.svg" loading="lazy" alt="JPost" height="378" width="353">
+              </a>
+            </div>
+            <div class="news">
+              <a target="_blank" href="https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html">
+                <img src="m/independent.svg" loading="lazy" alt="Independent" height="378" width="353">
+              </a>
+            </div>
+            <div class="news">
+              <a target="_blank" href="https://partners.time.com/partners/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/?prx_t=2KYJAObptA9k0PA&utm_campaign=216036&ntv_ui=83889e86-5d18-40c6-ab96-7813610d958b&ntv_ht=31C2ZwA">
+                <img src="m/time.svg" loading="lazy" alt="Time Magazine" height="378" width="353">
+              </a>
+            </div>
+            <!-- Duplicate set for seamless looping -->
+            <div class="news">
+              <a target="_blank" href="https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/">
+                <img src="m/usa-today.svg" loading="lazy" alt="USA Today" height="378" width="353">
+              </a>
+            </div>
+            <div class="news">
+              <a target="_blank" href="https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901">
+                <img src="m/jpost.svg" loading="lazy" alt="JPost" height="378" width="353">
+              </a>
+            </div>
+            <div class="news">
+              <a target="_blank" href="https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html">
+                <img src="m/independent.svg" loading="lazy" alt="Independent" height="378" width="353">
+              </a>
+            </div>
+            <div class="news">
+              <a target="_blank" href="https://partners.time.com/partners/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/?prx_t=2KYJAObptA9k0PA&utm_campaign=216036&ntv_ui=83889e86-5d18-40c6-ab96-7813610d958b&ntv_ht=31C2ZwA">
+                <img src="m/time.svg" loading="lazy" alt="Time Magazine" height="378" width="353">
+              </a>
+            </div>
+          </div>
+        </div>        
       </div>
+      
+
+
+
       <div class=col-12>
         <h2>We help to solve a<br>variety of business <br>challenges</h2>
       </div>
@@ -756,6 +818,13 @@
         font-size: 27px;
         line-height: 35px;
         margin-bottom: 40px;
+        padding-bottom: 12px;
+        border-bottom: 1.33px solid #D9D9D9;
+        }
+        .news_title.m {
+          font-size:22px;
+          font-family: l, 'Open Sans', Arial;
+          padding-left:0 !important;
         }
         .news p {
             font-family: l, 'Open Sans', Arial;
@@ -1053,6 +1122,10 @@
         font-size: 32px;
         line-height: 40px;
         }
+        .news_subtitle h3 {
+          font-size: 24px;
+          font-family: n, 'Open Sans', Arial;
+        }
         .section.whymanaged svg+p {
           font-size: 28px
         }
@@ -1242,6 +1315,45 @@
           padding-right: 12px
         }
       }
+
+/* Wrapper hides overflow and sets the visible width */
+.news_carousel_wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* The carousel container: with 8 items (2 sets of 4), it’s 200% wide */
+.news_carousel {
+  display: flex;
+  width: 200%;
+  animation: slideCarousel 10s linear infinite;
+}
+
+/* Animate the carousel from 0 to -50% of its width so one set slides out */
+@keyframes slideCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile tweaks: container is 80% wide and the cycle is slower (10s) */
+@media only screen and (max-width: 767px) {
+  .news_carousel_wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .news {
+    min-width: 250px;
+  }
+  .news_carousel {
+    animation-duration: 10s;
+  }
+}
+
+
     </style>
   </body>
 </html>
