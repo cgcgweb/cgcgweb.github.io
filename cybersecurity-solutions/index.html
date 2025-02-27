@@ -69,9 +69,21 @@
 			float: left;
 			box-sizing:border-box;
 		}
+        .upcoming .col-12 {
+            align-content: center;
+            align-items: center;
+            display: flex;
+        }
         @media screen and (max-width:900px) {
             [class*="col-"] {
                 width: 100%;
+            }
+            .upcoming .col-12 {
+                align-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                gap: 26px;
             }
             .d {
                 display: none;
@@ -376,6 +388,16 @@
                 </div>
                 <div class="col-4">
                     <img loading="lazy" src="../m/sc5.svg" />
+                </div>
+            </div>
+        </div>
+        <div class="section upcoming">
+            <div class="col-12">
+                <div class="col-6">
+                    <h2>Our future thinking solutions:</h2>
+                </div>
+                <div class="col-6">
+                    <img loading="lazy" src="../m/21.png" />
                 </div>
             </div>
         </div>
