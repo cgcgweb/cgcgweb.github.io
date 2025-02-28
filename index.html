@@ -564,7 +564,8 @@
       }
 
       function ardown() {
-        "none" == document.querySelector(".slist").style.display ? (document.querySelector(".slist").style.display = "block", document.querySelector("#drop").innerText = "+") : (document.querySelector(".slist").style.display = "none", document.querySelector("#drop").innerText = "+")
+        document.querySelectorAll('.bnav.fadeIn > a').forEach(e => e.style.display = e.style.display === 'none' ? 'block' : 'none');
+        "none" == document.querySelector(".slist").style.display ? (document.querySelector(".slist").style.display = "block", document.querySelector("#drop").innerText = "-") : (document.querySelector(".slist").style.display = "none", document.querySelector("#drop").innerText = "+")
       }
       document.querySelector(".right .m").onclick = burger, document.querySelector(".close").onclick = burger, document.querySelector("#drop").onclick = ardown, setInterval(it, 2e3), document.addEventListener("DOMContentLoaded", (e => {
         const t = document.getElementById("f1"),
