@@ -105,7 +105,7 @@
       }
 
       .d {
-        display: none
+        display: none !important
       }
 
       h1 {
@@ -158,7 +158,7 @@
 
     @media screen and (min-width:900px) {
       .m {
-        display: none
+        display: none !important
       }
 
       h1 {
@@ -310,6 +310,9 @@
 
     .sk {
       display: none !important
+    }
+    .m .news > a, .m .news {
+      min-height: 84px;
     }
   </style>
   <body id=main><a href=#main class=sk>Skip to main content</a>
@@ -578,7 +581,7 @@
       }))
     </script>
     <div class="section wehelp">
-      <!--<div class="col-12 news_section">
+      <div class="col-12 news_section m">
         <h2 class="news_title d">These prominent news outlets are buzzing about us and our products!</h2>
         <h2 class="news_title m">Media Highlights</h2>
         <div class="news_subtitle">
@@ -596,10 +599,10 @@
         <div class="news">
             <a href="https://partners.time.com/partners/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/?prx_t=2KYJAObptA9k0PA"><img src="m/time.svg" loading="lazy" alt="Time Magazine" height="378" width="353"></a>
         </div>
-      </div>-->
+      </div>
 
 
-      <div class="col-12 news_section">
+      <div class="col-12 news_section d">
         <h2 class="news_title d">These prominent news outlets are buzzing about us and our products!</h2>
         <h2 class="news_title m">Media Highlights</h2>
         <div class="news_subtitle">
