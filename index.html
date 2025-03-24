@@ -314,6 +314,13 @@
     .m .news > a, .m .news {
       min-height: 84px;
     }
+    .news_subtitle a {
+      display: inline-block;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+      text-decoration: none;
+      color: inherit;
+    }
   </style>
   <body id=main><a href=#main class=sk>Skip to main content</a>
     <div class=menu>
@@ -544,6 +551,9 @@
       }
     </style>
     <script nonce=a34g29914>
+
+
+
       function it() {
         document.getElementById("threatsCounter").innerText = "";
         var e = new Date(2022, 9, 2, 22, 0, 0, 0),
@@ -579,6 +589,53 @@
           }), 2e4)
         }))
       }))
+
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+      // Array of headline objects
+      var headlines = [
+        {
+          text: "Nicholas Martin Aims to re-imagine the internet with worldsfastest.com",
+          link: "https://partners.time.com/partners/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/"
+        },
+        {
+          text: "FileScience: Nick Martin’s mission to secure the cloud’s overlooked data",
+          link: "https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html"
+        },
+        {
+          text: "Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365",
+          link: "https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901"
+        },
+        {
+          text: "Nick Martin: CEO of Cyber Guardian Consulting Group on Security Innovations",
+          link: "https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/"
+        }
+      ];
+
+      // Set up starting index
+      var currentIndex = 0;
+      // Select the <a> and its contained <h3>
+      var headlineLink = document.querySelector('.d .news_subtitle a');
+      var headlineH3 = headlineLink.querySelector('h3');
+
+      function changeHeadline() {
+        // Fade out the current headline
+        headlineLink.style.opacity = 0;
+        
+        // After the fade-out completes, update the text and link, then fade in
+        setTimeout(function() {
+          headlineLink.href = headlines[currentIndex].link;
+          headlineH3.textContent = headlines[currentIndex].text;
+          headlineLink.style.opacity = 1;
+          // Move to the next headline (wrap around at the end)
+          currentIndex = (currentIndex + 1) % headlines.length;
+        }, 500); // match the CSS transition duration
+      }
+
+      // Change headline every 3 seconds
+      setInterval(changeHeadline, 3000);
+    });
     </script>
     <div class="section wehelp">
       <div class="col-12 news_section m">
@@ -606,7 +663,7 @@
         <h2 class="news_title d">These prominent news outlets are buzzing about us and our products!</h2>
         <h2 class="news_title m">Media Highlights</h2>
         <div class="news_subtitle">
-          <h3>“Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365”</h3>
+          <a href="#"><h3>“Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365”</h3></a>
         </div>
         
         <!-- New carousel wrapper -->
@@ -875,7 +932,7 @@
           text-align: left;
           font-size: 48px;
           font-family: n;
-          font-weight: ;
+          color: #272727;
           font-weight: lighter;
           max-width: 875px;
           float: right;
