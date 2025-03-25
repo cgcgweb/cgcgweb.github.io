@@ -613,22 +613,26 @@
         }
       ];
 
-      // Set up starting index
       var currentIndex = 0;
-      // Select the <a> and its contained <h3>
-      var headlineLink = document.querySelector('.d .news_subtitle a');
-      var headlineH3 = headlineLink.querySelector('h3');
+      // Select all headlines for desktop (.d) and mobile (.m)
+      var headlineLinks = document.querySelectorAll('.d .news_subtitle a, .m .news_subtitle a');
 
       function changeHeadline() {
-        // Fade out the current headline
-        headlineLink.style.opacity = 0;
-        
-        // After the fade-out completes, update the text and link, then fade in
+        // Fade out all headlines
+        headlineLinks.forEach(function(headlineLink) {
+          headlineLink.style.opacity = 0;
+        });
+
+        // After fade-out, update the text and link, then fade in
         setTimeout(function() {
-          headlineLink.href = headlines[currentIndex].link;
-          headlineH3.textContent = headlines[currentIndex].text;
-          headlineLink.style.opacity = 1;
-          // Move to the next headline (wrap around at the end)
+          headlineLinks.forEach(function(headlineLink) {
+            headlineLink.href = headlines[currentIndex].link;
+            // Select the contained <h3>
+            var headlineH3 = headlineLink.querySelector('h3');
+            headlineH3.textContent = headlines[currentIndex].text;
+            headlineLink.style.opacity = 1;
+          });
+          // Cycle to the next headline (wrap-around)
           currentIndex = (currentIndex + 1) % headlines.length;
         }, 500); // match the CSS transition duration
       }
@@ -642,7 +646,7 @@
         <h2 class="news_title d">These prominent news outlets are buzzing about us and our products!</h2>
         <h2 class="news_title m">Media Highlights</h2>
         <div class="news_subtitle">
-          <h3>“Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365”</h3>
+          <a><h3>“Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365”</h3></a>
         </div>
         <div class="news">
             <a href="https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/"><img src="m/usa-today.svg" loading="lazy" alt="USA Today" height="378" width="353"></a>
