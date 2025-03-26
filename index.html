@@ -98,7 +98,7 @@
       float: left;
       box-sizing: border-box
     }
-
+    
     @media screen and (max-width:900px) {
       [class*=col-] {
         width: 100%
@@ -154,6 +154,10 @@
       .first img.m {
         height: calc(85vw * .59)
       }
+      img.titlesvg {
+        margin-left: 0;
+        max-width: 100%;
+      }
     }
 
     @media screen and (min-width:900px) {
@@ -169,7 +173,10 @@
         max-width: 140%;
         margin-left: -40px
       }
-
+      img.titlesvg {
+        margin-left: -20px;
+        max-width: 100%;
+      }
       h2 {
         font-size: 92px;
         margin-bottom: 0
@@ -307,7 +314,7 @@
     .navdservices:hover {
       display: block !important
     }
-
+    
     .sk {
       display: none !important
     }
@@ -332,7 +339,8 @@
     </div>
     <div class="section first">
       <div class=col-6>
-        <h1>SOLUTIONS<br>DESIGNED TO<br>LET YOUR<br>BUSINESS THRIVE</h1>
+        <h1 style="display: none;">SOLUTIONS<br>DESIGNED TO<br>LET YOUR<br>BUSINESS THRIVE</h1>
+        <img src="media/title.svg" alt="CGCG Banner" width="500" height="250" class="titlesvg">
         <p class=d>Comprehensive solutions for start-ups to Fortune 500 companies. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p><img src=m/e.svg alt="CGCG Eagle" class=m>
         <p class=m>Comprehensive solutions for start-ups to Fortune 500 companies. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p>
         <div class="d arrowlink"><a href=/services/><span><svg fill=none height=50 role=Presentation width=50 xmlns=http://www.w3.org/2000/svg>
