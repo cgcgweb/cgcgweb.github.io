@@ -1402,6 +1402,11 @@
   animation: slideCarousel 10s linear infinite;
 }
 
+/* Pause the carousel when hovered */
+.news_carousel_wrapper:hover .news_carousel {
+  animation-play-state: paused;
+}
+
 /* Animate the carousel from 0 to -50% of its width so one set slides out */
 @keyframes slideCarousel {
   0% {
@@ -1425,9 +1430,11 @@
     animation-duration: 10s;
   }
 }
+
 .news_carousel {
-	max-height: 274px !important;
+  max-height: 274px !important;
 }
+
 
     </style>
   </body>
