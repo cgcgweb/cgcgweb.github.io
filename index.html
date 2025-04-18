@@ -649,153 +649,136 @@
       setInterval(changeHeadline, 3000);
     });
     </script>
+    <style>
+    .carousel-container {
+      position: relative;
+      width: 80%;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+    }
+
+    .title{
+      width: 100%;
+      display: flex;
+      justify-content: start; 
+      font-size: 22px;
+      margin-left: 10px;
+    }
+    .carousel-title{
+      margin: 0 20px;
+      padding-top: 16px;
+    }
+    .carousel-title::before{
+      content: attr(data-text-desktop);
+    }
+    .carousel-item p {
+      font-size: 36px;
+    }
+    .separator {
+      width: 96%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 20px;
+      
+    }
+    
+    .carousel-quote {
+      width: 100%;
+      height:280px;
+      display: flex;
+      justify-content: end;
+    }
+    
+    .carousel-item {
+      position: absolute;
+      width: 60%;
+      opacity: 0;
+      transition: opacity 0.5s;
+      display: flex;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 40px;
+    }
+    
+    .carousel-item.active {
+      opacity: 1;
+    }
+    .carousel-indicators{
+      overflow-x: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      width: 90%;
+      margin: 20px;
+      padding-bottom: 24px;
+    }
+    
+    
+    .indicator {
+      width: 200px;
+      height: 50px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      filter: invert(0.5);
+      opacity: 0.7;
+    }
+    
+    
+    .indicator.active {
+      filter: invert(0);
+      opacity: 1;
+    }
+    
+    .indicator:hover {
+      filter: invert(0);
+      opacity: 1;
+    }
+    
+    /* mobile styling*/
+    
+    @media only screen and (max-width: 600px) and (min-width: 200px) {
+      .carousel-indicators{
+        width: 90%;
+      }
+    
+      .carousel-title::before{
+        content: attr(data-text-mobile);
+      }
+      .carousel-quote {
+      justify-content: center;
+    }
+      .carousel-item {
+      width: 80%;
+      font-size: 26px;
+      margin: 0 20px ;
+    }
+    }
+    
+    </style>
     <div class="section wehelp">
-      <div class="col-12 news_section m">
-        <h2 class="news_title d">These prominent news outlets are buzzing about us and our products!</h2>
-        <h2 class="news_title m">Media Highlights</h2>
-        <div class="news_subtitle">
-          <a><h3>“Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365”</h3></a>
-        </div>
-        <div class="news">
-            <a href="https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/"><img src="m/usa-today.svg" loading="lazy" alt="USA Today" height="378" width="353"></a>
-        </div>
-        <div class="news">
-            <a href="https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901"><img src="m/jpost.svg" loading="lazy" alt="JPost" height="378" width="353"></a>
-        </div>
-        <div class="news">
-            <a href="https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html"><img src="m/independent.svg" loading="lazy" alt="Independent" height="378" width="353"></a>
-        </div>
-        <div class="news">
-            <a href="https://partners.time.com/partners/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/?prx_t=2KYJAObptA9k0PA"><img src="m/time.svg" loading="lazy" alt="Time Magazine" height="378" width="353"></a>
-        </div>
-      </div>
-      <style>
-        .carousel-container {
-  position: relative;
-  width: 100%;
-  margin: 40px auto;
-  background-color: white;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-.title{
-  width: 100%;
-  display: flex;
-  justify-content: start; 
-  font-size: 12px;
-}
-.carousel-title{
-  margin: 2px 20px;
-  padding-top: 16px;
-  font-size: 20px;
-}
-.carousel-title::before{
-  content: attr(data-text-desktop);
-}
-
-.separator {
-  width: 96%;
-  height: 1px;
-  background-color: #ccc;
-  margin: 20px;
-  
-}
-
-.carousel-quote {
-  width: 100%;
-  height:280px;
-  display: flex;
-  justify-content: end;
-}
-
-.carousel-item {
-  position: absolute;
-  width: 600px;
-  opacity: 0;
-  transition: opacity 0.5s;
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
-  margin: 0 40px;
-}
-
-.carousel-item.active {
-  opacity: 1;
-}
-.carousel-indicators{
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  width: 90%;
-  margin: 20px;
-  padding-bottom: 24px;
-}
-
-
-.indicator {
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  filter: invert(0.5);
-  opacity: 0.7;
-}
-
-
-.indicator.active {
-  filter: invert(0);
-  opacity: 1;
-}
-
-.indicator:hover {
-  filter: invert(0);
-  opacity: 1;
-}
-
-/* mobile styling*/
-
-@media only screen and (max-width: 600px) and (min-width: 200px) {
-  .carousel-indicators{
-    width: 90%;
-  }
-
-  .carousel-title::before{
-    content: attr(data-text-mobile);
-  }
-  .carousel-quote {
-  justify-content: center;
-}
-  .carousel-item {
-  width: 80%;
-  font-size: 26px;
-  margin: 0 20px ;
-}
-}
-
-      </style>
-
-      <div class="col-12 news_section d">
+      <div class="col-12 news_section">
         <div class="carousel-container">
           <div class="title"><p class="carousel-title" data-text-desktop="These prominent news outlets are buzzing about us and our products!" data-text-mobile="Media Highlights"></p></div>
           <div class="separator"></div>
             <div class="carousel-quote">
               <div class="carousel-item active">
-                <p>“FileScience: Nick Martin’s mission to secure the cloud’s overlooked data” – Independent </p>
+                <p>“FileScience: Nick Martin’s mission to secure the cloud’s overlooked data”  </p>
               </div>
               <div class="carousel-item">
-                <p>“Practical Strategies for Securing Cloud Data and Microsoft 365” – USA Today  </p>
+                <p>“Practical Strategies for Securing Cloud Data and Microsoft 365”   </p>
               </div>
               <div class="carousel-item">
-                <p>"Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365" – JP  </p>
+                <p>"Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365"  </p>
               </div>
               <div class="carousel-item">
-                <p>"Nick Martin Aims to Re-Imagine the Internet" – Time </p>
+                <p>"Nick Martin Aims to Re-Imagine the Internet" </p>
               </div>
             </div>
             <div class="carousel-indicators">
@@ -805,7 +788,7 @@
                 <img src="time.svg" class="indicator" data-target="#carousel-example" data-slide-to="3">
               
             </div>
-          </div>        
+          </div>       
       </div>
       <script nonce="a34g29914">
         
