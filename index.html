@@ -692,6 +692,39 @@
       margin: 20px;
       
     }
+    /* Carousel Animation */
+    .carousel-indicators-wrapper {
+        width: 100%;              /* Or a fixed value like 400px */
+        overflow: hidden;
+        position: relative;
+      }
+
+      .scroll-track {
+        display: flex;
+        width: max-content;       /* Makes it as wide as needed */
+        animation: scroll-left 10s linear infinite;  /* Slower, smoother */
+      }
+
+      .indicator {
+        width: 25%;             /* Match the actual size */
+        margin-right: 20px;       /* Spacing between logos */
+        flex-shrink: 0;
+      }
+
+      /* Keyframes for perfect looping */
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .carousel-indicators-wrapper:hover .scroll-track {
+        animation-play-state: paused;
+      }
+
     
     .carousel-quote {
       width: 100%;
@@ -797,12 +830,17 @@
                 <p role="heading">"Nick Martin Aims to Re-Imagine the Internet" </p>
               </div>
             </div>
-            <div class="carousel-indicators">
-                <img src="independent.svg" tabindex="0" class="indicator active" data-target="#carousel-example" data-slide-to="0">
-                <img src="usa_today.svg" tabindex="0" class="indicator" data-target="#carousel-example" data-slide-to="1">
-                <img src="the_jp.svg" tabindex="0" class="indicator" data-target="#carousel-example" data-slide-to="2">
-                <img src="time.svg" tabindex="0" class="indicator" data-target="#carousel-example" data-slide-to="3">
-              
+            <div class="carousel-indicators-wrapper">
+              <div class="scroll-track">
+                <img src="independent.svg" tabindex="0" class="indicator" >
+                <img src="usa_today.svg" tabindex="0" class="indicator" >
+                <img src="the_jp.svg" tabindex="0" class="indicator active" >
+                <img src="time.svg" tabindex="0" class="indicator" >
+                <img src="independent.svg" tabindex="0" class="indicator" >
+                <img src="usa_today.svg" tabindex="0" class="indicator" >
+                <img src="the_jp.svg" tabindex="0" class="indicator active" >
+                <img src="time.svg" tabindex="0" class="indicator" >
+              </div>
             </div>
           </div>       
       </div>
