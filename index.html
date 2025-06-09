@@ -891,7 +891,8 @@
           carouselIndicators.forEach((indicator, index) => {
           indicator.addEventListener('mouseover', () => {
             clearInterval(intervalId);
-            currentSlide = index;
+            currentSlide = index % 4;
+            console.log("Current Slide: " + currentSlide);
             showSlide(currentSlide);
           });
 
