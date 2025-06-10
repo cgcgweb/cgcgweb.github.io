@@ -742,6 +742,7 @@
       justify-content: center;
       font-size: 36px;
       margin: 0 40px;
+      flex-direction: column;
     }
     
     .carousel-item.active {
@@ -819,15 +820,19 @@
             <div class="carousel-quote">
               <div class="carousel-item active">
                 <p role="heading">“FileScience: Nick Martin’s mission to secure the cloud’s overlooked data”  </p>
+                <span>— The Independent</span>
               </div>
               <div class="carousel-item">
                 <p role="heading">“Practical Strategies for Securing Cloud Data and Microsoft 365”   </p>
+                <span>— USA Today</span>
               </div>
               <div class="carousel-item">
                 <p role="heading">"Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365"  </p>
+                <span>— The Jerusalem Post</span>
               </div>
               <div class="carousel-item">
                 <p role="heading">"Nick Martin Aims to Re-Imagine the Internet" </p>
+                <span>— The Time</span>
               </div>
             </div>
             <div class="carousel-indicators-wrapper">
@@ -1481,8 +1486,13 @@
         .carousel-quote .carousel-item {
           background: #ffffffd8;
           padding: 6px 14px;
-          min-height: 213px;
-          margin-top: 130px;
+          min-height: 230px;
+          margin-top: 120px;
+        }
+        .carousel-item span {
+          text-align: right;
+          font-size: 24px;
+          margin-top: 0;
         }
         .carousel-quote .carousel-item p {
           font-size: 32px;
