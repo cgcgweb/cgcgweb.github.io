@@ -618,6 +618,14 @@
         {
           text: "Nick Martin: CEO of Cyber Guardian Consulting Group on Security Innovations",
           link: "https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/"
+        },
+        {
+          text: "Public Officials Separate Workplace and Personal Online Lives. Hackers Don’t Care.",
+          link: "https://www.wsj.com/articles/public-officials-separate-workplace-and-personal-online-lives-hackers-dont-care-baabc078?st=zLkHRx&reflink=desktopwebshare_permalink"
+        },
+        {
+          text: "Dark-web AI models ould make criminal hackers even more powerful.",
+          link: "https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html"
         }
       ];
 
@@ -762,7 +770,7 @@
     
     
     .indicator {
-      width: 200px;
+      width: 160px;
       height: 50px;
       cursor: pointer;
       transition: background-color 0.2s;
@@ -798,6 +806,7 @@
       width: 80%;
       font-size: 26px;
       margin: 0 20px ;
+      margin-top: 40px;
     }
     .carousel-indicators {
       flex-direction: column;
@@ -834,6 +843,13 @@
                 <p role="heading">"Nick Martin Aims to Re-Imagine the Internet" </p>
                 <span>— The Time</span>
               </div>
+              <div class="carousel-item">
+                <p role="heading">"Public Officials Separate Workplace and Personal Online Lives. Hackers Don’t Care." </p>
+                <span>— The Wall Street Journal</span>
+              </div>
+              <div class="carousel-item">
+                <p role="heading">"Dark-web AI models could make criminal hackers even more powerful." </p>
+                <span>— Market Watch</span>
             </div>
             <div class="carousel-indicators-wrapper">
               <div class="scroll-track">
@@ -841,10 +857,14 @@
                 <img src="usa_today.svg" tabindex="0" class="indicator" >
                 <img src="the_jp.svg" tabindex="0" class="indicator active" >
                 <img src="time.svg" tabindex="0" class="indicator" >
+                <img src="wsj.svg" tabindex="0" class="indicator" >
+                <img src="marketwatch.svg" tabindex="0" class="indicator" >
                 <img src="independent.svg" tabindex="0" class="indicator" >
                 <img src="usa_today.svg" tabindex="0" class="indicator" >
                 <img src="the_jp.svg" tabindex="0" class="indicator active" >
                 <img src="time.svg" tabindex="0" class="indicator" >
+                <img src="wsj.svg" tabindex="0" class="indicator" >
+                <img src="marketwatch.svg" tabindex="0" class="indicator" >
               </div>
             </div>
           </div>       
@@ -896,7 +916,7 @@
           carouselIndicators.forEach((indicator, index) => {
           indicator.addEventListener('mouseover', () => {
             clearInterval(intervalId);
-            currentSlide = index % 4;
+            currentSlide = index % 6;
             console.log("Current Slide: " + currentSlide);
             showSlide(currentSlide);
           });
