@@ -628,6 +628,18 @@
           link: "https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html"
         }
       ];
+      
+      const indicators = document.querySelectorAll('.scroll-track .indicator');
+
+      // Attach click event to each image
+      indicators.forEach((img, index) => {
+        img.addEventListener('click', () => {
+          const headline = headlines[index % headlines.length];
+          if (headline && headline.link) {
+            window.open(headline.link, '_blank');
+          }
+        });
+      });
 
       var currentIndex = 0;
       // Select all headlines for desktop (.d) and mobile (.m)
