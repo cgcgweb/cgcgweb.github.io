@@ -640,6 +640,29 @@
           }
         });
       });
+      // add another event to add .active class to the .carousel-item corresponding to the hovered image. 
+      indicators.forEach((img, index) => {
+        img.addEventListener('mouseover', () => {
+          const carouselItems = document.querySelectorAll('.carousel-item');
+          carouselItems.forEach((item, itemIndex) => {
+            item.classList.remove('active');
+            if (itemIndex === index % carouselItems.length) {
+              item.classList.add('active');
+            }
+          });
+        });
+      });
+
+      // add another event to remove the .active class when the mouse leaves the image. The Carousel is in front of the images with higher z-index, so we need to remove the active class when the mouse leaves the image's parent .scroll-track
+      const scrollTrack = document.querySelector('.scroll-track');
+      scrollTrack.addEventListener('mouseleave', () => {
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        carouselItems.forEach((item) => {
+          item.classList.remove('active');
+        });
+      });
+      
+      
 
       var currentIndex = 0;
       // Select all headlines for desktop (.d) and mobile (.m)
@@ -727,7 +750,7 @@
 
       .indicator {
         width: 25%;             /* Match the actual size */
-        margin-right: 20px;       /* Spacing between logos */
+        margin-right: 40px;       /* Spacing between logos */
         flex-shrink: 0;
       }
 
@@ -783,8 +806,8 @@
     
     
     .indicator {
-      width: 160px;
-      height: 50px;
+      width: 270px;
+      height: 110px;
       cursor: pointer;
       transition: background-color 0.2s;
       filter: invert(0.5);
@@ -840,7 +863,7 @@
           <div class="title"><p class="carousel-title" data-text-desktop="These prominent news outlets are buzzing about us and our products!" data-text-mobile="Media Highlights"></p></div>
           <div class="separator"></div>
             <div class="carousel-quote">
-              <div class="carousel-item active">
+              <div class="carousel-item">
                 <p role="heading">“FileScience: Nick Martin’s mission to secure the cloud’s overlooked data”  </p>
                 <span>— The Independent</span>
               </div>
@@ -901,15 +924,14 @@
         function startInterval() {
           intervalId = setInterval(nextSlide, 3000);
         }
-
         function showSlide(n) {
           carouselItems.forEach((items) => {
-            items.classList.remove('active');
+            //items.classList.remove('active'); UNCOMMENT THIS LINE TO DISABLE THE ACTIVE CLASS
           });
           carouselIndicators.forEach((indicator) => {
             indicator.classList.remove('active');
           });
-          carouselItems[n].classList.add('active');
+          //carouselItems[n].classList.add('active'); // UNCOMMENT THIS LINE TO DISABLE THE ACTIVE CLASS
           carouselIndicators[n].classList.add('active');
         }
 
