@@ -634,9 +634,10 @@
       // Attach click event to each image
       indicators.forEach((img, index) => {
         img.addEventListener('click', () => {
+          const headlineIndex = img.getAttribute('data-index-url');
           const headline = headlines[index % headlines.length];
           if (headline && headline.link) {
-            window.open(headline.link, '_blank');
+            window.open(headlines[headlineIndex].link, '_blank');
           }
         });
       });
@@ -865,7 +866,7 @@
         margin-left: 0;
         width: 100%;
         border-radius: 12px;
-        transition: opacity 0.5s;
+        transition: opacity 0s;
       }
       .carousel-item p {
         color: black;
@@ -920,18 +921,18 @@
             </div>
             <div class="carousel-indicators-wrapper">
               <div class="scroll-track">
-                <img src="independent.svg" tabindex="0" class="indicator" >
-                <img src="usa_today.svg" tabindex="0" class="indicator" >
-                <img src="the_jp.svg" tabindex="0" class="indicator active" >
-                <img src="time.svg" tabindex="0" class="indicator" >
-                <img src="wsj.svg" tabindex="0" class="indicator" >
-                <img src="marketwatch.svg" tabindex="0" class="indicator" >
-                <img src="independent.svg" tabindex="0" class="indicator" >
-                <img src="usa_today.svg" tabindex="0" class="indicator" >
-                <img src="the_jp.svg" tabindex="0" class="indicator active" >
-                <img src="time.svg" tabindex="0" class="indicator" >
-                <img src="wsj.svg" tabindex="0" class="indicator" >
-                <img src="marketwatch.svg" tabindex="0" class="indicator" >
+                <img src="independent.svg" tabindex="0" class="indicator" data-index-url="1" >
+                <img src="usa_today.svg" tabindex="0" class="indicator" data-index-url="3" >
+                <img src="the_jp.svg" tabindex="0" class="indicator active" data-index-url="2" >
+                <img src="time.svg" tabindex="0" class="indicator" data-index-url="0" >
+                <img src="wsj.svg" tabindex="0" class="indicator" data-index-url="4" >
+                <img src="marketwatch.svg" tabindex="0" class="indicator" data-index-url="5" >
+                <img src="independent.svg" tabindex="0" class="indicator" data-index-url="1" >
+                <img src="usa_today.svg" tabindex="0" class="indicator" data-index-url="3" >
+                <img src="the_jp.svg" tabindex="0" class="indicator" data-index-url="2" >
+                <img src="time.svg" tabindex="0" class="indicator" data-index-url="0" >
+                <img src="wsj.svg" tabindex="0" class="indicator" data-index-url="4" >
+                <img src="marketwatch.svg" tabindex="0" class="indicator" data-index-url="5" >
               </div>
             </div>
           </div>       
@@ -986,7 +987,7 @@
           });
           carouselItems[currentSlide].classList.add('activem');
           currentSlide = (currentSlide + 1) % carouselItems.length;
-        }, 4000);
+        }, 6000);
 
         }else{
           // code desktop
