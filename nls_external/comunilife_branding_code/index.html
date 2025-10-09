@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500");
+    </style>
+
+    <title></title>
+    <!--[if (!mso)&(!ie)]>These<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>are<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>for<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>outlook<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>live<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>that<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>removes<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>the first<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>10 well-formed<!-- -->
+    <!--<![endif]-->
+    <!--[if (!mso)&(!ie)]>conditional comments<!-- -->
+    <!--<![endif]-->
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings xmlns:o="urn:schemas-microsoft-com:office:office">
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+
+    <style type="text/css">
+      .dark-mode .color-fffffe {
+        color: #fffffe !important;
+      }
+      .dark-mode .color-ffffff {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+      .dark-mode .bg-fffffe {
+        background-color: #fffffe !important;
+      }
+      .dark-mode .bg-dcfce7 {
+        background-color: #dcfce7 !important;
+      }
+      .dark-mode .color-0f172b {
+        color: #0f172b !important;
+      }
+      .dark-mode .color-008236 {
+        color: #008236 !important;
+      }
+      .dark-mode .color-314158 {
+        color: #314158 !important;
+      }
+      .dark-mode .bg-0f172b {
+        background-color: #0f172b !important;
+      }
+      .dark-mode .color-05df72 {
+        color: #05df72 !important;
+      }
+      .dark-mode .bg-f3e8ff {
+        background-color: #f3e8ff !important;
+      }
+      .dark-mode .bg-fef2f2 {
+        background-color: #fef2f2 !important;
+      }
+      .dark-mode .bg-ffe2e2 {
+        background-color: #ffe2e2 !important;
+      }
+      .dark-mode .bg-ffc9c9 {
+        background-color: #ffc9c9 !important;
+      }
+      .dark-mode .color-9f0712 {
+        color: #9f0712 !important;
+      }
+      .dark-mode .bg-f0fdf4 {
+        background-color: #f0fdf4 !important;
+      }
+      .dark-mode .bg-b9f8cf {
+        background-color: #b9f8cf !important;
+      }
+      .dark-mode .color-016630 {
+        color: #016630 !important;
+      }
+      .dark-mode .bg-ffffff {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+      }
+      .dark-mode .bg-dbeafe {
+        background-color: #dbeafe !important;
+      }
+      .dark-mode .color-155dfc {
+        color: #155dfc !important;
+      }
+      .dark-mode .color-1447e6 {
+        color: #1447e6 !important;
+      }
+      .dark-mode .color-45556c {
+        color: #45556c !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html:not(.light-mode) .color-fffffe {
+          color: #fffffe !important;
+        }
+        html:not(.light-mode) .color-ffffff {
+          color: rgba(255, 255, 255, 0.9) !important;
+        }
+        html:not(.light-mode) .bg-fffffe {
+          background-color: #fffffe !important;
+        }
+        html:not(.light-mode) .bg-dcfce7 {
+          background-color: #dcfce7 !important;
+        }
+        html:not(.light-mode) .color-0f172b {
+          color: #0f172b !important;
+        }
+        html:not(.light-mode) .color-008236 {
+          color: #008236 !important;
+        }
+        html:not(.light-mode) .color-314158 {
+          color: #314158 !important;
+        }
+        html:not(.light-mode) .bg-0f172b {
+          background-color: #0f172b !important;
+        }
+        html:not(.light-mode) .color-05df72 {
+          color: #05df72 !important;
+        }
+        html:not(.light-mode) .bg-f3e8ff {
+          background-color: #f3e8ff !important;
+        }
+        html:not(.light-mode) .bg-fef2f2 {
+          background-color: #fef2f2 !important;
+        }
+        html:not(.light-mode) .bg-ffe2e2 {
+          background-color: #ffe2e2 !important;
+        }
+        html:not(.light-mode) .bg-ffc9c9 {
+          background-color: #ffc9c9 !important;
+        }
+        html:not(.light-mode) .color-9f0712 {
+          color: #9f0712 !important;
+        }
+        html:not(.light-mode) .bg-f0fdf4 {
+          background-color: #f0fdf4 !important;
+        }
+        html:not(.light-mode) .bg-b9f8cf {
+          background-color: #b9f8cf !important;
+        }
+        html:not(.light-mode) .color-016630 {
+          color: #016630 !important;
+        }
+        html:not(.light-mode) .bg-ffffff {
+          background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+        html:not(.light-mode) .bg-dbeafe {
+          background-color: #dbeafe !important;
+        }
+        html:not(.light-mode) .color-155dfc {
+          color: #155dfc !important;
+        }
+        html:not(.light-mode) .color-1447e6 {
+          color: #1447e6 !important;
+        }
+        html:not(.light-mode) .color-45556c {
+          color: #45556c !important;
+        }
+      }
+
+      [data-ogsc] .color-fffffe {
+        color: #fffffe !important;
+      }
+      [data-ogsc] .color-ffffff {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+      [data-ogsc] .bg-fffffe {
+        background-color: #fffffe !important;
+      }
+      [data-ogsc] .bg-dcfce7 {
+        background-color: #dcfce7 !important;
+      }
+      [data-ogsc] .color-0f172b {
+        color: #0f172b !important;
+      }
+      [data-ogsc] .color-008236 {
+        color: #008236 !important;
+      }
+      [data-ogsc] .color-314158 {
+        color: #314158 !important;
+      }
+      [data-ogsc] .bg-0f172b {
+        background-color: #0f172b !important;
+      }
+      [data-ogsc] .color-05df72 {
+        color: #05df72 !important;
+      }
+      [data-ogsc] .bg-f3e8ff {
+        background-color: #f3e8ff !important;
+      }
+      [data-ogsc] .bg-fef2f2 {
+        background-color: #fef2f2 !important;
+      }
+      [data-ogsc] .bg-ffe2e2 {
+        background-color: #ffe2e2 !important;
+      }
+      [data-ogsc] .bg-ffc9c9 {
+        background-color: #ffc9c9 !important;
+      }
+      [data-ogsc] .color-9f0712 {
+        color: #9f0712 !important;
+      }
+      [data-ogsc] .bg-f0fdf4 {
+        background-color: #f0fdf4 !important;
+      }
+      [data-ogsc] .bg-b9f8cf {
+        background-color: #b9f8cf !important;
+      }
+      [data-ogsc] .color-016630 {
+        color: #016630 !important;
+      }
+      [data-ogsc] .bg-ffffff {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+      }
+      [data-ogsc] .bg-dbeafe {
+        background-color: #dbeafe !important;
+      }
+      [data-ogsc] .color-155dfc {
+        color: #155dfc !important;
+      }
+      [data-ogsc] .color-1447e6 {
+        color: #1447e6 !important;
+      }
+      [data-ogsc] .color-45556c {
+        color: #45556c !important;
+      }
+    </style>
+
+    <meta name="color-scheme" content="light dark" />
+
+    <meta name="supported-color-schemes" content="light dark" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+
+    <meta name="x-apple-disable-message-reformatting" />
+
+    <style></style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style type="text/css">
+      u + div .kombai-email-compat__list-with-padding-left {
+        padding-left: 0.5em !important;
+      }
+    </style>
+
+    <!--[if mso]>
+      <style type="text/css">
+        v\:* {
+          behavior: url(#default#VML);
+          display: inline-block;
+        }
+        o\:* {
+          behavior: url(#default#VML);
+          display: inline-block;
+        }
+        w\:* {
+          behavior: url(#default#VML);
+          display: inline-block;
+        }
+        .ExternalClass {
+          width: 100%;
+        }
+        table {
+          mso-table-lspace: 0pt;
+          mso-table-rspace: 0pt;
+        }
+        img {
+          -ms-interpolation-mode: bicubic;
+        }
+        .ReadMsgBody {
+          width: 100%;
+        }
+        a {
+          background: transparent !important;
+          background-color: transparent !important;
+        }
+
+        li {
+          text-align: -webkit-match-parent;
+          display: list-item;
+          text-indent: -1em;
+        }
+
+        ul,
+        ol {
+          margin-left: 1em !important;
+        }
+
+        p {
+          text-indent: 0;
+        }
+      </style>
+    <![endif]-->
+  </head>
+  <body style="margin: 0; padding: 0">
+    <div style="font-size: 0px; line-height: 1px; mso-line-height-rule: exactly; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all"></div>
+    <center lang="en" dir="ltr" style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%">
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="1341.00" bgcolor="#f8fafc" style="background-color: #f8fafc; background: linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(239, 246, 255, 1) 100%); width: 1341px; border-spacing: 0; font-family: Inter, Tahoma, sans-serif; min-width: 1341px">
+        <tr>
+          <td valign="top" width="100.00%" style="padding-top: 41px; padding-bottom: 165px; width: 100%; vertical-align: top">
+            <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+              <tr>
+                <td align="center" style="padding-bottom: 41px">
+                  <img src="assets/image_3641bf36.png" alt="a heart made of colorful circles on a black background" width="274" style="max-width: initial; width: 274px; display: block" />
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px; padding-bottom: 12px; padding-left: 310px; padding-right: 310px">
+                  <img src="assets/image_888b8a08.png" alt="two women are looking at a tablet together and smiling" width="720" style="border: none; border-radius: 16px; max-width: initial; object-fit: contain; width: 720px; display: block; margin-top: -0.5px" />
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 12px; padding-bottom: 16px; padding-left: 310.5px; padding-right: 310.5px">
+                  <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="720.00" bgcolor="#ff6900" style="background-color: #ff6900; border-radius: 16px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1); background: linear-gradient(90deg, rgba(255, 105, 0, 1) 0%, rgba(251, 44, 54, 1) 100%); padding-top: 32px; padding-bottom: 28.5px; width: 720px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                    <tr>
+                      <td align="left" valign="middle" width="100.00%" style="padding-left: 31px; width: 100%; vertical-align: middle">
+                        <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="margin: 0; width: 100%; border-spacing: 0">
+                          <tr>
+                            <td style="padding-bottom: 8.91px">
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-spacing: 0">
+                                <tr>
+                                  <td valign="middle" style="padding-right: 3px; vertical-align: middle">
+                                    <img src="assets/image_aef2265e.png" alt="a white envelope icon on a black background." width="40.00" height="40.00" style="width: 40px; height: 40px; display: block" />
+                                  </td>
+                                  <td valign="middle" width="637" style="padding-left: 8px; width: 637px; vertical-align: middle">
+                                    <!--[if mso]> <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="637" style="width:637px;"> <tr> <td> <![endif]-->
+                                    <p class="color-fffffe" width="637" style="font-size: 16px; font-weight: 500; letter-spacing: -0.31px; color: white; margin: 0; padding: 0; width: 637px; line-height: 40px; mso-line-height-alt: normal">This Week's Focus</p>
+                                    <!--[if mso]></td></tr></table><![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-top: 8.91px; padding-bottom: 8.66px">
+                              <p class="color-fffffe" width="100.00%" style="font-size: 24px; font-weight: 500; letter-spacing: 0.07px; color: white; margin: 0; padding: 0; width: 100%; line-height: 28.36px; mso-line-height-alt: 28px">🔐 Can AI guess your password?</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="padding-top: 8.66px; padding-right: 79px">
+                              <p class="color-ffffff" width="100.00%" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; text-align: left; line-height: 26px; color: rgba(255, 255, 255, 0.9); mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">Welcome to Week 1 of Cybersecurity Awareness Month! We are starting with the foundations of digital safety and how AI is reshaping the threat landscape. Strong passwords and multi-factor authentication (MFA) remain essential, but attackers are increasingly using AI to crack weak credentials faster than ever.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px; padding-bottom: 16px; padding-left: 310.5px; padding-right: 310.5px">
+                  <table class="bg-fffffe" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="white" width="720.00" style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1); background-color: white; width: 720px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                    <tr>
+                      <td valign="top" width="100.00%" style="padding-top: 32px; padding-bottom: 43px; padding-left: 32px; padding-right: 32px; width: 100%; vertical-align: top">
+                        <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                          <tr>
+                            <!--[if mso]><td valign="top"><table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr><![endif]-->
+                            <td valign="top" style="padding-bottom: 64px; padding-right: 7px; vertical-align: top">
+                              <table class="bg-dcfce7" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#dcfce7" width="52.00" height="52.00" style="border-radius: 14px; background-color: #dcfce7; width: 52px; height: 52px; border-spacing: 0; border-collapse: separate">
+                                <tr>
+                                  <td valign="middle" width="100.00%" height="52.00" style="padding-left: 12px; padding-right: 12px; width: 100%; vertical-align: middle; height: 52px">
+                                    <img src="assets/image_8998d827.png" alt="a green shield icon on a black background." width="100.00%" height="28" style="width: 100%; height: 28px; display: block" />
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <!--[if mso]></tr></table></td><![endif]-->
+                            <td valign="top" width="587" style="padding-left: 8px; width: 587px; vertical-align: top">
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                                <tr>
+                                  <td align="left" style="padding-bottom: 7.75px">
+                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                      <tr>
+                                        <td valign="middle" width="502.86" style="width: 502.86px; vertical-align: middle">
+                                          <!--[if mso]> <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="502.86" style="width:502.86px;"> <tr> <td> <![endif]-->
+                                          <p class="color-0f172b" width="502.86" style="font-size: 20px; font-weight: 400; letter-spacing: -0.45px; color: #0f172b; margin: 0; padding: 0; width: 502.86px; line-height: 28px; mso-line-height-alt: 28px">Security Tip of the Week</p>
+                                          <!--[if mso]></td></tr></table><![endif]-->
+                                        </td>
+                                        <td valign="middle" width="59.08" style="width: 59.08px; vertical-align: middle">
+                                          <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" height="22.00" style="border-radius: 8px; border: 1px solid #b9f8cf; width: 100%; height: 22px; border-spacing: 0; border-collapse: separate">
+                                            <tr>
+                                              <td valign="middle" width="100.00%" height="20.00" style="width: 100%; vertical-align: middle; height: 20px">
+                                                <p class="color-008236" width="100.00%" style="font-size: 12px; font-weight: 500; color: #008236; margin: 0; padding: 0; width: 100%; line-height: 16px; text-align: center; mso-line-height-alt: 16px">Pro Tip</p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="left" style="padding-top: 7.75px; padding-bottom: 5.25px; padding-right: 25px">
+                                    <p class="color-314158" width="100.00%" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; text-align: left; line-height: 26px; color: #314158; mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">Adopt a passphrase instead of a traditional password. Four random words are significantly stronger than a short password with predictable substitutions.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="padding-top: 5.25px">
+                                    <table class="bg-0f172b" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#0f172b" width="100.00%" height="56.00" style="border-radius: 14px; background-color: #0f172b; width: 100%; height: 56px; border-spacing: 0; border-collapse: separate">
+                                      <tr>
+                                        <td valign="middle" width="100.00%" height="56.00" style="width: 100%; vertical-align: middle; height: 56px">
+                                          <p class="color-05df72" width="100.00%" style="font-size: 16px; font-weight: 400; color: #05df72; margin: 0; padding: 0; width: 100%; line-height: 24px; text-align: center; mso-line-height-alt: 24px">Guitar-Pencil-Window-Sky</p>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px; padding-bottom: 16px; padding-left: 310.5px; padding-right: 310.5px">
+                  <table class="bg-fffffe" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="white" width="720.00" style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1); background-color: white; padding-top: 32px; padding-bottom: 32px; width: 720px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                    <tr>
+                      <td valign="middle" width="100.00%" style="width: 100%; vertical-align: middle">
+                        <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                          <tr>
+                            <td align="left" style="padding-bottom: 12px; padding-left: 32px">
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                <tr>
+                                  <td valign="middle" style="padding-right: 3px; vertical-align: middle">
+                                    <table class="bg-f3e8ff" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#f3e8ff" width="52.00" height="52.00" style="border-radius: 14px; background-color: #f3e8ff; width: 52px; height: 52px; border-spacing: 0; border-collapse: separate">
+                                      <tr>
+                                        <td valign="middle" width="100.00%" height="52.00" style="padding-left: 12px; padding-right: 12px; width: 100%; vertical-align: middle; height: 52px">
+                                          <img src="assets/image_d5c65860.png" alt="a purple warning sign with an exclamation point inside of it on a black background." width="100.00%" height="28" style="width: 100%; height: 28px; display: block" />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td valign="middle" width="624" style="padding-left: 8px; width: 624px; vertical-align: middle">
+                                    <!--[if mso]> <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="624" style="width:624px;"> <tr> <td> <![endif]-->
+                                    <p class="color-0f172b" width="624" style="font-size: 20px; font-weight: 400; letter-spacing: -0.45px; color: #0f172b; margin: 0; padding: 0; width: 624px; line-height: 52px; mso-line-height-alt: normal">Myth vs Reality Check</p>
+                                    <!--[if mso]></td></tr></table><![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-top: 12px; padding-bottom: 8px; padding-left: 32px; padding-right: 32px">
+                              <table class="bg-fef2f2" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#fef2f2" width="654.00" style="border-radius: 0px 14px 14px 0px; border-left: 4px solid #ff6467; background-color: #fef2f2; padding-top: 19px; padding-bottom: 19px; width: 654px; border-spacing: 0; border-collapse: separate">
+                                <tr>
+                                  <td align="left" valign="middle" style="padding-left: 23px; vertical-align: middle">
+                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                      <tr>
+                                        <td width="36" style="padding-right: 7px; width: 36px">
+                                          <table class="bg-ffe2e2" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#ffe2e2" width="100.00%" style="border-radius: 10px; background-color: #ffe2e2; width: 100%; border-spacing: 0; border-collapse: separate">
+                                            <tr>
+                                              <td valign="top" width="100.00%" style="padding-top: 8px; padding-bottom: 56px; padding-left: 8px; padding-right: 8px; width: 100%; vertical-align: top">
+                                                <img src="assets/image_a9b5838d.png" alt="a red cross in a red circle on a black background." width="100.00%" height="20" style="width: 100%; height: 20px; display: block" />
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                        <td width="514" style="padding-left: 8px; width: 514px">
+                                          <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                                            <tr>
+                                              <td style="padding-bottom: 3.75px">
+                                                <table class="bg-ffc9c9" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#ffc9c9" width="57.41" height="28.00" style="border-radius: 16777200px; background-color: #ffc9c9; width: 57.41px; height: 28px; border-spacing: 0; border-collapse: separate">
+                                                  <tr>
+                                                    <td align="left" valign="middle" width="100.00%" height="28.00" style="padding-left: 11px; width: 100%; vertical-align: middle; height: 28px">
+                                                      <p class="color-9f0712" width="100.00%" style="font-size: 14px; font-weight: 500; letter-spacing: -0.15px; color: #9f0712; margin: 0; padding: 0; width: 100%; line-height: 20px; mso-line-height-alt: 20px">Myth</p>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding-top: 3.75px">
+                                                <p class="color-314158" width="100.00%" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; text-align: left; line-height: 24px; color: #314158; mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">Adding an exclamation point or number at the end makes my password secure.</p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-top: 8px; padding-left: 32px; padding-right: 32px">
+                              <table class="bg-f0fdf4" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#f0fdf4" width="654.00" style="border-radius: 0px 14px 14px 0px; border-left: 4px solid #05df72; background-color: #f0fdf4; padding-top: 19px; padding-bottom: 19px; width: 654px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                                <tr>
+                                  <td align="left" valign="middle" style="padding-left: 23px; vertical-align: middle">
+                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                      <tr>
+                                        <td width="36" style="padding-right: 7px; width: 36px">
+                                          <table class="bg-dcfce7" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#dcfce7" width="100.00%" style="border-radius: 10px; background-color: #dcfce7; width: 100%; border-spacing: 0; border-collapse: separate">
+                                            <tr>
+                                              <td valign="top" width="100.00%" style="padding-top: 8px; padding-bottom: 80px; padding-left: 8px; padding-right: 8px; width: 100%; vertical-align: top">
+                                                <img src="assets/image_98c05e25.png" alt="a green check mark in a circle on a black background." width="100.00%" height="20" style="width: 100%; height: 20px; display: block" />
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                        <td width="524" style="padding-left: 8px; width: 524px">
+                                          <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                                            <tr>
+                                              <td style="padding-bottom: 3.75px">
+                                                <table class="bg-b9f8cf" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#b9f8cf" width="68.66" height="28.00" style="border-radius: 16777200px; background-color: #b9f8cf; width: 68.66px; height: 28px; border-spacing: 0; border-collapse: separate">
+                                                  <tr>
+                                                    <td align="left" valign="middle" width="100.00%" height="28.00" style="padding-left: 11px; width: 100%; vertical-align: middle; height: 28px">
+                                                      <p class="color-016630" width="100.00%" style="font-size: 14px; font-weight: 500; letter-spacing: -0.15px; color: #016630; margin: 0; padding: 0; width: 100%; line-height: 20px; mso-line-height-alt: 20px">Reality</p>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding-top: 3.75px">
+                                                <p class="color-314158" width="100.00%" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; text-align: left; line-height: 24px; color: #314158; mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">AI-powered cracking tools can break simple patterns like 'Password1!' in seconds. Passphrases or a password manager provide much stronger protection.</p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px; padding-bottom: 16px; padding-left: 310.5px; padding-right: 310.5px">
+                  <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="720.00" bgcolor="#155dfc" style="background-color: #155dfc; border-radius: 16px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1); background: linear-gradient(135deg, rgba(21, 93, 252, 1) 0%, rgba(152, 16, 250, 1) 100%); width: 720px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                    <tr>
+                      <td valign="top" width="100.00%" style="padding-top: 32px; padding-bottom: 22.5px; width: 100%; vertical-align: top">
+                        <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                          <tr>
+                            <td align="left" style="padding-bottom: 32px; padding-left: 220.17px">
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                <tr>
+                                  <td valign="top" style="vertical-align: top">
+                                    <table class="bg-ffffff" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#447dfd" width="56.00" height="56.00" style="border-radius: 16777200px; background-color: #447dfd; width: 56px; height: 56px; border-spacing: 0; border-collapse: separate">
+                                      <tr>
+                                        <td valign="middle" width="100.00%" height="56.00" style="padding-left: 12px; padding-right: 12px; width: 100%; vertical-align: middle; height: 56px">
+                                          <img src="assets/image_e5cf527d.png" alt="a white trophy icon on a black background." width="100.00%" height="32" style="width: 100%; height: 32px; display: block" />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <!--[if mso]><td valign="top"><table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr><![endif]-->
+                                  <td valign="top" width="235.69" style="padding-top: 1.82px; width: 235.69px; vertical-align: top">
+                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                                      <tr>
+                                        <td>
+                                          <p class="color-fffffe" width="100.00%" style="font-size: 24px; font-weight: 500; letter-spacing: 0.07px; color: white; margin: 0; padding: 0; width: 100%; line-height: 28.36px; text-align: center; mso-line-height-alt: 28px">Weekly Challenge</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <p class="color-ffffff" width="100.00%" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; color: rgba(255, 255, 255, 0.8); margin: 0; padding: 0; width: 100%; line-height: 24px; text-align: center; mso-line-height-alt: 24px">Test your security knowledge</p>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <!--[if mso]></tr></table></td><![endif]-->
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-top: 16px; padding-bottom: 11.75px; padding-left: 32px; padding-right: 32px">
+                              <table class="bg-ffffff" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#2c6dfc" width="656.00" style="border-radius: 14px; background-color: #2c6dfc; padding-top: 24px; padding-bottom: 24px; width: 656px; border-spacing: 0; border-collapse: separate">
+                                <tr>
+                                  <td valign="middle" width="100.00%" style="width: 100%; vertical-align: middle">
+                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                                      <tr>
+                                        <td style="padding-bottom: 12px">
+                                          <p class="color-fffffe" width="100.00%" style="font-size: 18px; font-weight: 500; letter-spacing: -0.44px; color: white; margin: 0; padding: 0; width: 100%; line-height: 28px; text-align: center; mso-line-height-alt: 28px">Which of these passwords is strongest?</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-top: 12px; padding-bottom: 6px; padding-left: 24px; padding-right: 24px">
+                                          <table class="bg-ffffff" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#417cfc" width="608.00" style="border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2); background-color: #417cfc; padding-top: 16px; padding-bottom: 16px; width: 608px; border-spacing: 0; border-collapse: separate">
+                                            <tr>
+                                              <td align="left" valign="middle" style="padding-left: 16px; vertical-align: middle">
+                                                <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                                  <tr>
+                                                    <td valign="middle" style="padding-right: 7px; vertical-align: middle">
+                                                      <img src="assets/image_34255f74.png" alt="the letter a is in a circle on a black background." width="32.00" height="32.00" style="width: 32px; height: 32px; display: block" />
+                                                    </td>
+                                                    <td valign="middle" width="544" style="padding-left: 8px; width: 544px; vertical-align: middle">
+                                                      <!--[if mso]> <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="544" style="width:544px;"> <tr> <td> <![endif]-->
+                                                      <p class="color-fffffe" width="544" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; color: white; margin: 0; padding: 0; width: 544px; line-height: 32px; mso-line-height-alt: normal">Welcome2024!</p>
+                                                      <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-top: 6px; padding-bottom: 6px; padding-left: 24px; padding-right: 24px">
+                                          <table class="bg-ffffff" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#417cfc" width="608.00" style="border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2); background-color: #417cfc; padding-top: 16px; padding-bottom: 16px; width: 608px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                                            <tr>
+                                              <td align="left" valign="middle" style="padding-left: 16px; vertical-align: middle">
+                                                <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                                  <tr>
+                                                    <td valign="middle" style="padding-right: 7px; vertical-align: middle">
+                                                      <img src="assets/image_e9195ebf.png" alt="a white letter b is in a black circle on a black background." width="32.00" height="32.00" style="width: 32px; height: 32px; display: block" />
+                                                    </td>
+                                                    <td valign="middle" width="544" style="padding-left: 8px; width: 544px; vertical-align: middle">
+                                                      <!--[if mso]> <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="544" style="width:544px;"> <tr> <td> <![endif]-->
+                                                      <p class="color-fffffe" width="544" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; color: white; margin: 0; padding: 0; width: 544px; line-height: 32px; mso-line-height-alt: normal">Sunshine99</p>
+                                                      <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-top: 6px; padding-left: 24px; padding-right: 24px">
+                                          <table class="bg-ffffff" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#417cfc" width="608.00" style="border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2); background-color: #417cfc; padding-top: 16px; padding-bottom: 16px; width: 608px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                                            <tr>
+                                              <td align="left" valign="middle" style="padding-left: 16px; vertical-align: middle">
+                                                <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                                  <tr>
+                                                    <td valign="middle" style="padding-right: 7px; vertical-align: middle">
+                                                      <img src="assets/image_99db4d2.png" alt="a white letter c in a black circle on a black background." width="32.00" height="32.00" style="width: 32px; height: 32px; display: block" />
+                                                    </td>
+                                                    <td valign="middle" width="544" style="padding-left: 8px; width: 544px; vertical-align: middle">
+                                                      <!--[if mso]> <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="544" style="width:544px;"> <tr> <td> <![endif]-->
+                                                      <p class="color-fffffe" width="544" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; color: white; margin: 0; padding: 0; width: 544px; line-height: 32px; mso-line-height-alt: normal">Tree-Cloud-Library-Train</p>
+                                                      <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-top: 11.75px">
+                              <p class="color-ffffff" width="100.00%" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; color: rgba(255, 255, 255, 0.9); margin: 0; padding: 0; width: 100%; line-height: 24px; text-align: center; mso-line-height-alt: 24px">👍 We'll share the answer on next week's newsletter!</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px; padding-left: 310.5px; padding-right: 310.5px">
+                  <table class="bg-fffffe" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="white" width="720.00" style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.1); background-color: white; padding-top: 31.5px; padding-bottom: 32.5px; width: 720px; border-spacing: 0; margin-top: -0.5px; border-collapse: separate">
+                    <tr>
+                      <td align="left" valign="middle" style="padding-left: 32px; vertical-align: middle">
+                        <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                          <tr>
+                            <td valign="middle" style="padding-right: 7px; vertical-align: middle">
+                              <table class="bg-dbeafe" cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#dbeafe" width="52.00" height="52.00" style="border-radius: 14px; background-color: #dbeafe; width: 52px; height: 52px; border-spacing: 0; border-collapse: separate">
+                                <tr>
+                                  <td valign="middle" width="100.00%" height="52.00" style="padding-left: 12px; padding-right: 12px; width: 100%; vertical-align: middle; height: 52px">
+                                    <img src="assets/image_4a76049e.png" alt="a blue arrow pointing to the right on a black background." width="100.00%" height="28" style="width: 100%; height: 28px; display: block" />
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td valign="middle" width="620" style="padding-left: 8px; width: 620px; vertical-align: middle">
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" style="width: 100%; border-spacing: 0">
+                                <tr>
+                                  <td align="left" style="padding-bottom: 4.25px">
+                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin: 0; border-spacing: 0">
+                                      <tr>
+                                        <td valign="top" width="154.09" style="width: 154.09px; vertical-align: top">
+                                          <!--[if mso]> <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="154.09" style="width:154.09px;"> <tr> <td> <![endif]-->
+                                          <p class="color-155dfc" width="154.09" style="font-size: 16px; font-weight: 500; letter-spacing: -0.31px; color: #155dfc; margin: 0; padding: 0; width: 154.09px; line-height: 24px; mso-line-height-alt: 24px">Coming Next Week</p>
+                                          <!--[if mso]></td></tr></table><![endif]-->
+                                        </td>
+                                        <!--[if mso]><td valign="top"><table role="presentation" border="0" cellspacing="0" cellpadding="0"><tr><![endif]-->
+                                        <td valign="top" width="60.53" style="padding-top: 1.5px; width: 60.53px; vertical-align: top">
+                                          <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100.00%" height="22.00" style="border-radius: 8px; border: 1px solid #bedbff; width: 100%; height: 22px; border-spacing: 0; border-collapse: separate">
+                                            <tr>
+                                              <td valign="middle" width="100.00%" height="20.00" style="width: 100%; vertical-align: middle; height: 20px">
+                                                <p class="color-1447e6" width="100.00%" style="font-size: 12px; font-weight: 500; color: #1447e6; margin: 0; padding: 0; width: 100%; line-height: 16px; text-align: center; mso-line-height-alt: 16px">Week 2</p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                        <!--[if mso]></tr></table></td><![endif]-->
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="padding-top: 4.25px; padding-bottom: 3.75px">
+                                    <p class="color-0f172b" width="100.00%" style="font-size: 20px; font-weight: 400; letter-spacing: -0.45px; color: #0f172b; margin: 0; padding: 0; width: 100%; line-height: 28px; mso-line-height-alt: 28px">Phishing in the AI Era</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="left" style="padding-top: 3.75px; padding-right: 73px">
+                                    <p class="color-45556c" width="100.00%" style="font-size: 16px; font-weight: 400; letter-spacing: -0.31px; text-align: left; line-height: 24px; color: #45556c; mso-line-height-rule: exactly; margin: 0; padding: 0; width: 100%">How to recognize AI-crafted emails and deepfake scams that are becoming increasingly sophisticated.</p>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
