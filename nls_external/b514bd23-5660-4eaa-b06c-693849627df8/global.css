@@ -1,0 +1,131 @@
+:root {
+  --color-text-primary: #0f172b;
+  --color-text-secondary: #314158;
+  --color-text-tertiary: #45556c;
+  --color-white: #ffffff;
+  --color-border: #e2e8f0;
+  --gradient-orange: linear-gradient(90deg, #ff6900 0%, #fb2c36 100%);
+  --gradient-blue-purple: linear-gradient(135deg, #155dfc 0%, #9810fa 141.42%);
+  --shadow-md: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0px 8px 10px -6px rgba(0, 0, 0, 0.1), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 141.42%);
+  color: var(--color-text-secondary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p, span {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card {
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.card-white {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 32px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+.icon-container.size-sm {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.icon-container.size-lg {
+  width: 52px;
+  height: 52px;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.icon-container.bg-white-20 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-container.bg-green {
+  background-color: #dcfce7;
+}
+
+.icon-container.bg-purple {
+  background-color: #f3e8ff;
+}
+
+.icon-container.bg-blue {
+  background-color: #dbeafe;
+}
+
+.badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.badge.badge-green {
+  border: 1px solid #b9f8cf;
+  color: #008236;
+}
+
+.badge.badge-blue {
+  border: 1px solid #bedbff;
+  color: #1447e6;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 24px 16px;
+  }
+  .content-wrapper {
+    gap: 24px;
+  }
+  .card-white {
+    padding: 24px;
+  }
+}
