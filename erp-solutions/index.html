@@ -110,6 +110,9 @@
             .serviceSingle.secTop {
                 width: 100%;
             }
+            .erp-logos > div {
+                flex-basis: 40%;
+            }
         }
         @media screen and (min-width:900px) {
             .m {
@@ -145,13 +148,36 @@
                 display: block;
             }
         }  
+        @media screen and (max-width: 1200px) and (min-width: 901px) {
+            .mitservices .col-4 {
+                width: 50%;
+            }
+        }
         .section {
             overflow: hidden;
             display: block;
             width: 75%;
-            margin: 0 auto;
+            margin: 40px auto;
             padding-bottom:48px;
+        }        
+        
+        .mitservices {
+            width: 80%;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0 auto;
         }
+    
+        @media screen and (max-width:1000px) {
+            .mitservices {
+                width: 90%;
+                flex-basis: 70%;
+            }
+        
+        }
+        
         .first p {
             font-size: 24px;
             font-family: 'Open Sans', Arial;
@@ -181,6 +207,9 @@
         }
         .section.first {
             overflow:hidden;
+            margin-top: 140px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #E5E5E5;
         }
         .section.first .serviceSingle {
             margin-bottom: 48px;
@@ -275,6 +304,12 @@
         .bold.dpin img {
             max-width: 25px;
         }
+        .erp-logos {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
     </style>
     <body>
         <div class="menu">
@@ -317,19 +352,8 @@
                 <p>In today's market, your Enterprise Resource Planning (ERP) system must be a secure, efficient engine for growth. We specialize in providing end-to-end services across the industry's leading platforms, ensuring your implementation is not only functional but fortified against risk.</p>
             </div>
         </div>
-        <div class="section">
-            <div class="col-12">
-                <div class="col-12">
-                    <h2 class="cstsocas">Our certified consultants deliver deep expertise across solutions including</h2>
-                    <br/>
-                </div>
-                <div class="col-12">
-                    <!-- Images of ERP logos -->
-                     <img src="../m/erp-solution.svg" alt="ERP Solutions Logos" />
-                </div>
-            </div>
-        </div>
-        <div class="section mitservices">
+         </div>
+        <div class="mitservices">
             <div class="col-12">
                 <div class="col-4">
                     <div class="mitservice">
@@ -371,6 +395,24 @@
                 </div>
             </div>
         </div>
+        <div class="section">
+            <div class="col-12">
+                <div class="col-12">
+                    <h2 class="cstsocas">Our certified consultants deliver deep expertise across solutions including</h2>
+                    <br/>
+                </div>
+                <div class="col-12">
+                    <!-- Images of ERP logos -->
+                    <div class="erp-logos">
+                        <div class="col-2"><img src="../ac-logo.svg" alt="NetSuite Logo" /></div>
+                        <div class="col-2"><img src="../Microsoft-logo.svg" alt="Microsoft logo" /></div>
+                        <div class="col-2"><img src="../oracle-logo.svg" alt="Oracle NetSuite Logo" /></div>
+                        <div class="col-2"><img src="../sap-logo.svg" alt="SAP Logo" /></div>
+                        <div class="col-2"><img src="../UNIT4-logo.svg" alt="UNIT4 Logo" /></div>
+                        <div class="col-2"><p>...and other critical enterprise systems</p></div>
+                </div>
+            </div>
+        </div> </div>
         <div class="section section3">
     <div class="col-12 section3-wrap">
 
@@ -462,6 +504,7 @@
     padding-top: 64px;
     padding-bottom: 64px;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -470,7 +513,9 @@
     display: flex;
     width: 75%;
     margin: 0 auto;
+    flex-basis: 75%;
 }
+
 
 .section3-left h2 {
     font-size: 48px;
@@ -517,15 +562,20 @@
     }
 
     .section3-right {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         margin-top: 48px;
     }
 
     .section3-left h2 {
         font-size: 34px;
     }
+
+    .section3-wrap {
+        flex-direction: column;
+    }
 }
 </style>
+
 
         <div class="section contact">
             <div class="col-6">
@@ -740,6 +790,7 @@
                 border-bottom: 1px solid black;
                 margin-bottom: 6px;
                 -webkit-appearance: none;
+                appearance: none;
             }
             .section.partners {
                 padding-bottom:25px;
@@ -852,6 +903,7 @@
                 appearance: none !important;
                 background-color: #f2f2f2 !important;
             }
+    
         </style>
     </body>
 </html>
