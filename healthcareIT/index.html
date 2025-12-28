@@ -73,6 +73,10 @@
             [class*="col-"] {
                 width: 100%;
             }
+            .erp-logos .col-2 {
+                width: 50% !important;
+                flex-basis: 50% !important;
+            }
             .d {
                 display: none;
             }
@@ -109,9 +113,6 @@
             }
             .serviceSingle.secTop {
                 width: 100%;
-            }
-            .erp-logos > div {
-                flex-basis: 50%;
             }
         }
         @media screen and (min-width:900px) {
@@ -170,14 +171,9 @@
             margin: 40px auto;
             padding: 24px 0px;
         }
-    
-        @media screen and (max-width:1000px) {
-            .mitservices {
-                width: 90%;
-                flex-basis: 70%;
-            }
+
         
-        }
+
         
         .first p {
             font-size: 24px;
@@ -312,6 +308,7 @@
             align-items: center;
             gap: 50px;
         }
+
     </style>
     <body>
         <div class="menu">
@@ -350,8 +347,7 @@
         </div>
         <div class="section first">
             <div class="col-12">
-                <h1>FUTURE-READY HEALTHCARE IT:<br> 
-AI-Enhanced & Secure EMR Solution</h1>
+                <h1>FUTURE-READY HEALTHCARE IT:<br> AI-Enhanced & Secure EMR Solution</h1>
                 <p>In the era of smart healthcare, your EMR/EHR system must be more than a data repository—it should be an intelligent assistant. We specialize in modernizing healthcare IT by integrating Artificial Intelligence (AI) and Machine Learning (ML) capabilities into the industry's leading platforms. We ensure your system helps providers work smarter, not harder, while rigorously protecting Protected Health Information (PHI).</p>
             </div>
         </div>
@@ -369,15 +365,13 @@ AI-Enhanced & Secure EMR Solution</h1>
                 <div class="col-12">
                     
                     <div class="erp-logos">
-                        <div class="col-2">
-                        <img src="../cosmos.svg" alt="Cosmos Logo" />
-                        </div>
-                        <div class="col-2"><img src="../MEDITECH.svg" alt="MEDITECH logo" /></div>
+                        <div class="col-2"><img  src="../cosmos.svg" alt="Cosmos Logo" /></div>
+                        <div class="col-2"><img  src="../MEDITECH.svg" alt="MEDITECH logo" /></div>
                         <div class="col-2"><img src="../orancle-logo.svg" alt="Oracle NetSuite Logo" /></div>
-                        <div class="col-2"><img src="../nebula.svg" alt="Nebula Logo" /></div>
-                        <div class="col-2"><img src="../Athenahealth.svg" alt="Athenahealth Logo" /></div>
-                        <div class="col-2"><img src="../EClinicalWorks.svg" alt="EClinicalWorks Logo" /></div>
-                        <div class="col-2"><img src="../Allscripts.svg" alt="Allscripts Logo" /></div>
+                        <div class="col-2"><img  src="../nebula.svg" alt="Nebula Logo" /></div>
+                        <div class="col-2"><img  src="../Athenahealth.svg" alt="Athenahealth Logo" /></div>
+                        <div class="col-2"><img  src="../EClinicalWorks.svg" alt="EClinicalWorks Logo" /></div>
+                        <div class="col-2"><img  src="../Allscripts.svg" alt="Allscripts Logo" /></div>
                 </div>
             </div>
         </div> 
@@ -465,7 +459,7 @@ AI-Enhanced & Secure EMR Solution</h1>
 
             <div class="phase-card">
                 <div class="phase-icon">
-                    <img loading="lazy" src="../m/mdi_eye.svg" />
+                    <img class="icon-mob" loading="lazy" src="../m/mdi_eye.svg" />
                 </div>
                 <h3>Assess</h3>
                 <p>
@@ -476,7 +470,7 @@ AI-Enhanced & Secure EMR Solution</h1>
 
             <div class="phase-card">
                 <div class="phase-icon">
-                    <img loading="lazy" src="../m/mdi_design.svg" />
+                    <img class="icon-mob" loading="lazy" src="../m/mdi_design.svg" />
                 </div>
                 <h3>Architect</h3>
                 <p>
@@ -487,7 +481,7 @@ AI-Enhanced & Secure EMR Solution</h1>
 
             <div class="phase-card">
                 <div class="phase-icon">
-                    <img loading="lazy" src="../m/material-symbols_developer-mode-tv-outline.svg" />
+                    <img class="icon-mob" loading="lazy" src="../m/material-symbols_developer-mode-tv-outline.svg" />
                 </div>
                 <h3>Execute</h3>
                 <p>
@@ -498,7 +492,7 @@ AI-Enhanced & Secure EMR Solution</h1>
 
             <div class="phase-card">
                 <div class="phase-icon">
-                    <img loading="lazy" src="../m/ph_hand-heart-light.svg" />
+                    <img class="icon-mob" loading="lazy" src="../m/ph_hand-heart-light.svg" />
                 </div>
                 <h3>Sustain</h3>
                 <p>
@@ -566,6 +560,17 @@ AI-Enhanced & Secure EMR Solution</h1>
 .phase-card p {
     font-size: 18px;
     line-height: 1.4;
+}
+@media screen and (max-width:600px) {
+    .icon-mob {
+    width: 48px;
+    height: 48px;
+}
+
+    .logo-m {
+        width: 20vh;
+    }
+
 }
 
 /* ===== MOBILE ===== */
