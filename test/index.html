@@ -111,7 +111,7 @@
       }
 
       h1 {
-        font-size: 34px
+        font-size: 34px;
       }
 
       .first a svg {
@@ -361,7 +361,7 @@
     <div class="section first">
       <div class=col-6>
         <img src="../media/title.svg" alt="CGCG Banner" width="500" height="250" class="titlesvg">
-        <p class=d role="heading" aria-level="2">Comprehensive solutions for start-ups to Fortune 500 companies. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p><img src=../m/e.svg alt="CGCG Eagle" class=m>
+        <p role="heading" aria-level="2">Comprehensive solutions for start-ups to Fortune 500 companies. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p><img src=../m/e.svg alt="CGCG Eagle" class=m>
         <p class=m role="heading" aria-level="2">Comprehensive solutions for start-ups to Fortune 500 companies. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p>
         <div class="d arrowlink"><a href=/services/><span><svg fill=none height=50 role="presentation" width=50 xmlns=http://www.w3.org/2000/svg>
                 <circle cx=25 cy=25 fill=#fff r=25 />
@@ -579,9 +579,6 @@
       }
     </style>
     <script nonce=a34g29914>
-
-
-
       function it() {
         document.getElementById("threatsCounter").innerText = "";
         var e = new Date(2022, 9, 2, 22, 0, 0, 0),
@@ -617,101 +614,6 @@
           }), 2e4)
         }))
       }))
-
-
-
-      document.addEventListener("DOMContentLoaded", function() {
-      // Array of headline objects
-      var headlines = [
-        {
-          text: "Nicholas Martin Aims to re-imagine the internet with worldsfastest.com",
-          link: "https://partners.time.com/partners/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/"
-        },
-        {
-          text: "FileScience: Nick Martin’s mission to secure the cloud’s overlooked data",
-          link: "https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html"
-        },
-        {
-          text: "Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365",
-          link: "https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901"
-        },
-        {
-          text: "Nick Martin: CEO of Cyber Guardian Consulting Group on Security Innovations",
-          link: "https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/"
-        },
-        {
-          text: "Public Officials Separate Workplace and Personal Online Lives. Hackers Don’t Care.",
-          link: "https://www.wsj.com/articles/public-officials-separate-workplace-and-personal-online-lives-hackers-dont-care-baabc078?st=zLkHRx&reflink=desktopwebshare_permalink"
-        },
-        {
-          text: "Dark-web AI models ould make criminal hackers even more powerful.",
-          link: "https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html"
-        }
-      ];
-      
-      const indicators = document.querySelectorAll('.scroll-track .indicator');
-
-      // Attach click event to each image
-      indicators.forEach((img, index) => {
-        img.addEventListener('click', () => {
-          const headlineIndex = img.getAttribute('data-index-url');
-          const headline = headlines[index % headlines.length];
-          if (headline && headline.link) {
-            window.open(headlines[headlineIndex].link, '_blank');
-          }
-        });
-      });
-      // add another event to add .active class to the .carousel-item corresponding to the hovered image. 
-      indicators.forEach((img, index) => {
-        img.addEventListener('mouseover', () => {
-          const carouselItems = document.querySelectorAll('.carousel-item');
-          carouselItems.forEach((item, itemIndex) => {
-            item.classList.remove('active');
-            if (itemIndex === index % carouselItems.length) {
-              item.classList.add('active');
-            }
-          });
-        });
-      });
-
-      // add another event to remove the .active class when the mouse leaves the image. The Carousel is in front of the images with higher z-index, so we need to remove the active class when the mouse leaves the image's parent .scroll-track
-      const scrollTrack = document.querySelector('.scroll-track');
-      scrollTrack.addEventListener('mouseleave', () => {
-        const carouselItems = document.querySelectorAll('.carousel-item');
-        carouselItems.forEach((item) => {
-          item.classList.remove('active');
-        });
-      });
-      
-      
-
-      var currentIndex = 0;
-      // Select all headlines for desktop (.d) and mobile (.m)
-      var headlineLinks = document.querySelectorAll('.d .news_subtitle a, .m .news_subtitle a');
-
-      function changeHeadline() {
-        // Fade out all headlines
-        headlineLinks.forEach(function(headlineLink) {
-          headlineLink.style.opacity = 0;
-        });
-
-        // After fade-out, update the text and link, then fade in
-        setTimeout(function() {
-          headlineLinks.forEach(function(headlineLink) {
-            headlineLink.href = headlines[currentIndex].link;
-            // Select the contained <h3>
-            var headlineH3 = headlineLink.querySelector('h3');
-            headlineH3.textContent = headlines[currentIndex].text;
-            headlineLink.style.opacity = 1;
-          });
-          // Cycle to the next headline (wrap-around)
-          currentIndex = (currentIndex + 1) % headlines.length;
-        }, 500); // match the CSS transition duration
-      }
-
-      // Change headline every 3 seconds
-      setInterval(changeHeadline, 3000);
-    });
     </script>
 
       <style>
@@ -719,6 +621,7 @@
         .whymanaged {
           display: flex;
           justify-content: center;
+          padding-top: 64px;
           margin: 0 auto;
           min-width: 90%;
         }
@@ -1089,15 +992,15 @@
      <div class="section stats">
       <div class="col-12 line"></div>
       <div class=col-4>
-        <h2>$30B</h2>
+        <h1>$30B</h1>
         <p class="light large" role="heading" aria-level="2">combined valuation of companies we saved from cyber attacks</p>
       </div>
       <div class=col-4>
-        <h2>$<span>20</span>M</h2>
+        <h1>$<span>20</span>M</h1>
         <p class="light large">lost from cyber threats everyday</p>
       </div>
       <div class=col-4>
-        <h2 id=threatsCounter>200,000</h2>
+        <h1 id=threatsCounter>200,000</h1>
         <p class="light large">threats prevented</p>
       </div>
     </div>
@@ -1493,45 +1396,10 @@
         font-size: 24px
       }
 
-      
-      .carousel-item span {
-          text-align: right;
-          font-size: 24px;
-          margin-top: 0;
-          color: #636161;
-          font-weight: 600;
-          font-family: l;
-        }
-
       @media screen and (min-width:900px) and (max-width:1500px) {
         .col-4.missionItem .bold {
           font-size: 32px;
           font-weight: bolder
-        }
-        
-        .carousel-quote .carousel-item {
-          background: #ffffffee;
-          padding: 6px 14px;
-          min-height: 260px;
-          margin-top: 20px;
-          z-index: 55;
-          margin-right: 0;
-        }
-        .carousel-item span {
-          text-align: right;
-          font-size: 24px;
-          margin-top: 0;
-          color: #636161;
-          font-weight: 600;
-          font-family: l;
-          margin-top: 16px;
-        }
-        .carousel-quote .carousel-item p {
-          font-size: 32px;
-          padding: 4px 12px;
-          color: black;
-          margin-top: 16px;
-          margin-bottom: 16px;
         }
         .col-4.missionItem p,
         .section.whymanaged h2+p {
@@ -1541,14 +1409,6 @@
 
         .section.stats .line {
           margin-bottom: 48px
-        }
-
-        
-
-        .section.whymanaged .col-6.d img {
-          width: 80%;
-          margin: 0 auto;
-          display: block
         }
 
         .testimonial>p {
@@ -1561,16 +1421,6 @@
 
         .section.stats h2 {
           font-size: 78px
-        }
-        .carousel-title {
-            margin: 0 20px;
-            padding-top: 16px;
-            color: white;
-            font-family: n;
-            font-size: 40px;
-            max-width: 627px;
-            font-size: 64px;
-            max-width: 1000px;
         }
 
 
@@ -1596,6 +1446,7 @@
         margin-bottom: 48px
       }
 
+
       input[type=submit] {
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
@@ -1620,68 +1471,12 @@
         }
       }
 
-/* Wrapper hides overflow and sets the visible width */
-.news_carousel_wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-/* The carousel container: with 8 items (2 sets of 4), it’s 200% wide */
-.news_carousel {
-  display: flex;
-  width: 200%;
-  animation: slideCarousel 10s linear infinite;
-}
-
-/* Pause the carousel when hovered */
-.news_carousel_wrapper:hover .news_carousel {
-  animation-play-state: paused;
-}
-
-/* Animate the carousel from 0 to -50% of its width so one set slides out */
-@keyframes slideCarousel {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
-
-/* Mobile override to keep the wehelp spinner visible above any fixed wehelp section */
-@media screen and (max-width:900px) {
-  .news_carousel_wrapper {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .news {
-    min-width: 250px;
-  }
-  .news_carousel {
-    animation-duration: 10s;
-  }
-
-.news_carousel {
-  max-height: 274px !important;
-}
-
-  .section.wehelp {
-    position: static !important;
-    z-index: 0 !important;
-  }
-}
-
     </style>
   <script nonce="a34g29914">
     (function() {
       var ignoredSelectors = [
         '.wehelp-scroller',
-        '.wehelp-spinner-wrap',
-        '.news_carousel_wrapper',
-        '.news_carousel',
-        '.carousel-quote'
+        '.wehelp-spinner-wrap'
       ];
 
       function isInIgnored(target) {
