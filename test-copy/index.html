@@ -18,6 +18,7 @@
   <meta content="index, follow" name=robots>
   <meta content=English name=language>
   <meta content="21 days" name=revisit-after>
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
   <style>
     @font-face {
       font-family: 'Nexa';
@@ -119,20 +120,7 @@
   
 
     
-    .arrowlink p {
-      display: inline-block;
-      color: #fff;
-      font-size: 34px
-    }
-
-    .arrowlink p,
-    .arrowlink span,
-    .arrowlink svg {
-      vertical-align: middle;
-      margin-right: 16px
-    }
-
-    .menu {
+    a {
       min-height: 20vh
     }
 
@@ -143,6 +131,7 @@
     }
 
     .nav {
+      display: none;
       position: absolute;
       left: 30%;
       top: 28px;
@@ -157,19 +146,6 @@
     .nav a {
       padding-right: 32px
     }
-
-    .line {
-      border-bottom: 8px solid #fff;
-      overflow: hidden;
-      height: 24px
-    }
-
-
-    .e {
-      height: 1px
-    }
-
-
 
     .navdservices {
       position: absolute;
@@ -194,9 +170,6 @@
       display: none !important
     }
 
-    .m {
-      display: none;;
-    }
 
 
     :root {
@@ -266,7 +239,7 @@ p {
       <div class="d nav"><a href=/services/ id=navservices>Services</a>
         <div class=navdservices><a href=/managed-it-services/>Managed IT Services</a><a href=/cybersecurity-solutions/>Cybersecurity Solutions</a><a href=/socas/>SOCaaS</a><a href=/cioas/>CIOaaS</a><a href=/ctoas/>CTOaaS</a><a href=/cisoaas/>CISOaaS</a><a href=https://filescience.io aria-label="Visit FileScience (opens in a new tab)" target=_blank>Cloud-to-Cloud Backup</a><a aria-label="Visit Switchboard-Plus (opens in a new tab)" href=https://switchboard-plus.com/ target=_blank>Business Phone</a><a href=/low-voltage-cabling/>Low Voltage Cabling</a><a href=/app-development/>App Development</a><a href=/door-access-control/>Door Access Control</a><a href=/NaaS/>Network-as-a-service</a><a href=/cloud-based-security-cameras/>Cloud-Based Security Cameras</a><a href=/recycling-charity/>Recycling & Charity</a><a href=/reputation-management/>Reputation Management</a><a href=/private-digital-investigations/>Private Digital Investigations</a></div><a href=/about/>Company</a><a href=/trust>Trust</a><a href=/resources/>Resources</a><a href=/portfolio/>Portfolio</a><a href=/lets-talk/>Contact</a>
       </div>
-      <div class=right><img src=../m/f.svg alt="Forbes 2020" height=176 width=115 class=d><img src=../m/bu.svg alt="Open Menu" class=m></div>
+      <div class=right><img src=../m/f.svg alt="Forbes 2020" height=176 width=115 class=d><img src=../m/bu.svg alt="Open Menu" class=m width=48 height=48></div>
     </div>
    
     
@@ -274,13 +247,13 @@ p {
     
   <div class=s1>
     <div class=s1-l>
-      <img src="../media/title.svg" alt="CGCG Banner" class="a-titles">
+      <img src="../media/title.svg" alt="CGCG Banner" class="a-titles" width="100%" height="auto" style="aspect-ratio: auto; max-width: 100%;">
        <p role="heading">Scalable IT and cybersecurity solutions for companies at every stage — from start-ups to Fortune 500 enterprises. From Managed IT, Cybersecurity, PMS & POS support, and backup services to low-voltage infrastructure and cloud management across AWS, Azure, and Google Cloud. We design secure, scalable strategies built specifically for your business.</p>
     </div>
     
     <div class=s1-r>
-      <img src=../m/e.svg alt="CGCG Eagle" class=eagle>
-      <img src=..//images/em.svg alt="CGCG Eagle Mobile" class=meagle>
+      <img src=../m/e.svg alt="CGCG Eagle" class=eagle width=800 height=800 style="width:100%; height:auto; max-width:800px;">
+      <img src=..//images/em.svg alt="CGCG Eagle Mobile" class=meagle style="max-width:800px;">
     </div>
   </div>  
 
@@ -316,7 +289,7 @@ p {
     </div>
 
     <div class="s2-r">
-      <h2>End-to-end IT solutions</h2>
+      <h2>END-TO-END IT SOLUTIONS</h2>
       <p>From Managed IT, Сybersecurity, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p>
       <div class="buttonS" role="button"><a href="/services/" aria-label="View services">
         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -328,11 +301,6 @@ p {
       </a></div>
   
 </div>
-</div>
-
-
-<div class=s3>
-  <div class=""></div>
 </div>
   
    <style>
@@ -422,11 +390,10 @@ p {
           justify-content: center;
           align-content: center;
           min-width: 0;
-          background: rgba(255,255,255,0.9);
           color: #2b354e;
-          border-radius: 12px;
+          border-radius: 8px;
           padding: clamp(16px, 2.5vw, 28px);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+          background-color: #DADBDE;
         }
 
 
@@ -455,12 +422,11 @@ p {
           flex-wrap: wrap;
         }
         .meagle {
-          display: block;
-        width: calc(100% + 20vw);
-        margin: 0 !important;
+        display:block;
+        width: 100vw;
+        height: auto;
+        margin: 0 calc(-50vw + 50%);
         margin-top: 32px;
-        margin-left: -10vw !important;
-        margin-right: -10vw !important;
         animation: blurOnScroll linear 0.4s backwards;
         animation-timeline: view();
         mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
