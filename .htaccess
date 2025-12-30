@@ -1,0 +1,30 @@
+# Enable compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache static assets for 1 year (31536000 seconds)
+<FilesMatch "\.(woff2|woff|ttf|otf|eot)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache SVG images for 1 year
+<FilesMatch "\.svg$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+  AddType image/svg+xml .svg
+</FilesMatch>
+
+# Cache other image formats for 1 year
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|avif)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache HTML for 1 day (86400 seconds) - shorter to allow updates
+<FilesMatch "\.html?$">
+  Header set Cache-Control "public, max-age=86400"
+</FilesMatch>
+
+# No cache for PHP files
+<FilesMatch "\.php$">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+</FilesMatch>
