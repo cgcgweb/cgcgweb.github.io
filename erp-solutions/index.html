@@ -686,12 +686,6 @@ body {
     flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none !important;
-    }
-}
-
 .nav-links a {
     color: #24314c;
     text-decoration: none;
@@ -837,7 +831,7 @@ body {
 </style>
 <script>
 // Burger menu toggle for mobile
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
     const burgerBtn = document.querySelector('.burger-btn');
     const navLinks = document.querySelector('.nav-links');
     const menuItems = navLinks ? navLinks.querySelectorAll('a') : [];
@@ -875,7 +869,7 @@ body {
             });
         });
     }
-})();
+});
 
 // Slow down scroll to create a "heavy" feel; respects reduced-motion preferences.
 (function() {
