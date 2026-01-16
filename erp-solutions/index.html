@@ -593,12 +593,13 @@ body {
   }
 
   .s2 {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
   .s2-icon {
-    max-width: 80px;
+    max-width: 100%;
   }
 
   .s3 {
@@ -718,6 +719,8 @@ body {
     cursor: pointer;
     gap: 6px;
     padding: 8px;
+    z-index: 1001;
+    pointer-events: auto;
 }
 
 .burger-btn span {
@@ -781,7 +784,7 @@ body {
         right: clamp(16px, 6vw, 150px);
         top: clamp(12px, 3vh, 24px);
         transform: none;
-        z-index: 1000;
+        z-index: 2000;
     }
 
     .nav-links {
