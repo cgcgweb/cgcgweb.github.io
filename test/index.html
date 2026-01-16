@@ -912,6 +912,7 @@
           let currentProgress = 0;
           let autoScrollInterval = null;
           let isHovering = false;
+          let lastActiveIndex = -1;
           
           const images = [
             '../usa_today.svg',
@@ -936,8 +937,9 @@
             const activeIndex = Math.min(items.length - 1, Math.round(currentProgress * (items.length - 1)));
             items.forEach((el, idx) => el.classList.toggle('active', idx === activeIndex));
             
-            if (images[activeIndex]) {
+            if (activeIndex !== lastActiveIndex && images[activeIndex]) {
               dot.src = images[activeIndex];
+              lastActiveIndex = activeIndex;
             }
           };
 
