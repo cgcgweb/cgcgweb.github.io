@@ -379,6 +379,8 @@ body {
     padding: clamp(48px, 8vw, 100px) clamp(16px, 6vw, 150px);
     gap: 50px;
     margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .s1-l {
@@ -387,6 +389,8 @@ body {
     flex-direction: column;
     max-width: 600px;
     gap: 18px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .s1-img {
@@ -411,6 +415,8 @@ body {
     gap: 40px;
     padding: clamp(20px, 5vw, 60px) clamp(10px, 3vw, 80px);
     background-color: #F5F8FA;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .s2-icon {
@@ -429,6 +435,8 @@ body {
     row-gap: 64px;
     align-self: stretch;
     flex-wrap: wrap;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .s3-l {
@@ -440,12 +448,14 @@ body {
 
 .s3-r {
     display: grid;
-    width: 568px;
+    width: 100%;
+    max-width: 568px;
     height: 224px;
     row-gap: 76px;
     column-gap: 76px;
     grid-template-rows: repeat(2, minmax(0, 1fr));
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    box-sizing: border-box;
 }
 
 .s4 {
@@ -454,6 +464,8 @@ body {
     gap: 50px;
     align-items: center;
     padding: clamp(48px, 8vw, 100px) clamp(16px, 6vw, 150px);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .s4-r {
@@ -482,11 +494,16 @@ body {
     align-items: flex-start;
     padding: clamp(48px, 8vw, 100px) clamp(16px, 6vw, 150px);
     gap: 40px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 .s5-b {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .s5-list {
@@ -500,6 +517,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .site-footer {
@@ -616,6 +635,8 @@ body {
     color: #24314c;
     min-height: 64px;
     overflow: visible;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-brand img {
@@ -633,7 +654,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     flex: 1 1 auto;
-    min-width: 320px;
+    min-width: 0;
     flex-wrap: wrap;
 }
 
