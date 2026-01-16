@@ -300,10 +300,12 @@ body {
 .h2 {
     color: #2B354E;
     font-family: 'NB', sans-serif;
-    font-size: 42px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 52px; /* 125% */
+    line-height: 60px; /* 125% */
+    orphans: 3;
+    widows: 2;
 }
 .span {
     color: #375E74;
@@ -652,6 +654,7 @@ body {
   .footer-col {
     min-width: 0;
   }
+  
 }
 
 .nav-bar {
@@ -828,7 +831,7 @@ body {
 }
 
 </style>
-<script>
+<script nonce="a34g29914">
 // Burger menu toggle for mobile
 document.addEventListener('DOMContentLoaded', function() {
     const burgerBtn = document.querySelector('.burger-btn');
