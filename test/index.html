@@ -981,6 +981,12 @@
           
           startAutoScroll();
           update();
+          
+          // Ensure initial image loads
+          if (images[0]) {
+            dot.src = images[0];
+            lastActiveIndex = 0;
+          }
         })();
       </script>
 
