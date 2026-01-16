@@ -481,16 +481,18 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: clamp(48px, 8vw, 100px) clamp(16px, 6vw, 150px);
-    gap: 40px;
+    gap: 30px;
 }
 .s5-b {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 30px;
 }
 
 .s5-list {
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .s6 {
@@ -610,6 +612,10 @@ body {
     flex-direction: column;}
 
 }
+
+.footer-row { grid-template-columns: repeat(2, 1fr); }
+  .footer-col { min-width: 0; }
+
 .nav-bar {
     display: flex;
     align-items: center;
