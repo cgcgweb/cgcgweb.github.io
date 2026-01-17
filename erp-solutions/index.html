@@ -278,10 +278,9 @@ body {
 .title {
     color: #2B354E;
     font-family: 'NB', sans-serif;
-    font-size: 64px;
-    font-style: normal;
+    font-size: clamp(32px, 5.5vw, 64px);
+    line-height: clamp(42px, 6.5vw, 84px); 
     font-weight: 500;
-    line-height: 84px;
     margin: 0;
     orphans: 3;
 }
@@ -289,23 +288,23 @@ body {
 .h3 {
     color: #2B354E;
     font-family: 'NB', sans-serif;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 49.5px; /* 137.5% */
-    margin: 0;
-    orphans: 3;
+  font-size: clamp(20px, 3.8vw, 36px);
+  line-height: clamp(28px, 4.8vw, 49.5px);
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  orphans: 3;
 }
 
 .h2 {
     color: #2B354E;
     font-family: 'NB', sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 60px; /* 125% */
-    orphans: 3;
-    widows: 2;
+  font-size: clamp(24px, 4.5vw, 48px);
+  line-height: clamp(34px, 5.2vw, 60px);
+  font-style: normal;
+  font-weight: 700;
+  orphans: 3;
+  widows: 2;
 }
 .span {
     color: #375E74;
@@ -318,9 +317,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 125%;
-    margin: 0;
     orphans: 3;
-    widows: 2;
+    widows: 2;    
 }
 .paragraph b { 
     font-family: 'NB', sans-serif;
@@ -333,7 +331,7 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    line-height: 24px; /* 142.857% */
     margin: 0;
     orphans: 3;
     widows: 2;
