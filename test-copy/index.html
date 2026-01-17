@@ -687,6 +687,73 @@ max-width: 400px;
 }
 }
 
+
+
+
+/* partners */
+
+.partners-ticker{
+  width: 100vw;
+  margin: clamp(24px, 4vw, 48px) calc(-50vw + 50%);
+  background: #DADBDE;
+  padding: clamp(12px, 2.5vw, 18px) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* optional: soft fade edges */
+.partners-ticker::before,
+.partners-ticker::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width: 64px;
+  z-index: 2;
+  pointer-events:none;
+}
+.partners-ticker::before{
+  left:0;
+  background: linear-gradient(to right, #DADBDE 0%, rgba(218,219,222,0) 100%);
+}
+.partners-ticker::after{
+  right:0;
+  background: linear-gradient(to left, #DADBDE 0%, rgba(218,219,222,0) 100%);
+}
+
+.partners-ticker .partners-track{
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 28px);
+  will-change: transform;
+  animation: partners-marquee 28s linear infinite;
+}
+
+/* "see ~6 logos" rule:
+   make each logo around 1/6 of the container (minus gaps) */
+.partners-ticker img{
+  flex: 0 0 auto;
+  height: clamp(22px, 2.2vw, 34px);
+  width: clamp(120px, 14vw, 170px); /* ~6 logos visible on wide screens */
+  object-fit: contain;
+}
+
+/* pause on hover */
+.partners-ticker:hover .partners-track{
+  animation-play-state: paused;
+}
+
+@keyframes partners-marquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* because set is duplicated */
+}
+
+@media (prefers-reduced-motion: reduce){
+  .partners-ticker .partners-track{
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
 
   .main-content {
@@ -911,25 +978,48 @@ max-width: 400px;
     </div>
   </div>
 
-  <div class="partners">
-      <img src="../m/partners/pnr17.svg" alt="Partner 17" loading="lazy">
-      <img src="../m/partners/pnr16.svg" alt="Partner 16" loading="lazy">
-      <img src="../m/partners/pnr15.svg" alt="Partner 15" loading="lazy">
-      <img src="../m/partners/pnr14.svg" alt="Partner 14" loading="lazy">
-      <img src="../m/partners/pnr13.svg" alt="Partner 13" loading="lazy">
-      <img src="../m/partners/pnr12.svg" alt="Partner 12" loading="lazy">
-      <img src="../m/partners/pnr11.svg" alt="Partner 11" loading="lazy">
-      <img src="../m/partners/pnr10.svg" alt="Partner 10" loading="lazy">
-      <img src="../m/partners/pnr09.svg" alt="Partner 9" loading="lazy">
-      <img src="../m/partners/pnr08.svg" alt="Partner 8" loading="lazy">
-      <img src="../m/partners/pnr07.svg" alt="Partner 7" loading="lazy">
-      <img src="../m/partners/pnr06.svg" alt="Partner 6" loading="lazy">
-      <img src="../m/partners/pnr05.svg" alt="Partner 5" loading="lazy">
-      <img src="../m/partners/pnr04.svg" alt="Partner 4" loading="lazy">
-      <img src="../m/partners/pnr03.svg" alt="Partner 3" loading="lazy">
-      <img src="../m/partners/pnr02.svg" alt="Partner 2" loading="lazy">
-      <img src="../m/partners/pnr01.svg" alt="Partner 1" loading="lazy">
-    </div>
+  <div class="partners partners-ticker" aria-label="Partners">
+  <div class="partners-track">
+    <!-- set 1 -->
+    <img src="../m/partners/pnr17.svg" alt="Partner 17" loading="lazy">
+    <img src="../m/partners/pnr16.svg" alt="Partner 16" loading="lazy">
+    <img src="../m/partners/pnr15.svg" alt="Partner 15" loading="lazy">
+    <img src="../m/partners/pnr14.svg" alt="Partner 14" loading="lazy">
+    <img src="../m/partners/pnr13.svg" alt="Partner 13" loading="lazy">
+    <img src="../m/partners/pnr12.svg" alt="Partner 12" loading="lazy">
+    <img src="../m/partners/pnr11.svg" alt="Partner 11" loading="lazy">
+    <img src="../m/partners/pnr10.svg" alt="Partner 10" loading="lazy">
+    <img src="../m/partners/pnr09.svg" alt="Partner 9" loading="lazy">
+    <img src="../m/partners/pnr08.svg" alt="Partner 8" loading="lazy">
+    <img src="../m/partners/pnr07.svg" alt="Partner 7" loading="lazy">
+    <img src="../m/partners/pnr06.svg" alt="Partner 6" loading="lazy">
+    <img src="../m/partners/pnr05.svg" alt="Partner 5" loading="lazy">
+    <img src="../m/partners/pnr04.svg" alt="Partner 4" loading="lazy">
+    <img src="../m/partners/pnr03.svg" alt="Partner 3" loading="lazy">
+    <img src="../m/partners/pnr02.svg" alt="Partner 2" loading="lazy">
+    <img src="../m/partners/pnr01.svg" alt="Partner 1" loading="lazy">
+
+    <!-- set 2 (duplicate, aria-hidden) -->
+    <img src="../m/partners/pnr17.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr16.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr15.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr14.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr13.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr12.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr11.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr10.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr09.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr08.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr07.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr06.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr05.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr04.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr03.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr02.svg" alt="" aria-hidden="true">
+    <img src="../m/partners/pnr01.svg" alt="" aria-hidden="true">
+  </div>
+</div>
+
 
 
 
