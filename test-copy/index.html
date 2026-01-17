@@ -348,25 +348,34 @@ margin: 0px -23px;
 
 /*Partners*/
 
-.partners {
+.partners-ticker{
   width: 100vw;
-  margin: clamp(36px, 5vw, 48px) calc(-50vw + 50%);
-  margin-top: clamp(60px, 8vw, 120px);
-  background: #DADBDE;
-  padding: clamp(24px, 3vw, 18px) 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(8px, 2vw, 24px);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background:#DADBDE;
+  padding: 14px 0;
+  overflow:hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 120px;
 }
 
+.partners-track{
+  display:flex;
+  align-items:center;
+  width: max-content;
+  animation: partners-marquee 22s linear infinite;
+  will-change: transform;
+}
 
+.partners-track img{
+  height: clamp(56px, 5vw, 64px);
+  width: auto;
+  flex: 0 0 auto;
+}
 
-.partners img {
-flex: 1 0 auto;
-height: clamp(36px, 2vw, 24px);
-width: auto;
+@keyframes partners-marquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 
@@ -729,73 +738,6 @@ max-width: 400px;
 }
 }
 
-
-
-
-/* partners */
-
-.partners-ticker{
-  width: 100vw;
-  margin: clamp(24px, 4vw, 48px) calc(-50vw + 50%);
-  background: #DADBDE;
-  padding: clamp(12px, 2.5vw, 18px) 0;
-  overflow: hidden;
-  position: relative;
-}
-
-/* optional: soft fade edges */
-.partners-ticker::before,
-.partners-ticker::after{
-  content:"";
-  position:absolute;
-  top:0; bottom:0;
-  width: 64px;
-  z-index: 2;
-  pointer-events:none;
-}
-.partners-ticker::before{
-  left:0;
-  background: linear-gradient(to right, #DADBDE 0%, rgba(218,219,222,0) 100%);
-}
-.partners-ticker::after{
-  right:0;
-  background: linear-gradient(to left, #DADBDE 0%, rgba(218,219,222,0) 100%);
-}
-
-.partners-ticker .partners-track{
-  display: inline-flex;
-  align-items: center;
-  gap: clamp(16px, 2vw, 28px);
-  will-change: transform;
-  animation: partners-marquee 28s linear infinite;
-}
-
-/* "see ~6 logos" rule:
-   make each logo around 1/6 of the container (minus gaps) */
-.partners-ticker img{
-  flex: 0 0 auto;
-  height: clamp(22px, 2.2vw, 34px);
-  width: clamp(120px, 14vw, 170px); /* ~6 logos visible on wide screens */
-  object-fit: contain;
-}
-
-/* pause on hover */
-.partners-ticker:hover .partners-track{
-  animation-play-state: paused;
-}
-
-@keyframes partners-marquee{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); } /* because set is duplicated */
-}
-
-@media (prefers-reduced-motion: reduce){
-  .partners-ticker .partners-track{
-    animation: none !important;
-    transform: none !important;
-  }
-}
-
 @media screen and (max-width: 768px) {
 
   .main-content {
@@ -1020,49 +962,6 @@ max-width: 400px;
     </div>
   </div>
 
-  <div class="partners partners-ticker" aria-label="Partners">
-  <div class="partners-track">
-    <!-- set 1 -->
-    <img src="../m/partners/pnr17.svg" alt="Partner 17" loading="lazy">
-    <img src="../m/partners/pnr16.svg" alt="Partner 16" loading="lazy">
-    <img src="../m/partners/pnr15.svg" alt="Partner 15" loading="lazy">
-    <img src="../m/partners/pnr14.svg" alt="Partner 14" loading="lazy">
-    <img src="../m/partners/pnr13.svg" alt="Partner 13" loading="lazy">
-    <img src="../m/partners/pnr12.svg" alt="Partner 12" loading="lazy">
-    <img src="../m/partners/pnr11.svg" alt="Partner 11" loading="lazy">
-    <img src="../m/partners/pnr10.svg" alt="Partner 10" loading="lazy">
-    <img src="../m/partners/pnr09.svg" alt="Partner 9" loading="lazy">
-    <img src="../m/partners/pnr08.svg" alt="Partner 8" loading="lazy">
-    <img src="../m/partners/pnr07.svg" alt="Partner 7" loading="lazy">
-    <img src="../m/partners/pnr06.svg" alt="Partner 6" loading="lazy">
-    <img src="../m/partners/pnr05.svg" alt="Partner 5" loading="lazy">
-    <img src="../m/partners/pnr04.svg" alt="Partner 4" loading="lazy">
-    <img src="../m/partners/pnr03.svg" alt="Partner 3" loading="lazy">
-    <img src="../m/partners/pnr02.svg" alt="Partner 2" loading="lazy">
-    <img src="../m/partners/pnr01.svg" alt="Partner 1" loading="lazy">
-
-    <!-- set 2 (duplicate, aria-hidden) -->
-    <img src="../m/partners/pnr17.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr16.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr15.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr14.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr13.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr12.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr11.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr10.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr09.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr08.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr07.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr06.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr05.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr04.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr03.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr02.svg" alt="" aria-hidden="true">
-    <img src="../m/partners/pnr01.svg" alt="" aria-hidden="true">
-  </div>
-</div>
-
-
 
 
 <div class="s2-h">
@@ -1113,7 +1012,6 @@ max-width: 400px;
         />
       </g>
     </svg>
-  </body>
       <h3>Compliance Assured</h3>
       <p class="helper">We ensure your organization meets industry standards including HIPAA, PCI-DSS, and SOC 2.</p> 
       </div>
@@ -1138,6 +1036,13 @@ max-width: 400px;
       </a></div>
   
 </div>
+</div>
+
+ <div class="partners-ticker" aria-label="Partners">
+  <div class="partners-track">
+    <img src="../partners.svg" alt="Our partners" width="800px" height="200px" loading="lazy" decoding="async">
+    <img src="../partners.svg" alt="" aria-hidden="true" width="800px" height="220px" loading="lazy" decoding="async">
+  </div>
 </div>
 
 
@@ -1440,6 +1345,13 @@ max-width: 400px;
     }
   });
 })();
+
+window.addEventListener('load', () => {
+  const img = document.querySelector('.partners img[data-src]');
+  if (img) img.src = img.dataset.src;
+});
+
+
 </script>
 </body>
 
