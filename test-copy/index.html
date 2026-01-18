@@ -121,18 +121,8 @@ color: #2B354E;
 body {
 background-color: #2b354e;
 color: #fff;
-animation: pageLoad 0.6s ease-out;
 font-family: Arial, Helvetica, sans-serif;
 
-}
-
-@keyframes pageLoad {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 
@@ -241,17 +231,6 @@ font-family: Arial, Helvetica, sans-serif;
     }
 }
 
-@keyframes menuItemBlur {
-    from {
-        transform: scaleX(20) scaleY(2);
-        filter: blur(16px);
-    }
-    to {
-        transform: scaleX(1) scaleY(1);
-        filter: blur(0px);
-    }
-}
-
 @media (max-width: 768px) {
     .nav-bar {
         position: relative;
@@ -314,11 +293,6 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 
-.s3, .s4, .s5, .wehelp-spinner-container, footer, .partners, .s2, .s2-h {
-  content-visibility: auto;
-  contain-intrinsic-size: 1000px;
-}
-
 .s1 {
 display: flex;
 flex-wrap: wrap;
@@ -357,8 +331,6 @@ margin: 0px -23px;
   background:#DADBDE;
   padding: 14px 0;
   overflow:hidden;
-  content-visibility: auto;
-  contain-intrinsic-size: 120px;
 }
 
 .partners-track{
@@ -742,6 +714,7 @@ max-width: 400px;
 
 @media screen and (max-width: 768px) {
 
+ 
   .main-content {
     margin: 0 5%;
   }
@@ -867,15 +840,6 @@ max-width: 400px;
   flex-direction: column;
 }
 
-.footer-title {
-  margin: 0 0 18px 0;
-  font-family: 'NB', sans-serif;
-  font-size: 24px;
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
 .footer-link {
   display: inline-block;
   font-family: 'NL', sans-serif;
@@ -890,36 +854,8 @@ max-width: 400px;
   color: rgba(255, 255, 255, 0.85);
 }
 
-.footer-col--services {
-  flex: 1 1 700px;
-}
-
-.footer-subcols {
-  display: flex;
-  gap: 140px; 
-}
-
-.footer-subcol {
-  display: flex;
-  flex-direction: column;
-}
-
 @media (max-width: 900px) {
   .footer-row {
-    flex-wrap: wrap;
-    gap: 48px;
-  }
-
-  .footer-subcols {
-    gap: 48px;
-    flex-wrap: wrap;
-  }
-
-  .footer-col--services {
-    flex: 1 1 100%;
-  }
-
-    .footer-row {
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -947,19 +883,19 @@ max-width: 400px;
           <a class="above" href="/portfolio/">Portfolio</a>
           <a class="above" href="/lets-talk/">Contact</a>
       </nav>
-      <div aria-label="Forbes Business Council 2020 Official Member"> <img src="..//f.svg" alt="Forbes Business Council 2020 Official Member" width="120px" height="40px">
+      <div aria-label="Forbes Business Council 2020 Official Member"> <img src="..//f.svg" alt="Forbes Business Council 2020 Official Member" width="120px" height="40px" loading="lazy" decoding="async">
       </div>
   </header>
 
 <div class="main-content">
   <div class=s1>
     <div class=s1-l>
-      <img src="../media/title.svg" alt="CGCG Banner" class="a-titles" width="500" height="250" style="width: 100%; height: auto; aspect-ratio: 2 / 1;">
+      <img src="../media/title.svg" alt="CGCG Banner" class="a-titles" width="500" height="250" loading="lazy" decoding="async" style="width: 100%; height: auto; aspect-ratio: 2 / 1;">
        <p class="above">Scalable IT and cybersecurity solutions for companies at every stage — from start-ups to Fortune 500 enterprises. From Managed IT, Cybersecurity, PMS & POS support, and backup services to low-voltage infrastructure and cloud management across AWS, Azure, and Google Cloud. We design secure, scalable strategies built specifically for your business.</p>
     </div>
     
     <div class=s1-r>
-      <img src=../e.svg alt="CGCG Eagle" width="750" height="500" loading="eager" fetchpriority="high" decoding="async">
+      <img src=../e.svg alt="CGCG Eagle" width="750" height="500" loading="eager" fetchpriority="high" decoding="async" class="eagle">
       <img src=..//images/em.svg alt="CGCG MOB Eagle" width="750" height="500" loading="eager" fetchpriority="high" decoding="async" class="meagle">
     </div>
   </div>
@@ -1049,7 +985,7 @@ max-width: 400px;
 
 
 <div class=s3>
-    <img src=../m/z8.svg alt="CGCG Eagle" class="eagle" width=400 height=400 style="width:40%; height:auto; max-width:800px;">
+    <img src=../m/z8.svg alt="CGCG Eagle" class="eagle" width=400 height=400 loading="lazy" decoding="async" style="width:40%; height:auto; max-width:800px;">
   <div class="s3-r">
     <h1><b>Designing</b> your company to work without friction</h1>
     <p>CGCG designs and operates the core systems that businesses rely on every day. This includes <a href="/cloud-based-security-cameras/" class="service-link">cloud infrastructure</a>, <a href="/low-voltage-cabling/" class="service-link">internal networks</a>, <a href="/app-development/" class="service-link">business applications</a>, and <a href="/managed-it-services/" class="service-link">IT operations</a> as a whole. The focus is stability, performance, and scalability — making sure systems are built correctly from the start and continue to work as the company grows. CGCG acts as a long-term technical partner, not just a support desk.</p>
@@ -1081,12 +1017,12 @@ max-width: 400px;
       </a>
     </div>
   </div>
-    <img src=../m/z9.svg alt="CGCG Eagle" class="eagle" width=400 height=400 loading="lazy">
+    <img src=../m/z9.svg alt="CGCG Eagle" class="eagle" width=400 height=400 loading="lazy" decoding="async">
 </div>
 
 
 <div class="s5"> 
-   <img src=../m/h5.svg alt="CGCG Eagle" class="eagle" width=400 height=400 loading="lazy">
+   <img src=../m/h5.svg alt="CGCG Eagle" class="eagle" width=400 height=400 loading="lazy" decoding="async">
   <div class="s5-r">
     <h1>Ensuring your company never stops</h1>
     <p>CGCG ensures that businesses can keep operating even when things go wrong. This means protecting communication, data, and access across the organization. Reliable business phone systems, cloud-to-cloud backup, and fast recovery processes are designed as part of the overall infrastructure. When systems fail, data is lost, or teams are disrupted, continuity plans are already in place.</p>
@@ -1133,7 +1069,7 @@ max-width: 400px;
                   <a class="wehelp-item" href="https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html" target="_blank">"Dark-web AI models could make criminal hackers even more powerful."<br><span style="opacity: 0.7; font-size: 0.85em;"></span></a>
                 </div>
               </div>
-              <img class="wehelp-dot" src="../m/independent.svg" alt="News source indicator" width="150" height="150">
+              <img class="wehelp-dot" src="../m/independent.svg" alt="News source indicator" width="150" height="150" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -1182,8 +1118,41 @@ max-width: 400px;
    
 <script nonce="a34g29914">
 
-    // Script for spinner (load images once, then only swap loaded sources)
-(function () {
+// Burger menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerBtn = document.querySelector('.burger-btn');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (burgerBtn && navLinks) {
+    burgerBtn.addEventListener('click', function() {
+      burgerBtn.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      burgerBtn.setAttribute('aria-expanded', burgerBtn.classList.contains('active'));
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        burgerBtn.classList.remove('active');
+        navLinks.classList.remove('active');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+});
+
+// Defer spinner script until after first paint
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      initSpinner();
+    }, 100);
+  });
+});
+
+function initSpinner() {
+  // Script for spinner (load images once, then only swap loaded sources)
+  (function () {
   const scroller = document.querySelector('.wehelp-scroller');
   const spinner = document.querySelector('.wehelp-spinner');
   const spinnerWrap = document.querySelector('.wehelp-spinner-wrap');
@@ -1294,8 +1263,8 @@ max-width: 400px;
   scroller.addEventListener('scroll', () => update(), { passive: true });
   window.addEventListener('resize', () => update(), { passive: true });
 
-  // init
-  const initSpinner = async () => {
+  // init - delay all spinner work until after critical load window (1s+)
+  const startSpinner = async () => {
     await loadImagesOnce();
     update(0);
     setDotImage(0);
@@ -1304,18 +1273,30 @@ max-width: 400px;
 
   const container = document.querySelector('.wehelp-spinner-container');
   if (container) {
-    const io = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
-      io.disconnect();
+    // Wait for page load + 1 second before setting up observer
+    const setupObserver = () => {
+      const io = new IntersectionObserver(([e]) => {
+        if (!e.isIntersecting) return;
+        io.disconnect();
 
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(initSpinner, { timeout: 2000 });
-      } else {
-        setTimeout(initSpinner, 1200);
-      }
-    }, { rootMargin: '800px 0px' });
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(startSpinner, { timeout: 2000 });
+        } else {
+          setTimeout(startSpinner, 1200);
+        }
+      }, { rootMargin: '800px 0px' });
 
-    io.observe(container);
+      io.observe(container);
+    };
+
+    // Delay observer setup until after critical window
+    if (document.readyState === 'complete') {
+      setTimeout(setupObserver, 1000);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(setupObserver, 1000);
+      });
+    }
   }
 
   // cleanup blob urls
@@ -1324,7 +1305,8 @@ max-width: 400px;
       if (typeof v === 'string' && v.startsWith('blob:')) URL.revokeObjectURL(v);
     }
   });
-})();
+  })();
+}
 
 </script>
 </body>
