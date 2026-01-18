@@ -1294,19 +1294,13 @@ max-width: 400px;
   scroller.addEventListener('scroll', () => update(), { passive: true });
   window.addEventListener('resize', () => update(), { passive: true });
 
-  // init
-  const initSpinner = async () => {
-  await loadImagesOnce();
-  update(0);
-  setDotImage(0);
-  startAutoScroll();
-};
-
-if ('requestIdleCallback' in window) {
-  requestIdleCallback(initSpinner, { timeout: 2000 });
-} else {
-  setTimeout(initSpinner, 1200);
-}
+  // init - load images immediately after page load
+  window.addEventListener('load', async () => {
+    await loadImagesOnce();
+    update(0);
+    setDotImage(0);
+    startAutoScroll();
+  });
 
   // cleanup blob urls
   window.addEventListener('beforeunload', () => {
