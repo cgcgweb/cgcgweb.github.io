@@ -933,7 +933,7 @@ max-width: 400px;
 
 <body>
   <header class="nav-bar">
-      <div class="nav-brand"><img src="..//logowhite.svg" alt="Cyber Guardian Logo" width="40px" height="40px"></div>
+      <div class="nav-brand"><img src="..//logowhite.svg" alt="Cyber Guardian Logo" width="40px" height="40px" decoding="async"fetchpriority="low"></div>
       <button class="burger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -959,8 +959,8 @@ max-width: 400px;
     </div>
     
     <div class=s1-r>
-      <img src=../e.svg alt="CGCG Eagle" class=eagle decoding="async" fetchpriority="high" width=750px height=500px>
-      <img src=..//images/em.svg alt="CGCG Eagle Mobile" decoding="async" fetchpriority="high" class=meagle width="800" height="600" style="max-width:800px;">
+      <img src=../e.svg alt="CGCG Eagle" width="750" height="500" loading="eager" fetchpriority="high" decoding="async">
+      <img src=..//images/em.svg alt="CGCG MOB Eagle" width="750" height="500" loading="eager" fetchpriority="high" decoding="async" class="meagle">
     </div>
   </div>
 
@@ -1294,13 +1294,29 @@ max-width: 400px;
   scroller.addEventListener('scroll', () => update(), { passive: true });
   window.addEventListener('resize', () => update(), { passive: true });
 
-  // init - load images immediately after page load
-  window.addEventListener('load', async () => {
+  // init
+  const initSpinner = async () => {
     await loadImagesOnce();
     update(0);
     setDotImage(0);
     startAutoScroll();
-  });
+  };
+
+  const container = document.querySelector('.wehelp-spinner-container');
+  if (container) {
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      io.disconnect();
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initSpinner, { timeout: 2000 });
+      } else {
+        setTimeout(initSpinner, 1200);
+      }
+    }, { rootMargin: '800px 0px' });
+
+    io.observe(container);
+  }
 
   // cleanup blob urls
   window.addEventListener('beforeunload', () => {
