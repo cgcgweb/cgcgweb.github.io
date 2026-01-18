@@ -297,7 +297,6 @@ align-items: center;
 
 .s1-l {
 width: clamp(400px, 50%, 100%);
-max-width: 100%;
 }
 
 .s1-r {
@@ -308,6 +307,9 @@ justify-content: center;
 .eagle {
 max-width: 100%
 }
+
+
+
 
 
 /*Partners*/
@@ -359,7 +361,6 @@ margin-top: 15%;
 
 .s2-l {
 flex: 1 2 55%;
-min-width: 0;
 display: flex;
 flex-wrap: wrap;
 gap: clamp(12px, 1vw, 14px);
@@ -387,7 +388,6 @@ height: 90%;
 align-self: center;
 justify-content: center;
 align-content: center;
-min-width: 0;
 box-sizing: border-box;
 color: #2b354e;
 border-radius: 8px;
@@ -526,7 +526,7 @@ width: 100%;
 gap: 2rem;
 padding: 2rem;
 max-width: 90%;
-margin: 50px auto;
+margin: 50px 20px;
 }
 
 .wehelp-spinner-container .wehelp-left {
@@ -682,7 +682,10 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 }
-
+.s1-l {
+width: 100%;
+max-width: 600px;
+}
 .s1-r {
 width: 100%;
 max-width: 600px;
@@ -697,15 +700,15 @@ max-width: 400px;
 
 @media screen and (max-width: 768px) {
 
- 
+  .a-titles {
+      display: none;
+    }
+
   .main-content {
-    margin: 0 5%;
+    margin: 0 2%;
   }
     .s1 {
     margin-top: 25%;
-    }
-    .a-titles {
-      display: none;
     }
     .eagle {
     display: none;
@@ -839,10 +842,6 @@ max-width: 400px;
 @media (max-width: 900px) {
   .footer-row {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .footer-col {
-    min-width: 0;
   }
 }
 
