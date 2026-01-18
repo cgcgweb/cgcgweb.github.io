@@ -148,11 +148,6 @@ font-family: Arial, Helvetica, sans-serif;
     overflow: visible;
 }
 
-.nav-brand img {
-    height: 64px;
-    width: auto;
-    display: block;
-}
 
 .nav-links {
     display: flex;
@@ -182,13 +177,6 @@ font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.nav-bar > div[aria-label*="Forbes"] img {
-    height: 120px;
-    width: auto;
-    display: block;
-    margin: -8px 0;
 }
 
 .burger-btn {
@@ -896,7 +884,7 @@ max-width: 400px;
 <div class="main-content">
   <div class=s1>
     <div class=s1-l>
-      <img src="../media/title.svg" alt="CGCG Banner" class="a-titles" width="500" height="250" loading="lazy" decoding="async" style="width: 100%; height: auto; aspect-ratio: 2 / 1;">
+      <img src="../media/title.svg" alt="CGCG Banner" class="a-titles" width="500" height="250" loading="eager" fetchpriority="high" decoding="async" style="width: 100; height: auto; aspect-ratio: 2 / 1;">
        <p class="above">Scalable IT and cybersecurity solutions for companies at every stage — from start-ups to Fortune 500 enterprises. From Managed IT, Cybersecurity, PMS & POS support, and backup services to low-voltage infrastructure and cloud management across AWS, Azure, and Google Cloud. We design secure, scalable strategies built specifically for your business.</p>
     </div>
     
