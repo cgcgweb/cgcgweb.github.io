@@ -960,7 +960,7 @@ max-width: 400px;
     
     <div class=s1-r>
       <img src=../e.svg alt="CGCG Eagle" class=eagle decoding="async" fetchpriority="high" width=750px height=500px>
-      <img src=..//images/em.svg alt="CGCG Eagle Mobile" decoding="async" fetchpriority="high" class=meagle style="max-width:800px;">
+      <img src=..//images/em.svg alt="CGCG Eagle Mobile" decoding="async" fetchpriority="high" class=meagle width="800" height="600" style="max-width:800px;">
     </div>
   </div>
 
@@ -972,13 +972,13 @@ max-width: 400px;
 <div class="s2">
   <div class="s2-l">
       <div class="s2-item">
-        <img src="../m/x2.svg" alt="Expertise Icon" class="s2-icon" loading="lazy">
+        <img src="../m/x2.svg" alt="Expertise Icon" class="s2-icon" width="48" height="48" loading="lazy">
         <h3>24/7 Monitoring</h3>
         <p class="helper">Full time protection of your services.</p>
       </div>
       
       <div class="s2-item">
-      <img src="../m/x1.svg" alt="Trust Icon" class="s2-icon" loading="lazy">
+      <img src="../m/x1.svg" alt="Trust Icon" class="s2-icon" width="48" height="48" loading="lazy">
       <h3>Adaptable Solutions</h3>
       <p class="helper">Scalable model that provides a personal solution for every client.</p> 
       </div>
@@ -1019,7 +1019,7 @@ max-width: 400px;
       </div>
 
       <div class="s2-item">
-      <img src="../m/x3.svg" alt="Trust Icon" class="s2-icon" loading="lazy">
+      <img src="../m/x3.svg" alt="Trust Icon" class="s2-icon" width="48" height="48" loading="lazy">
       <h3>Solitary Protection</h3>
       <p class="helper">CGCG 7-Layer Cyber Armor System™</p> 
       </div>
@@ -1043,7 +1043,7 @@ max-width: 400px;
  <div class="partners-ticker" aria-label="Partners">
   <div class="partners-track">
     <img src="../partners.webp" alt="Our partners" width="800px" height="200px" loading="lazy" decoding="async">
-    <img src="../partners.webp" alt="" aria-hidden="true" width="800px" height="220px" loading="lazy" decoding="async">
+    <img src="../partners.webp" alt="" aria-hidden="true" width="800px" height="200px" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -1081,12 +1081,12 @@ max-width: 400px;
       </a>
     </div>
   </div>
-    <img src=../m/z9.svg alt="CGCG Eagle" class="eagle" width=400 height=400 style="width:40%; height:auto; max-width:800px;">
+    <img src=../m/z9.svg alt="CGCG Eagle" class="eagle" width=400 height=400 loading="lazy">
 </div>
 
 
 <div class="s5"> 
-   <img src=../m/h5.svg alt="CGCG Eagle" class="eagle" width=400 height=400 style="width:40%; height:auto; max-width:800px;">
+   <img src=../m/h5.svg alt="CGCG Eagle" class="eagle" width=400 height=400 loading="lazy">
   <div class="s5-r">
     <h1>Ensuring your company never stops</h1>
     <p>CGCG ensures that businesses can keep operating even when things go wrong. This means protecting communication, data, and access across the organization. Reliable business phone systems, cloud-to-cloud backup, and fast recovery processes are designed as part of the overall infrastructure. When systems fail, data is lost, or teams are disrupted, continuity plans are already in place.</p>
@@ -1133,7 +1133,7 @@ max-width: 400px;
                   <a class="wehelp-item" href="https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html" target="_blank">"Dark-web AI models could make criminal hackers even more powerful."<br><span style="opacity: 0.7; font-size: 0.85em;"></span></a>
                 </div>
               </div>
-              <img class="wehelp-dot" src="../m/independent.svg" alt="News source indicator">
+              <img class="wehelp-dot" src="../m/independent.svg" alt="News source indicator" width="150" height="150">
             </div>
           </div>
         </div>
@@ -1315,12 +1315,6 @@ if ('requestIdleCallback' in window) {
     }
   });
 })();
-
-window.addEventListener('load', () => {
-  const img = document.querySelector('.partners img[data-src]');
-  if (img) img.src = img.dataset.src;
-});
-
 
 </script>
 </body>
