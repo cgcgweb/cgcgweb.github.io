@@ -1072,7 +1072,7 @@ max-width: 400px;
                   <a class="wehelp-item" href="https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html" target="_blank">"Dark-web AI models could make criminal hackers even more powerful."<br><span style="opacity: 0.7; font-size: 0.85em;"></span></a>
                 </div>
               </div>
-              <img class="wehelp-dot" src="../m/independent.svg" alt="News source indicator" width="150" height="150" loading="lazy" decoding="async">
+              <img class="wehelp-dot" src="../independent.svg" alt="News source indicator" width="150" height="150" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -1179,40 +1179,9 @@ function initSpinner() {
     '../marketwatch.svg'
   ];
 
-  // final preloaded sources (blob: urls or fallbacks)
-  const loadedSrcs = new Array(images.length).fill(null);
-  const srcCache = new Map(); // dedupe by src
-
-  async function loadImagesOnce() {
-    await Promise.all(
-      images.map(async (src, i) => {
-        // reuse if already loaded
-        if (srcCache.has(src)) {
-          loadedSrcs[i] = srcCache.get(src);
-          return;
-        }
-
-        try {
-          const res = await fetch(src, { cache: 'force-cache' });
-          if (!res.ok) throw new Error(`Failed: ${src}`);
-          const blob = await res.blob();
-          const url = URL.createObjectURL(blob);
-          srcCache.set(src, url);
-          loadedSrcs[i] = url;
-        } catch (e) {
-          // if fetch fails (rare on same-origin), use original url
-          srcCache.set(src, src);
-          loadedSrcs[i] = src;
-        }
-      })
-    );
-  }
-
   function setDotImage(index) {
     if (index === lastActiveIndex) return;
-    const src = loadedSrcs[index] || images[index];
-    if (!src) return;
-    dot.src = src;
+    dot.src = images[index];
     lastActiveIndex = index;
   }
 
@@ -1267,8 +1236,7 @@ function initSpinner() {
   window.addEventListener('resize', () => update(), { passive: true });
 
   // init - delay all spinner work until after critical load window (1s+)
-  const startSpinner = async () => {
-    await loadImagesOnce();
+  const startSpinner = () => {
     update(0);
     setDotImage(0);
     startAutoScroll();
@@ -1302,12 +1270,6 @@ function initSpinner() {
     }
   }
 
-  // cleanup blob urls
-  window.addEventListener('beforeunload', () => {
-    for (const v of srcCache.values()) {
-      if (typeof v === 'string' && v.startsWith('blob:')) URL.revokeObjectURL(v);
-    }
-  });
   })();
 }
 
