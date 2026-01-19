@@ -37,14 +37,14 @@ html {
 
 @font-face{
   font-family:'NL';
-  src: url('..//L.woff2') format('woff2');
+  src: url('../L.woff2') format('woff2');
   font-weight:300;
   font-style:normal;
   font-display: swap;
 }
 @font-face{
   font-family:'NB';
-  src: url('..//nbold.woff2') format('woff2');
+  src: url('../nbold.woff2') format('woff2');
   font-weight:700;
   font-style:normal;
   font-display: swap;
@@ -121,6 +121,40 @@ flex: 0 0 auto;
 color: #2B354E;
 }
 
+.button {
+    background-color: #fff;
+    color: #2B354E;
+    cursor: pointer;
+    font-family: 'NL', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 22px;
+    padding: 12px 24px;
+    text-align: center;
+    max-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-2 {
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-family: 'NL', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 22px;
+    padding: 10px 1%;
+    text-align: center;
+    max-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
 
 body {
 background-color: #2b354e;
@@ -139,7 +173,7 @@ font-family: Arial, Helvetica, sans-serif;
 .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: clamp(16px, 3vw, 32px);
     padding: 12px clamp(24px, 8.3vw, 200px);
@@ -148,11 +182,17 @@ font-family: Arial, Helvetica, sans-serif;
     overflow: visible;
 }
 
+.nav-brand img {
+    height: 64px;
+    width: auto;
+    display: block;
+}
+
 
 .nav-links {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     gap: clamp(16px, 2.5vw, 36px);
     font-family: 'NB', sans-serif;
     font-size: 20px;
@@ -160,6 +200,103 @@ font-family: Arial, Helvetica, sans-serif;
     flex: 1 1 auto;
     min-width: 320px;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item > a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-item > a:hover,
+.nav-item > a:focus-visible {
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #24314c;
+  border-radius: 8px;
+  padding: 24px 32px;
+  min-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+  z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dropdown-column h3 {
+  font-family: 'NB', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #F2C94C;
+}
+
+.dropdown-column a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-family: 'NL', sans-serif;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.dropdown-column a:hover {
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .dropdown-menu {
+    min-width: auto;
+    width: calc(100vw - 32px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    padding: 20px 24px;
+    gap: 24px;
+  }
+
+  .nav-item:hover .dropdown-menu,
+  .dropdown-menu:hover {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none !important;
+  }
 }
 
 .nav-links a {
@@ -290,9 +427,15 @@ font-family: Arial, Helvetica, sans-serif;
 .s1 {
 display: flex;
 flex-wrap: wrap;
-margin-top: 9%;
+margin-top: 5%;
 justify-content: center;
 align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .s1-l {
@@ -305,7 +448,11 @@ justify-content: center;
 }
 
 .eagle {
-max-width: 100%
+max-width: 100%;
+}
+
+.a-titles {
+  margin-left: -2%;
 }
 
 
@@ -693,7 +840,7 @@ margin-top: 32px;
 }
 .eagle {
 width: 100%;
-height: auto;
+height: 64px;
 max-width: 400px;
 }
 }
@@ -867,7 +1014,39 @@ max-width: 400px;
           <span></span>
       </button>
       <nav class="nav-links" aria-label="Primary">
-          <a class="above" href="/services/">Services</a>
+          <div class="nav-item">
+            <a class="above" href="/services/">Services</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-column">
+                <h3>IT and Managed Services</h3>
+                <a href="/managed-it-services/">Managed IT Services</a>
+                <a href="/NaaS/">Network-as-a-service</a>
+                <a href="/ctoas/">CTO Advisory Services</a>
+                <a href="/cioas/">CIO Advisory Services</a>
+              </div>
+              <div class="dropdown-column">
+                <h3>Cloud and Digital Solutions</h3>
+                <a href="https://filescience.io" target="_blank">Cloud-to-Cloud Backup</a>
+                <a href="/cloud-based-security-cameras/">Cloud-Based Security Cameras</a>
+                <a href="/app-development/">App Development</a>
+                <a href="https://switchboard-plus.com/" target="_blank">Business Phone</a>
+              </div>
+              <div class="dropdown-column">
+                <h3>Security and Data Protection</h3>
+                <a href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+                <a href="/socas/">Advanced SOC Support</a>
+                <a href="/cisoaas/">CISO Advisory Services</a>
+                <a href="/private-digital-investigations/">Private Digital Investigations</a>
+              </div>
+              <div class="dropdown-column">
+                <h3>Physical Infrastructure and Auxiliary Services</h3>
+                <a href="/low-voltage-cabling/">Low Voltage Cabling</a>
+                <a href="/door-access-control/">Door Access Control</a>
+                <a href="/recycling-charity/">Recycling & Charity</a>
+                <a href="/reputation-management/">Reputation Management</a>
+              </div>
+            </div>
+          </div>
           <a class="above" href="/about/">Company</a>
           <a class="above" href="/trust/">Trust</a>
           <a class="above" href="/resources/">Resources</a>
@@ -883,6 +1062,10 @@ max-width: 400px;
     <div class=s1-l>
       <img src="../media/title.svg" alt="CGCG Banner" class="a-titles" width="450" height="250" loading="eager" fetchpriority="high" decoding="async" style="width: 100; height: auto; aspect-ratio: 2 / 1;">
        <p class="above">Scalable IT and cybersecurity solutions for companies at every stage — from start-ups to Fortune 500 enterprises. From Managed IT, Cybersecurity, PMS & POS support, and backup services to low-voltage infrastructure and cloud management across AWS, Azure, and Google Cloud. We design secure, scalable strategies built specifically for your business.</p>
+       <div class="buttons">
+                    <div class="button" href="/lets-talk/">Let's talk</div>
+                    <div class="button-2" href="/services/">What we do</div>
+                </div>
     </div>
     
     <div class=s1-r>
@@ -999,7 +1182,7 @@ max-width: 400px;
     <p>Security is built into everything CGCG delivers, not added later. CGCG protects businesses through proactive cybersecurity, continuous monitoring, and executive-level security leadership. This includes threat detection, incident response, compliance support, and strategic guidance from CISO, CTO, and CIO roles. The goal is to reduce risk, prevent disruption, and give leadership clear visibility into their security posture.</p>
     <div class="s4-divider"></div>
     <div class="s4-cta">
-      <a href="/portfolio/" aria-label="View case study">
+      <a href="/trust/" aria-label="View case study">
         <svg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'>
           <circle cx='50' cy='50' r='50' fill='#F2F2F2'/>
           <path d='M76.0607 51.0607C76.6464 50.4749 76.6464 49.5251 76.0607 48.9393L66.5147 39.3934C65.9289 38.8076 64.9792 38.8076 64.3934 39.3934C63.8076 39.9792 63.8076 40.9289 64.3934 41.5147L72.8787 50L64.3934 58.4853C63.8076 59.0711 63.8076 60.0208 64.3934 60.6066C64.9792 61.1924 65.9289 61.1924 66.5147 60.6066L76.0607 51.0607ZM27 50V51.5H75V50V48.5H27V50Z' fill='#2B354E'/>
