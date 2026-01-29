@@ -15,6 +15,20 @@
 }
 
 
+@media screen and (max-width: 680px) {
+    .s2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        gap: 24px 16px;
+        padding: 32px 24px;
+    }
+    
+    .s2 img {
+        max-width: 100%;
+        flex: none;
+    }
+}
 
 .s3-top {
     text-align: center;
@@ -123,7 +137,7 @@
 .s6-icon {
     width: 80px;
     height: 80px;
-    background: #6BA4B8;
+    background: #6DA9C6;
     border-radius: 16px;
     display: flex;
     align-items: center;
