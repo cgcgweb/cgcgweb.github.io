@@ -19,297 +19,34 @@
         <meta property="og:type" content="business.business">
         <meta property="twitter:image" content="https://cgcg.biz/m/e2.png">
         <meta property="og:image" content="https://cgcg.biz/m/e2.png">
+        <style>
+            .s1 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: clamp(24px, 5vw, 64px);
+                padding: 0 clamp(36px, 5vw, 128px);
+                margin-top: 2%;
+                margin-bottom: 5%;
+            }
+
+            .s1l {
+                flex: 1 1 350px;
+                max-width: 700px;
+            }
+
+            .s1r {
+                flex: 1 1 400px;
+                max-width: 600px;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="/base.css">
+        <link rel="stylesheet" href="/healthcareIT/healthcare.css">
+        
     </head>
-    <style>
-        body {
-            background-color:#F2F2F2;
-            color:#2B354E;
-            font-family: n, Arial;
-            margin:0;
-            box-sizing: border-box;
-            overflow-x:hidden;
-        }
-        body * {
-            box-sizing: border-box;
-        }
-        @font-face {
-			font-family: 'n';
-			font-display:swap;
-			src: url('../n.woff2') format('embedded-opentype'), /* Internet Explorer */
-			url('../n.woff2') format('woff2'), /* Super Modern Browsers */
-			url('../n.woff2') format('woff'), /* Pretty Modern Browsers */
-			url('../n.woff2')  format('truetype'), /* Safari, Android, iOS */
-			url('../n.woff2') format('svg'); /* Legacy iOS */
-		}
-        @font-face {
-			font-family: 'L';
-			font-display:swap;
-			src: url('../L.woff2') format('embedded-opentype'), /* Internet Explorer */
-			url('../L.woff2') format('woff2'), /* Super Modern Browsers */
-			url('../L.woff2') format('woff'), /* Pretty Modern Browsers */
-			url('../L.woff2')  format('truetype'), /* Safari, Android, iOS */
-			url('../L.woff2') format('svg'); /* Legacy iOS */
-		}
-        .light {
-            font-family: l, 'Open Sans', Arial !important;
-        }
-        .col-1 {width: 8.33%;}
-		.col-2 {width: 16.66%;}
-		.col-3 {width: 25%;}
-		.col-4 {width: 33.33%;}
-		.col-5 {width: 41.66%;}
-		.col-6 {width: 50%;}
-		.col-7 {width: 58.33%;}
-		.col-8 {width: 66.66%;}
-		.col-9 {width: 75%;}
-		.col-10 {width: 83.33%;}
-		.col-11 {width: 91.66%;}
-		.col-12 {width: 100%;} 
-		[class*="col-"] {
-			float: left;
-			box-sizing:border-box;
-		}
-        @media screen and (max-width:900px) {
-            [class*="col-"] {
-                width: 100%;
-            }
-            .erp-logos .col-2 {
-                width: 40% !important;
-                flex-basis: 40% !important;
-            }
-            .d {
-                display: none;
-            }
-            h1 {
-                font-size: 34px;
-            }
-            .first a svg {
-                position: relative;
-                left: calc(50% - 25px);
-                top: 48px;
-                transform: rotate(90deg);
-            }
-            h2 {
-                font-size: 32px;
-                margin-bottom: 0;
-                margin-top:12px;
-            }
-            .section.first {
-                overflow: hidden;
-                width: 85%;
-            }
-            .right {
-                position: absolute;
-                right: 24px;
-                top: 24px;
-            }
-            .mission .line + .col-9 p {
-                padding-left: 0 !important;
-            }
-            .first .arrowlink p {
-                position: absolute;
-                left: calc(50vw - 70px);
-                margin-top: 0;
-            }
-            .serviceSingle.secTop {
-                width: 100%;
-            }
-        }
-        @media screen and (min-width:900px) {
-            .m {
-                display: none;
-            }
-            h1 {
-                font-size: min(74px, 4vw);
-            }
-            h2 {
-                font-size: 36px;
-                margin-bottom: 0;
-                margin-top:12px;
-            }
-            .section.first {
-                overflow: visible;
-                width: 75%;
-            }
-            .right {
-                position: absolute;
-                right: 5%;
-                top: 0;
-            }
-            .section.first h1, .section.first p {
-                padding-left: 0;
-                text-align: center;
-            }
-            .section.first h1 {
-                margin-top:12px;
-            }
-            .section.first img {
-                width: 70%;
-                margin: 0 auto;
-                display: block;
-            }
-        }  
-        @media screen and (max-width: 1200px) and (min-width: 901px) {
-            .mitservices .col-4 {
-                width: 50%;
-            }
-        }
-        .section {
-            overflow: hidden;
-            display: block;
-            width: 75%;
-            margin: 40px auto;
-            padding: 48px 0px;
-        }        
-        
-        .mitservices {
-            width: 75%;
-            overflow: hidden;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            margin: 40px auto;
-            padding: 24px 0px;
-        }
 
-        
-
-        
-        .first p {
-            font-size: 24px;
-            font-family: 'Open Sans', Arial;
-        }
-        p {
-            font-family: 'Open Sans', Arial;
-            font-size: 20px;
-        }
-        .arrowlink span, .arrowlink p, .arrowlink svg {
-            vertical-align: middle;
-            margin-right:16px;
-        }
-        
-        .menu {
-            min-height: 20vh;
-        }
-        .left {
-            position: absolute;
-            left: 12.5%;
-            top: 24px;
-        }
-        .nav {
-            position: absolute;
-            left: 30%;
-            top: 28px;
-            font-size: 22px;
-        }
-        .section.first {
-            overflow:hidden;
-            margin-top: 140px;
-            margin-bottom: 60px;
-            border-bottom: 1px solid #E5E5E5;
-        }
-        .section.first .serviceSingle {
-            margin-bottom: 48px;
-        }
-        a {
-            color: #2B354E;
-            text-decoration: none;
-        }
-        .nav a {
-            padding-right: 32px;
-        }
-        .line {
-            border-bottom: 8px solid white;
-            overflow: hidden;
-            height: 24px;
-        }
-        .e {
-            height: 1px;
-        }
-        img {
-            max-width: 100%;
-        }
-        p.bold {
-            font-weight: bold;
-        }
-        .mitservice::before {
-            position: absolute;
-            opacity: 0.2;
-            margin-left: -32px;
-            font-size: 64px;
-            color: #375E74;
-            font-family: 'Open Sans', Arial;
-            font-weight: bolder;
-            line-height: 32px;
-            z-index: -1;
-        }
-        .mitservice1::before {
-            content: '01';
-        }
-        .mitservice2::before {
-            content: '02';
-        }
-        .mitservice3::before {
-            content: '03';
-        }
-        .mitservice4::before {
-            content: '04';
-        }
-        .mitservice5::before {
-            content: '05';
-        }
-        .mitservice6::before {
-            content: '06';
-        }
-        .mitservice {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .mitservice ul li {
-            font-size: 19px;
-            font-weight: light;
-            font-family: 'Open Sans', Arial;
-        }
-        .mitservice {
-            margin-top: 48px;
-        }
-        .backupsolutions h2 {
-            font-size:56px;
-        }
-        .cstsocas {
-            max-width:1400px;
-        }
-        .navdservices {
-            position: absolute;
-            background-color: #2B354E;
-            border: 2px solid #f2f2f2;
-            padding: 15px;
-            display: none;
-        }
-        .navdservices a {
-            width: 100%;
-            display: block;
-            line-height: 33px;
-            color: #fff;
-        }
-        #navservices:hover + .navdservices, .navdservices:hover {
-            display: block !important;
-        }
-        h1 {
-            color:#375E74;
-         
-        }
-        .bold.dpin img {
-            max-width: 25px;
-        }
-        .erp-logos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 50px;
-        }
-
-    </style>
     <body>
         <div class="menu">
             <div class="left">
@@ -345,282 +82,266 @@
             </div>
             <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
         </div>
-        <div class="section first">
-            <div class="col-12">
-                <h1>FUTURE-READY HEALTHCARE IT:<br> AI-Enhanced & Secure EMR Solution</h1>
-                <p>In the era of smart healthcare, your EMR/EHR system must be more than a data repository—it should be an intelligent assistant. We specialize in modernizing healthcare IT by integrating Artificial Intelligence (AI) and Machine Learning (ML) capabilities into the industry's leading platforms. We ensure your system helps providers work smarter, not harder, while rigorously protecting Protected Health Information (PHI).</p>
+        
+        
+        
+        <div class="s1">
+            <div class="s1l">
+                <h1>AI-Enhanced & Secure EMR Solutions</h1>
+                <p>Implementation · Clinical AI Integration · Optimization · HIPAA & Zero-Trust Security
+                Healthcare systems today face rising clinical workloads, increasing cyber risk, and growing pressure to do more with less—especially in hospital networks and NGO-driven care environments.
+                Your EMR/EHR must evolve beyond a system of record.
+                It should actively support clinicians, automate routine work, and protect patient data by design.
+                We modernize healthcare IT by integrating AI and Machine Learning into leading EMR platforms—while enforcing Zero Trust security principles to safeguard Protected Health Information (PHI) at every layer.</p>
+            <div class="buttons">
+                    <div class="button" href="/lets-talk/">Talk to the Expert</div>
+                    <div class="button-2" href="/services/">Other Services</div>
             </div>
+            </div>
+            <div class="s1r">
+                <img src="../healthcareIT/hcit.webp" />
         </div>
-         </div>
-
-
-<!-- Images of ERP logos -->
-
-<div class="section">
-            <div class="col-12">
-                <div class="col-12">
-                    <h2 class="cstsocas">Our certified consultants deliver deep expertise across solutions including</h2>
-                    <br/>
-                </div>
-                <div class="col-12">
-                    
-                    <div class="erp-logos">
-                        <div class="col-2"><img  src="../cosmos.svg" alt="Cosmos Logo" /></div>
-                        <div class="col-2"><img  src="../MEDITECH.svg" alt="MEDITECH logo" /></div>
-                        <div class="col-2"><img src="../orancle-logo.svg" alt="Oracle NetSuite Logo" /></div>
-                        <div class="col-2"><img  src="../nebula.svg" alt="Nebula Logo" /></div>
-                        <div class="col-2"><img  src="../Athenahealth.svg" alt="Athenahealth Logo" /></div>
-                        <div class="col-2"><img  src="../EClinicalWorks.svg" alt="EClinicalWorks Logo" /></div>
-                        <div class="col-2"><img  src="../Allscripts.svg" alt="Allscripts Logo" /></div>
-                </div>
-            </div>
-        </div> 
-    
-    </div>
-
-
-<div class="mitservices">
-            <div class="l-health">
-                    <div class="icon-l">
-                    <img class="icon" src="../cloud.svg">  
-                    <h2>AI Integration & Ambient Intelligence</h2>
-                    </div>
-                    <p class="small">We deploy advanced AI tools that integrate with your EMR to reduce burnout and streamline clinical work. Ambient Clinical Voice systems like Nuance DAX or Abridge act as “Invisible Scribes,” capturing consults and drafting notes to cut after-hours charting. We also configure predictive analytics that flag sepsis, readmission, or deterioration risks directly in the workflow. Finally, we set up secure generative AI assistants to draft compassionate patient-portal responses for physician review.</p>
-                </div>
-            <div class="l-health">
-                    <div class="icon-l">
-                    <img class="icon" src="../devop.svg">  
-                    <h2>Multi-Platform Expertise</h2>
-                    </div>
-                    <p class="small">We create a data-rich foundation for advanced analytics by ensuring structured data capture, specialty-aligned workflow configuration, secure legacy data migration, and seamless identity management through SSO or biometrics. We then optimize operations with targeted automation, auditing workflows to apply RPA and AI where they reduce errors and delays. This includes AI-driven coding and denial-prediction tools for the revenue cycle, smart scheduling algorithms to cut no-shows, and data-based order set management to remove outdated options.</p>
-                    
-            </div>
-</div>
-
+        </div>
 
         
+        <div class="s2">
+            <img src="../healthcareIT/Allscripts.svg"/>
+            <img src="../healthcareIT/cosmos.svg"/> 
+            <img src="../healthcareIT/orh.svg"/> 
+            <img src="../healthcareIT/MEDITECH-2.svg"/>
+            <img src="../healthcareIT/nebula.svg"/>  
+            <img src="../healthcareIT/Athenahealth.svg"/>
+            <img src="../healthcareIT/ecw.svg"/> 
+        </div>
+        
+        <div class="s3">
+        <div class="s3-top">
+            <h2>Key Benefits</h2>
+            <p></p>
+            </div>
+
+        <div class="s3-bottom">
+            <div class="s3-l"> 
+                <div class="s3-1">
+                    <img class="i" src="../healthcareIT/i1.svg" />
+                    <h6> Reduce clinician documentation time and burnout</h6>
+                </div>
+
+                <div class="s3-1">
+                    <img class="i" src="../healthcareIT/i2.svg"/>
+                    <h6>Reduce clinician documentation time and burnout</h6>
+                </div>
+            </div>
+
+             <div class="s3-m"> 
+            <div class="s3-1">
+                <img class="i" src="../healthcareIT/i4.svg" />
+                <h6>Reduce clinician documentation time and burnout</h6>
+            </div>
+
+            <div class="s3-1">
+                <img class="i" src="../healthcareIT/i5.svg" />
+                <h6>Reduce clinician documentation time and burnout</h6>
+            </div>
             
-
-                <style> 
-                    .mitservices {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        gap: 48px;
-                    }
-                    .l-health {
-                        flex: 1;
-                    }
-                    @media screen and (max-width: 1024px) {
-                        .l-health {
-                            flex: 0 0 100%;
-                        }
-
-
-                        .mitservices {
-                        min-width: 90%;
-                    }
-
-                    }
-                    .icon-l {
-                        display: flex;
-                        gap: 16px;
-                        align-items: center;
-                    }
-
-                    .icon {
-                        width: 64px;
-                    }
-                </style>
-
-        
-        <div class="section section3">
-    <div class="col-12 section3-wrap">
-
-        <!-- LEFT SIDE -->
-        <div class="col-6 section3-left">
-            <h2>Security,<br/>Compliance &amp;<br/> AI Governance</h2>
-
-            <p class="bold">Our 4-Phase Approach</p>
-
-            <p>
-                <strong>AI Governance: </strong> Establish “Human-in-the-Loop” protocols so physicians review and approve all AI-generated notes and orders.
-            </p>
-
-            <p>
-                <strong>PHI Protection:</strong> Enforce end-to-end encryption for all data used by AI models, ensuring no patient data trains public systems.
-            </p>
-
-            <p>
-                <strong>Access Control:</strong> Configure strict Role-Based Access Control (RBAC) so AI tools only access required patient data segments.
-            </p>
-
-            <p>
-                <strong>Audit &AMP; Forensics: </strong> Enable AI audit trails that record when decisions were assisted by AI versus a human provider.
-            </p>
-        </div>
-
-        <!-- RIGHT SIDE -->
-        <div class="col-6 section3-right">
-
-            <div class="phase-card">
-                <div class="phase-icon">
-                    <img class="icon-mob" loading="lazy" src="../m/mdi_eye.svg" />
-                </div>
-                <h3>Assess</h3>
-                <p>
-                    We review your “As-Is” state, focusing on processes,
-                    performance, and current security and compliance gaps.
-                </p>
+        </div><div class="s3-r"> 
+            <div class="s3-1">
+                <img class="i" src="../healthcareIT/i4.svg" />
+                <h6>Reduce clinician documentation time and burnout</h6>
             </div>
 
-            <div class="phase-card">
-                <div class="phase-icon">
-                    <img class="icon-mob" loading="lazy" src="../m/mdi_design.svg" />
-                </div>
-                <h3>Architect</h3>
-                <p>
-                    We design the “To-Be” state, creating a secure,
-                    scalable technical blueprint and roadmap.
-                </p>
-            </div>
-
-            <div class="phase-card">
-                <div class="phase-icon">
-                    <img class="icon-mob" loading="lazy" src="../m/material-symbols_developer-mode-tv-outline.svg" />
-                </div>
-                <h3>Execute</h3>
-                <p>
-                    Our certified specialists build, test, and deploy
-                    the configuration in a secure sandbox before go-live.
-                </p>
-            </div>
-
-            <div class="phase-card">
-                <div class="phase-icon">
-                    <img class="icon-mob" loading="lazy" src="../m/ph_hand-heart-light.svg" />
-                </div>
-                <h3>Sustain</h3>
-                <p>
-                    We provide hyper-care support, compliance monitoring,and continuous security check-ups.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<style>
-/* ===== SECTION 3 ===== */
-.section3 {
-    background-color: #E5E5E5;
-    padding-top: 64px;
-    padding-bottom: 64px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.section3-wrap {
-    overflow: hidden;
-    display: flex;
-    width: 75%;
-    margin: 0 auto;
-    flex-basis: 75%;
-}
-
-
-.section3-left h2 {
-    font-size: 48px;
-    line-height: 1.1;
-    margin-bottom: 24px;
-}
-
-.section3-left p {
-    font-size: 20px;
-    margin-bottom: 16px;
-    width: 90%;
-}
-
-.section3-right {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-}
-
-.phase-card {
-    background: transparent;
-}
-
-.phase-icon {
-    margin-bottom: 12px;
-}
-
-.phase-card h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
-    color: #2B354E;
-}
-
-.phase-card p {
-    font-size: 18px;
-    line-height: 1.4;
-}
-@media screen and (max-width:600px) {
-    .icon-mob {
-    width: 48px;
-    height: 48px;
-}
-
-    .logo-m {
-        width: 20vh;
-    }
-
-}
-
-/* ===== MOBILE ===== */
-@media screen and (max-width:900px) {
-    .section3-left,
-    .section3-right {
-        width: 100%;
-    }
-
-    .section3-right {
-        grid-template-columns: 1fr 1fr;
-        margin-top: 48px;
-    }
-
-    .section3-left h2 {
-        font-size: 34px;
-    }
-
-    .section3-wrap {
-        flex-direction: column;
-    }
-}
-</style>
-}
-
-
-        <div class="section contact">
-            <div class="col-6">
-                <a href="tel:+18454448273"><h2>845-444-8273</h2></a>
-                <p class="bold dpin"><img loading="lazy" src="../m/dpin.svg" /> Hudson Valley</p>
-                <p class="bold dpin"><img loading="lazy" src="../m/dpin.svg" /> Hudson Yards</p>
-                <p class="bold dpin"><img loading="lazy" src="../m/dpin.svg" /> Brooklyn</p>
-                <a href="mailto:hello@cgcg.biz">hello@cgcg.biz</a>
-            </div>
-            <div class="col-6">
-                <form action="https://cgnew.wpengine.com/apis/cgcg/form/home/" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" />
-                    <input type="text" name="bname" placeholder="Business Name" />
-                    <input type="tel" name="phone" placeholder="Phone" />
-                    <input type="email" name="email" placeholder="Email" />
-                    <input type="text" name="message" placeholder="Message" />
-                    <input type="submit" value="Send" />
-                </form>
+            <div class="s3-1">
+                <img class="i" src="../healthcareIT/i5.svg" />
+                <h6>Reduce clinician documentation time and burnout</h6>
             </div>
         </div>
+
+        </div>
+        </div>
+
+        <div class="s4">
+            <div class="s4l">
+                <h2>Security, Compliance & Zero-Trust AI Governance</h2>
+                <p>Healthcare innovation must not increase risk.
+We embed Zero Trust security principles across all AI and EMR integrations—assuming no system, user, or AI component is trusted by default.</p>
+                <div class="s4l-item">
+                    <img src="../healthcareIT/check.svg" />
+                    <h6><b>Zero Trust Architecture: </b>Continuous identity verification and least-privilege access across users, systems, and AI tools</h6>
+                </div>
+                <div class="s4l-item">
+                    <img src="../healthcareIT/check.svg" />
+                    <h6><b>PHI Protection: </b>End-to-end encryption for all data used by AI models</h6>
+                </div>
+                <div class="s4l-item">
+                    <img src="../healthcareIT/check.svg" />
+                    <h6><b>Human Oversight: </b>Clinicians always review and approve AI-generated content</h6>
+                </div>
+                <div class="s4l-item">
+                    <img src="../healthcareIT/check.svg" />
+                    <h6><b>Access Control:  </b>Role-based and context-aware access to patient data</h6>
+                </div>
+                <div class="s4l-item">
+                    <img src="../healthcareIT/check.svg" />
+                    <h6><b>Audit & Compliance: </b>Full audit trails supporting HIPAA, donor, and regulatory reviews</h6>
+                </div>
+            </div>
+
+        <div class="s4r">
+            <img src="../healthcareIT/eyes.svg" />
+        </div>
+        </div>
+
+
+        <div class="s5">
+            <h2>Our 4-Phase Engagement Model</h2>
+            <div class="s5-imgs">
+                <img src="../healthcareIT/4.svg" width="350" height="350"/>
+                <img src="../healthcareIT/1.svg"width="350" height="350" />
+                <img src="../healthcareIT/2.svg"width="350" height="350" />
+                <img src="../healthcareIT/3.svg" width="350" height="350" />
+            </div>
+        </div>
+
+
+        <div class="s6-h">
+            <h2> Core Service Offerings</h2>
+        </div>
+
+
+        <div class="s6">
+            <div class="s6-top">
+            <div class="s6-icon">
+                <img src="../healthcareIT/ai.svg" />
+            </div>
+            <div class="s6-header">
+                <span class="s6-label">Service 1</span>
+                <h3>AI Integration & Ambient Intelligence</h3>
+                <p><b>Reduce documentation time. Improve focus on patients.</b></p>
+                <p>We integrate AI tools directly into your EMR to support clinicians without disrupting their workflow.</p>
+            </div>
+        </div>
+
+        <div class="s6-cards">
+            <div class="s6-card">
+                <h4>Ambient Clinical Voice ("Invisible Scribe")</h4>
+                <p>AI listens during visits and drafts clinical notes automatically for provider review—saving hours of after-hours documentation.</p>
+            </div>
+
+            <div class="s6-card">
+                <h4>Predictive Clinical Analytics</h4>
+                <p>AI models surface risk indicators (e.g., sepsis, readmission, deterioration) directly inside the EMR workflow.</p>
+            </div>
+
+            <div class="s6-card">
+                <h4>Generative AI for Patient Messaging</h4>
+                <p>Secure AI drafts responses to patient portal messages, allowing providers to review and approve before sending.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="s6">
+            <div class="s6-top">
+            <div class="s6-icon">
+                <img src="../healthcareIT/emr.svg" />
+            </div>
+            <div class="s6-header">
+                <span class="s6-label">Service 2</span>
+                <h3>EMR / EHR Implementation & Modernization</h3>
+                <p><b>Build a strong data foundation for AI and analytics.</b></p>
+                <p>We manage EMR deployments and upgrades with future intelligence in mind.</p>
+            </div>
+        </div>
+
+        <div class="s6-cards">
+            <div class="s6-card">
+                <h4>AClinical Workflow Analysis</h4>
+                <p>EMR configuration tailored to specialties while keeping data structured and standardized.</p>
+            </div>
+
+            <div class="s6-card">
+                <h4>Secure Data Migration</h4>
+                <p>Legacy data mapped correctly so historical records are usable for reporting and AI insights.</p>
+            </div>
+
+            <div class="s6-card">
+                <h4>Identity & Access Management</h4>
+                <p>Single Sign-On (SSO), MFA, and biometric authentication for secure and seamless access.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="s6">
+            <div class="s6-top">
+            <div class="s6-icon">
+                <img src="../healthcareIT/ai.svg" />
+            </div>
+            <div class="s6-header">
+                <span class="s6-label">Service 1</span>
+                <h3>Clinical Optimization & Automation</h3>
+                <p><b>Get more value from the systems you already own.</b></p>
+                <p>We identify slow, manual, or error-prone processes and improve them using automation and AI.</p>
+            </div>
+        </div>
+
+        <div class="s6-cards">
+            <div class="s6-card">
+                <h4>Revenue Cycle Intelligence</h4>
+                <p>AI-assisted coding, denial prediction, and claims optimization.</p>
+            </div>
+
+            <div class="s6-card">
+                <h4>Smart Scheduling</h4>
+                <p>Algorithms that improve slot utilization and reduce no-shows.</p>
+            </div>
+
+            <div class="s6-card">
+                <h4>Order Set Optimization</h4>
+                <p>Data-driven recommendations to clean up unused or outdated order sets.</p>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="s7">
+            <div class="s7-left">
+                <h2>Build Intelligent Healthcare IT—Without Compromising Trust</h2>
+                <p>AI in healthcare must be practical, explainable, and secure.</p>
+                <p>When implemented correctly, it becomes a force multiplier for clinicians—not a risk factor.</p>
+                <p>Talk to a healthcare IT expert to explore how AI-enabled, Zero-Trust EMR modernization can support your organization's clinical and operational goals.</p>
+                
+                <div class="s7-buttons">
+                    <div class="button">
+                        <img src="../healthcareIT/phone.svg" />
+                        Talk to an Expert
+                    </div>
+                    <div class="button-2">
+                        <img src="../healthcareIT/mail.svg" />
+                        Contact Us
+                    </div>
+                </div>
+
+                <div class="s7-stats">
+                    <div class="s7-stat">
+                        <h2>100%</h2>
+                        <p>HIPAA Compliant</p>
+                    </div>
+                    <div class="s7-stat">
+                        <h2>Zero Trust</h2>
+                        <p>Security Model</p>
+                    </div>
+                    <div class="s7-stat">
+                        <h2>7+</h2>
+                        <p>EMR Platforms</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s7-right">
+                <img src="../healthcareIT/cube.png" width="600" height="600"/>
+            </div>
+        </div>
+
+
         <div class="burgerMenu" style="display:none;">
             <img class="close" src="../m/X.svg" />
             <img class="bueagle" src="../m/cgcg.svg" />
@@ -658,9 +379,7 @@
             </div>
             <img class="forbesMobile" src="/m/forbes.svg" />
         </div>
-        <style>
-            .bnav .bold{   font-size:24px;   font-weight:bold;   }   .bnav a{   font-family:'Open Sans',Arial,sans-serif;   text-decoration:none !important;   font-family:'N','Open Sans',Arial,sans-serif;   font-size:30px !important;   line-height:48px;   }   .burgerMenu{   display:block;   overflow:hidden;   width:100vw;   position:absolute;   top:0;   background:#000;   height:100vh;   left:0;   }   .close{   top:24px;   right:24px;   position:absolute;   }   .bueagle{   width:25%;   margin:32px;   }   .forbesMobile{   position:absolute;   width:25%;   bottom:32px;   right:32px;   }   .bnav a{   width:100%;   display:block;   font-size:30px;   color:#fff;   }     .sml{   max-width:259px;   position:absolute;   bottom:25px;   left:25px;   }   .sml a{   font-size:24px;   color:#fff;   }   .bnav{   width:85%;   position:absolute;   left:32px;   top:15vh;   z-index:5;   }   .bnav a:not(.bold){   text-decoration:underline;   }  #drop{   color:#fff;   float:left;   line-height:50px;   font-size:52px;   padding-left:12px;   }   .slist a{   font-size:20px !important;   line-height:26px;   }   .bus a{   width:auto;   float:left;   max-width:180px;   }   .bus,.slist{   overflow:hidden;   }   .slist{   margin-left:32px;   }   .slickIn{   animation-name:slickIn;   animation-duration:0.3s;   animation-fill-mode:forwards;   }   .slickOut{   animation-name:slickOut;   animation-duration:0.3s;   animation-fill-mode:forwards;   }  @keyframes slickIn{   from{opacity:0;}   to{opacity:1;}   }  @keyframes slickOut{   from{opacity:1;}   to{opacity:0;}   }  @keyframes fadeIn{   from{opacity:0;}   to{opacity:1;}   }  @keyframes dualFill{   from{    border-width:24px 24px 0vh 0vw;   }   to{    border-width:24px 24px 93vh 156vw;   }   }   .dualFill{   border:solid #2B354E;   box-sizing:revert-layer;   top:0;   right:0;   background-color:#2B354E;   animation:dualFill;   animation-duration:3s;;   animation-fill-mode:forwards;   }   .fadeIn{   animation:fadeIn;   animation-duration:3s;   }   .burgerMenu .bnav a,.burgerMenu img,.burgerMenu .bnav p{   transition:transform 1s ease-in;   }
-        </style>
+
         <script nonce="a34g29914">
             document.querySelector('.right .m').onclick = burger;
             document.querySelector('.close').onclick = burger;
@@ -705,230 +424,44 @@
                 }
             }
         </script>
-        <style>
-            .section.contact {
-                padding-bottom:64px !important;
-                background-color: white;
-            }
-            .packages .col-4 img {
-                width: 90%;
-                margin: 0 auto;
-            }
-            .bold.nexa {
-                font-family: n;
-                font-size:32px;
-            }
-            .nexa + p {
-                width:80%;
-            }
-        </style>
-        <div class="section footer">
-            <div class="col-3">
-                <a href="https://cgcg.biz"><p class="bold">Home</p></a>
-                <a href="../about/">About CGCG</a>
-                <a href="../about/">Team</a>
-                <a href="../portfolio/">Clients</a>
-                <a href="../careers/">Careers</a>
-            </div>
-            <div class="col-3">
-                <a href="../managed-it-services/">Managed IT Services</a>
-                <a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
-                <a href="../socas/">SOCaaS</a>
-                <a href="../cioas/">CIOaaS</a>
-                <a href="../ctoas/">CTOaaS</a>
-                <a href="../cisoaas/">CISOaaS</a>
-                <a target="_blank" aria-label="Opens in a new tab" href="https://filescience.io">Cloud-to-Cloud Backup</a>
-                <a target="_blank" aria-label="Opens in a new tab" href="https://switchboard-plus.com/">Business Phone</a>
-                <a href="/clio">Clio Integration</a>
-            </div>
-            <div class="col-3">
-                <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
-                <a href="../app-development/">App Development</a>
-                <a href="../door-access-control/">Door Access Control</a>
-                <a href="../NaaS/">Network-as-a-service</a>
-                <a href="../cloud-based-security-cameras/">Cloud-Based Security Cameras</a>
-                <a href="../recycling-charity/">Recycling & Charity</a>
-                <a href="../reputation-management/">Reputation Management</a>
-                <a href="../private-digital-investigations/">Private Digital Investigations</a>
-            </div>
-            <div class="col-3 e"></div>
-            <div class="col-12">
-                <div class="col-3">
-                    <a href="../resources/"><p class="bold">Resources</p></a>
-                </div>
-                <div class="col-3">
-                    <a href="../lets-talk/"><p class="bold">Contact</p></a>
-                </div>
-            </div>
-        </div>
-        <style>
-            .section.backupsolutions .col-6 img {
-                width: 80%;
-                margin: 0 10%;
-            }
-            h3 {
-                font-size:64px;
-                margin-bottom:0;
-            }
-            .t1 {
-                animation: d1 20s infinite;
-            }
-            .t2 {
-                animation: d2 20s infinite;
-            }
-            @keyframes d1 {
-                0% {opacity: 0.1;}
-                10% {opacity: 0.8;}
-                50% {opacity: 1;}
-                60% {opacity: 0.1}
-                100% {opacity: 0;}
-            }
-            @keyframes d2 {
-                0% {opacity: 0;}
-                50% {opacity: 0;}
-                100% {opacity: 1;}
-            }
-            .section.contact h2 {
-                font-size: 55px;
-                color: #2B354E;
-            }
-            .section.contact {
-                padding: 4% 12.5%;
-                margin: 0;
-                width: 100%;
-            }
-            form {
-                display: block;
-                text-align: center;
-            }
-            .section.contact, .section.contact a {
-                color: #2B354E;
-            }
-            input {
-                width: 80%;
-                border: 0;
-                height: 48px;
-                color: black;
-                opacity: 1;
-                font-family: 'Open Sans', Arial;
-                font-size: 24px;
-                border-bottom: 1px solid black;
-                margin-bottom: 6px;
-                -webkit-appearance: none;
-                appearance: none;
-            }
-            .section.partners {
-                padding-bottom:25px;
-            }
-            .section.footer p, .section.footer a {
-                width: 100%;
-                display: block;
-                margin-top: 0;
-                margin-bottom:5px;
-            }
-            .section.footer {
-                background-color: black;
-                padding: 4% 12.5%;
-                margin: 0;
-                width: 100%;
-            }
-            .section.footer .col-12 {
-                margin-top: 24px;
-            }
-            .line + [class*="col-"] p {
-                font-size: 24px;
-            }
-            .section.footer a {
-                color: #fff;
-            }
-            @media screen and (max-width:900px) {
-                h3 {
-                    font-size: 32px;
-                }
-                div.helpspot {
-                    padding: 32px;
-                    margin: 0 !important;
-                }
-                .helpspot p, .whymanaged .arrowLink p {
-                    width: 100%;
-                }
-                .helpspot svg, .whymanaged svg {
-                    transform: translateX(-25%) translateY(-10%) scale(0.5);
-                    float: left;
-                }
-                .section.wehelp .col-12 {
-                    width: 100%;
-                    margin: 0 auto;
-                    display: block;
-                    float: unset;
-                }
-                .helpspot .arrowLink p, .whymanaged .arrowLink p {
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-left: 0;
-                    font-size: 18px;
-                    margin-top: 0;
-                    width: calc(100% - 104px);
-                }
-                .whymanaged .arrowLink p {
-                    margin-top: 20px;
-                }
-                .section.wehelp .col-12 h2 {
-                    padding: 36px;
-                }
-                .section.contact h2 {
-                    font-size: 34px;
-                }
-                form {
-                    text-align: left;
-                }
-                input {
-                   width: 100%;
-                }
-                .section.footer .col-3 {
-                    margin-bottom: 18px;
-                }
-                .section.contact .col-6 {
-                    margin-bottom: 48px;
-                }
-                .packages .col-4 img {
-                    width: 100%;
-                    margin: 0 auto;
-                }
-                .section.backupsolutions {
-                    margin: 0;
-                    width: 100%;
-                    padding: 2% 15%;
-                }
-                .col-5.cloudimg.m {
-                    margin-left: -10%;
-                    max-width: unset;
-                    width: 128%;
-                }
-                
-            }
-            input {
-                    background-color: transparent;
-            }
-            .section.footer a {
-                font-family: 'Open Sans', Arial;
-            }
-            .section.footer a p.bold {
-                font-size: 26px;
-            }
-            .section.contact p.bold {
-                font-size: 26px;
-            }
-            .section.contact {
-                padding-top: 64px;
-            }
-            input[type="submit"] {
-                -webkit-appearance: none !important;
-                -moz-appearance: none !important;
-                appearance: none !important;
-                background-color: #f2f2f2 !important;
-            }
-    
-        </style>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <!-- FOUR COLUMN LAYOUT -->
+    <div class="footer-row">
+      <!-- Column 1: Home & Company -->
+      <nav class="footer-col" aria-label="Company">
+        <a class="footer-link" href="https://cgcg.biz/">Home</a>
+        <a class="footer-link" href="/about/">About CGCG</a>
+        <a class="footer-link" href="/about/">Team</a>
+        <a class="footer-link" href="/portfolio/">Portfolio</a>
+        <a class="footer-link" href="/careers/">Career</a>
+      </nav>
+
+      <!-- Column 2: Core Services -->
+      <nav class="footer-col" aria-label="Core Services">
+        <a class="footer-link" href="/managed-it-services/">Managed IT Services</a>
+        <a class="footer-link" href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+        <a class="footer-link" href="/socas/">SOCaaS</a>
+        <a class="footer-link" href="/cioas/">CIOaaS</a>
+        <a class="footer-link" href="/ctoas/">CTOaaS</a>
+      </nav>
+
+      <!-- Column 3: More Services -->
+      <nav class="footer-col" aria-label="More Services">
+        <a class="footer-link" href="/cisoaas/">CISOaaS</a>
+        <a class="footer-link" href="https://filescience.io" target="_blank" rel="noopener">Cloud-to-Cloud Backup</a>
+        <a class="footer-link" href="https://switchboard-plus.com/" target="_blank" rel="noopener">Business Phone</a>
+        <a class="footer-link" href="/low-voltage-cabling/">Low Voltage Cabling</a>
+      </nav>
+
+      <!-- Column 4: Additional Services -->
+      <nav class="footer-col" aria-label="Additional Services">
+        <a class="footer-link" href="/app-development/">App Development</a>
+        <a class="footer-link" href="/door-access-control/">Door Access Control</a>
+        <a class="footer-link" href="/NaaS/">Network-as-a-Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
     </body>
 </html>
