@@ -276,6 +276,10 @@ html {
     min-width: 90%;
   }
 
+  .s2 {
+    min-width: 100%;
+  }
+
   .s1 {
     flex-direction: column-reverse;
   }
