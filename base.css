@@ -263,7 +263,7 @@ margin-bottom: 48px;
     color: #2B354E;
     background-color: white;
     border-radius: 14px;
-    border: 2px solid white;
+    border: 2px solid #f3f3f3;
     cursor: pointer;
     font-family: 'NB', sans-serif;
     font-size: clamp(14px, 3vw, 18px);
