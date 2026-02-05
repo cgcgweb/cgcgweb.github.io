@@ -19,26 +19,45 @@
         <meta property="og:type" content="business.business">
         <meta property="twitter:image" content="https://cgcg.biz/m/e2.png"">
         <meta property="og:image" content="https://cgcg.biz/m/e2.png">
+        <link rel="stylesheet" href="/base.css">
     </head>
     <body>
-        <header class="nav-bar">
-            <div class="nav-brand"><img src="..//logoblue.svg" alt="Cyber Guardian Logo"></div>
-            <button class="burger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav-links" aria-label="Primary">
-                <a href="/services/">Services</a>
-                <a href="/about/">Company</a>
-                <a href="/trust/">Trust</a>
-                <a href="/resources/">Resources</a>
-                <a href="/portfolio/">Portfolio</a>
-                <a href="/lets-talk/">Contact</a>
-            </nav>
-            <div aria-label="Forbes Business Council 2020 Official Member"> <img src="..//f.svg" alt="Forbes Business Council 2020 Official Member" width="120px" height="40px">
+        <div class="menu">
+            <div class="left">
+                <a href="https://cgcg.biz">
+                    <img src="../m/logodark.svg" />
+                </a>
             </div>
-        </header>
+            <div class="nav d">
+                <a id="navservices" href="/services/">Services</a>
+                <div class="navdservices">
+                    <a href="../managed-it-services/">Managed IT Services</a>
+                    <a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
+                    <a href="../socas/">SOCaaS</a>
+                    <a href="../cioas/">CIOaaS</a>
+                    <a href="../ctoas/">CTOaaS</a>
+                    <a href="../cisoaas/">CISOaaS</a>
+                    <a target="_blank" aria-label="Opens in a new tab" href="https://filescience.io">Cloud-to-Cloud Backup</a>
+                    <a target="_blank" aria-label="Opens in a new tab" href="https://switchboard-plus.com/">Business Phone</a>
+                    <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
+                    <a href="../app-development/">App Development</a>
+                    <a href="../door-access-control/">Door Access Control</a>
+                    <a href="../NaaS/">Network-as-a-service</a>
+                    <a href="../cloud-based-security-cameras/">Cloud-Based Security Cameras</a>
+                    <a href="../recycling-charity/">Recycling & Charity</a>
+                    <a href="../reputation-management/">Reputation Management</a>
+                    <a href="../private-digital-investigations/">Private Digital Investigations</a>
+                    <a href="../erp-solutions/">ERP Solutions</a>
+                    <a href="../healthcare-it/">EHR/EMR – Healthcare IT </a>
+                </div>
+                <a href="../about/">Company</a>
+                <a href="../trust">Trust</a>
+                <a href="../resources/">Resources</a>
+                <a href="../portfolio/">Portfolio</a>
+                <a href="../lets-talk/">Contact</a>
+            </div>
+            <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
+        </div>
         <div class="s1">
             <div class="s1-l">
                 <p class="title">
@@ -189,6 +208,89 @@
 
 <b>Vulnerability Management:</b> Run security health checks, perform penetration testing, and ensure timely patching across the ERP application layer.</p>
 </div>
+        <div class="burgerMenu" style="display:none;">
+            <img class="close" src="../m/X.svg" />
+            <img class="bueagle" src="../m/cgcg.svg" />
+            <div class="bnav">
+                <a class="bold" href="https://cgcg.biz">Home</a>
+                <div class="bus">
+                    <a href="/services/">Services</a><span id="drop">+</span>
+                </div>
+                <div class="slist" style="display:none">
+                    <a href="/managed-it-services/">Managed IT Services</a>
+                    <a href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+                    <a href="/socas/">SOCaaS</a>
+                    <a href="/cioas/">CIOaaS</a>
+                    <a href="/ctoas/">CTOaaS</a>
+                    <a href="/cisoaas/">CISOaaS</a>
+                    <a target="_blank" aria-label="Opens in a new tab" href="https://filescience.io">Cloud-to-Cloud Backup</a>
+                    <a target="_blank" aria-label="Opens in a new tab" href="https://switchboard-plus.com/">Business Phone</a>
+                    <a href="/low-voltage-cabling/">Low Voltage Cabling</a>
+                    <a href="/app-development/">App Development</a>
+                    <a href="/door-access-control/">Door Access Control</a>
+                    <a href="/NaaS/">Network-as-a-service</a>
+                    <a href="/cloud-based-security-cameras/">Cloud-Based Security Cameras</a>
+                    <a href="/recycling-charity/">Recycling & Charity</a>
+                    <a href="/reputation-management/">Reputation Management</a>
+                    <a href="/private-digital-investigations/">Private Digital Investigations</a>
+                </div>
+                <a href="/about/">Company</a>
+                <a href="/trust">Trust</a>
+                <a href="/resources/">Resources</a>
+                <a href="/portfolio/">Portfolio</a>
+                <a href="/lets-talk/">Contact</a>
+            </div>
+            <div class="sml">
+                <a href="https://www.linkedin.com/company/cyber-guardian-consulting-group-llc-" class="sml_li">LinkedIn</a>
+            </div>
+            <img class="forbesMobile" src="/m/forbes.svg" />
+        </div>
+
+        <script nonce="a34g29914">
+            document.querySelector('.right .m').onclick = burger;
+            document.querySelector('.close').onclick = burger;
+            document.querySelector('#drop').onclick = ardown;
+            function burger() {
+                const burgerMenu = document.querySelector(".burgerMenu");
+                const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
+                const isHidden = burgerMenu.style.display === "none";
+                if (isHidden) {
+                    burgerMenu.style.display = "block";
+                    burgerMenu.classList.remove("slickOut");
+                    burgerMenu.classList.add("slickIn");
+                    document.querySelector(".burgerMenu .bnav").classList.add("fadeIn");
+                    menuContents.forEach(element => {
+                        element.style.transition = "transform 0.8s ease, filter 1.2s ease, border 0.4s ease-in";
+                        element.style.transform = "scaleX(20) scaleY(2)";
+                        element.style.filter = "blur(16px)";
+                        element.style.border = "12px solid white";
+                    });
+                    setTimeout(() => {
+                        menuContents.forEach(element => {
+                            element.style.transform = "scaleX(1) scaleY(1)";
+                            element.style.filter = "blur(0px)";
+                            element.style.border = "0px solid white";
+                        });
+                    }, 100);
+                } else {
+                    burgerMenu.classList.remove("slickIn");
+                    burgerMenu.classList.add("slickOut");
+                        setTimeout(() => {
+                            burgerMenu.style.display = "none";
+                        }, 1000);
+                }
+            }
+            function ardown() {
+                if (document.querySelector(".slist").style.display == "none") {
+                    document.querySelector(".slist").style.display = "block";
+                    document.querySelector("#drop").innerText = "+";
+                } else {
+                    document.querySelector(".slist").style.display = "none";
+                    document.querySelector("#drop").innerText = "+";
+                }
+            }
+        </script>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <!-- FOUR COLUMN LAYOUT -->
