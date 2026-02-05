@@ -19,7 +19,7 @@
         <meta property="og:type" content="business.business">
         <meta property="twitter:image" content="https://cgcg.biz/m/e2.png"">
         <meta property="og:image" content="https://cgcg.biz/m/e2.png">
-        <link rel="stylesheet" href="/base.css">
+        <link rel="stylesheet" href="../base.css">
 
 
     </head>
@@ -49,6 +49,9 @@
                     <a href="../recycling-charity/">Recycling & Charity</a>
                     <a href="../reputation-management/">Reputation Management</a>
                     <a href="../private-digital-investigations/">Private Digital Investigations</a>
+                    <a href="../erp-solutions/">ERP Solutions</a>
+                    <a href="../healthcare-it/">Healthcare IT</a>
+                    <a href="../erp-unit4/">Unit4 ERP</a>
                 </div>
                 <a href="../about/">Company</a>
                 <a href="../trust">Trust</a>
@@ -56,7 +59,7 @@
                 <a href="../portfolio/">Portfolio</a>
                 <a href="../lets-talk/">Contact</a>
             </div>
-            <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
+            <div class="right"><img class="d" src="../m/f.svg" /><img class="m" src="../m/bud.svg" /></div>
         </div>
         <div class="s1">
             <div class="s1-l">
@@ -234,6 +237,9 @@
                     <a href="/recycling-charity/">Recycling & Charity</a>
                     <a href="/reputation-management/">Reputation Management</a>
                     <a href="/private-digital-investigations/">Private Digital Investigations</a>
+                    <a href="../erp-solutions/">ERP Solutions</a>
+                    <a href="../healthcare-it/">Healthcare IT</a>
+                    <a href="../erp-unit4/">Unit4 ERP</a>
                 </div>
                 <a href="/about/">Company</a>
                 <a href="/trust">Trust</a>
@@ -247,50 +253,34 @@
             <img class="forbesMobile" src="/m/forbes.svg" />
         </div>
 
-        <script nonce=a34g29914>
-            document.querySelector('.right .m').onclick = burger;
-            document.querySelector('.close').onclick = burger;
-            document.querySelector('#drop').onclick = ardown;
-            function burger() {
-                const burgerMenu = document.querySelector(".burgerMenu");
-                const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
-                const isHidden = burgerMenu.style.display === "none";
-                if (isHidden) {
-                    burgerMenu.style.display = "block";
-                    burgerMenu.classList.remove("slickOut");
-                    burgerMenu.classList.add("slickIn");
-                    document.querySelector(".burgerMenu .bnav").classList.add("fadeIn");
-                    menuContents.forEach(element => {
-                        element.style.transition = "transform 0.8s ease, filter 1.2s ease, border 0.4s ease-in";
-                        element.style.transform = "scaleX(20) scaleY(2)";
-                        element.style.filter = "blur(16px)";
-                        element.style.border = "12px solid white";
-                    });
-                    setTimeout(() => {
-                        menuContents.forEach(element => {
-                            element.style.transform = "scaleX(1) scaleY(1)";
-                            element.style.filter = "blur(0px)";
-                            element.style.border = "0px solid white";
-                        });
-                    }, 100);
-                } else {
-                    burgerMenu.classList.remove("slickIn");
-                    burgerMenu.classList.add("slickOut");
-                        setTimeout(() => {
-                            burgerMenu.style.display = "none";
-                        }, 1000);
-                }
-            }
-            function ardown() {
-                if (document.querySelector(".slist").style.display == "none") {
-                    document.querySelector(".slist").style.display = "block";
-                    document.querySelector("#drop").innerText = "+";
-                } else {
-                    document.querySelector(".slist").style.display = "none";
-                    document.querySelector("#drop").innerText = "+";
-                }
-            }
-        </script>
+        
+<script nonce=a34g29914>
+
+      function burger() {
+        const e = document.querySelector(".burgerMenu"),
+          t = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
+        "none" === e.style.display ? (e.style.display = "block", e.classList.remove("slickOut"), e.classList.add("slickIn"), document.querySelector(".burgerMenu .bnav").classList.add("fadeIn"), t.forEach((e => {
+          e.style.transition = "transform 0.8s ease, filter 1.2s ease, border 0.4s ease-in", e.style.transform = "scaleX(20) scaleY(2)", e.style.filter = "blur(16px)", e.style.border = "12px solid white"
+        })), setTimeout((() => {
+          t.forEach((e => {
+            e.style.transform = "scaleX(1) scaleY(1)", e.style.filter = "blur(0px)", e.style.border = "0px solid white"
+          }))
+        }), 100)) : (e.classList.remove("slickIn"), e.classList.add("slickOut"), setTimeout((() => {
+          e.style.display = "none"
+        }), 1e3))
+      }
+
+      function ardown() {
+        document.querySelectorAll('.bnav.fadeIn > a').forEach(e => e.style.display = e.style.display === 'none' ? 'block' : 'none');
+        "none" == document.querySelector(".slist").style.display ? (document.querySelector(".slist").style.display = "block", document.querySelector("#drop").innerText = "-") : (document.querySelector(".slist").style.display = "none", document.querySelector("#drop").innerText = "+")
+      }
+      document.querySelector(".right .m").onclick = burger, document.querySelector(".close").onclick = burger, document.querySelector("#drop").onclick = ardown;
+
+
+
+    </script>
+
+
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -934,6 +924,184 @@ body {
         display: none;
     }
 }
+
+
+
+
+      .bnav .bold {
+        font-size: 24px;
+        font-weight: 700
+      }
+
+      .bnav a {
+        font-family: 'Open Sans', Arial, sans-serif;
+        text-decoration: none !important;
+        font-family: 'N', 'Open Sans', Arial, sans-serif;
+        font-size: 30px !important;
+        line-height: 48px
+      }
+
+      .burgerMenu {
+        display: block;
+        overflow: hidden;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        background: #000;
+        height: 100vh;
+        left: 0
+      }
+
+      .close {
+        top: 24px;
+        right: 24px;
+        position: absolute
+      }
+
+      .bueagle {
+        width: 25%;
+        margin: 32px
+      }
+
+      .forbesMobile {
+        position: absolute;
+        width: 25%;
+        bottom: 32px;
+        right: 32px
+      }
+
+      .bnav a {
+        width: 100%;
+        display: block;
+        font-size: 30px;
+        color: #fff
+      }
+
+      .sml {
+        max-width: 259px;
+        position: absolute;
+        bottom: 25px;
+        left: 25px
+      }
+
+      .sml a {
+        font-size: 24px
+      }
+
+      .bnav {
+        width: 85%;
+        position: absolute;
+        left: 32px;
+        top: 15vh;
+        z-index: 5
+      }
+
+      .bnav a:not(.bold) {
+        text-decoration: underline
+      }
+
+      #drop {
+        color: #fff;
+        float: left;
+        line-height: 50px;
+        font-size: 52px;
+        padding-left: 12px
+      }
+
+      .slist a {
+        font-size: 20px !important;
+        line-height: 26px
+      }
+
+      .bus a {
+        width: auto;
+        float: left;
+        max-width: 180px
+      }
+
+      .bus,
+      .slist {
+        overflow: hidden
+      }
+
+      .slist {
+        margin-left: 32px
+      }
+
+      .slickIn {
+        animation-name: slickIn;
+        animation-duration: .3s;
+        animation-fill-mode: forwards
+      }
+
+      .slickOut {
+        animation-name: slickOut;
+        animation-duration: .3s;
+        animation-fill-mode: forwards
+      }
+
+      @keyframes slickIn {
+        from {
+          opacity: 0
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      @keyframes slickOut {
+        from {
+          opacity: 1
+        }
+
+        to {
+          opacity: 0
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      @keyframes dualFill {
+        from {
+          border-width: 24px 24px 0 0
+        }
+
+        to {
+          border-width: 24px 24px 93vh 156vw
+        }
+      }
+
+      .dualFill {
+        border: solid #2b354e;
+        box-sizing: revert-layer;
+        top: 0;
+        right: 0;
+        background-color: #2b354e;
+        animation: dualFill;
+        animation-duration: 3s;
+        animation-fill-mode: forwards
+      }
+
+      .fadeIn {
+        animation: fadeIn;
+        animation-duration: 3s
+      }
+
+      .burgerMenu .bnav a,
+      .burgerMenu .bnav p,
+      .burgerMenu img {
+        transition: transform 1s ease-in
+      }
+    
 
 </style>
 <script nonce="a34g29914">
