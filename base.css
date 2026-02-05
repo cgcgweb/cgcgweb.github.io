@@ -245,6 +245,7 @@ margin-bottom: 48px;
     background-color: #6DA9C6;
     color: #FFFFFF;
     cursor: pointer;
+    border-radius: 14px;
     font-family: 'NL', sans-serif;
     font-size: clamp(14px, 3vw, 18px);
     font-style: normal;
@@ -260,8 +261,9 @@ margin-bottom: 48px;
 
 .button-2 {
     color: #2B354E;
+    background-color: white;
     border-radius: 14px;
-    border: 2px solid #CAD5E2;
+    border: 2px solid white;
     cursor: pointer;
     font-family: 'NB', sans-serif;
     font-size: clamp(14px, 3vw, 18px);
