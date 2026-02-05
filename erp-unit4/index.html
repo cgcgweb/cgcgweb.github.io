@@ -306,8 +306,6 @@
         </style>
 
         <script>
-            document.querySelector('.close').onclick = burger;
-            document.querySelector('#drop').onclick = ardown;
             function burger() {
                 const burgerMenu = document.querySelector(".burgerMenu");
                 const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
@@ -346,6 +344,20 @@
                     document.querySelector(".slist").style.display="none";
                     document.querySelector("#drop").innerText = "+";
                 }
+            }
+            
+            // Initialize after DOM is loaded
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initBurger);
+            } else {
+                initBurger();
+            }
+            
+            function initBurger() {
+                const closeBtn = document.querySelector('.close');
+                const dropBtn = document.querySelector('#drop');
+                if (closeBtn) closeBtn.onclick = burger;
+                if (dropBtn) dropBtn.onclick = ardown;
             }
         </script>
 
