@@ -124,9 +124,12 @@ img {
     margin: 0;
 }
 
+.s4l {
+    flex: 1 1 400px;
+}
+
 .s4r {
-    max-width: 500px;
-    flex: 1 1 300px;
+    max-width: 100%;
 }
 
 .s4r img {
