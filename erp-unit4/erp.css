@@ -189,6 +189,7 @@ html {
     margin: 0;
 }
 
+
 .site-footer {
   background: #0b0b0b;
   color: #fff;
@@ -269,6 +270,14 @@ html {
   
   .footer-col {
     min-width: 0;
+  }
+
+  .s6 {
+    min-width: 90%;
+  }
+
+  .s1 {
+    flex-direction: column-reverse;
   }
 }
   
