@@ -80,7 +80,7 @@
                 <a href="../portfolio/">Portfolio</a>
                 <a href="../lets-talk/">Contact</a>
             </div>
-            <div class="right"><img class="d" src="../m/f.svg" /><img onclick="burger()" class="m" src="../m/bud.svg" /></div>
+            <div class="right"><img class="d" src="../m/f.svg" /><img class="m" src="../m/bud.svg" /></div>
         </div>
         
         
@@ -306,10 +306,13 @@
         </style>
 
         <script>
+            document.querySelector('.right .m').onclick = burger;
+            document.querySelector('.close').onclick = burger;
+            document.querySelector('#drop').onclick = ardown;
             function burger() {
                 const burgerMenu = document.querySelector(".burgerMenu");
                 const menuContents = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
-                const isHidden = burgerMenu.style.display === "none" || burgerMenu.style.display === "";
+                const isHidden = burgerMenu.style.display === "none";
                 if (isHidden) {
                     burgerMenu.style.display = "block";
                     burgerMenu.classList.remove("slickOut");
@@ -337,27 +340,13 @@
                 }
             }
             function ardown() {
-                if(document.querySelector(".slist").style.display=="none" || document.querySelector(".slist").style.display=="") {
+                if(document.querySelector(".slist").style.display=="none") {
                     document.querySelector(".slist").style.display="block";
                     document.querySelector("#drop").innerText = "-";
                 }else {
                     document.querySelector(".slist").style.display="none";
                     document.querySelector("#drop").innerText = "+";
                 }
-            }
-            
-            // Initialize after DOM is loaded
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initBurger);
-            } else {
-                initBurger();
-            }
-            
-            function initBurger() {
-                const closeBtn = document.querySelector('.close');
-                const dropBtn = document.querySelector('#drop');
-                if (closeBtn) closeBtn.onclick = burger;
-                if (dropBtn) dropBtn.onclick = ardown;
             }
         </script>
 
