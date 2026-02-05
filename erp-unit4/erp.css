@@ -129,6 +129,12 @@ img {
     flex: 1 1 300px;
 }
 
+.s4r img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
 .s4-item {
     display: flex;
     gap: 10px;
