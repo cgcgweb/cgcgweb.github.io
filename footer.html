@@ -1,0 +1,114 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-row">
+      <nav class="footer-col" aria-label="Company">
+        <a class="footer-link" href="https://cgcg.biz/">Home</a>
+        <a class="footer-link" href="/about/">About CGCG</a>
+        <a class="footer-link" href="/about/">Team</a>
+        <a class="footer-link" href="/portfolio/">Portfolio</a>
+        <a class="footer-link" href="/careers/">Career</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Core Services">
+        <a class="footer-link" href="/managed-it-services/">Managed IT Services</a>
+        <a class="footer-link" href="/cybersecurity-solutions/">Cybersecurity Solutions</a>
+        <a class="footer-link" href="/socas/">SOCaaS</a>
+        <a class="footer-link" href="/cioas/">CIOaaS</a>
+        <a class="footer-link" href="/ctoas/">CTOaaS</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="More Services">
+        <a class="footer-link" href="/cisoaas/">CISOaaS</a>
+        <a class="footer-link" href="https://filescience.io" target="_blank" rel="noopener">Cloud-to-Cloud Backup</a>
+        <a class="footer-link" href="https://switchboard-plus.com/" target="_blank" rel="noopener">Business Phone</a>
+        <a class="footer-link" href="/low-voltage-cabling/">Low Voltage Cabling</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Additional Services">
+        <a class="footer-link" href="/app-development/">App Development</a>
+        <a class="footer-link" href="/door-access-control/">Door Access Control</a>
+        <a class="footer-link" href="/NaaS/">Network-as-a-Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<style>
+
+.site-footer {
+  background: #0b0b0b;
+  color: #fff;
+  padding: 96px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-inner {
+  padding: 0 clamp(16px, 6vw, 120px);
+}
+
+.footer-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-col {
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  margin: 0 0 18px 0;
+  font-family: 'NB', sans-serif;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.footer-link {
+  display: inline-block;
+  font-family: 'NL', sans-serif;
+  margin: 0 0 14px 0;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-col--services {
+  flex: 1 1 700px;
+}
+
+.footer-subcols {
+  display: flex;
+  gap: 140px; 
+}
+
+.footer-subcol {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .footer-row {
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  .footer-subcols {
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .footer-col--services {
+    flex: 1 1 100%;
+  }
+}
+</style>
