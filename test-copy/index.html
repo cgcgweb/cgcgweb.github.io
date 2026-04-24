@@ -363,6 +363,328 @@
       }
       .svc-card:last-child { border-bottom: none !important; }
     }
+    /* ── GUARDIAN PULSE ── */
+    .pulse-sec {
+      --plum:  #1E1F21;
+      --lime:  #C8FF47;
+      --coral: #FF6A55;
+      --sky:   #8AB4F8;
+      --mono:  "JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;
+      --ease:  cubic-bezier(0.22,0.61,0.36,1);
+      position: relative;
+      padding: 130px 100px 140px;
+      background: var(--plum);
+      color: #fff;
+      overflow: hidden;
+      font-family: 'NL', -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: -0.018em;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+    .pulse-sec * { box-sizing: border-box; }
+
+    .pulse-sec::before {
+      content: ''; position: absolute; left: -200px; top: -200px;
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(46,59,255,0.35), transparent 65%);
+      pointer-events: none;
+    }
+    .pulse-sec::after {
+      content: ''; position: absolute; right: -120px; bottom: -150px;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,255,71,0.18), transparent 65%);
+      pointer-events: none;
+    }
+
+    .pulse-grid {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1.05fr 1fr;
+      gap: 80px; align-items: center;
+      max-width: 1440px; margin: 0 auto;
+    }
+
+    .pulse-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--mono); font-size: 11px;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--lime); margin-bottom: 24px;
+    }
+    .pulse-eyebrow::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--lime); box-shadow: 0 0 12px var(--lime);
+      animation: pulse-blink 1.6s infinite;
+    }
+    @keyframes pulse-blink { 0%,100% { opacity:1 } 50% { opacity:0.35 } }
+
+    .pulse-title {
+      font-family: 'NB', sans-serif;
+      font-size: clamp(48px, 6vw, 88px);
+      line-height: 0.92; letter-spacing: -0.03em;
+      margin: 0 0 28px; color: #fff; font-weight: 500;
+    }
+    .pulse-title em { font-style: normal; color: var(--lime); }
+
+    .pulse-sub {
+      font-size: var(--f-lg); line-height: 1.6;
+      color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 0 22px;
+    }
+    .pulse-sub.active-line { font-size: var(--f-base); color: #fff; margin: 0; }
+    .pulse-sub strong { color: var(--lime); font-weight: 400; letter-spacing: 0.02em; }
+    .pulse-sub .active-desc { color: rgba(255,255,255,0.65); }
+
+    .pulse-stats {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 30px; margin-top: 40px; padding-top: 34px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .pulse-stat-val {
+      font-family: 'NB', sans-serif;
+      font-size: var(--f-2xl); line-height: 1; letter-spacing: -0.025em; color: #fff;
+    }
+    .pulse-stat-val em { color: var(--lime); font-style: normal; }
+    .pulse-stat-lbl {
+      font-family: var(--mono); font-size: var(--f-xs);
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-top: 10px; max-width: 130px; line-height: 1.45;
+    }
+
+    .pulse-stage {
+      position: relative; height: 640px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pulse-radar { position: relative; width: 600px; height: 600px; }
+    .pulse-radar svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+    .pulse-ring-lbl {
+      position: absolute;
+      font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      background: rgba(30,31,33,0.88);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 6px 10px; border-radius: 999px; white-space: nowrap;
+      transform: translate(-50%,-50%); cursor: pointer;
+      transition: all 300ms var(--ease); backdrop-filter: blur(4px);
+    }
+    .pulse-ring-lbl.hot {
+      color: var(--plum); background: var(--lime);
+      border-color: var(--lime); box-shadow: 0 0 20px rgba(200,255,71,0.5);
+    }
+
+    .pulse-legend {
+      position: absolute; left: 0; bottom: -10px;
+      display: flex; gap: 22px; z-index: 3;
+      font-family: var(--mono); font-size: 10.5px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .pulse-legend span { display: inline-flex; align-items: center; gap: 8px; }
+    .pulse-legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; font-style: normal; }
+    .pulse-legend .lg-a { background: var(--lime); }
+    .pulse-legend .lg-b { background: var(--coral); }
+    .pulse-legend .lg-c { background: var(--sky); }
+
+    @media (max-width: 960px) {
+      .pulse-sec   { padding: 90px 48px 100px; }
+      .pulse-grid  { grid-template-columns: 1fr; gap: 60px; }
+      .pulse-stage { height: 520px; }
+      .pulse-radar { width: 480px; height: 480px; }
+    }
+    @media (max-width: 600px) {
+      .pulse-sec   { padding: 70px 24px 90px; }
+      .pulse-stats { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .pulse-stage { height: 420px; }
+      .pulse-radar { width: 360px; height: 360px; }
+      .pulse-ring-lbl { font-size: 9px; padding: 4px 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pulse-sec *, .pulse-sec *::before, .pulse-sec *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ── CASE STUDIES ── */
+    .cases-sec {
+      background: #fff;
+      padding: 100px 80px 100px;
+    }
+
+    .cases-title {
+      font-family: 'NB', sans-serif;
+      font-size: var(--f-hero);
+      font-weight: 700;
+      color: #1a1a1a;
+      text-align: center;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      margin-bottom: 56px;
+    }
+
+    .cases-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .case-row {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      padding: 56px 60px;
+    }
+    .case-row + .case-row { border-top: 1px solid #e8e8e8; }
+
+    .case-left { padding-right: 40px; }
+
+    .case-icon {
+      width: 64px; height: 64px;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .case-name {
+      font-family: 'NL', sans-serif;
+      font-size: var(--f-xl);
+      font-weight: 400;
+      color: #1a1a1a;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .case-desc {
+      font-size: var(--f-sm);
+      line-height: 1.65;
+      color: #999;
+    }
+
+    .case-right { padding-left: 52px; }
+
+    .case-block { margin-bottom: 20px; }
+    .case-block:last-of-type { margin-bottom: 32px; }
+
+    .case-label {
+      font-family: 'NB', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .case-block p {
+      font-size: var(--f-sm);
+      line-height: 1.7;
+      color: #666;
+    }
+
+    .case-stats {
+      display: flex;
+      gap: 52px;
+      padding-top: 28px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .case-stat-val {
+      font-family: 'NL', sans-serif;
+      font-size: var(--f-2xl);
+      color: #1a1a1a;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .case-stat-lbl {
+      font-family: 'NB', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #bbb;
+    }
+
+    .cases-cta {
+      text-align: center;
+      padding: 48px 0 56px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .cases-cta-btn {
+      display: inline-block;
+      background: #2B354E;
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 44px;
+      border-radius: 12px;
+      font-family: 'NL', sans-serif;
+      font-size: var(--f-base);
+      letter-spacing: 0.01em;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+    .cases-cta-btn:hover {
+      background: #1a2133;
+      transform: translateY(-2px);
+    }
+
+    /* entrance states */
+    .cases-title {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .cases-title.in-view { opacity: 1; transform: none; }
+
+    .cases-card {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s;
+    }
+    .cases-card.in-view { opacity: 1; transform: none; }
+
+    .case-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .case-right {
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .case-left.in-view,
+    .case-right.in-view { opacity: 1; transform: none; }
+
+    .case-block {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    .case-block.in-view { opacity: 1; transform: none; }
+
+    .cases-cta {
+      opacity: 0;
+      transition: opacity 0.6s ease, background 0.25s ease;
+    }
+    .cases-cta.in-view { opacity: 1; }
+
+    /* hover */
+    .case-row         { transition: background 0.28s ease; }
+    .case-row:hover   { background: #fafafa; }
+    .case-icon        { transition: transform 0.35s ease; }
+    .case-row:hover .case-icon { transform: scale(1.07) translateY(-3px); }
+
+    @media (max-width: 960px) {
+      .cases-sec   { padding: 80px 40px; }
+      .case-row    { grid-template-columns: 1fr; gap: 40px; }
+      .case-left   { padding-right: 0; transform: translateY(20px); }
+      .case-right  { padding-left: 0; border-top: 1px solid #e8e8e8; padding-top: 32px; transform: translateY(20px); }
+    }
+    @media (max-width: 600px) {
+      .cases-sec   { padding: 60px 20px; }
+      .case-row    { padding: 40px 24px; }
+      .case-stats  { gap: 28px; flex-wrap: wrap; }
+      .cases-cta   { padding: 36px 0 44px; }
+    }
   </style>
 </head>
 <body>
@@ -8151,6 +8473,152 @@
 
   </section>
 
+  <section class="pulse-sec" id="guardian-pulse">
+    <div class="pulse-grid">
+
+      <div>
+        <div class="pulse-eyebrow">Live · Guardian Pulse</div>
+        <h2 class="pulse-title">Always<br><em>watching.</em><br>Always on.</h2>
+        <p class="pulse-sub">Your infrastructure sits inside four concentric defense domains — identity, endpoint, network, and cloud. Each domain is instrumented, monitored, and self-healing. Attackers don't meet one wall; they meet a system that's already moving.</p>
+        <p class="pulse-sub active-line">
+          <strong data-pulse-active-name="">Endpoint &amp; Device.</strong>
+          <span class="active-desc" data-pulse-active-desc="">EDR, AV, device posture, encryption everywhere.</span>
+        </p>
+        <div class="pulse-stats">
+          <div><div class="pulse-stat-val">247</div><div class="pulse-stat-lbl">Threats neutralized (last hour)</div></div>
+          <div><div class="pulse-stat-val">4 min</div><div class="pulse-stat-lbl">Avg. P1 response time</div></div>
+          <div><div class="pulse-stat-val">99.98%</div><div class="pulse-stat-lbl">Uptime — 12mo rolling</div></div>
+        </div>
+      </div>
+
+      <div class="pulse-stage">
+        <div class="pulse-radar">
+          <svg viewBox="0 0 600 600" aria-hidden="true">
+            <defs>
+              <radialGradient id="pulseCore" cx="50%" cy="50%">
+                <stop offset="0%"   stop-color="#C8FF47" stop-opacity="0.9"/>
+                <stop offset="60%"  stop-color="#C8FF47" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#C8FF47" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#C8FF47" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#C8FF47" stop-opacity="0.55"/>
+              </linearGradient>
+              <filter id="pulseGlow"><feGaussianBlur stdDeviation="3"/></filter>
+            </defs>
+            <g id="pulse-grid-lines"></g>
+            <g id="pulse-rings"></g>
+            <g id="pulse-sweep">
+              <path d="M 300 300 L 585 300 A 285 285 0 0 0 495 100 Z" fill="url(#sweepGrad)" opacity="0.4"/>
+              <line x1="300" y1="300" x2="585" y2="300" stroke="#C8FF47" stroke-width="1.5" opacity="0.75"/>
+            </g>
+            <g id="pulse-blips"></g>
+            <circle cx="300" cy="300" r="60" fill="url(#pulseCore)"/>
+            <circle cx="300" cy="300" r="14" fill="#C8FF47" filter="url(#pulseGlow)"/>
+            <circle cx="300" cy="300" r="6"  fill="#1E1F21"/>
+            <circle cx="300" cy="300" r="22" fill="none" stroke="#C8FF47" stroke-opacity="0.5">
+              <animate attributeName="r" from="22" to="70" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="stroke-opacity" from="0.7" to="0" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+          <div id="pulse-labels"></div>
+        </div>
+        <div class="pulse-legend">
+          <span><i class="lg-a"></i>Neutralized</span>
+          <span><i class="lg-b"></i>Flagged</span>
+          <span><i class="lg-c"></i>Under watch</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CASE STUDIES ── -->
+  <section class="cases-sec">
+
+    <h2 class="cases-title">How We Solve<br>Real Problems.</h2>
+
+    <div class="cases-card">
+
+      <!-- Case 1 -->
+      <div class="case-row">
+        <div class="case-left">
+          <svg class="case-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="11" height="13" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <rect x="27" y="10" width="11" height="13" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <rect x="44" y="10" width="11" height="13" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <rect x="9"  y="23" width="47" height="7"  rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <rect x="9"  y="32" width="47" height="7"  rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <rect x="9"  y="41" width="47" height="7"  rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+          </svg>
+          <h3 class="case-name">Construction &amp;<br>Design Firm</h3>
+          <p class="case-desc">Global modular construction company with distributed teams, remote workforce, and large-scale production facilities.</p>
+        </div>
+        <div class="case-right">
+          <div class="case-block">
+            <div class="case-label">Challenges</div>
+            <p>Frequent phishing and malware attacks bypassing cloud security, an overwhelmed internal IT team, and lack of proactive infrastructure management.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Solution</div>
+            <p>Restructured IT with a co-managed model, deployed advanced endpoint protection, upgraded network infrastructure, and rolled out a multi-layered security + monitoring framework.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Impact</div>
+            <p>Email-based threats reduced to near-zero, IT workload significantly offloaded, enterprise-grade proactive environment established.</p>
+          </div>
+          <div class="case-stats">
+            <div><div class="case-stat-val">98%</div><div class="case-stat-lbl">Threats Blocked</div></div>
+            <div><div class="case-stat-val">3.2×</div><div class="case-stat-lbl">Ticket Throughput</div></div>
+            <div><div class="case-stat-val">0</div><div class="case-stat-lbl">Breaches Since</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-row">
+        <div class="case-left">
+          <svg class="case-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 20 C32 20 22 13 22 21 C22 27 32 33 32 33 C32 33 42 27 42 21 C42 13 32 20Z" stroke="#1a1a1a" stroke-width="1.7" stroke-linejoin="round"/>
+            <circle cx="18" cy="41" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <circle cx="32" cy="41" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <circle cx="46" cy="41" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <path d="M10 56 L10 50 Q18 46 26 50 L26 56" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24 56 L24 50 Q32 46 40 50 L40 56" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M38 56 L38 50 Q46 46 54 50 L54 56" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="case-name">Community<br>Center (Nonprofit)</h3>
+          <p class="case-desc">Regional nonprofit serving 12,000 members with limited IT staff and legacy infrastructure across four locations.</p>
+        </div>
+        <div class="case-right">
+          <div class="case-block">
+            <div class="case-label">Challenges</div>
+            <p>Aging endpoints, no centralized backup, repeated ransomware scares, and a single overloaded technician handling everything.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Solution</div>
+            <p>Full device refresh on grant-friendly lease, cloud-to-cloud backups, deployed MDR, and introduced a ticketing + escalation model.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Impact</div>
+            <p>Member-facing systems run uninterrupted, technician freed for strategic work, and the board gained board-ready security reporting.</p>
+          </div>
+          <div class="case-stats">
+            <div><div class="case-stat-val">99.9%</div><div class="case-stat-lbl">Uptime Achieved</div></div>
+            <div><div class="case-stat-val">4×</div><div class="case-stat-lbl">Tech Capacity</div></div>
+            <div><div class="case-stat-val">12k</div><div class="case-stat-lbl">Members Protected</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cases-cta">
+        <a href="/case-studies" class="cases-cta-btn">Explore More Case Studies →</a>
+      </div>
+
+    </div>
+  </section>
+
 <script>
 (function () {
   /* SVG is already inline — zero fetch delay, runs synchronously */
@@ -8228,6 +8696,220 @@
     });
     obs.disconnect();
   }, { threshold: 0.12 }).observe(section);
+})();
+
+/* ── Guardian Pulse radar ── */
+(function () {
+  var root = document.getElementById('guardian-pulse');
+  if (!root) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+
+  var rings = [
+    { r: 80,  name:'Identity & Access',   desc:'MFA, SSO, least-privilege, session monitoring.',     color:'#C8FF47' },
+    { r: 150, name:'Endpoint & Device',   desc:'EDR, AV, device posture, encryption everywhere.',    color:'#8AB4F8' },
+    { r: 220, name:'Network & Perimeter', desc:'Firewall, segmentation, DNS filtering, zero trust.', color:'#FF6A55' },
+    { r: 285, name:'Cloud & SaaS',        desc:'Tenant hardening, logs, cloud-to-cloud backups.',    color:'#C8FF47' }
+  ];
+  var labelAngles = [-60, 35, 140, 220];
+
+  /* grid lines */
+  var gGrid = root.querySelector('#pulse-grid-lines');
+  [0, 45, 90, 135].forEach(function (d) {
+    [1, -1].forEach(function (sgn) {
+      var ln = document.createElementNS(NS, 'line');
+      ln.setAttribute('x1', 300); ln.setAttribute('y1', 300);
+      ln.setAttribute('x2', 300 + sgn * Math.cos(d * Math.PI / 180) * 320);
+      ln.setAttribute('y2', 300 + sgn * Math.sin(d * Math.PI / 180) * 320);
+      ln.setAttribute('stroke', 'rgba(255,255,255,0.06)');
+      ln.setAttribute('stroke-width', '1');
+      ln.setAttribute('stroke-dasharray', '2 6');
+      gGrid.appendChild(ln);
+    });
+  });
+
+  /* rings */
+  var gRings = root.querySelector('#pulse-rings');
+  var ringEls = rings.map(function (r) {
+    var c = document.createElementNS(NS, 'circle');
+    c.setAttribute('cx', 300); c.setAttribute('cy', 300); c.setAttribute('r', r.r);
+    c.setAttribute('fill', 'none');
+    c.style.transition = 'all 400ms cubic-bezier(0.22,0.61,0.36,1)';
+    gRings.appendChild(c);
+    return c;
+  });
+
+  /* labels */
+  var labelsEl = root.querySelector('#pulse-labels');
+  var lblEls = rings.map(function (r, i) {
+    var a  = labelAngles[i] * Math.PI / 180;
+    var el = document.createElement('div');
+    el.className = 'pulse-ring-lbl';
+    el.style.left = (50 + Math.cos(a) * r.r / 600 * 100) + '%';
+    el.style.top  = (50 + Math.sin(a) * r.r / 600 * 100) + '%';
+    el.textContent = String(i + 1).padStart(2, '0') + ' · ' + r.name;
+    el.addEventListener('mouseenter', function () { setActive(i); });
+    el.addEventListener('click',      function () { setActive(i); });
+    labelsEl.appendChild(el);
+    return el;
+  });
+
+  /* active state */
+  var active = 1;
+  var nameEl = root.querySelector('[data-pulse-active-name]');
+  var descEl = root.querySelector('[data-pulse-active-desc]');
+
+  function setActive(i) {
+    active = i;
+    ringEls.forEach(function (el, k) {
+      var on = k === active;
+      el.setAttribute('stroke', on ? rings[k].color : 'rgba(255,255,255,0.22)');
+      el.setAttribute('stroke-width', on ? 2 : 1);
+      el.setAttribute('stroke-dasharray', on ? '0' : '3 6');
+      el.style.filter = on ? 'drop-shadow(0 0 8px ' + rings[k].color + ')' : 'none';
+    });
+    lblEls.forEach(function (el, k) { el.classList.toggle('hot', k === active); });
+    nameEl.textContent = rings[active].name + '.';
+    descEl.textContent = rings[active].desc;
+  }
+  setActive(1);
+
+  if (!reduced) {
+    setInterval(function () { setActive((active + 1) % rings.length); }, 2800);
+  }
+
+  /* sweep rotation */
+  var sweep = root.querySelector('#pulse-sweep');
+  var angle = 0;
+  if (!reduced) {
+    (function tick() {
+      angle = (angle + 0.6) % 360;
+      sweep.setAttribute('transform', 'rotate(' + angle + ' 300 300)');
+      requestAnimationFrame(tick);
+    })();
+  }
+
+  /* blips */
+  var blipsEl = root.querySelector('#pulse-blips');
+  var blipId  = 0;
+  function spawnBlip() {
+    var r   = rings[Math.floor(Math.random() * rings.length)];
+    var th  = Math.random() * Math.PI * 2;
+    var x   = 300 + Math.cos(th) * r.r;
+    var y   = 300 + Math.sin(th) * r.r;
+    var ok  = Math.random() < 0.75;
+    var col = ok ? '#C8FF47' : '#FF6A55';
+    var g   = document.createElementNS(NS, 'g');
+    g.setAttribute('data-blip', ++blipId);
+
+    var dot = document.createElementNS(NS, 'circle');
+    dot.setAttribute('cx', x); dot.setAttribute('cy', y);
+    dot.setAttribute('r', 4); dot.setAttribute('fill', col);
+    var fd = document.createElementNS(NS, 'animate');
+    fd.setAttribute('attributeName', 'opacity');
+    fd.setAttribute('from', '1'); fd.setAttribute('to', '0');
+    fd.setAttribute('dur', '2s'); fd.setAttribute('fill', 'freeze');
+    dot.appendChild(fd); g.appendChild(dot);
+
+    var ring = document.createElementNS(NS, 'circle');
+    ring.setAttribute('cx', x); ring.setAttribute('cy', y);
+    ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', col);
+    ring.setAttribute('stroke-width', ok ? 1.5 : 1.8);
+    var ar = document.createElementNS(NS, 'animate');
+    ar.setAttribute('attributeName', 'r');
+    ar.setAttribute('from', '4'); ar.setAttribute('to', ok ? 24 : 30);
+    ar.setAttribute('dur', ok ? '1s' : '1.4s'); ar.setAttribute('fill', 'freeze');
+    var ao = document.createElementNS(NS, 'animate');
+    ao.setAttribute('attributeName', 'opacity');
+    ao.setAttribute('from', '0.9'); ao.setAttribute('to', '0');
+    ao.setAttribute('dur', ok ? '1s' : '1.4s'); ao.setAttribute('fill', 'freeze');
+    ring.appendChild(ar); ring.appendChild(ao);
+    g.appendChild(ring); blipsEl.appendChild(g);
+    setTimeout(function () { if (g.parentNode) g.parentNode.removeChild(g); }, 2200);
+  }
+
+  var inView = false;
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { inView = e.isIntersecting; });
+  }, { threshold: 0.25 }).observe(root);
+
+  if (!reduced) {
+    setInterval(function () { if (inView) spawnBlip(); }, 650);
+  }
+})();
+
+/* ── Case Studies: scroll animations + counters ── */
+(function () {
+  var sec = document.querySelector('.cases-sec');
+  if (!sec) return;
+
+  var title  = sec.querySelector('.cases-title');
+  var card   = sec.querySelector('.cases-card');
+  var rows   = Array.from(sec.querySelectorAll('.case-row'));
+  var cta    = sec.querySelector('.cases-cta');
+
+  /* ease-out cubic */
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+  /* animate a stat number from 0 → target */
+  function counter(el) {
+    var raw      = el.textContent.trim();
+    var match    = raw.match(/^([\d.]+)(.*)/);
+    if (!match) return;
+    var target   = parseFloat(match[1]);
+    var suffix   = match[2];
+    var decimals = match[1].indexOf('.') > -1 ? match[1].split('.')[1].length : 0;
+    var duration = 1500;
+    var startTs  = null;
+
+    (function step(ts) {
+      if (!startTs) startTs = ts;
+      var p = Math.min((ts - startTs) / duration, 1);
+      var v = target * easeOut(p);
+      el.textContent = (decimals > 0 ? v.toFixed(decimals) : Math.round(v)) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    obs.disconnect();
+
+    /* 1. title */
+    title.classList.add('in-view');
+
+    /* 2. card shell */
+    setTimeout(function () { card.classList.add('in-view'); }, 120);
+
+    /* 3. rows staggered */
+    rows.forEach(function (row, ri) {
+      var base   = 220 + ri * 180;
+      var left   = row.querySelector('.case-left');
+      var right  = row.querySelector('.case-right');
+      var blocks = Array.from(row.querySelectorAll('.case-block'));
+      var stats  = Array.from(row.querySelectorAll('.case-stat-val'));
+
+      setTimeout(function () {
+        left.classList.add('in-view');
+        right.classList.add('in-view');
+
+        /* 4. stagger content blocks */
+        blocks.forEach(function (b, bi) {
+          setTimeout(function () { b.classList.add('in-view'); }, bi * 100);
+        });
+
+        /* 5. kick off counters */
+        stats.forEach(function (s) { counter(s); });
+
+      }, base);
+    });
+
+    /* 6. CTA last */
+    setTimeout(function () {
+      if (cta) cta.classList.add('in-view');
+    }, 220 + rows.length * 180 + 200);
+
+  }, { threshold: 0.08 }).observe(sec);
 })();
 </script>
 </body>
