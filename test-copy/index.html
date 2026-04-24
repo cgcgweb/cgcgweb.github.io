@@ -110,7 +110,9 @@
       font-family: 'NL', sans-serif;
       cursor: pointer;
       white-space: nowrap;
+      transition: background 0.14s ease, transform 0.14s ease;
     }
+    .btn-primary:hover { background: #3a3a3a; transform: translateY(-1px); }
 
     .btn-secondary {
       background: transparent;
@@ -122,7 +124,9 @@
       font-family: 'NL', sans-serif;
       cursor: pointer;
       white-space: nowrap;
+      transition: border-color 0.14s ease, background 0.14s ease, transform 0.14s ease;
     }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); transform: translateY(-1px); }
 
     .hero-desc {
       font-size: var(--f-sm);
@@ -236,8 +240,8 @@
       opacity: 0;
       transform: translateY(24px);
       transition:
-        background 0.28s ease,
-        box-shadow 0.28s ease,
+        background 0.14s ease,
+        box-shadow 0.14s ease,
         opacity 0.55s ease,
         transform 0.55s ease;
     }
@@ -282,7 +286,7 @@
       width: 0;
       height: 1.5px;
       background: #1a1a1a;
-      transition: width 0.32s ease;
+      transition: width 0.18s ease;
     }
 
     .svc-card:hover h3::after { width: 100%; }
@@ -294,7 +298,7 @@
       margin-top: 4px;
       line-height: 1;
       display: inline-block;
-      transition: transform 0.28s ease;
+      transition: transform 0.14s ease;
     }
 
     .svc-card:hover .svc-arrow {
@@ -305,7 +309,7 @@
       font-size: var(--f-sm);
       line-height: 1.7;
       color: #888;
-      transition: color 0.28s ease;
+      transition: color 0.14s ease;
     }
 
     .svc-card:hover p { color: #666; }
@@ -464,7 +468,7 @@
       border: 1px solid rgba(255,255,255,0.14);
       padding: 6px 10px; border-radius: 999px; white-space: nowrap;
       transform: translate(-50%,-50%); cursor: pointer;
-      transition: all 300ms var(--ease); backdrop-filter: blur(4px);
+      transition: color 0.12s ease, background 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease; backdrop-filter: blur(4px);
     }
     .pulse-ring-lbl.hot {
       color: var(--plum); background: var(--lime);
@@ -619,7 +623,7 @@
       font-family: 'NL', sans-serif;
       font-size: var(--f-base);
       letter-spacing: 0.01em;
-      transition: background 0.25s ease, transform 0.25s ease;
+      transition: background 0.14s ease, transform 0.14s ease;
     }
     .cases-cta-btn:hover {
       background: #1a2133;
@@ -668,9 +672,9 @@
     .cases-cta.in-view { opacity: 1; }
 
     /* hover */
-    .case-row         { transition: background 0.28s ease; }
+    .case-row         { transition: background 0.14s ease; }
     .case-row:hover   { background: #fafafa; }
-    .case-icon        { transition: transform 0.35s ease; }
+    .case-icon        { transition: transform 0.18s ease; }
     .case-row:hover .case-icon { transform: scale(1.07) translateY(-3px); }
 
     @media (max-width: 960px) {
@@ -684,6 +688,155 @@
       .case-row    { padding: 40px 24px; }
       .case-stats  { gap: 28px; flex-wrap: wrap; }
       .cases-cta   { padding: 36px 0 44px; }
+    }
+
+    /* ── ONBOARDING PROCESS ── */
+    .process {
+      --accent:      #C8FF47;
+      --accent-glow: rgba(200,255,71,0.45);
+      --navy:        #2B354E;
+      --slate:       #6A6A84;
+      --mono:        "JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;
+      --ease:        cubic-bezier(0.22,0.61,0.36,1);
+      padding: 100px;
+      background: #FAFAFA;
+      color: #151515;
+      font-family: 'NL', -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: -0.018em;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+    .process * { box-sizing: border-box; }
+
+    .process-head {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: end;
+      margin-bottom: 72px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .process-title {
+      font-family: 'NL', sans-serif;
+      font-size: clamp(40px, 5.2vw, 72px);
+      line-height: 0.93;
+      letter-spacing: -0.028em;
+      margin: 0;
+      color: #151515;
+      font-weight: 400;
+    }
+
+    .process-sub {
+      font-size: var(--f-base);
+      line-height: 1.6;
+      color: var(--slate);
+      max-width: 380px;
+      margin: 0;
+    }
+
+    .process-timeline {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .process-line {
+      position: absolute;
+      left: 0; right: 0; top: 38px;
+      height: 1px;
+      background: rgba(43,53,78,0.15);
+    }
+
+    .process-progress {
+      position: absolute;
+      left: 0; top: 37px;
+      height: 3px;
+      background: var(--accent);
+      transition: width 900ms var(--ease);
+      box-shadow: 0 0 14px var(--accent-glow);
+      width: 0;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+
+    .process-step {
+      padding-top: 66px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .process-step .dot {
+      position: absolute;
+      top: 31px; left: 0;
+      width: 15px; height: 15px;
+      border-radius: 50%;
+      background: #FAFAFA;
+      border: 2px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, transform 0.14s ease;
+    }
+
+    .process-step.active .dot {
+      background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 6px var(--accent-glow);
+      transform: scale(1.15);
+    }
+
+    .process-step .num {
+      font-family: var(--mono);
+      font-size: var(--f-xs);
+      letter-spacing: 0.2em;
+      color: var(--slate);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .process-step .step-title {
+      font-family: 'NL', sans-serif;
+      font-size: var(--f-xl);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+      color: #151515;
+      font-weight: 400;
+      transition: color 0.14s ease;
+    }
+
+    .process-step.active .step-title { color: #151515; }
+
+    .process-step .step-body {
+      font-size: var(--f-sm);
+      line-height: 1.55;
+      color: var(--slate);
+      margin: 0;
+      transition: color 0.14s ease;
+    }
+
+    @media (max-width: 960px) {
+      .process      { padding: 80px 48px; }
+      .process-head { grid-template-columns: 1fr; gap: 28px; align-items: start; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px 24px; }
+      .process-line,
+      .process-progress { display: none; }
+      .process-step { padding-top: 0; padding-left: 28px; }
+      .process-step .dot { top: 4px; left: 0; }
+    }
+    @media (max-width: 600px) {
+      .process        { padding: 64px 24px; }
+      .process-steps  { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .process *, .process *::before, .process *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
@@ -8619,7 +8772,60 @@
     </div>
   </section>
 
-<script>
+  <!-- ── How We Onboard Clients ── -->
+  <section class="process" id="process">
+
+    <div class="process-head">
+      <h2 class="process-title">How we<br>onboard clients.</h2>
+      <p class="process-sub">Most MSP relationships fall apart at handoff. Ours doesn't — because there isn't one. The team that scopes you is the team that runs you.</p>
+    </div>
+
+    <div class="process-timeline" data-process-timeline="">
+      <div class="process-line"></div>
+      <div class="process-progress" data-process-progress=""></div>
+      <div class="process-steps" data-process-steps="">
+
+        <div class="process-step" data-step="0">
+          <div class="dot"></div>
+          <p class="num">01</p>
+          <h3 class="step-title">Discovery</h3>
+          <p class="step-body">We audit your current stack, risks, and gaps — no sales pitch, just a clear picture of where you stand.</p>
+        </div>
+
+        <div class="process-step" data-step="1">
+          <div class="dot"></div>
+          <p class="num">02</p>
+          <h3 class="step-title">Plan</h3>
+          <p class="step-body">We build a 90-day roadmap with your team — prioritized by risk, sequenced by impact, and priced without surprises.</p>
+        </div>
+
+        <div class="process-step" data-step="2">
+          <div class="dot"></div>
+          <p class="num">03</p>
+          <h3 class="step-title">Deploy</h3>
+          <p class="step-body">Our engineers execute the rollout in parallel with your operations. Zero downtime is the standard, not the goal.</p>
+        </div>
+
+        <div class="process-step" data-step="3">
+          <div class="dot"></div>
+          <p class="num">04</p>
+          <h3 class="step-title">Operate</h3>
+          <p class="step-body">24/7 monitoring, patching, and response from day one. You get a named team that knows your environment.</p>
+        </div>
+
+        <div class="process-step" data-step="4">
+          <div class="dot"></div>
+          <p class="num">05</p>
+          <h3 class="step-title">Evolve</h3>
+          <p class="step-body">Quarterly reviews keep your stack ahead of threats and aligned with where your business is going — not where it was.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+<script nonce="a34g29914">
 (function () {
   /* SVG is already inline — zero fetch delay, runs synchronously */
   const svg    = document.querySelector('#svgWrap svg');
@@ -8910,6 +9116,84 @@
     }, 220 + rows.length * 180 + 200);
 
   }, { threshold: 0.08 }).observe(sec);
+})();
+
+/* ── Onboarding Process: step activation + progress bar ── */
+(function () {
+  var timeline = document.querySelector('[data-process-timeline]');
+  if (!timeline) return;
+
+  var steps    = Array.from(timeline.querySelectorAll('.process-step'));
+  var progress = timeline.querySelector('[data-process-progress]');
+  var stepsWrap = timeline.querySelector('[data-process-steps]');
+  var reduced  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setActive(idx) {
+    steps.forEach(function (s, i) {
+      s.classList.toggle('active', i === idx);
+    });
+    /* progress bar: advance to centre of active dot */
+    if (progress && steps.length > 1) {
+      var fraction = idx / (steps.length - 1);
+      progress.style.width = (fraction * 100) + '%';
+    }
+  }
+
+  /* hover activates the hovered step */
+  steps.forEach(function (step, i) {
+    step.addEventListener('mouseenter', function () { setActive(i); });
+  });
+
+  /* click also activates */
+  steps.forEach(function (step, i) {
+    step.addEventListener('click', function () { setActive(i); });
+  });
+
+  /* scroll reveal: stagger steps, then start auto-walk */
+  var revealed = false;
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting || revealed) return;
+    revealed = true;
+    obs.disconnect();
+
+    /* stagger reveal each step */
+    steps.forEach(function (step, i) {
+      var delay = i * 90;
+      step.style.opacity = '0';
+      step.style.transform = 'translateY(18px)';
+      step.style.transition = reduced
+        ? 'none'
+        : 'opacity 400ms ease ' + delay + 'ms, transform 400ms ease ' + delay + 'ms';
+      setTimeout(function () {
+        step.style.opacity = '1';
+        step.style.transform = 'translateY(0)';
+      }, 40);
+      /* clear inline styles after the animation completes so they don't delay future hover transitions */
+      setTimeout(function () {
+        step.style.opacity = '';
+        step.style.transform = '';
+        step.style.transition = '';
+      }, 40 + delay + 420);
+    });
+
+    /* auto-walk through steps after reveal, unless user has already interacted */
+    var interacted = false;
+    steps.forEach(function (step) {
+      step.addEventListener('mouseenter', function () { interacted = true; }, { once: true });
+    });
+
+    if (!reduced) {
+      var autoIdx = 0;
+      setActive(0);
+      var walker = setInterval(function () {
+        if (interacted) { clearInterval(walker); return; }
+        autoIdx = (autoIdx + 1) % steps.length;
+        setActive(autoIdx);
+        if (autoIdx === steps.length - 1) { clearInterval(walker); }
+      }, 1200);
+    }
+
+  }, { threshold: 0.25 }).observe(timeline);
 })();
 </script>
 </body>
