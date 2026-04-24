@@ -314,6 +314,12 @@
 
     .svc-card:hover p { color: #666; }
 
+    /* ── hero pulse (mobile only) ── */
+    @keyframes hero-breathe {
+      0%, 100% { filter: brightness(0.92) saturate(0.9); transform: scale(1); }
+      50%       { filter: brightness(1.12) saturate(1.1); transform: scale(1.022); }
+    }
+
     /* ── RESPONSIVE ── */
 
     @media (max-width: 960px) {
@@ -326,8 +332,15 @@
         padding: 72px 48px 52px;
         min-height: 0;
       }
-      .hero-right { height: 58vh; }
+      .hero-right {
+        height: 58vh;
+        animation: hero-breathe 3.8s ease-in-out infinite;
+        transform-origin: center center;
+      }
       .stats-box { display: none; }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-right { animation: none; }
+      }
 
       .services { grid-template-columns: 1fr; }
       .services-left {
