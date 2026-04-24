@@ -200,6 +200,9 @@
       font-weight: 500;
       line-height: 1.12;
       color: #1a1a1a;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .services-desc {
@@ -207,22 +210,52 @@
       line-height: 1.7;
       color: #888;
       max-width: 320px;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+    }
+
+    .services-left.in-view h2,
+    .services-left.in-view .services-desc {
+      opacity: 1;
+      transform: none;
     }
 
     .services-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
     }
 
     .svc-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
       padding: 52px 56px;
       border-bottom: 1px solid #dedede;
       border-right: 1px solid #dedede;
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        background 0.28s ease,
+        box-shadow 0.28s ease,
+        opacity 0.55s ease,
+        transform 0.55s ease;
     }
-    .svc-card:nth-child(even)  { border-right: none; }
+    .svc-card:nth-child(even) { border-right: none; }
     .svc-card:nth-child(3),
-    .svc-card:nth-child(4)     { border-bottom: none; }
+    .svc-card:nth-child(4)    { border-bottom: none; }
+
+    .svc-card.in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    .svc-card:hover {
+      background: #fff;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.07);
+      position: relative;
+      z-index: 1;
+    }
 
     .svc-card-top {
       display: flex;
@@ -237,7 +270,22 @@
       font-weight: 400;
       color: #1a1a1a;
       line-height: 1.1;
+      display: inline-block;
+      position: relative;
     }
+
+    .svc-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: #1a1a1a;
+      transition: width 0.32s ease;
+    }
+
+    .svc-card:hover h3::after { width: 100%; }
 
     .svc-arrow {
       font-size: 20px;
@@ -245,12 +293,75 @@
       flex-shrink: 0;
       margin-top: 4px;
       line-height: 1;
+      display: inline-block;
+      transition: transform 0.28s ease;
+    }
+
+    .svc-card:hover .svc-arrow {
+      transform: translate(4px, -4px);
     }
 
     .svc-card p {
       font-size: var(--f-sm);
       line-height: 1.7;
       color: #888;
+      transition: color 0.28s ease;
+    }
+
+    .svc-card:hover p { color: #666; }
+
+    /* ── RESPONSIVE ── */
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 100svh;
+      }
+      .hero-left {
+        padding: 80px 48px 60px;
+        min-height: 55vh;
+      }
+      .hero-right { height: 52vh; }
+      .stats-box {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 24px 28px;
+      }
+
+      .services { grid-template-columns: 1fr; }
+      .services-left {
+        border-right: none;
+        border-bottom: 1px solid #dedede;
+        padding: 60px 48px;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-left { padding: 56px 24px 44px; }
+      .hero-right { height: 44vh; }
+      .hero-buttons { flex-direction: column; align-items: flex-start; }
+      .stats-box {
+        grid-template-columns: 1fr 1fr;
+        bottom: 14px;
+        left: 14px;
+        right: 14px;
+        padding: 18px 20px;
+        gap: 16px;
+      }
+      .stat-value  { font-size: var(--f-xl); }
+      .stat-label  { font-size: 11px; }
+
+      .services-left { padding: 48px 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card {
+        border-right: none !important;
+        border-bottom: 1px solid #dedede !important;
+        padding: 36px 24px;
+      }
+      .svc-card:last-child { border-bottom: none !important; }
     }
   </style>
 </head>
@@ -8004,37 +8115,37 @@
 
     <div class="services-grid">
 
-      <div class="svc-card">
+      <a class="svc-card" href="/infrastructure">
         <div class="svc-card-top">
           <h3>Infrastructure</h3>
           <span class="svc-arrow">↗</span>
         </div>
         <p>Devices, networks, and environments managed as one connected layer — stable, scalable, aligned with how your business actually runs.</p>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a class="svc-card" href="/cybersecurity">
         <div class="svc-card-top">
           <h3>Cybersecurity</h3>
           <span class="svc-arrow">↗</span>
         </div>
         <p>Continuous protection across endpoints, identities, and data. Always active, never isolated, always verified.</p>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a class="svc-card" href="/operations">
         <div class="svc-card-top">
           <h3>Operations</h3>
           <span class="svc-arrow">↗</span>
         </div>
         <p>Internal processes, automation, and hands-on execution working in parallel with every request you raise.</p>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a class="svc-card" href="/data">
         <div class="svc-card-top">
           <h3>Data</h3>
           <span class="svc-arrow">↗</span>
         </div>
         <p>Backup, recovery, and integrity engineered into every layer — so a bad day never becomes a bad quarter.</p>
-      </div>
+      </a>
 
     </div>
 
@@ -8100,6 +8211,23 @@
     }
     requestAnimationFrame(loop);
   })();
+})();
+
+/* ── Services: animate in on scroll ── */
+(function () {
+  const section = document.querySelector('.services');
+  const left    = document.querySelector('.services-left');
+  const cards   = document.querySelectorAll('.svc-card');
+  if (!section) return;
+
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    left.classList.add('in-view');
+    cards.forEach(function (c, i) {
+      setTimeout(function () { c.classList.add('in-view'); }, i * 110);
+    });
+    obs.disconnect();
+  }, { threshold: 0.12 }).observe(section);
 })();
 </script>
 </body>
