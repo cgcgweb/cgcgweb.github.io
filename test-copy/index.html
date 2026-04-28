@@ -48,7 +48,7 @@
       --f-xl:    clamp(18px, 2vw, 28px);     /* sub-headings            */
       --f-2xl:   clamp(22px, 2.8vw, 38px);   /* section titles          */
       --f-3xl:   clamp(28px, 3.6vw, 52px);   /* page titles (h2)        */
-      --f-hero:  clamp(52px, 6.8vw, 96px);   /* hero h1                 */
+      --f-hero:  clamp(36px, 4.5vw, 64px);   /* hero h1                 */
     }
 
     body {
@@ -73,7 +73,7 @@
 
     /* Left column */
     .hero-left {
-      padding: 100px 60px 80px 100px;
+      padding: 140px 60px 80px 100px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -88,10 +88,10 @@
     h1 {
       font-family: 'NB', sans-serif;
       font-size: var(--f-hero);
-      line-height: 1.0;
+      line-height: 1.1;
       font-weight: 500;
       color: #fff;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.5px;
     }
 
     .hero-buttons {
@@ -129,10 +129,10 @@
     .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); transform: translateY(-1px); }
 
     .hero-desc {
-      font-size: var(--f-lg);
-      line-height: 1.6;
+      font-size: var(--f-sm);
+      line-height: 1.65;
       color: rgba(255, 255, 255, 0.62);
-      max-width: 460px;
+      max-width: 420px;
     }
 
     /* Right column */
@@ -222,7 +222,7 @@
     .services-left.in-view h2,
     .services-left.in-view .services-desc {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
 
     .services-grid {
@@ -251,7 +251,7 @@
 
     .svc-card.in-view {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
 
     .svc-card:hover {
@@ -325,16 +325,15 @@
     @media (max-width: 960px) {
       .hero {
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        height: 100svh;
-        overflow: hidden;
+        height: auto;
+        min-height: 100svh;
       }
       .hero-left {
-        padding: 64px 48px 44px;
+        padding: 72px 48px 52px;
+        min-height: 0;
       }
       .hero-right {
-        height: 100%;
-        min-height: 0;
+        height: 58vh;
         animation: hero-breathe 3.8s ease-in-out infinite;
         transform-origin: center center;
       }
@@ -360,7 +359,8 @@
     }
 
     @media (max-width: 600px) {
-      .hero-left { padding: 52px 24px 36px; }
+      .hero-left { padding: 48px 24px 40px; }
+      .hero-right { height: 52vh; }
       .hero-buttons { flex-direction: column; align-items: flex-start; }
 
       .services-left { padding: 48px 24px; }
@@ -635,14 +635,14 @@
       transform: translateY(24px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .cases-title.in-view { opacity: 1; transform: translateY(0); }
+    .cases-title.in-view { opacity: 1; transform: none; }
 
     .cases-card {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s;
     }
-    .cases-card.in-view { opacity: 1; transform: translateY(0); }
+    .cases-card.in-view { opacity: 1; transform: none; }
 
     .case-left {
       opacity: 0;
@@ -655,14 +655,14 @@
       transition: opacity 0.65s ease, transform 0.65s ease;
     }
     .case-left.in-view,
-    .case-right.in-view { opacity: 1; transform: translateX(0); }
+    .case-right.in-view { opacity: 1; transform: none; }
 
     .case-block {
       opacity: 0;
       transform: translateY(10px);
       transition: opacity 0.45s ease, transform 0.45s ease;
     }
-    .case-block.in-view { opacity: 1; transform: translateY(0); }
+    .case-block.in-view { opacity: 1; transform: none; }
 
     .cases-cta {
       opacity: 0;
@@ -961,8 +961,7 @@
       background: var(--ink);
       transform: scaleY(0);
       transform-origin: bottom;
-      will-change: transform;
-      transition: transform 200ms ease;
+      transition: transform 460ms var(--ease);
       z-index: 0;
     }
     .itile:hover::before { transform: scaleY(1); }
@@ -974,7 +973,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: color 180ms ease;
+      transition: color 380ms var(--ease);
     }
     .itile:hover .itile-inner { color: #fff; }
 
@@ -983,7 +982,7 @@
       font-size: 11px;
       letter-spacing: 0.18em;
       color: var(--slate);
-      transition: color 180ms ease;
+      transition: color 380ms ease;
     }
     .itile:hover .num { color: rgba(255,255,255,0.55); }
 
@@ -995,7 +994,7 @@
       font-weight: 400;
       margin: 0;
       color: var(--ink);
-      transition: color 180ms ease;
+      transition: color 380ms ease;
     }
     .itile:hover .iname { color: #fff; }
 
@@ -1006,14 +1005,14 @@
       max-width: 260px;
       opacity: 0;
       transform: translateY(8px);
-      transition: opacity 200ms ease, transform 200ms ease, max-height 240ms ease, color 200ms ease;
+      transition: opacity 360ms var(--ease), transform 360ms var(--ease), max-height 360ms var(--ease), color 360ms ease;
       max-height: 0;
       overflow: hidden;
       margin: 12px 0 0;
     }
     .itile:hover .iblurb {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
       max-height: 120px;
       color: rgba(255,255,255,0.8);
     }
@@ -1030,7 +1029,7 @@
       text-transform: uppercase;
       color: var(--slate);
       font-family: var(--mono);
-      transition: color 180ms ease;
+      transition: color 380ms ease;
     }
     .itile:hover .itile-tag { color: rgba(255,255,255,0.5); }
 
@@ -1043,8 +1042,7 @@
       align-items: center;
       justify-content: center;
       font-size: 14px;
-      will-change: transform;
-      transition: background 0.15s ease, border-color 0.15s ease, transform 200ms ease;
+      transition: background 0.18s ease, border-color 0.18s ease, transform 460ms var(--ease);
     }
     .itile:hover .itile-arrow {
       background: var(--accent);
@@ -1060,7 +1058,7 @@
       width: 200px;
       height: 200px;
       opacity: 0.04;
-      transition: opacity 200ms ease, transform 220ms ease;
+      transition: opacity 460ms ease, transform 860ms var(--ease);
       pointer-events: none;
       z-index: 0;
     }
@@ -1077,7 +1075,7 @@
     }
     .itile.in-view {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
 
     @media (max-width: 960px) {
@@ -1173,10 +1171,9 @@
       border: 1px solid rgba(43,53,78,0.08);
       opacity: 0;
       transform: translateY(24px);
-      will-change: transform;
       transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.28s ease;
     }
-    .pcard.in-view { opacity: 1; transform: translateY(0); transition: opacity 0.55s ease, transform 0.22s ease, box-shadow 0.22s ease; }
+    .pcard.in-view { opacity: 1; transform: translateY(0); }
     .pcard.in-view:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(20,27,42,0.14); }
     .pcard[data-tier="essential"] { background: var(--sky); }
     .pcard[data-tier="full"]      { background: var(--coral-soft); }
