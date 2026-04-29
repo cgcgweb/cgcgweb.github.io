@@ -110,6 +110,8 @@
       font-family: 'NL', sans-serif;
       cursor: pointer;
       white-space: nowrap;
+      text-decoration: none;
+      display: inline-block;
       transition: background 0.14s ease, transform 0.14s ease;
     }
     .btn-primary:hover { background: #3a3a3a; transform: translateY(-1px); }
@@ -124,6 +126,8 @@
       font-family: 'NL', sans-serif;
       cursor: pointer;
       white-space: nowrap;
+      text-decoration: none;
+      display: inline-block;
       transition: border-color 0.14s ease, background 0.14s ease, transform 0.14s ease;
     }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); transform: translateY(-1px); }
@@ -139,6 +143,7 @@
     .hero-right {
       position: relative;
       overflow: hidden;
+      contain: layout paint;
     }
 
     #svgWrap {
@@ -150,6 +155,13 @@
       width: 100%;
       height: 100%;
       display: block;
+      /* promote the whole SVG to a GPU compositor layer in Safari so
+         mix-blend-mode repaints stay off the main thread */
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      isolation: isolate;
     }
 
     /* Stats overlay */
@@ -316,8 +328,8 @@
 
     /* ── hero pulse (mobile only) ── */
     @keyframes hero-breathe {
-      0%, 100% { filter: brightness(0.92) saturate(0.9); transform: scale(1); }
-      50%       { filter: brightness(1.12) saturate(1.1); transform: scale(1.022); }
+      0%, 100% { transform: scale(1); }
+      50%       { transform: scale(1.022); }
     }
 
     /* ── RESPONSIVE ── */
@@ -675,6 +687,29 @@
     .case-row:hover   { background: #fafafa; }
     .case-icon        { transition: transform 0.18s ease; }
     .case-row:hover .case-icon { transform: scale(1.07) translateY(-3px); }
+
+    /* ── Case icon animations ── */
+    @keyframes win-light {
+      0%, 100% { fill: transparent; }
+      35%, 65% { fill: rgba(43,53,78,.12); }
+    }
+    @keyframes heart-beat {
+      0%, 100% { transform: scale(1); }
+      14%       { transform: scale(1.2); }
+      28%       { transform: scale(1); }
+      42%       { transform: scale(1.1); }
+      56%       { transform: scale(1); }
+    }
+    .bwin {
+      fill: transparent;
+      animation: win-light 5s ease-in-out infinite;
+      animation-delay: var(--wd, 0s);
+    }
+    .heart-ico {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: heart-beat 2.4s ease-in-out infinite;
+    }
 
     @media (max-width: 960px) {
       .cases-sec   { padding: 80px 40px; }
@@ -1234,6 +1269,21 @@
       margin: 0;
       min-height: 66px;
     }
+    .pcard-price {
+      font-family: 'NL', sans-serif;
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1;
+      letter-spacing: -0.025em;
+      font-weight: 400;
+      color: var(--navy);
+      margin: 0;
+    }
+    .pcard-price sup { font-size: 0.52em; vertical-align: top; margin-top: 0.15em; }
+    .pcard-price .price-note { font-size: 0.36em; letter-spacing: 0.01em; color: var(--slate); display: block; margin-top: 5px; }
+    .pcard.featured .pcard-price { color: #fff; }
+    .pcard.featured .pcard-price .price-note { color: rgba(255,255,255,0.5); }
+    .x-mark { flex: none; width: 14px; height: 14px; margin-top: 4px; display: inline-flex; opacity: 0.3; }
+    .x-mark svg { width: 14px; height: 14px; }
     .btn-sales {
       background: var(--steel);
       color: #fff;
@@ -1643,8 +1693,8 @@
       <div class="hero-left-top">
         <h1>We make your IT<br>chaos disappear</h1>
         <div class="hero-buttons">
-          <button class="btn-primary">Let's Talk</button>
-          <button class="btn-secondary">Explore Services</button>
+          <a class="btn-primary" href="/contact">Let's Talk</a>
+          <a class="btn-secondary" href="/managed-it-services2">Explore Services</a>
         </div>
       </div>
       <p class="hero-desc">Security-first IT, proactive support, and reliable infrastructure built to eliminate downtime and risk. Expert advisory, robust security, scalable cloud backups, and hands-on cabling–24/7 support to drive efficiency and eliminate risks.</p>
@@ -9492,12 +9542,19 @@
       <div class="case-row">
         <div class="case-left">
           <svg class="case-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="11" height="13" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <rect x="27" y="10" width="11" height="13" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <rect x="44" y="10" width="11" height="13" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <rect x="9"  y="23" width="47" height="7"  rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <rect x="9"  y="32" width="47" height="7"  rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <rect x="9"  y="41" width="47" height="7"  rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <!-- building body -->
+            <rect x="9" y="24" width="46" height="34" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <!-- roof -->
+            <path d="M6 24 L32 7 L58 24" stroke="#1a1a1a" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+            <!-- door -->
+            <rect x="26" y="43" width="12" height="15" rx="1" stroke="#1a1a1a" stroke-width="1.5"/>
+            <!-- windows row 1 (light up in sequence) -->
+            <rect x="12" y="29" width="9" height="8" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:0s"/>
+            <rect x="27.5" y="29" width="9" height="8" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:.6s"/>
+            <rect x="43" y="29" width="9" height="8" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:1.2s"/>
+            <!-- windows row 2 -->
+            <rect x="12" y="40" width="9" height="7" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:1.8s"/>
+            <rect x="43" y="40" width="9" height="7" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:2.4s"/>
           </svg>
           <h3 class="case-name">Construction &amp;<br>Design Firm</h3>
           <p class="case-desc">Global modular construction company with distributed teams, remote workforce, and large-scale production facilities.</p>
@@ -9527,13 +9584,16 @@
       <div class="case-row">
         <div class="case-left">
           <svg class="case-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 20 C32 20 22 13 22 21 C22 27 32 33 32 33 C32 33 42 27 42 21 C42 13 32 20Z" stroke="#1a1a1a" stroke-width="1.7" stroke-linejoin="round"/>
-            <circle cx="18" cy="41" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <circle cx="32" cy="41" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <circle cx="46" cy="41" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
-            <path d="M10 56 L10 50 Q18 46 26 50 L26 56" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M24 56 L24 50 Q32 46 40 50 L40 56" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M38 56 L38 50 Q46 46 54 50 L54 56" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- heart (pulsing) -->
+            <path class="heart-ico" d="M32 35 C22 28 11 20 11 13 C11 7 17 5 22 8 C25 10 28 12 32 16 C36 12 39 10 42 8 C47 5 53 7 53 13 C53 20 42 28 32 35 Z" stroke="#1a1a1a" stroke-width="1.7" stroke-linejoin="round"/>
+            <!-- people heads -->
+            <circle cx="18" cy="44" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <circle cx="32" cy="44" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <circle cx="46" cy="44" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <!-- people shoulders -->
+            <path d="M10 59 L10 53 Q18 49 26 53 L26 59" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24 59 L24 53 Q32 49 40 53 L40 59" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M38 59 L38 53 Q46 49 54 53 L54 59" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <h3 class="case-name">Community<br>Center (Nonprofit)</h3>
           <p class="case-desc">Regional nonprofit serving 12,000 members with limited IT staff and legacy infrastructure across four locations.</p>
@@ -9627,7 +9687,7 @@
       <h2 class="industries-title">Industries<br>we serve.</h2>
       <div>
         <p class="industries-sub">Regulated, high-stakes, detail-heavy. We specialize where getting IT wrong means more than a bad morning.</p>
-        <a class="pill-out" href="#">View Industry Solutions →</a>
+        <a class="pill-out" href="/industries">View Industry Solutions →</a>
       </div>
     </div>
 
@@ -9737,62 +9797,62 @@
 
     <div class="pricing-grid">
 
-      <!-- Essential Operations -->
+      <!-- Silver Managed IT -->
       <div class="pcard" data-tier="essential">
-        <span class="pill">Small Business</span>
-        <h3 class="pcard-name">Essential&#10;Operations</h3>
-        <p class="pcard-sub">A stable IT foundation with core protection and monitoring for day-to-day business operations.</p>
-        <a class="btn-sales" href="/contact">Talk to Sales →</a>
+        <span class="pill">Business Hours</span>
+        <h3 class="pcard-name">Silver&#10;Managed IT</h3>
+        <div class="pcard-price"><sup>$</sup>129 <span class="price-note">per workstation / month</span></div>
+        <p class="pcard-sub">For professional service firms and organizations operating primarily during standard business hours.</p>
+        <a class="btn-sales" href="/managed-it-services2">Learn More →</a>
         <ul class="pcard-list">
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>IT Foundation</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Endpoint Protection</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Hardware &amp; Network (basic setup)</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Email &amp; Cloud Security*</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Backup upgrades*</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Business Hours Support (8AM–6PM, M–F)</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Unlimited Remote Support During Business Hours</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Basic Cybersecurity Stack (Managed AV/EDR, DNS Filtering)</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Patch Management &amp; System Updates</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Advanced Email Security &amp; Phishing Protection</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>3-Year Workstation Refresh*</span></li>
+          <li><span class="x-mark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4 L12 12 M12 4 L4 12" stroke-linecap="round"></path></svg></span><span>24/7 Remote Help Desk Support</span></li>
         </ul>
-        <div class="pcard-meta"><span>Up to 25 seats</span><span>Biz hours</span></div>
+        <div class="pcard-meta"><span>M–F · 8AM–6PM</span><span>Biz Hours</span></div>
       </div>
 
-      <!-- Secure Growth — featured -->
+      <!-- Golden Managed IT — featured -->
       <div class="pcard featured" data-tier="growth">
-        <span class="pill">Growing Companies</span>
-        <h3 class="pcard-name">Secure&#10;Growth</h3>
-        <p class="pcard-sub">A balanced package combining proactive IT, layered security, and operational visibility.</p>
-        <a class="btn-sales" href="/contact">Talk to Sales →</a>
+        <span class="pill">Full Coverage</span>
+        <h3 class="pcard-name">Golden&#10;Managed IT</h3>
+        <div class="pcard-price"><sup>$</sup>199 <span class="price-note">per workstation / month</span></div>
+        <p class="pcard-sub">Full coverage with predictable budgeting and built-in hardware lifecycle management.</p>
+        <a class="btn-sales" href="/managed-it-services2">Learn More →</a>
         <ul class="pcard-list">
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Co-managed IT</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Endpoint Protection</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>E-mail &amp; Cloud Security</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Hardware &amp; Network Solutions</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Cloud-to-cloud backup*</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Compliance support*</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Advanced monitoring*</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>24/7 Unlimited Remote Help Desk Support</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Remote Monitoring &amp; Proactive Maintenance</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Patch Management &amp; Performance Optimization</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Basic Cybersecurity Stack (Managed AV/EDR, DNS Filtering)</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Advanced Email Security &amp; Phishing Protection</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>3-Year Workstation Refresh Program (Modern Business-Class Workstation Included)</span></li>
         </ul>
-        <div class="pcard-meta"><span>25 – 150 seats</span><span>24 / 7</span></div>
+        <div class="pcard-meta"><span>24 / 7</span><span>Full Coverage</span></div>
       </div>
 
-      <!-- Full Coverage -->
+      <!-- Hardware Refresh Bolt-On -->
       <div class="pcard" data-tier="full">
-        <span class="pill">Full Coverage</span>
-        <h3 class="pcard-name">Full&#10;Coverage</h3>
-        <p class="pcard-sub">A fully managed, security-first environment with advanced protection, support, and strategic oversight.</p>
-        <a class="btn-sales" href="/contact">Talk to Sales →</a>
+        <span class="pill">Add-On</span>
+        <h3 class="pcard-name">Hardware&#10;Refresh</h3>
+        <div class="pcard-price"><sup>$</sup>49 <span class="price-note">per workstation / month</span></div>
+        <p class="pcard-sub">Eliminate capital hardware spikes with predictable monthly billing and full lifecycle management.</p>
+        <a class="btn-sales" href="/managed-it-services2">Learn More →</a>
         <ul class="pcard-list">
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Fully-managed IT</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Endpoint Protection</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>E-mail &amp; Cloud Security</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Hardware &amp; Network Solutions</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Advanced security (SOCaaS, investigations)</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>CIOaaS / CISOaaS*</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Compliance &amp; audit support*</span></li>
-          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Custom infrastructure*</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>3-Year Workstation Refresh Cycle</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Modern Business-Class Workstation Included</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Deployment &amp; Migration Services Included</span></li>
+          <li><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 L6.5 12 L13 4.5" stroke-linecap="round"></path></svg></span><span>Eliminates Capital Hardware Spikes</span></li>
         </ul>
-        <div class="pcard-meta"><span>150+ seats</span><span>24 / 7 · SLA</span></div>
+        <div class="pcard-meta"><span>Bolt-On</span><span>Add-On Service</span></div>
       </div>
 
     </div>
 
-    <div class="pricing-foot">*add-ons available on every tier</div>
+    <div class="pricing-foot">*3-Year Workstation Refresh available as an add-on for the Silver Managed IT tier</div>
 
   </section>
 
@@ -9883,7 +9943,7 @@
   const data = Array.from(spokes, el => {
     const bb = el.getBBox();
     return { el, cx: bb.x + bb.width * 0.5, cy: bb.y + bb.height * 0.5,
-             tx: 0, ty: 0, vx: 0, vy: 0, px: '!', py: '!' };
+             tx: 0, ty: 0, vx: 0, vy: 0, px: '!', py: '!', moved: false };
   });
 
   const REPEL_R = 90;
@@ -9895,8 +9955,14 @@
   let mx = -9999, my = -9999;
 
   /* cache SVG rect; only recalculate on resize to avoid forced layouts */
-  let rect = svg.getBoundingClientRect();
-  window.addEventListener('resize', () => { rect = svg.getBoundingClientRect(); });
+  let rect  = svg.getBoundingClientRect();
+  let scaleX = rect.width  / vb.width;
+  let scaleY = rect.height / vb.height;
+  window.addEventListener('resize', () => {
+    rect   = svg.getBoundingClientRect();
+    scaleX = rect.width  / vb.width;
+    scaleY = rect.height / vb.height;
+  });
 
   svg.addEventListener('mousemove', e => {
     mx = (e.clientX - rect.left) / rect.width  * vb.width;
@@ -9904,7 +9970,20 @@
   });
   svg.addEventListener('mouseleave', () => { mx = my = -9999; });
 
-  (function loop() {
+  let heroVisible = true;
+  let heroRafId   = null;
+  let lastTs      = 0;
+  const FRAME_MS  = 1000 / 24;   /* cap at 24fps — imperceptible vs 60fps for this effect */
+
+  function loop(ts) {
+    heroRafId = null;
+    /* throttle: skip frames that arrive too soon */
+    if (ts - lastTs < FRAME_MS) {
+      if (heroVisible) heroRafId = requestAnimationFrame(loop);
+      return;
+    }
+    lastTs = ts;
+
     for (const s of data) {
       const dx = s.cx + s.tx - mx;
       const dy = s.cy + s.ty - my;
@@ -9921,16 +10000,35 @@
       s.tx += s.vx;
       s.ty += s.vy;
 
-      /* only write to DOM when the value actually changed */
-      const px = s.tx.toFixed(2);
-      const py = s.ty.toFixed(2);
+      /* skip DOM write for spokes that have fully settled at rest */
+      if (Math.abs(s.vx) < THRESH && Math.abs(s.vy) < THRESH &&
+          Math.abs(s.tx) < THRESH && Math.abs(s.ty) < THRESH) {
+        s.vx = s.vy = s.tx = s.ty = 0;
+        if (s.moved) {
+          s.el.style.transform = '';
+          s.moved = false;
+        }
+        continue;
+      }
+
+      /* use CSS style.transform (compositor path) instead of SVG setAttribute
+         values must be converted from viewBox units to CSS pixels */
+      const px = (s.tx * scaleX).toFixed(2);
+      const py = (s.ty * scaleY).toFixed(2);
       if (px !== s.px || py !== s.py) {
-        s.el.setAttribute('transform', `translate(${px} ${py})`);
+        s.el.style.transform = `translate(${px}px,${py}px)`;
         s.px = px;  s.py = py;
+        s.moved = true;
       }
     }
-    requestAnimationFrame(loop);
-  })();
+    if (heroVisible) heroRafId = requestAnimationFrame(loop);
+  }
+  heroRafId = requestAnimationFrame(loop);
+
+  new IntersectionObserver(entries => {
+    heroVisible = entries[0].isIntersecting;
+    if (heroVisible && !heroRafId) heroRafId = requestAnimationFrame(loop);
+  }, { threshold: 0 }).observe(document.querySelector('.hero'));
 })();
 
 /* ── Services: animate in on scroll ── */
@@ -10018,7 +10116,6 @@
       el.setAttribute('stroke', on ? rings[k].color : 'rgba(255,255,255,0.22)');
       el.setAttribute('stroke-width', on ? 2 : 1);
       el.setAttribute('stroke-dasharray', on ? '0' : '3 6');
-      el.style.filter = on ? 'drop-shadow(0 0 8px ' + rings[k].color + ')' : 'none';
     });
     lblEls.forEach(function (el, k) { el.classList.toggle('hot', k === active); });
     nameEl.textContent = rings[active].name + '.';
@@ -10031,14 +10128,16 @@
   }
 
   /* sweep rotation */
-  var sweep = root.querySelector('#pulse-sweep');
-  var angle = 0;
-  if (!reduced) {
-    (function tick() {
-      angle = (angle + 0.6) % 360;
-      sweep.setAttribute('transform', 'rotate(' + angle + ' 300 300)');
-      requestAnimationFrame(tick);
-    })();
+  var sweep       = root.querySelector('#pulse-sweep');
+  var angle       = 0;
+  var sweepRafId  = null;
+  var inView      = false;
+
+  function tick() {
+    sweepRafId = null;
+    angle = (angle + 0.6) % 360;
+    sweep.setAttribute('transform', 'rotate(' + angle + ' 300 300)');
+    if (inView) sweepRafId = requestAnimationFrame(tick);
   }
 
   /* blips */
@@ -10080,9 +10179,11 @@
     setTimeout(function () { if (g.parentNode) g.parentNode.removeChild(g); }, 2200);
   }
 
-  var inView = false;
   new IntersectionObserver(function (es) {
-    es.forEach(function (e) { inView = e.isIntersecting; });
+    es.forEach(function (e) {
+      inView = e.isIntersecting;
+      if (inView && !reduced && !sweepRafId) sweepRafId = requestAnimationFrame(tick);
+    });
   }, { threshold: 0.25 }).observe(root);
 
   if (!reduced) {
