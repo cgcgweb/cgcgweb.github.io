@@ -1,1741 +1,1250 @@
 <!doctype html>
-<html lang=en>
-  <link href=https://cgcg.biz/favicon.ico rel="shortcut icon">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="imgs/hero-bg.avif" as="image" type="image/avif">
+  <link rel="preload" href="fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/n.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%232b354e' width='100' height='100'/%3E%3Ctext x='50' y='60' font-size='80' font-weight='bold' text-anchor='middle' fill='%23fff'%3EG%3C/text%3E%3C/svg%3E" rel="shortcut icon" type="image/svg+xml">
   <title>Cyber Guardian - Managed IT and Cyber Security in New York</title>
-  <meta content="width=device-width,initial-scale=1" name=viewport>
-  <meta charset=UTF-8>
-  <meta content="Homepage - Cyber Guardian Consulting Group" property=og:title>
-  <meta content="Managed IT & Cybersecurity Provider in New York" property=og:site_name>
-  <meta content=https://cgcg.biz property=og:url>
-  <meta content="Managed IT, Cybersecurity and Cloud Management provider in New York. Providing comprehensive solutions for small and medium-sized businesses." property=og:description>
-  <meta content=business.business property=og:type>
-  <meta content=https://cgcg.biz/m/e2.png property=og:image>
-  <meta content=https://cgcg.biz/m/e2.png property=twitter:image>
-  <meta content="Managed IT, Cybersecurity and Cloud Management provider in New York. Providing comprehensive solutions for small and medium-sized businesses." name=description>
-  <meta content="Cybersecurity, Managed IT, New York, Cloud Backup, CGCG" name=keywords>
-  <meta content="index, follow" name=robots>
-  <meta content=English name=language>
-  <meta content="21 days" name=revisit-after>
-  <style>
-    body {
-      background-color: #2b354e;
-      color: #fff;
-      font-family: n, Arial;
-      margin: 0;
-      box-sizing: border-box;
-      overflow-x: hidden
-    }
+  <meta content="Homepage - Cyber Guardian Consulting Group" property="og:title">
+  <meta content="Managed IT & Cybersecurity Provider in New York" property="og:site_name">
+  <meta content="https://cgcg.biz" property="og:url">
+  <meta content="Managed IT, Cybersecurity and Cloud Management provider in New York. Providing comprehensive solutions for small and medium-sized businesses." property="og:description">
+  <meta content="business.business" property="og:type">
+  <meta content="https://cgcg.biz/m/e2.png" property="og:image">
+  <meta content="https://cgcg.biz/m/e2.png" property="twitter:image">
+  <meta content="Managed IT, Cybersecurity and Cloud Management provider in New York. Providing comprehensive solutions for small and medium-sized businesses." name="description">
+  <meta content="Cybersecurity, Managed IT, New York, Cloud Backup, CGCG" name="keywords">
+  <meta content="index, follow" name="robots">
+  <meta content="English" name="language">
+  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}@font-face{font-family:'NL';src:url('fonts/n.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'NB';src:url('fonts/nbold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Anton';src:url('fonts/anton.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}:root{--f-xs:12px;--f-sm:14px;--f-base:16px;--f-lg:clamp(14px,1.4vw,20px);--f-xl:clamp(18px,2vw,28px);--f-2xl:clamp(22px,2.8vw,38px);--f-3xl:clamp(28px,3.6vw,52px);--f-hero:clamp(52px,6.8vw,96px)}body{background:#1a1a1a;color:#fff;font-family:'NL',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:var(--f-base);overflow-x:hidden}html{min-height:100%}.hero{position:relative;min-height:100vh;background:#0a0a0a;display:flex;flex-direction:column;justify-content:flex-end;padding:132px 56px 56px;overflow:hidden}/* visually hidden but present for SEO / screen readers */
+.hero-headline{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}.hero-bottom{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;animation:heroFadeUp 0.5s cubic-bezier(0.22,0.61,0.36,1) 100ms both}.hero-intro{display:flex;flex-direction:column;gap:28px;max-width:520px}@keyframes heroFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}h1{font-family:'NB',sans-serif;font-size:var(--f-hero);line-height:1.0;font-weight:500;color:#fff;letter-spacing:-0.02em;animation:heroFadeUp 0.45s cubic-bezier(0.22,0.61,0.36,1) 0ms both}.hero-buttons{animation:heroFadeUp 0.45s cubic-bezier(0.22,0.61,0.36,1) 60ms both}.hero-desc{animation:heroFadeUp 0.45s cubic-bezier(0.22,0.61,0.36,1) 100ms both}.hero-buttons{display:flex;gap:16px;align-items:center}.btn-primary{background:#252525;color:#fff;border:none;padding:16px 44px;border-radius:12px;font-size:var(--f-base);font-family:'NL',sans-serif;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;transition:background 0.14s ease,transform 0.14s ease}.btn-primary:hover{background:#3a3a3a;transform:translateY(-1px)}.btn-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.38);padding:16px 44px;border-radius:12px;font-size:var(--f-base);font-family:'NL',sans-serif;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;transition:border-color 0.14s ease,background 0.14s ease,transform 0.14s ease}.btn-secondary:hover{border-color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.07);transform:translateY(-1px)}.hero-desc{font-size:var(--f-lg);line-height:1.6;color:rgba(255,255,255,0.62);max-width:460px}#svgWrap{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;background:center center/cover no-repeat url(imgs/hero-bg.avif) #0a0a0a}#svgWrap svg g{mix-blend-mode:normal!important}#svgWrap svg{width:100%;height:100%;display:block;transform:translateZ(0);-webkit-transform:translateZ(0);backface-visibility:hidden;-webkit-backface-visibility:hidden;isolation:isolate}.stats-box{background:rgba(20,20,20,0.9);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:30px 40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;flex:1 1 520px;max-width:780px}.stat-value{font-family:'NB',sans-serif;font-size:var(--f-2xl);font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-0.5px}.stat-label{font-family:'NL',sans-serif;font-size:var(--f-xs);line-height:1.55;color:rgba(255,255,255,0.52)}.services{background:#f5f5f3;border-top:1px solid #dedede;display:grid;grid-template-columns:3fr 7fr}.services-left{padding:80px 64px 80px 100px;border-right:1px solid #dedede;display:flex;flex-direction:column;justify-content:space-between}.services-left h2{font-family:'NB',sans-serif;font-size:var(--f-3xl);font-weight:500;line-height:1.12;color:#1a1a1a;opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}.services-left h2 .accent{color:inherit}.services-desc{font-size:var(--f-sm);line-height:1.7;color:#616161;max-width:320px;opacity:0;transform:translateY(16px);transition:opacity 0.6s ease 0.15s,transform 0.6s ease 0.15s}.services-left.in-view h2,.services-left.in-view .services-desc{opacity:1;transform:translateY(0)}.services-grid{display:grid;grid-template-columns:1fr 1fr}.svc-card{display:block;text-decoration:none;color:inherit;padding:52px 56px;border-bottom:1px solid #dedede;border-right:1px solid #dedede;opacity:0;transform:translateY(24px);transition:background 0.14s ease,box-shadow 0.14s ease,opacity 0.55s ease,transform 0.55s ease}.svc-card:nth-child(even){border-right:none}.svc-card:nth-child(3),.svc-card:nth-child(4){border-bottom:none}.svc-card.in-view{opacity:1;transform:translateY(0)}.svc-card:hover{background:#fff;box-shadow:0 6px 32px rgba(0,0,0,0.07);position:relative;z-index:1}.svc-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}.svc-card h3{font-family:'NL',sans-serif;font-size:var(--f-2xl);font-weight:400;color:#1a1a1a;line-height:1.1;display:inline-block;position:relative}.svc-card h3::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:#1a1a1a;transition:width 0.18s ease}.svc-card:hover h3::after{width:100%}.svc-arrow{font-size:20px;color:#1a1a1a;flex-shrink:0;margin-top:4px;line-height:1;display:inline-block;transition:transform 0.14s ease}.svc-card:hover .svc-arrow{transform:translate(4px,-4px)}.svc-card p{font-size:var(--f-sm);line-height:1.7;color:#616161;transition:color 0.14s ease}.svc-card:hover p{color:#474747}@keyframes hero-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.022)}}@media (max-width:960px){.hero{min-height:100svh;padding:104px 32px 40px}.hero-bottom{flex-direction:column;align-items:stretch;gap:32px}.hero-intro{max-width:100%}.stats-box{grid-template-columns:1fr;gap:24px;padding:26px 28px;max-width:100%}.services{grid-template-columns:1fr}.services-left{border-right:none;border-bottom:1px solid #dedede;padding:60px 48px;gap:40px}.services-grid{grid-template-columns:1fr 1fr}.svc-card{padding:40px 36px}.svc-card:nth-child(3),.svc-card:nth-child(4){border-bottom:none}}@media (max-width:600px){.hero{padding:88px 20px 32px}.hero-headline{font-size:clamp(44px,15vw,96px)}.hero-buttons{flex-direction:column;align-items:flex-start}.services{border-top:none}.services-left{background:#0d1525;border-bottom:none;padding:56px 24px 60px;gap:28px}.services-left::before{content:'Our Approach';display:block;font-family:'NB',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:4px}.services-left h2{color:#fff;font-size:clamp(38px,11vw,54px);line-height:1.05;opacity:1!important;transform:none!important}.services-left h2 .accent{color:#C8FF47}.services-desc{color:rgba(255,255,255,.55);max-width:none;font-size:15px;opacity:1!important;transform:none!important}.services-grid{grid-template-columns:1fr 1fr}.svc-card{padding:28px 18px!important;border-right:1px solid #dedede!important;border-bottom:1px solid #dedede!important;opacity:1!important;transform:none!important}.svc-card:nth-child(even){border-right:none!important}.svc-card:nth-child(3),.svc-card:nth-child(4){border-bottom:none!important}.svc-card-top{margin-bottom:14px}.svc-card h3{font-size:18px;line-height:1.15}.svc-card p{font-size:13px;line-height:1.6}.svc-arrow{font-size:16px}}.pulse-sec{--plum:#1E1F21;--lime:#C8FF47;--coral:#FF6A55;--sky:#8AB4F8;--mono:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;--ease:cubic-bezier(0.22,0.61,0.36,1);position:relative;padding:130px 100px 140px;background:var(--plum);color:#fff;overflow:hidden;font-family:'NL',-apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:-0.018em;line-height:1.4;-webkit-font-smoothing:antialiased}.pulse-sec *{box-sizing:border-box}.pulse-sec::before{content:'';position:absolute;left:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(46,59,255,0.35),transparent 65%);pointer-events:none}.pulse-sec::after{content:'';position:absolute;right:-120px;bottom:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,71,0.18),transparent 65%);pointer-events:none}.pulse-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center;max-width:1440px;margin:0 auto}.pulse-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--lime);margin-bottom:24px}.pulse-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime);animation:pulse-blink 1.6s infinite}@keyframes pulse-blink{0%,100%{opacity:1}50%{opacity:0.35}}.pulse-title{font-family:'NB',sans-serif;font-size:clamp(48px,6vw,88px);line-height:0.92;letter-spacing:-0.03em;margin:0 0 28px;color:#fff;font-weight:500}.pulse-title em{font-style:normal;color:var(--lime)}.pulse-sub{font-size:var(--f-lg);line-height:1.6;color:rgba(255,255,255,0.72);max-width:480px;margin:0 0 22px}.pulse-sub.active-line{font-size:var(--f-base);color:#fff;margin:0}.pulse-sub strong{color:var(--lime);font-weight:400;letter-spacing:0.02em}.pulse-sub .active-desc{color:rgba(255,255,255,0.65)}.pulse-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px;padding-top:34px;border-top:1px solid rgba(255,255,255,0.12)}.pulse-stat-val{font-family:'NB',sans-serif;font-size:var(--f-2xl);line-height:1;letter-spacing:-0.025em;color:#fff}.pulse-stat-val em{color:var(--lime);font-style:normal}.pulse-stat-lbl{font-family:var(--mono);font-size:var(--f-xs);letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:10px;max-width:130px;line-height:1.45}.pulse-stage{position:relative;height:640px;display:flex;align-items:center;justify-content:center}.pulse-radar{position:relative;width:600px;height:600px}.pulse-radar svg{width:100%;height:100%;display:block;overflow:visible}.pulse-ring-lbl{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.7);background:rgba(30,31,33,0.88);border:1px solid rgba(255,255,255,0.14);padding:6px 10px;border-radius:999px;white-space:nowrap;transform:translate(-50%,-50%);cursor:pointer;transition:color 0.12s ease,background 0.12s ease,border-color 0.12s ease,box-shadow 0.12s ease;backdrop-filter:blur(4px)}.pulse-ring-lbl.hot{color:var(--plum);background:var(--lime);border-color:var(--lime);box-shadow:0 0 20px rgba(200,255,71,0.5)}.pulse-legend{position:absolute;left:0;bottom:-10px;display:flex;gap:22px;z-index:3;font-family:var(--mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5)}.pulse-legend span{display:inline-flex;align-items:center;gap:8px}.pulse-legend i{width:10px;height:10px;border-radius:50%;display:inline-block;font-style:normal}.pulse-legend .lg-a{background:var(--lime)}.pulse-legend .lg-b{background:var(--coral)}.pulse-legend .lg-c{background:var(--sky)}@media (max-width:960px){.pulse-sec{padding:90px 48px 100px}.pulse-grid{grid-template-columns:1fr;gap:60px}.pulse-stage{height:520px}.pulse-radar{width:480px;height:480px}}@media (max-width:600px){.pulse-sec{padding:70px 24px 90px}.pulse-stats{grid-template-columns:1fr 1fr;gap:24px}.pulse-stage{height:420px}.pulse-radar{width:360px;height:360px}.pulse-ring-lbl{font-size:9px;padding:4px 8px}}@media (prefers-reduced-motion:reduce){.pulse-sec *,.pulse-sec *::before,.pulse-sec *::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}.press{background:#0d1525;padding:64px 0 72px;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}.press-head{display:flex;align-items:baseline;justify-content:space-between;gap:32px;padding:0 80px;margin-bottom:36px}.press-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#C8FF47;margin-bottom:12px}.press-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#C8FF47;box-shadow:0 0 10px rgba(200,255,71,0.7);animation:pressDot 1.8s ease-in-out infinite}@keyframes pressDot{0%,100%{opacity:1}50%{opacity:.35}}.press-title{font-weight:500;font-size:clamp(20px,2.2vw,30px);line-height:1.15;letter-spacing:-.02em;color:#fff;margin:0;max-width:760px}.press-title em{font-style:normal;color:#C8FF47}.press-count{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);white-space:nowrap;flex-shrink:0}.press-count strong{color:#fff;font-weight:500;letter-spacing:-.02em;margin-right:4px;font-size:14px}.press-viewport{position:relative;overflow:hidden}.press-viewport::before,.press-viewport::after{content:'';position:absolute;top:0;bottom:0;width:140px;z-index:2;pointer-events:none}.press-viewport::before{left:0;background:linear-gradient(to right,#0d1525,transparent)}.press-viewport::after{right:0;background:linear-gradient(to left,#0d1525,transparent)}@keyframes pressScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.press-track{display:flex;gap:16px;width:max-content;align-items:stretch;animation:pressScroll 70s linear infinite;padding:0 8px}.press-track:hover{animation-play-state:paused}@media(prefers-reduced-motion:reduce){.press-track{animation:none}}.press-card{flex:0 0 360px;background:#11192c;color:#fff;border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:20px 22px 18px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:background .25s ease,border-color .25s ease,transform .25s ease;position:relative}.press-card:hover{background:#16203a;border-color:rgba(200,255,71,0.25);transform:translateY(-2px)}.press-card.is-cream{background:#f6efe3;color:#1a1a1a;border-color:rgba(0,0,0,0.06)}.press-card.is-cream:hover{background:#fff;border-color:rgba(0,0,0,0.12)}.press-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.press-outlet-name{font-size:14px;letter-spacing:-.01em;color:inherit;font-weight:500;line-height:1.2}.press-outlet-name.is-serif-old{font-family:Georgia,serif;font-weight:600;font-size:17px;letter-spacing:0}.press-outlet-name.is-serif{font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:15px;letter-spacing:0}.press-outlet-name.is-italic{font-style:italic;font-weight:600;font-size:15px}.press-outlet-name.is-condensed{font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:13px}.press-arrow{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:12px;color:inherit;flex-shrink:0;transition:background .15s ease,border-color .15s ease,transform .15s ease}.press-card.is-cream .press-arrow{border-color:rgba(0,0,0,.18)}.press-card:hover .press-arrow{background:#C8FF47;border-color:#C8FF47;color:#0a1020;transform:translate(2px,-2px)}.press-quote{font-size:14px;line-height:1.45;letter-spacing:-.005em;color:inherit;margin:0;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.press-card.is-cream .press-quote{color:rgba(0,0,0,.78)}.press-quote-open{font-family:Georgia,serif;color:#C8FF47;font-weight:600;margin-right:2px}.press-card.is-cream .press-quote-open{color:#0a1020}.press-date{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:2px}.press-card.is-cream .press-date{color:rgba(0,0,0,.45)}@media(max-width:768px){.press{padding:48px 0 56px}.press-head{flex-direction:column;align-items:flex-start;gap:14px;padding:0 24px;margin-bottom:24px}.press-viewport::before,.press-viewport::after{width:60px}.press-track{animation-duration:55s;gap:12px}.press-card{flex-basis:300px;padding:18px 18px 16px}}.cases-sec{background:#fff;padding:100px 80px 100px}.cases-title{font-family:'NB',sans-serif;font-size:var(--f-hero);font-weight:700;color:#1a1a1a;text-align:center;line-height:1.05;letter-spacing:-0.025em;margin-bottom:56px}.cases-card{border:1px solid #e5e5e5;border-radius:20px;overflow:hidden;max-width:1200px;margin:0 auto}.case-row{display:grid;grid-template-columns:260px 1fr;padding:56px 60px}.case-row + .case-row{border-top:1px solid #e8e8e8}.case-left{padding-right:40px}.case-icon{width:64px;height:64px;margin-bottom:24px;display:block}.case-name{font-family:'NL',sans-serif;font-size:var(--f-xl);font-weight:400;color:#1a1a1a;line-height:1.2;margin-bottom:14px}.case-desc{font-size:var(--f-sm);line-height:1.65;color:#616161}.case-right{padding-left:52px}.case-block{margin-bottom:20px}.case-block:last-of-type{margin-bottom:32px}.case-label{font-family:'NB',sans-serif;font-size:11px;letter-spacing:0.13em;text-transform:uppercase;color:#1a1a1a;margin-bottom:6px}.case-block p{font-size:var(--f-sm);line-height:1.7;color:#666}.case-stats{display:flex;gap:52px;padding-top:28px;border-top:1px solid #e8e8e8}.case-stat-val{font-family:'NL',sans-serif;font-size:var(--f-2xl);color:#1a1a1a;letter-spacing:-0.02em;line-height:1;margin-bottom:6px}.case-stat-lbl{font-family:'NB',sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#616161}.cases-cta{text-align:center;padding:48px 0 56px;border-top:1px solid #e8e8e8}.cases-cta-btn{display:inline-block;background:#2B354E;color:#fff;text-decoration:none;padding:18px 44px;border-radius:12px;font-family:'NL',sans-serif;font-size:var(--f-base);letter-spacing:0.01em;transition:background 0.14s ease,transform 0.14s ease}.cases-cta-btn:hover{background:#1a2133;transform:translateY(-2px)}.cases-title{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}.cases-title.in-view{opacity:1;transform:translateY(0)}.cases-card{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease 0.1s,transform 0.7s ease 0.1s}.cases-card.in-view{opacity:1;transform:translateY(0)}.case-left{opacity:0;transform:translateX(-28px);transition:opacity 0.65s ease,transform 0.65s ease}.case-right{opacity:0;transform:translateX(28px);transition:opacity 0.65s ease,transform 0.65s ease}.case-left.in-view,.case-right.in-view{opacity:1;transform:translateX(0)}.case-block{opacity:0;transform:translateY(10px);transition:opacity 0.45s ease,transform 0.45s ease}.case-block.in-view{opacity:1;transform:translateY(0)}.cases-cta{opacity:0;transition:opacity 0.6s ease,background 0.25s ease}.cases-cta.in-view{opacity:1}.case-row{transition:background 0.14s ease}.case-row:hover{background:#fafafa}.case-icon{transition:transform 0.18s ease}.case-row:hover .case-icon{transform:scale(1.07) translateY(-3px)}@keyframes win-light{0%,100%{fill:transparent}35%,65%{fill:rgba(43,53,78,.12)}}@keyframes heart-beat{0%,100%{transform:scale(1)}14%{transform:scale(1.2)}28%{transform:scale(1)}42%{transform:scale(1.1)}56%{transform:scale(1)}}.bwin{fill:transparent;animation:win-light 5s ease-in-out infinite;animation-delay:var(--wd,0s)}.heart-ico{transform-box:fill-box;transform-origin:center;animation:heart-beat 2.4s ease-in-out infinite}@media (max-width:960px){.cases-sec{padding:80px 40px}.case-row{grid-template-columns:1fr;gap:40px}.case-left{padding-right:0;transform:translateY(20px)}.case-right{padding-left:0;border-top:1px solid #e8e8e8;padding-top:32px;transform:translateY(20px)}}@media (max-width:600px){.cases-sec{padding:60px 20px}.case-row{padding:40px 24px}.case-stats{gap:28px;flex-wrap:wrap}.cases-cta{padding:36px 0 44px}}.process{--accent:#C8FF47;--accent-glow:rgba(200,255,71,0.45);--navy:#2B354E;--slate:#6A6A84;--mono:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;--ease:cubic-bezier(0.22,0.61,0.36,1);padding:100px;background:#FAFAFA;color:#151515;font-family:'NL',-apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:-0.018em;line-height:1.4;-webkit-font-smoothing:antialiased}.process *{box-sizing:border-box}.process-head{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:end;margin-bottom:72px;max-width:1440px;margin-left:auto;margin-right:auto}.process-title{font-family:'NL',sans-serif;font-size:clamp(40px,5.2vw,72px);line-height:0.93;letter-spacing:-0.028em;margin:0;color:#151515;font-weight:400}.process-sub{font-size:var(--f-base);line-height:1.6;color:var(--slate);max-width:380px;margin:0}.process-timeline{position:relative;max-width:1440px;margin:0 auto}.process-line{position:absolute;left:0;right:0;top:38px;height:1px;background:rgba(43,53,78,0.15)}.process-progress{position:absolute;left:0;top:37px;height:3px;background:var(--accent);transition:width 900ms var(--ease);box-shadow:0 0 14px var(--accent-glow);width:0}.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}.process-step{padding-top:66px;position:relative;cursor:pointer}.process-step .dot{position:absolute;top:31px;left:0;width:15px;height:15px;border-radius:50%;background:#FAFAFA;border:2px solid var(--navy);transition:background 0.14s ease,border-color 0.14s ease,box-shadow 0.14s ease,transform 0.14s ease}.process-step.active .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px var(--accent-glow);transform:scale(1.15)}.process-step .num{font-family:var(--mono);font-size:var(--f-xs);letter-spacing:0.2em;color:var(--slate);text-transform:uppercase;margin-bottom:10px}.process-step .step-title{font-family:'NL',sans-serif;font-size:var(--f-xl);line-height:1.1;letter-spacing:-0.02em;margin:0 0 10px;color:#151515;font-weight:400;transition:color 0.14s ease}.process-step.active .step-title{color:#151515}.process-step .step-body{font-size:var(--f-sm);line-height:1.55;color:var(--slate);margin:0;transition:color 0.14s ease}@media (max-width:960px){.process{padding:80px 48px}.process-head{grid-template-columns:1fr;gap:28px;align-items:start}.process-steps{grid-template-columns:repeat(2,1fr);gap:40px 24px}.process-line,.process-progress{display:none}.process-step{padding-top:0;padding-left:28px}.process-step .dot{top:4px;left:0}}@media (max-width:600px){.process{padding:64px 24px}.process-steps{grid-template-columns:1fr;gap:32px}}@media (prefers-reduced-motion:reduce){.process *,.process *::before,.process *::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}.industries{--ink:#151515;--navy:#2B354E;--slate:#6A6A84;--paper:#FAFAFA;--cream:#F6EFE3;--cream-deep:#EFE3CC;--lime:#F3C969;--lime-deep:#d4a84a;--coral:#FF6A55;--cobalt:#2E3BFF;--sky:#BDE4FF;--plum:#1C2339;--accent:#C8FF47;--mono:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;--ease:cubic-bezier(0.22,0.61,0.36,1);padding:100px;background:var(--paper);color:var(--ink);font-family:'NL',-apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:-0.018em;line-height:1.4;-webkit-font-smoothing:antialiased}.industries *{box-sizing:border-box}.industries-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:50px;max-width:1440px;margin-left:auto;margin-right:auto}.industries-title{font-family:'NL',sans-serif;font-size:clamp(40px,5.2vw,72px);line-height:0.93;letter-spacing:-0.028em;margin:0;color:var(--ink);font-weight:400}.industries-sub{font-size:var(--f-base);line-height:1.5;color:var(--slate);max-width:400px;margin:0 0 20px}.industries .pill-out{display:inline-block;padding:11px 22px;background:transparent;border:1px solid var(--navy);color:var(--navy);border-radius:200px;cursor:pointer;font-size:15px;transition:background 0.14s ease,color 0.14s ease,transform 0.14s ease;text-decoration:none}.industries .pill-out:hover{background:var(--navy);color:#fff;transform:translateX(4px)}.industries-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:280px 280px;gap:14px;max-width:1440px;margin:0 auto}.itile{position:relative;background:#fff;border:1px solid rgba(43,53,78,0.15);border-radius:22px;overflow:hidden;cursor:pointer;padding:28px}.itile[data-tint="cream"]{background:var(--cream);border-color:var(--cream-deep)}.itile[data-tint="lime"]{background:var(--lime);border-color:var(--lime-deep)}.itile[data-tint="coral"]{background:var(--coral);border-color:var(--coral);color:#fff}.itile[data-tint="cobalt"]{background:var(--cobalt);border-color:var(--cobalt);color:#fff}.itile[data-tint="sky"]{background:var(--sky);border-color:#91cff9}.itile[data-tint="plum"]{background:var(--plum);border-color:var(--plum);color:#fff}.itile[data-tint="coral"] .iname,.itile[data-tint="coral"] .iblurb,.itile[data-tint="cobalt"] .iname,.itile[data-tint="cobalt"] .iblurb,.itile[data-tint="plum"] .iname,.itile[data-tint="plum"] .iblurb{color:#fff}.itile[data-tint="coral"] .num,.itile[data-tint="coral"] .itile-tag,.itile[data-tint="cobalt"] .num,.itile[data-tint="cobalt"] .itile-tag,.itile[data-tint="plum"] .num,.itile[data-tint="plum"] .itile-tag{color:rgba(255,255,255,0.8)}.itile[data-tint="coral"] .itile-arrow,.itile[data-tint="cobalt"] .itile-arrow,.itile[data-tint="plum"] .itile-arrow{border-color:rgba(255,255,255,0.5)}.itile.wide{grid-column:span 2}.itile::before{content:'';position:absolute;inset:0;background:var(--ink);transform:scaleY(0);transform-origin:bottom;will-change:transform;transition:transform 200ms ease;z-index:0}.itile:hover::before{transform:scaleY(1)}.itile-inner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:space-between;transition:color 180ms ease}.itile:hover .itile-inner{color:#fff}.itile .num{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;color:#474758;transition:color 180ms ease}.itile:hover .num{color:rgba(255,255,255,0.55)}.itile .iname{font-family:'NL',sans-serif;font-size:clamp(24px,2.5vw,36px);line-height:1;letter-spacing:-0.026em;font-weight:400;margin:0;color:var(--ink);transition:color 180ms ease}.itile:hover .iname{color:#fff}.itile .iblurb{font-size:13.5px;line-height:1.5;color:var(--slate);max-width:260px;opacity:0;transform:translateY(8px);transition:opacity 200ms ease,transform 200ms ease,max-height 240ms ease,color 200ms ease;max-height:0;overflow:hidden;margin:12px 0 0}.itile:hover .iblurb{opacity:1;transform:translateY(0);max-height:120px;color:rgba(255,255,255,0.8)}.itile-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto}.itile-tag{font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#474758;font-family:var(--mono);transition:color 180ms ease}.itile:hover .itile-tag{color:rgba(255,255,255,0.5)}.itile-arrow{width:36px;height:36px;border-radius:50%;border:1px solid rgba(43,53,78,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;will-change:transform;transition:background 0.15s ease,border-color 0.15s ease,transform 200ms ease}.itile:hover .itile-arrow{background:var(--accent);color:#151515;border-color:var(--accent);transform:rotate(-45deg) scale(1.1)}.itile svg.deco{position:absolute;right:-30px;bottom:-30px;width:200px;height:200px;opacity:0.04;transition:opacity 200ms ease,transform 220ms ease;pointer-events:none;z-index:0}.itile:hover svg.deco{opacity:0.18;transform:scale(1.2) rotate(8deg)}.itile{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease,box-shadow 0.18s ease}.itile.in-view{opacity:1;transform:translateY(0)}@media (max-width:960px){.industries{padding:80px 48px}.industries-head{grid-template-columns:1fr;gap:28px;align-items:start}.industries-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto;gap:12px}.itile{min-height:260px}.itile.wide{grid-column:span 2}}@media (max-width:600px){.industries{padding:64px 24px}.industries-title{font-size:40px}.industries-grid{grid-template-columns:1fr}.itile.wide{grid-column:span 1}.itile .iname{font-size:30px}}@media (prefers-reduced-motion:reduce){.industries *,.industries *::before,.industries *::after{transition-duration:0.01ms!important}}.pricing{--ink:#151515;--navy:#2B354E;--slate:#6A6A84;--paper:#FAFAFA;--sky:#BDE4FF;--coral-soft:#FFD9D1;--lime:#F3C969;--plum:#1C2339;--steel:#2B354E;--mono:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;--ease:cubic-bezier(0.22,0.61,0.36,1);padding:100px 100px 120px;background:var(--paper);color:var(--navy);font-family:'NL',-apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:-0.018em;line-height:1.4;-webkit-font-smoothing:antialiased}.pricing *{box-sizing:border-box}.pricing-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:50px;align-items:end;max-width:1440px;margin-left:auto;margin-right:auto}.pricing-title{font-family:'NL',sans-serif;font-size:clamp(40px,5.2vw,72px);line-height:0.93;letter-spacing:-0.028em;margin:0;color:var(--ink);font-weight:400}.pricing-sub{font-size:var(--f-base);color:var(--slate);max-width:400px;line-height:1.5;margin:0}.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;max-width:1440px;margin:0 auto}.pcard{background:var(--sky);padding:44px 30px 36px;color:var(--navy);min-height:600px;display:flex;flex-direction:column;gap:18px;border-radius:24px;cursor:pointer;position:relative;overflow:hidden;border:1px solid rgba(43,53,78,0.08);opacity:0;transform:translateY(24px);will-change:transform;transition:opacity 0.55s ease,transform 0.55s ease,box-shadow 0.28s ease}.pcard.in-view{opacity:1;transform:translateY(0);transition:opacity 0.55s ease,transform 0.22s ease,box-shadow 0.22s ease}.pcard.in-view:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(20,27,42,0.14)}.pcard[data-tier="essential"]{background:var(--sky)}.pcard[data-tier="full"]{background:var(--coral-soft)}.pcard::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,59,255,0.1),rgba(200,255,71,0.15));opacity:0;transition:opacity 0.22s ease;pointer-events:none}.pcard:hover::before{opacity:1}.pcard.featured{background:var(--plum);color:#fff;border-color:var(--plum)}.pcard.featured .pcard-name,.pcard.featured .pcard-list{color:#fff}.pcard.featured .pcard-sub{color:rgba(255,255,255,0.72)}.pcard.featured .pill{background:var(--lime);color:var(--plum)}.pcard.featured .btn-sales{background:var(--lime);color:var(--plum)}.pcard.featured .btn-sales:hover{background:#fff;color:var(--plum)}.pcard.featured .pcard-meta{color:rgba(255,255,255,0.4);border-top-color:rgba(255,255,255,0.1)}.pcard>*{position:relative;z-index:1}.pill{font-size:14px;padding:6px 18px;border-radius:200px;background:var(--navy);color:#fff;display:inline-block;line-height:1.2;align-self:flex-start}.pcard-name{font-family:'NL',sans-serif;font-size:clamp(32px,3.5vw,44px);line-height:1;letter-spacing:-0.025em;font-weight:400;color:var(--navy);margin:6px 0 0;white-space:pre-line}.pcard-sub{font-size:var(--f-base);line-height:1.4;color:var(--slate);margin:0;min-height:66px}.pcard-price{font-family:'NL',sans-serif;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.025em;font-weight:400;color:var(--navy);margin:0}.pcard-price sup{font-size:0.52em;vertical-align:top;margin-top:0.15em}.pcard-price .price-note{font-size:0.36em;letter-spacing:0.01em;color:var(--slate);display:block;margin-top:5px}.pcard.featured .pcard-price{color:#fff}.pcard.featured .pcard-price .price-note{color:rgba(255,255,255,0.5)}.x-mark{flex:none;width:14px;height:14px;margin-top:4px;display:inline-flex;opacity:0.3}.x-mark svg{width:14px;height:14px}.btn-sales{background:var(--steel);color:#fff;padding:12px 24px;border-radius:200px;font-size:15px;align-self:flex-start;cursor:pointer;transition:background 0.14s ease,transform 0.14s ease;text-decoration:none;display:inline-block}.btn-sales:hover{background:#2b4b5e;transform:translateX(4px)}.pcard-list{list-style:none;padding:20px 0 0;margin:4px 0 0;font-size:14.5px;line-height:1.5;color:var(--navy);display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(43,53,78,0.12)}.pcard.featured .pcard-list{border-top-color:rgba(255,255,255,0.15)}.pcard-list li{display:flex;gap:10px;align-items:flex-start}.pcard-list .check{flex:none;width:14px;height:14px;margin-top:4px;display:inline-flex}.pcard-list .check svg{width:14px;height:14px}.pcard-meta{margin-top:auto;padding-top:16px;border-top:1px solid rgba(43,53,78,0.12);font-size:11px;letter-spacing:0.12em;color:var(--slate);text-transform:uppercase;font-family:var(--mono);display:flex;justify-content:space-between}.pricing-foot{font-size:13px;color:var(--slate);margin-top:22px;max-width:1440px;margin-left:auto;margin-right:auto}@media (max-width:960px){.pricing{padding:80px 48px}.pricing-head{grid-template-columns:1fr;gap:28px;align-items:start}.pricing-grid{grid-template-columns:1fr;gap:16px}.pcard{min-height:0}.pcard-sub{min-height:0}}@media (max-width:600px){.pricing{padding:64px 24px}.pcard-name{font-size:36px}}@media (prefers-reduced-motion:reduce){.pricing *,.pricing *::before{transition-duration:0.01ms!important}}.faq{--ink:#151515;--navy:#2B354E;--slate:#6A6A84;--accent:#2B354E;--mono:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;--ease:cubic-bezier(0.22,0.61,0.36,1);padding:100px 100px 120px;background:#FAFAFA;color:var(--ink);font-family:'NL',-apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:-0.018em;line-height:1.4;-webkit-font-smoothing:antialiased}.faq *{box-sizing:border-box}.faq-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:40px;align-items:end;max-width:1440px;margin-left:auto;margin-right:auto}.faq-title{font-family:'NL',sans-serif;font-size:clamp(40px,5.2vw,72px);line-height:0.93;letter-spacing:-0.028em;margin:0;font-weight:400;color:var(--ink)}.faq-sub{font-size:var(--f-base);line-height:1.5;color:var(--slate);max-width:400px;margin:0}.faq-list{border-top:1px solid rgba(43,53,78,0.15);max-width:1440px;margin:0 auto}.faq-item{border-bottom:1px solid rgba(43,53,78,0.15);cursor:pointer;transition:background 0.14s ease}.faq-item:hover{background:rgba(43,53,78,0.025)}.faq-head-row{display:grid;grid-template-columns:60px 1fr 40px;gap:32px;align-items:center;padding:32px 0}.faq-num{font-family:var(--mono);font-size:13px;letter-spacing:0.14em;color:var(--slate)}.faq-q{font-family:'NL',sans-serif;font-size:clamp(18px,2vw,26px);line-height:1.2;letter-spacing:-0.018em;margin:0;font-weight:400;transition:color 0.14s ease}.faq-item:hover .faq-q{color:var(--accent)}.faq-toggle{width:36px;height:36px;border-radius:50%;border:1px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:18px;background:transparent;color:var(--ink);transition:background 0.14s ease,color 0.14s ease,border-color 0.14s ease,transform 360ms var(--ease);user-select:none}.faq-item.open .faq-toggle{background:var(--accent);color:#fff;border-color:var(--accent);transform:rotate(135deg)}.faq-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows 360ms var(--ease)}.faq-body-inner{overflow:hidden}.faq-item.open .faq-body{grid-template-rows:1fr}.faq-body-content{padding:0 0 32px 92px;max-width:680px;font-size:var(--f-base);line-height:1.65;color:var(--slate)}@media (max-width:960px){.faq{padding:80px 48px}.faq-head{grid-template-columns:1fr;gap:28px;align-items:start}.faq-head-row{grid-template-columns:44px 1fr 36px;gap:20px}.faq-body-content{padding-left:64px}}@media (max-width:600px){.faq{padding:64px 24px}.faq-head-row{grid-template-columns:36px 1fr 32px;gap:14px;padding:24px 0}.faq-num{font-size:11px}.faq-body-content{padding:0 0 24px 50px;font-size:15px}}@media (prefers-reduced-motion:reduce){.faq *{transition-duration:0.01ms!important}}.site-footer{--ease:cubic-bezier(0.22,0.61,0.36,1);--mono:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;background:#151515;color:#fff;position:relative;overflow:hidden;font-family:'NL',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased}.site-footer *{box-sizing:border-box}.site-footer::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:250px 250px;opacity:0.055;pointer-events:none;z-index:0}.footer-nav{position:relative;z-index:1;display:flex;align-items:center;padding:28px 100px;border-bottom:1px solid rgba(255,255,255,0.08)}.footer-logo img{height:52px;width:auto;display:block}.footer-nav-links{list-style:none;display:flex;gap:40px;margin:0 auto;padding:0}.footer-nav-links a{color:rgba(255,255,255,0.72);text-decoration:none;font-size:18px;letter-spacing:-0.01em;transition:color 0.14s ease}.footer-nav-links a:hover{color:#fff}.footer-nav-contact{color:#fff;text-decoration:none;font-family:'NB',sans-serif;font-size:18px;letter-spacing:-0.01em;transition:opacity 0.14s ease}.footer-nav-contact:hover{opacity:0.7}.footer-main{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;padding:80px 100px 72px;gap:80px;max-width:1440px;margin:0 auto}.footer-info{display:flex;flex-direction:column;justify-content:space-between;gap:64px}.footer-contact-info{display:flex;flex-direction:column;gap:4px}.footer-contact-info a{font-family:'NL',sans-serif;font-size:clamp(28px,3.6vw,52px);line-height:1.15;letter-spacing:-0.025em;color:#fff;text-decoration:none;transition:opacity 0.14s ease}.footer-contact-info a:hover{opacity:0.6}.footer-locations{display:flex;flex-direction:column;gap:2px}.footer-locations p{font-family:'NL',sans-serif;font-size:clamp(28px,3.6vw,52px);line-height:1.15;letter-spacing:-0.025em;color:#fff;margin:0}.footer-form{display:flex;flex-direction:column;gap:0;text-align:left}.footer-field{border-bottom:1px solid rgba(255,255,255,0.2);transition:border-color 0.14s ease}.footer-field:focus-within{border-color:rgba(255,255,255,0.7)}.footer-form input{width:100%;background:transparent;border:none;color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;height:56px;padding:0 2px;outline:none;appearance:none;-webkit-appearance:none}.footer-form input::placeholder{color:rgba(255,255,255,0.38)}.footer-send{align-self:flex-start;margin-top:28px;background:transparent;border:1px solid rgba(255,255,255,0.4);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;padding:12px 32px;cursor:pointer;border-radius:4px;transition:background 0.14s ease,border-color 0.14s ease}.footer-send:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.8)}.footer-bottom{position:relative;z-index:1;display:flex;gap:48px;padding:32px 100px 48px;border-top:1px solid rgba(255,255,255,0.08);max-width:1440px;margin:0 auto}.footer-bottom a{color:#fff;text-decoration:none;font-family:'NB',sans-serif;font-size:17px;letter-spacing:-0.01em;transition:opacity 0.14s ease}.footer-bottom a:hover{opacity:0.6}@media (max-width:960px){.footer-nav{padding:24px 48px}.footer-nav-links{gap:24px}.footer-nav-links a{font-size:16px}.footer-main{grid-template-columns:1fr;padding:60px 48px 56px;gap:56px}.footer-bottom{padding:28px 48px 40px}}@media (max-width:600px){.footer-nav{padding:20px 24px;flex-wrap:wrap;gap:16px}.footer-nav-links{display:none}.footer-main{padding:48px 24px 48px;gap:48px}.footer-bottom{padding:24px 24px 36px}}.site-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 20px;background:rgba(10,16,32,0.62);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border:1px solid rgba(255,255,255,0.08);border-radius:999px;box-shadow:0 12px 40px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.06);transition:transform .32s cubic-bezier(.22,.61,.36,1),top .25s ease,background .3s ease,border-color .3s ease}.site-nav.scrolled{top:12px;background:rgba(10,16,32,0.82);border-color:rgba(255,255,255,0.12)}.site-nav.nav-hidden{transform:translateX(-50%)}.site-nav.nav-light{background:rgba(255,255,255,0.78);border-color:rgba(0,0,0,0.08);box-shadow:0 12px 40px rgba(0,0,0,0.08),inset 0 1px 0 rgba(255,255,255,0.6)}.site-nav.nav-light .nav-links>li>a,.site-nav.nav-light .nav-link-services{color:rgba(20,20,20,0.68)}.site-nav.nav-light .nav-links>li>a:hover,.site-nav.nav-light .nav-link-services:hover{color:#0a1020;background:rgba(0,0,0,0.05)}.site-nav.nav-light .nav-cta{background:#0a1020;color:#fff}.site-nav.nav-light .nav-burger span{background:#0a1020}.nav-logo{display:flex;align-items:center;flex-shrink:0;padding:2px 4px 2px 0}.nav-logo img{height:30px;width:auto;display:block;transition:height .25s ease}img.nav-logo-icon{display:none}.site-nav.scrolled .nav-logo img{height:26px}.nav-links{list-style:none;display:flex;gap:2px;margin:0 auto;padding:0 6px;align-items:center}.nav-links>li>a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13.5px;letter-spacing:-.005em;padding:8px 14px;border-radius:999px;transition:color .14s ease,background .14s ease;white-space:nowrap}.nav-links>li>a:hover{color:#fff;background:rgba(255,255,255,0.06)}.nav-cta{background:#C8FF47;color:#0a1020;text-decoration:none;padding:11px 22px;border-radius:999px;font-size:13.5px;font-weight:700;white-space:nowrap;border:1px solid transparent;transition:background .15s ease,transform .15s ease,box-shadow .15s ease;flex-shrink:0;display:inline-flex;align-items:center;gap:8px}.nav-cta:hover{background:#d4ff66;transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,255,71,0.35)}.nav-cta::after{content:'';width:6px;height:6px;border-radius:50%;background:#0a1020;opacity:0.7}.nav-cta-mobile,.nav-status-mobile{display:none}.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;width:38px;height:38px;border-radius:50%;padding:0;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);cursor:pointer;-webkit-tap-highlight-color:transparent;flex-shrink:0}.nav-burger span{display:block;width:14px;height:1.6px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .22s ease,width .22s ease}.site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}.site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0}.site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}.nav-has-drop{position:static}.nav-link-services{display:inline-flex;align-items:center;gap:5px;color:rgba(255,255,255,0.7);text-decoration:none;font-size:13.5px;letter-spacing:-.005em;padding:8px 14px;border-radius:999px;transition:color .14s ease,background .14s ease}.nav-link-services:hover,.nav-has-drop:hover .nav-link-services,.nav-has-drop:focus-within .nav-link-services{color:#fff;background:rgba(255,255,255,0.06)}.nav-drop-chevron{transition:transform 200ms ease;flex-shrink:0}.nav-has-drop:hover .nav-drop-chevron,.nav-has-drop:focus-within .nav-drop-chevron{transform:rotate(180deg)}.nav-drop{position:fixed;top:80px;left:50%;transform:translateX(-50%) translateY(-6px);width:min(1100px,calc(100vw - 32px));background:rgba(15,22,40,0.94);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:36px 40px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;opacity:0;visibility:hidden;transition:opacity 180ms ease,transform 180ms ease,visibility 0ms linear 180ms;pointer-events:none;z-index:98;box-shadow:0 24px 60px rgba(0,0,0,0.45)}.nav-has-drop:hover .nav-drop,.nav-has-drop:focus-within .nav-drop,.nav-has-drop.is-open .nav-drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);transition:opacity 200ms ease,transform 200ms ease;pointer-events:all}.ndc-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;display:block;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:14px;text-decoration:none;font-weight:700}a.ndc-label{transition:color .14s ease}a.ndc-label:hover{color:#C8FF47}.ndc-link{display:block;font-size:14px;color:rgba(255,255,255,.55);padding:8px 0;text-decoration:none;letter-spacing:-.01em;transition:color .14s ease,padding-left .14s ease;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.3}.ndc-link:last-child{border-bottom:none}.ndc-link:hover{color:#fff;padding-left:6px}.ndc-desc{font-size:12px;line-height:1.5;color:rgba(255,255,255,.4);margin:0 0 16px;font-style:normal;letter-spacing:.01em}@keyframes navPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}.nav-drawer{position:fixed;left:12px;right:12px;top:64px;bottom:12px;background:rgba(10,16,32,0.94);backdrop-filter:blur(32px) saturate(180%);border:1px solid rgba(255,255,255,0.1);border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,0.5);z-index:96;display:flex;flex-direction:column;padding:22px 22px 28px;overflow-y:auto;opacity:0;transform:translateY(20px) scale(0.98);transition:opacity .25s ease,transform .25s ease;pointer-events:none}.nav-drawer.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}.nav-drawer-cta{display:flex;align-items:center;justify-content:space-between;background:#C8FF47;color:#0a1020;text-decoration:none;padding:18px 22px;border-radius:18px;font-family:'NB',sans-serif;font-weight:700;font-size:16px;margin-bottom:20px}.nav-drawer-section{border-bottom:1px solid rgba(255,255,255,0.08)}.nav-drawer-section summary{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;cursor:pointer;list-style:none;font-family:'NB',sans-serif;font-weight:700;font-size:18px;color:#fff}.nav-drawer-section summary::-webkit-details-marker{display:none}.nav-drawer-links{display:flex;flex-direction:column;padding:0 4px 12px}.nav-drawer-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:15px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);transition:color .14s ease}.nav-drawer-links a:last-child{border-bottom:none}.nav-drawer-links a:active{color:#fff}@media(max-width:1100px){.site-nav .nav-links li:not(.nav-has-drop){display:none}}@media(max-width:768px){.site-nav{top:12px;padding:5px 5px 5px 14px;gap:8px;width:calc(100% - 20px);max-width:560px;background:rgba(10,16,32,0.78);border:1px solid rgba(255,255,255,0.1);box-shadow:0 14px 36px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.08)}img.nav-logo-full{display:none}img.nav-logo-icon{display:block;height:30px;width:auto}.nav-links,.nav-cta{display:none}.nav-status-mobile{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;flex-shrink:0;background:rgba(200,255,71,0.1);border:1px solid rgba(200,255,71,0.2);margin-right:auto;margin-left:2px}.nav-status-mobile .nav-status-dot{width:7px;height:7px;border-radius:50%;background:#C8FF47;box-shadow:0 0 8px rgba(200,255,71,0.7);animation:navPulse 1.8s ease-in-out infinite}.nav-cta-mobile{display:inline-flex;align-items:center;gap:6px;background:#C8FF47;color:#0a1020;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:12.5px;font-family:'NB',sans-serif;font-weight:700;letter-spacing:-.005em;white-space:nowrap;flex-shrink:0;transition:background .15s ease,transform .15s ease}.nav-burger{display:flex;width:38px;height:38px;border-radius:50%;padding:0;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);gap:5px;margin-left:0}.nav-burger span{width:14px;height:1.6px}}.partners-marquee{background:#0a1020;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:28px 0;overflow:hidden}.pm-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.68);text-align:center;margin-bottom:22px;font-family:'NL',sans-serif}.pm-viewport{overflow:hidden;width:100%;position:relative}.pm-viewport::before,.pm-viewport::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}.pm-viewport::before{left:0;background:linear-gradient(to right,#0a1020,transparent)}.pm-viewport::after{right:0;background:linear-gradient(to left,#0a1020,transparent)}@keyframes pm-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.pm-track{display:flex;align-items:center;width:max-content;animation:pm-scroll 48s linear infinite}.pm-track:hover{animation-play-state:paused}.pm-item{display:flex;align-items:center;justify-content:center;padding:0 48px;opacity:.55;transition:opacity .2s ease;flex-shrink:0}.pm-item:hover{opacity:1}.pm-item svg,.pm-item img{display:block}.pm-item img{filter:brightness(0) invert(1)}.partners-marquee,.services,.pulse-sec,.press,.cases-sec,.process,.industries,.faq,.site-footer{content-visibility:auto}.partners-marquee{contain-intrinsic-size:auto 160px}.services{contain-intrinsic-size:auto 900px}.pulse-sec{contain-intrinsic-size:auto 1280px}.press{contain-intrinsic-size:auto 540px}.cases-sec{contain-intrinsic-size:auto 4260px}.process{contain-intrinsic-size:auto 2170px}.industries{contain-intrinsic-size:auto 2100px}.faq{contain-intrinsic-size:auto 2060px}.site-footer{contain-intrinsic-size:auto 980px}</style>
+</head>
+<body>
 
-    body * {
-      box-sizing: border-box
-    }
+  <nav class="site-nav" id="site-nav">
+    <a class="nav-logo" href="./"><img class="nav-logo-full" src="imgs/logowhite.svg" alt="CGCG" width="73" height="32"><img class="nav-logo-icon" src="logowhite.svg" alt="CGCG" width="54" height="32"></a>
+    <ul class="nav-links" role="list">
+      <li class="nav-has-drop">
+        <a class="nav-link-services" href="services/">Services<svg class="nav-drop-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav-drop" role="menu" aria-label="Services menu">
+          <div class="nav-drop-col">
+            <a class="ndc-label" href="infrastructure-connectivity/">Infrastructure ↗</a>
+            <p class="ndc-desc">Devices, networks, and environments managed as one connected layer.</p>
+            <a class="ndc-link" href="managed-it-services/" role="menuitem">Managed IT Services</a>
+            <a class="ndc-link" href="NaaS/" role="menuitem">Network as a Service (NaaS)</a>
+            <a class="ndc-link" href="low-voltage-cabling/" role="menuitem">Low Voltage Cabling</a>
+            <a class="ndc-link" href="cloud-security-cameras/" role="menuitem">Cloud-Based Security Cameras</a>
+            <a class="ndc-link" href="door-access-control/" role="menuitem">Door Access Control</a>
+            <a class="ndc-link" href="https://switchboard-plus.com" target="_blank" rel="noopener" role="menuitem">Business Phone (VoIP) &#x2197;</a>
+          </div>
+          <div class="nav-drop-col">
+            <a class="ndc-label" href="cybersecurity-solutions/">Cybersecurity ↗</a>
+            <p class="ndc-desc">Continuous protection across endpoints, identities, and data.</p>
+            <a class="ndc-link" href="cybersecurity-solutions/" role="menuitem">Cybersecurity Solutions</a>
+            <a class="ndc-link" href="socas/" role="menuitem">SOC as a Service (SOCaaS)</a>
+            <a class="ndc-link" href="cisoaas/" role="menuitem">CISO as a Service (CISOaaS)</a>
+            <a class="ndc-link" href="private-digital-investigations/" role="menuitem">Private Digital Investigations</a>
+          </div>
+          <div class="nav-drop-col">
+            <a class="ndc-label" href="services/#operations">Operations ↗</a>
+            <p class="ndc-desc">Internal processes, automation, and hands-on execution.</p>
+            <a class="ndc-link" href="cioas/" role="menuitem">CIO as a Service (CIOaaS)</a>
+            <a class="ndc-link" href="ctoas/" role="menuitem">CTO as a Service (CTOaaS)</a>
+            <a class="ndc-link" href="erp-solutions/" role="menuitem">ERP Solutions</a>
+            <a class="ndc-link" href="app-development/" role="menuitem">App Development</a>
+            <a class="ndc-link" href="reputation-management/" role="menuitem">Reputation Management</a>
+            <a class="ndc-link" href="recycling-charity/" role="menuitem">Recycling &amp; Charity</a>
+          </div>
+          <div class="nav-drop-col">
+            <a class="ndc-label" href="services/#data">Data ↗</a>
+            <p class="ndc-desc">Backup, recovery, and integrity engineered into every layer.</p>
+            <a class="ndc-link" href="healthcare-it/" role="menuitem">Healthcare IT</a>
+            <a class="ndc-link" href="https://filescience.io" target="_blank" rel="noopener" role="menuitem">Cloud-to-Cloud Backup (FileSciece.io) &#x2197;</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about/">About</a></li>
+    </ul>
+    <a class="nav-cta" href="/contact">Get a Free Assessment</a>
+    <div class="nav-status-mobile" role="img" aria-label="24/7 SOC operations live"><span class="nav-status-dot" aria-hidden="true"></span></div><a class="nav-cta-mobile" href="/contact" aria-label="Get a free assessment">Free assessment<svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
 
-    @font-face {
-      font-family: 'n';
-      font-display: swap;
-      src: url(n.woff2) format('embedded-opentype'), url(n.woff2) format('woff2'), url(n.woff2) format('woff'), url(n.woff2) format('truetype'), url(n.woff2) format('svg')
-    }
-
-    @font-face {
-      font-family: 'L';
-      font-display: swap;
-      src: url(L.woff2) format('embedded-opentype'), url(L.woff2) format('woff2'), url(L.woff2) format('woff'), url(L.woff2) format('truetype'), url(L.woff2) format('svg')
-    }
-
-    .light {
-      font-family: l, 'Open Sans', Arial
-    }
-
-    .col-1 {
-      width: 8.33%
-    }
-
-    .col-2 {
-      width: 16.66%
-    }
-
-    .col-3 {
-      width: 25%
-    }
-
-    .col-4 {
-      width: 33.33%
-    }
-
-    .col-5 {
-      width: 41.66%
-    }
-
-    .col-6 {
-      width: 50%
-    }
-
-    .col-7 {
-      width: 58.33%
-    }
-
-    .col-8 {
-      width: 66.66%
-    }
-
-    .col-9 {
-      width: 75%
-    }
-
-    .col-10 {
-      width: 83.33%
-    }
-
-    .col-11 {
-      width: 91.66%
-    }
-
-    .col-12 {
-      width: 100%
-    }
-
-    [class*=col-] {
-      float: left;
-      box-sizing: border-box
-    }
-    
-    @media screen and (max-width:900px) {
-      [class*=col-] {
-        width: 100%
-      }
-
-      .d {
-        display: none !important
-      }
-
-      h1 {
-        font-size: 34px
-      }
-
-      .first a svg {
-        position: relative;
-        left: calc(50% - 25px);
-        top: 48px;
-        transform: rotate(90deg)
-      }
-
-      h2 {
-        font-size: 40px;
-        margin-bottom: 0
-      }
-
-      .section.first {
-        overflow: hidden;
-        width: 85%
-      }
-
-      .right {
-        position: absolute;
-        right: 24px;
-        top: 24px
-      }
-
-      .mission .line+.col-9 p {
-        padding-left: 0 !important
-      }
-
-      .first .arrowlink p {
-        position: absolute;
-        left: calc(50vw - 70px);
-        margin-top: 0
-      }
-
-      .first img,
-      .menu img {
-        width: 100%;
-        height: 100%
-      }
-
-      .first img.m {
-        height: calc(85vw * .59)
-      }
-      img.titlesvg {
-        margin-left: 0;
-        max-width: 100%;
-      }
-    }
-
-    @media screen and (min-width:900px) {
-      .m {
-        display: none !important
-      }
-
-      h1 {
-        font-size: min(74px, 4vw)
-      }
-
-      .first img {
-        max-width: 140%;
-        margin-left: -40px
-      }
-      img.titlesvg {
-        margin-left: -20px;
-        max-width: 100%;
-      }
-      h2 {
-        font-size: 92px;
-        margin-bottom: 0
-      }
-
-      .section.first {
-        overflow: visible;
-        width: 75%
-      }
-
-      .right {
-        position: absolute;
-        right: 5%;
-        top: 0
-      }
-    }
-
-    .section {
-      overflow: hidden;
-      display: block;
-      width: 75%;
-      margin: 0 auto;
-      padding-bottom: 48px
-    }
-
-    .first p {
-      font-size: 24px;
-      font-family: 'Open Sans', Arial
-    }
-
-    p {
-      font-family: 'Open Sans', Arial;
-      font-size: 20px
-    }
-
-    .arrowlink p {
-      display: inline-block;
-      color: #fff;
-      font-size: 34px
-    }
-
-    .arrowlink p,
-    .arrowlink span,
-    .arrowlink svg {
-      vertical-align: middle;
-      margin-right: 16px
-    }
-
-    .menu {
-      min-height: 20vh
-    }
-
-    .left {
-      position: absolute;
-      left: 12.5%;
-      top: 24px
-    }
-
-    .nav {
-      position: absolute;
-      left: 30%;
-      top: 28px;
-      font-size: 22px
-    }
-
-    a {
-      color: #fff;
-      text-decoration: none
-    }
-
-    .nav a {
-      padding-right: 32px
-    }
-
-    .line {
-      border-bottom: 8px solid #fff;
-      overflow: hidden;
-      height: 24px
-    }
-
-    .mission .line+.col-9 p {
-      margin-top: 0;
-      padding: 12px
-    }
-
-    .e {
-      height: 1px
-    }
-
-    .mission img {
-      max-width: 100%
-    }
-
-    .missionItem {
-      padding: 0 12px
-    }
-
-    .missionItem img {
-      height: 200px;
-      width: 250px;
-      text-align: center
-    }
-
-    img {
-      max-width: 100%
-    }
-
-    p.bold {
-      font-weight: 700
-    }
-
-    .light {
-      font-family: l, 'Open Sans', Arial
-    }
-
-    .first p.m {
-      font-size: 20px
-    }
-
-    .navdservices {
-      position: absolute;
-      background-color: #2b354e;
-      border: 2px solid #f2f2f2;
-      padding: 15px;
-      display: none
-    }
-
-    .navdservices a {
-      width: 100%;
-      display: block;
-      line-height: 33px
-    }
-
-    #navservices:hover+.navdservices,
-    .navdservices:hover {
-      display: block !important
-    }
-    
-    .sk {
-      display: none !important
-    }
-    .m .news > a, .m .news {
-      min-height: 84px;
-    }
-    .news_subtitle a {
-      display: inline-block;
-      opacity: 1;
-      transition: opacity 0.5s ease-in-out;
-      text-decoration: none;
-      color: inherit;
-    }
-  </style>
-  <body><a href=#main class=sk>Skip to main content</a>
-    <div class=menu role="navigation">
-      <div class=left><a href=https://cgcg.biz aria-label="CGCG Homepage Link"><img src=m/l.svg alt="CGCG Logo" height=40 width=148></a></div>
-      <div class="d nav"><a href=/services/ id=navservices>Services</a>
-        <div class=navdservices><a href=/managed-it-services/>Managed IT Services</a><a href=/cybersecurity-solutions/>Cybersecurity Solutions</a><a href=/socas/>SOCaaS</a><a href=/cioas/>CIOaaS</a><a href=/ctoas/>CTOaaS</a><a href=/cisoaas/>CISOaaS</a><a href=https://filescience.io aria-label="Cloud-to-Cloud Backup (opens in a new tab)" target=_blank>Cloud-to-Cloud Backup</a><a aria-label="Business Phone (opens in a new tab)" href=https://switchboard-plus.com/ target=_blank>Business Phone</a><a href=/low-voltage-cabling/>Low Voltage Cabling</a><a href=/app-development/>App Development</a><a href=/door-access-control/>Door Access Control</a><a href=/NaaS/>Network-as-a-service</a><a href=/cloud-based-security-cameras/>Cloud-Based Security Cameras</a><a href=/recycling-charity/>Recycling & Charity</a><a href=/reputation-management/>Reputation Management</a><a href=/private-digital-investigations/>Private Digital Investigations</a><a href="/erp-solutions/">ERP Solutions</a><a href="/healthcare-it/">Healthcare IT</a></div><a href=/about/>Company</a><a href=/trust>Trust</a><a href=/resources/>Resources</a><a href=/portfolio/>Portfolio</a><a href=/lets-talk/>Contact</a>
-      </div>
-      <div class=right><img src=m/f.svg alt="Forbes 2020" height=176 width=115 class=d><img src=m/bu.svg alt="Open Menu" class=m></div>
+  <div class="nav-drawer">
+  <a class="nav-drawer-cta" href="/contact">
+    Get a free assessment
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 L15 5 M15 5 H7 M15 5 V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <details class="nav-drawer-section" open>
+    <summary>Infrastructure</summary>
+    <div class="nav-drawer-links">
+      <a href="managed-it-services/">Managed IT Services</a>
+      <a href="NaaS/">Network as a Service</a>
+      <a href="low-voltage-cabling/">Low Voltage Cabling</a>
+      <a href="cloud-security-cameras/">Cloud Security Cameras</a>
+      <a href="door-access-control/">Door Access Control</a>
+      <a href="https://switchboard-plus.com" target="_blank" rel="noopener">Business Phone (VoIP) &#x2197;</a>
     </div>
-    <main id="main">
-      <div class="section first">
-        <div class=col-6>
-          <img src="media/title.svg" alt="CGCG Banner" width="500" height="250" class="titlesvg">
-          <p class=d role="heading" aria-level="2">Comprehensive solutions for start-ups to Fortune 500 companies. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p><img src=m/e.svg alt="CGCG Eagle" class=m>
-          <p class=m role="heading" aria-level="2">Comprehensive solutions for start-ups to Fortune 500 companies. From Managed IT, Сybersecurity, PMS & POS Support, Backup and Advisory Services to Low Voltage Infrastructure Installs and Cloud Management of AWS, Azure and Google. We create innovative strategies that are tailored to your enterprise.</p>
-          <div class="d arrowlink"><a href=/services/><span><svg fill=none height=50 role=Presentation width=50 xmlns=http://www.w3.org/2000/svg>
-                  <circle cx=25 cy=25 fill=#fff r=25 />
-                  <path d="M40.2 25.7c.4-.4.4-1 0-1.4l-6.4-6.4a1 1 0 0 0-1.4 1.4l5.7 5.7-5.7 5.7a1 1 0 0 0 1.4 1.4l6.4-6.4ZM11 26h28.5v-2H11v2Z" fill=#375E74 />
-                </svg></span>
-              <p role="heading" aria-level="2">Services</p>
-            </a></div>
-        </div>
-        <div class="d col-6"><img src=m/e.svg alt="CGCG Eagle" height=566 width=964></div>
-      </div>
-      <div class="section mission">
-        <div class=col-12>
-          <h2>Mission</h2>
-          <div class="col-3 line"></div>
-          <div class=col-9>
-            <p role="heading" aria-level="2">CGCG is a security-forward, AI-first, Managed IT and Advisory Firm that implements proactive, lightweight, and inexpensive proprietary solutions that meet and exceed business and security requirements.</p>
-          </div>
-          <div class="col-3 e"></div>
-          <div class=col-9>
-            <div class="col-4 missionItem"><img src=m/x1.svg alt="Adaptable Solutions" loading=lazy>
-              <p class=bold role="heading" aria-level="2">Adaptable Solutions</p>
-              <p class=light role="heading" aria-level="2">Scalable model that provides a personal solution for every client.</p>
-            </div>
-            <div class="col-4 missionItem"><img src=m/x2.svg alt="24x7x365 Monitoring" loading=lazy>
-              <p class=bold role="heading" aria-level="2">24x7x365 Monitoring</p>
-              <p class=light role="heading" aria-level="2">Assistance for your business, at any time of the day or night.</p>
-            </div>
-            <div class="col-4 missionItem"><img src=m/x3.svg alt="Solitary Protection" loading=lazy>
-              <p class=bold role="heading" aria-level="2">Solitary Protection</p>
-              <p class=light role="heading" aria-level="2">CGCG 7-Layer Cyber Armor System™.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class=burgerMenu style=display:none><img src=m/X.svg class=close><img src=m/cgcg.svg class=bueagle>
-        <div class=bnav><a aria-current="page" href=https://cgcg.biz class=bold>Home</a>
-          <div class=bus><a href=/services/>Services</a><span id=drop>+</span></div>
-          <div class=slist style=display:none><a href=/managed-it-services/>Managed IT Services</a><a href=/cybersecurity-solutions/>Cybersecurity Solutions</a><a href=/socas/>SOCaaS</a><a href=/cioas/>CIOaaS</a><a href=/ctoas/>CTOaaS</a><a href=/cisoaas/>CISOaaS</a><a href=https://filescience.io target=_blank>Cloud-to-Cloud Backup</a><a href=https://switchboard-plus.com/ target=_blank>Business Phone</a><a href=/low-voltage-cabling/>Low Voltage Cabling</a><a href=/app-development/>App Development</a><a href=/door-access-control/>Door Access Control</a><a href=/NaaS/>Network-as-a-service</a><a href=/cloud-based-security-cameras/>Cloud-Based Security Cameras</a><a href=/recycling-charity/>Recycling & Charity</a><a href=/reputation-management/>Reputation Management</a><a href=/private-digital-investigations/>Private Digital Investigations</a><a href="/erp-solutions/">ERP Solutions</a><a href="/healthcare-it/">Healthcare IT</a></div><a href=/about/>Company</a><a href=/trust>Trust</a><a href=/resources/>Resources</a><a href=/portfolio/>Portfolio</a><a href=/lets-talk/>Contact</a>
-        </div>
-        <div class=sml><a href=https://www.linkedin.com/company/cyber-guardian-consulting-group-llc- class=sml_li>LinkedIn</a></div><img src=m/forbes.svg class=forbesMobile>
-      </div>
-      <style>
-        .bnav .bold {
-          font-size: 24px;
-          font-weight: 700
-        }
-
-        .bnav a {
-          font-family: 'Open Sans', Arial, sans-serif;
-          text-decoration: none !important;
-          font-family: 'N', 'Open Sans', Arial, sans-serif;
-          font-size: 30px !important;
-          line-height: 48px
-        }
-
-        .burgerMenu {
-          display: block;
-          overflow: hidden;
-          width: 100vw;
-          position: absolute;
-          top: 0;
-          background: #000;
-          height: 100vh;
-          left: 0
-        }
-
-        .close {
-          top: 24px;
-          right: 24px;
-          position: absolute
-        }
-
-        .bueagle {
-          width: 25%;
-          margin: 32px
-        }
-
-        .forbesMobile {
-          position: absolute;
-          width: 25%;
-          bottom: 32px;
-          right: 32px
-        }
-
-        .bnav a {
-          width: 100%;
-          display: block;
-          font-size: 30px;
-          color: #fff
-        }
-
-        .sml {
-          max-width: 259px;
-          position: absolute;
-          bottom: 25px;
-          left: 25px
-        }
-
-        .sml a {
-          font-size: 24px
-        }
-
-        .bnav {
-          width: 85%;
-          position: absolute;
-          left: 32px;
-          top: 15vh;
-          z-index: 5
-        }
-
-        .bnav a:not(.bold) {
-          text-decoration: underline
-        }
-
-        #drop {
-          color: #fff;
-          float: left;
-          line-height: 50px;
-          font-size: 52px;
-          padding-left: 12px
-        }
-
-        .slist a {
-          font-size: 20px !important;
-          line-height: 26px
-        }
-
-        .bus a {
-          width: auto;
-          float: left;
-          max-width: 180px
-        }
-
-        .bus,
-        .slist {
-          overflow: hidden
-        }
-
-        .slist {
-          margin-left: 32px
-        }
-
-        .slickIn {
-          animation-name: slickIn;
-          animation-duration: .3s;
-          animation-fill-mode: forwards
-        }
-
-        .slickOut {
-          animation-name: slickOut;
-          animation-duration: .3s;
-          animation-fill-mode: forwards
-        }
-
-        @keyframes slickIn {
-          from {
-            opacity: 0
-          }
-
-          to {
-            opacity: 1
-          }
-        }
-
-        @keyframes slickOut {
-          from {
-            opacity: 1
-          }
-
-          to {
-            opacity: 0
-          }
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0
-          }
-
-          to {
-            opacity: 1
-          }
-        }
-
-        @keyframes dualFill {
-          from {
-            border-width: 24px 24px 0 0
-          }
-
-          to {
-            border-width: 24px 24px 93vh 156vw
-          }
-        }
-
-        .dualFill {
-          border: solid #2b354e;
-          box-sizing: revert-layer;
-          top: 0;
-          right: 0;
-          background-color: #2b354e;
-          animation: dualFill;
-          animation-duration: 3s;
-          animation-fill-mode: forwards
-        }
-
-        .fadeIn {
-          animation: fadeIn;
-          animation-duration: 3s
-        }
-
-        .burgerMenu .bnav a,
-        .burgerMenu .bnav p,
-        .burgerMenu img {
-          transition: transform 1s ease-in
-        }
-      </style>
-      <script nonce=a34g29914>
-
-
-
-        function it() {
-          document.getElementById("threatsCounter").innerText = "";
-          var e = new Date(2022, 9, 2, 22, 0, 0, 0),
-            t = new Date,
-            r = 2e5 + 2 * (Math.floor(t / 1e3) - Math.floor(e / 1e3));
-          document.getElementById("threatsCounter").innerText = r.toLocaleString()
-        }
-
-        function burger() {
-          const e = document.querySelector(".burgerMenu"),
-            t = document.querySelectorAll(".burgerMenu .bnav a, .burgerMenu img, .burgerMenu .bnav p, .bnav div, .bnav a, .sml");
-          "none" === e.style.display ? (e.style.display = "block", e.classList.remove("slickOut"), e.classList.add("slickIn"), document.querySelector(".burgerMenu .bnav").classList.add("fadeIn"), t.forEach((e => {
-            e.style.transition = "transform 0.8s ease, filter 1.2s ease, border 0.4s ease-in", e.style.transform = "scaleX(20) scaleY(2)", e.style.filter = "blur(16px)", e.style.border = "12px solid white"
-          })), setTimeout((() => {
-            t.forEach((e => {
-              e.style.transform = "scaleX(1) scaleY(1)", e.style.filter = "blur(0px)", e.style.border = "0px solid white"
-            }))
-          }), 100)) : (e.classList.remove("slickIn"), e.classList.add("slickOut"), setTimeout((() => {
-            e.style.display = "none"
-          }), 1e3))
-        }
-
-        function ardown() {
-          document.querySelectorAll('.bnav.fadeIn > a').forEach(e => e.style.display = e.style.display === 'none' ? 'block' : 'none');
-          "none" == document.querySelector(".slist").style.display ? (document.querySelector(".slist").style.display = "block", document.querySelector("#drop").innerText = "-") : (document.querySelector(".slist").style.display = "none", document.querySelector("#drop").innerText = "+")
-        }
-        document.querySelector(".right .m").onclick = burger, document.querySelector(".close").onclick = burger, document.querySelector("#drop").onclick = ardown, setInterval(it, 2e3), document.addEventListener("DOMContentLoaded", (e => {
-          const t = document.getElementById("f1"),
-            r = document.getElementById("subf1");
-          t.addEventListener("submit", (e => {
-            r.disabled = !0, setTimeout((() => {
-              r.disabled = !1
-            }), 2e4)
-          }))
-        }))
-
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-        // Array of headline objects
-        var headlines = [
-          {
-            text: "Nicholas Martin Aims to re-imagine the internet with worldsfastest.com",
-            link: "https://partners.time.com/partners/bcc/nick-martin-aims-to-re-imagine-the-internet-with-worldsfastest.com/?prx_t=2KYJAObptAt_8PA&utm_campaign=216036&ntv_ui=bcdb39b1-6f25-4a3f-b08e-11d9e1499265&ntv_ht=HqqPaQA"
-          },
-          {
-            text: "FileScience: Nick Martin’s mission to secure the cloud’s overlooked data",
-            link: "https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html"
-          },
-          {
-            text: "Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365",
-            link: "https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901"
-          },
-          {
-            text: "Nick Martin: CEO of Cyber Guardian Consulting Group on Security Innovations",
-            link: "https://www.usatoday.com/story/special/contributor-content/2024/10/23/nick-martin-ceo-of-cyber-guardian-consulting-group-on-security-innovations/75810103007/"
-          },
-          {
-            text: "Public Officials Separate Workplace and Personal Online Lives. Hackers Don’t Care.",
-            link: "https://www.wsj.com/articles/public-officials-separate-workplace-and-personal-online-lives-hackers-dont-care-baabc078?st=zLkHRx&reflink=desktopwebshare_permalink"
-          },
-          {
-            text: "Dark-web AI models ould make criminal hackers even more powerful.",
-            link: "https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html"
-          }
-        ];
-        
-        const indicators = document.querySelectorAll('.scroll-track .indicator');
-
-        // Attach click event to each image
-        indicators.forEach((img, index) => {
-          img.addEventListener('click', () => {
-            const headlineIndex = img.getAttribute('data-index-url');
-            const headline = headlines[index % headlines.length];
-            if (headline && headline.link) {
-              window.open(headlines[headlineIndex].link, '_blank');
-            }
-          });
-        });
-        // add another event to add .active class to the .carousel-item corresponding to the hovered image. 
-        indicators.forEach((img, index) => {
-          img.addEventListener('mouseover', () => {
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            carouselItems.forEach((item, itemIndex) => {
-              item.classList.remove('active');
-              if (itemIndex === index % carouselItems.length) {
-                item.classList.add('active');
-              }
-            });
-          });
-        });
-
-        // add another event to remove the .active class when the mouse leaves the image. The Carousel is in front of the images with higher z-index, so we need to remove the active class when the mouse leaves the image's parent .scroll-track
-        const scrollTrack = document.querySelector('.scroll-track');
-        scrollTrack.addEventListener('mouseleave', () => {
-          const carouselItems = document.querySelectorAll('.carousel-item');
-          carouselItems.forEach((item) => {
-            item.classList.remove('active');
-          });
-        });
-        
-        
-
-        var currentIndex = 0;
-        // Select all headlines for desktop (.d) and mobile (.m)
-        var headlineLinks = document.querySelectorAll('.d .news_subtitle a, .m .news_subtitle a');
-
-        function changeHeadline() {
-          // Fade out all headlines
-          headlineLinks.forEach(function(headlineLink) {
-            headlineLink.style.opacity = 0;
-          });
-
-          // After fade-out, update the text and link, then fade in
-          setTimeout(function() {
-            headlineLinks.forEach(function(headlineLink) {
-              headlineLink.href = headlines[currentIndex].link;
-              // Select the contained <h3>
-              var headlineH3 = headlineLink.querySelector('h3');
-              headlineH3.textContent = headlines[currentIndex].text;
-              headlineLink.style.opacity = 1;
-            });
-            // Cycle to the next headline (wrap-around)
-            currentIndex = (currentIndex + 1) % headlines.length;
-          }, 500); // match the CSS transition duration
-        }
-
-        // Change headline every 3 seconds
-        setInterval(changeHeadline, 3000);
-      });
-      </script>
-      <style>
-      .carousel-container {
-        position: relative;
-        width: 100%;
-        margin: 40px auto;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      
-      }
-
-      .title{
-        width: 100%;
-        display: flex;
-        justify-content: start; 
-        font-size: 22px;
-        margin-left: 10px;
-      }
-      .carousel-title {
-        margin: 0 20px;
-        padding-top: 16px;
-        color: white;
-        font-family: n;
-        font-size: 40px;
-        max-width: 627px;
-      }
-      .carousel-title::before{
-        content: attr(data-text-desktop);
-      }
-      .carousel-item p {
-        font-size: 36px;
-      }
-      .carousel-item p {
-        color: white;
-      }
-
-      /* Carousel Animation */
-      .carousel-indicators-wrapper {
-          width: 100%;              /* Or a fixed value like 400px */
-          overflow: hidden;
-          position: relative;
-        }
-
-        .scroll-track {
-          display: flex;
-          width: max-content;       /* Makes it as wide as needed */
-          animation: scroll-left 10s linear infinite;  /* Slower, smoother */
-        }
-
-        .indicator {
-          width: 25%;             /* Match the actual size */
-          margin-right: 40px;       /* Spacing between logos */
-          flex-shrink: 0;
-        }
-
-        /* Keyframes for perfect looping */
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .carousel-indicators-wrapper:hover .scroll-track {
-          animation-play-state: paused;
-        }
-
-      
-      .carousel-quote {
-        width: 100%;
-        height:280px;
-        display: flex;
-        justify-content: end;
-        margin-top: -120px;
-      }
-      
-      .carousel-item {
-        position: absolute;
-        width: 45%;
-        opacity: 0;
-        transition: opacity 0.5s;
-        display: flex;
-        justify-content: center;
-        font-size: 36px;
-        margin: 0 40px;
-        flex-direction: column;
-      }
-      
-      .carousel-item.active {
-        opacity: 1;
-      }
-      .carousel-indicators{
-        overflow-x: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-        width: 90%;
-        margin: 20px;
-        padding-bottom: 24px;
-      }
-      
-      
-      .indicator {
-        width: 270px;
-        height: 110px;
-        cursor: pointer;
-        transition: background-color 0.2s;
-        filter: invert(0.5);
-        opacity: 0.7;
-      }
-      
-      
-      .indicator.active {
-        filter: invert(0);
-        opacity: 1;
-      }
-      
-      .indicator:hover {
-        filter: invert(0);
-        opacity: 1;
-      }
-      
-      /* mobile styling*/
-      
-      @media only screen and (max-width: 600px) and (min-width: 200px) {
-        .carousel-indicators{
-          width: 90%;
-        }
-      
-        .carousel-title::before{
-          content: attr(data-text-mobile);
-        }
-        .carousel-quote {
-        justify-content: center;
-      }
-      
-        .carousel-item {
-        width: 80%;
-        font-size: 26px;
-        margin: 0 20px ;
-        margin-top: 40px;
-      }
-      .carousel-indicators {
-        flex-direction: column;
-      }
-      .carousel-item p {
-    font-size: 24px;
-  }
-  .carousel-container {
-    margin: 0;
-    width: 100%;
-  }
-
-
-
-  /* zone */
-
-
-  .carousel-item.activem {
-          opacity: 1;
-          position: relative;
-          background: #ffffffe3;
-          color: black !important;
-          padding: 12px;
-          margin-right: 0;
-          margin-left: 0;
-          width: 100%;
-          border-radius: 12px;
-          transition: opacity 0s;
-        }
-        .carousel-item p {
-          color: black;
-        }
-        .carousel-quote {
-          height: 360px;
-          margin-top: 0;
-        }
-        .section.wehelp .col-12.news_section {
-          width:90% !important;
-        }
-        .indicator {
-          width: 120px;
-          height: 60px;
-          margin-right: 10px;
-        }
-        .scroll-track {
-          margin-top: 12px;
-        }
-      }
-      
-      </style>
-      <div class="section wehelp">
-        <div class="col-12 news_section">
-          <div class="carousel-container">
-            <div class="title"><p class="carousel-title" data-text-desktop="These prominent news outlets are buzzing about us and our products!" data-text-mobile="Media Highlights"></p></div>
-              <div class="carousel-quote">
-                <div class="carousel-item" aria-hidden="false">
-                  <p role="heading" aria-level="2">"FileScience: Nick Martin’s mission to secure the cloud’s overlooked data"  </p>
-                  <span role="heading" aria-level="3">— The Independent</span>
-                </div>
-                <div class="carousel-item" aria-hidden="true">
-                  <p role="heading" aria-level="2">"Practical Strategies for Securing Cloud Data and Microsoft 365"   </p>
-                  <span role="heading" aria-level="3">— USA Today</span>
-                </div>
-                <div class="carousel-item" aria-hidden="true">
-                  <p role="heading" aria-level="2">"Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365"  </p>
-                  <span role="heading" aria-level="3">— The Jerusalem Post</span>
-                </div>
-                <div class="carousel-item" aria-hidden="true">
-                  <p role="heading" aria-level="2">"Nick Martin Aims to Re-Imagine the Internet" </p>
-                  <span role="heading" aria-level="3">— Time</span>
-                </div>
-                <div class="carousel-item" aria-hidden="true">
-                  <p role="heading" aria-level="2">"Public Officials Separate Workplace and Personal Online Lives. Hackers Don’t Care." </p>
-                  <span role="heading" aria-level="3">— The Wall Street Journal</span>
-                </div>
-                <div class="carousel-item" aria-hidden="true">
-                  <p role="heading" aria-level="2">"Dark-web AI models could make criminal hackers even more powerful." </p>
-                  <span role="heading" aria-level="3">— Market Watch</span>
-                </div>
-              </div>
-              <div class="carousel-indicators-wrapper">
-                <div class="scroll-track">
-                  <img src="independent.svg" aria-label="The Independent" role="button" tabindex="0" class="indicator" data-index-url="1" >
-                  <img src="usa_today.svg" aria-label="USA Today" role="button" tabindex="0" class="indicator" data-index-url="3" >
-                  <img src="the_jp.svg" aria-label="The Jerusalem Post" role="button" tabindex="0" class="indicator active" data-index-url="2" >
-                  <img src="time.svg" aria-label="The Time" role="button" tabindex="0" class="indicator" data-index-url="0" >
-                  <img src="wsj.svg" aria-label="Wall Street Journal" role="button" tabindex="0" class="indicator" data-index-url="4" >
-                  <img src="marketwatch.svg" aria-label="MarketWatch" role="button" tabindex="0" class="indicator" data-index-url="5" >
-                  <img src="independent.svg" aria-label="The Independent" role="button" tabindex="0" class="indicator" data-index-url="1" >
-                  <img src="usa_today.svg" aria-label="USA Today" role="button" tabindex="0" class="indicator" data-index-url="3" >
-                  <img src="the_jp.svg" aria-label="The Jerusalem Post" role="button" tabindex="0" class="indicator" data-index-url="2" >
-                  <img src="time.svg" aria-label="The Time" role="button" tabindex="0" class="indicator" data-index-url="0" >
-                  <img src="wsj.svg" aria-label="Wall Street Journal" role="button" tabindex="0" class="indicator" data-index-url="4" >
-                  <img src="marketwatch.svg" aria-label="MarketWatch" role="button" tabindex="0" class="indicator" data-index-url="5" >
-                </div>
-              </div>
-            </div>       
-        </div>
-        <script nonce="a34g29914">
-          
-          const carouselInner = document.querySelector('.carousel-quote');
-          const carouselIndicators = document.querySelectorAll('.indicator');
-          const carouselItems = document.querySelectorAll('.carousel-item');
-          let currentSlide = 0;
-          let intervalId = null;
-
-          function nextSlide() {
-            currentSlide++;
-            if (currentSlide >= carouselItems.length) {
-              currentSlide = 0;
-            }
-            showSlide(currentSlide);
-          }
-          function startInterval() {
-            intervalId = setInterval(nextSlide, 3000);
-          }
-          function showSlide(n) {
-            carouselItems.forEach((items) => {
-              //items.classList.remove('active'); UNCOMMENT THIS LINE TO DISABLE THE ACTIVE CLASS
-            });
-            carouselIndicators.forEach((indicator) => {
-              indicator.classList.remove('active');
-            });
-            //carouselItems[n].classList.add('active'); // UNCOMMENT THIS LINE TO DISABLE THE ACTIVE CLASS
-            carouselIndicators[n].classList.add('active');
-          }
-
-
-          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            console.log("Mobile device detected");
-            // code mobile
-            carouselIndicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-              clearInterval(intervalId);
-              currentSlide = index;
-              showSlide(currentSlide);
-              startInterval();
-            });
-          });
-          startInterval();
-
-          // add class activem to each carousel-item for 5 seconds then remove it and add it to the next item forever
-          setInterval(() => {
-            carouselItems.forEach((item, index) => {
-              item.classList.remove('activem');
-            });
-            carouselItems[currentSlide].classList.add('activem');
-            currentSlide = (currentSlide + 1) % carouselItems.length;
-          }, 6000);
-
-          }else{
-            // code desktop
-            carouselIndicators.forEach((indicator, index) => {
-            indicator.addEventListener('mouseover', () => {
-              clearInterval(intervalId);
-              currentSlide = index % 6;
-              showSlide(currentSlide);
-            });
-
-            indicator.addEventListener('mouseout', () => {
-              startInterval();
-            });
-          });
-
-          startInterval();
-          }
-
-
-
-        </script>
-
-
-
-        <div class=col-12>
-          <h2>We help to solve a<br>variety of business <br>challenges</h2>
-        </div>
-        <div class="d col-7" style=max-height:1700px><img src=m/z8.svg alt=Animation loading=lazy height=240 width=240></div>
-        <div class=col-5>
-          <div class="helpspot hs1">
-            <h3>Leading<br>your company<br>through every<br>stage</h3>
-            <p class=light role="heading" aria-level="2">Our objective is to deeply understand the challenges organizations face in their day-to-day operations.</p>
-            <div class="col-12 line"></div>
-            <div class=col-12>
-              <div class=arrowLink><a href=/portfolio/><span><svg fill=none height=100 role=Presentation width=100 xmlns=http://www.w3.org/2000/svg>
-                      <circle cx=50 cy=50.5 fill=#F2F2F2 r=50 />
-                      <path d="M76 51.6c.6-.6.6-1.6 0-2.2L66.6 40a1.5 1.5 0 1 0-2.1 2.1l8.5 8.5-8.5 8.5a1.5 1.5 0 1 0 2.1 2.1l9.6-9.5ZM27 52h48v-3H27v3Z" fill=#2B354E />
-                    </svg></span>
-                  <p role="heading" aria-level="2">See how CGCG significantly optimized iBUILT’s operations and security posture.</p>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="d col-7" style=max-height:1700px><img src=m/z9.svg alt=Animation loading=lazy height=240 width=240></div>
-        <div class=col-5>
-          <div class="helpspot hs2">
-            <h3>Continuous Audit – Zero Trust</h3>
-            <p class=light>A methodology for controlling and preventing most cyber threats that was developed by CGCG.<br>A continuous audit of enterprise security helps to monitor the status and receive a report and statistics from all levels of enterprise security. As a result of the implementation of our unique methodology, you will receive analytics and an assessment of the status of all levels of security on a daily basis, monitor the dynamics and weaknesses of the company's cyber defense, and more – we provide you peace of mind as you focus on what's important.</p>
-            <div class="col-12 line"></div>
-            <div class=col-12>
-              <div class=arrowLink><a href=/portfolio/><span><svg fill=none height=100 role=Presentation width=100 xmlns=http://www.w3.org/2000/svg>
-                      <circle cx=50 cy=50.5 fill=#F2F2F2 r=50 />
-                      <path d="M76 51.6c.6-.6.6-1.6 0-2.2L66.6 40a1.5 1.5 0 1 0-2.1 2.1l8.5 8.5-8.5 8.5a1.5 1.5 0 1 0 2.1 2.1l9.6-9.5ZM27 52h48v-3H27v3Z" fill=#2B354E />
-                    </svg></span>
-                  <p role="heading" aria-level="2">See how CGCG helped entities like the Town of Marbletown government protect against a cyber attack.</p>
-                </a></div>
-            </div>
-          </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Cybersecurity</summary>
+    <div class="nav-drawer-links">
+      <a href="cybersecurity-solutions/">Cybersecurity Solutions</a>
+      <a href="socas/">SOC as a Service</a>
+      <a href="cisoaas/">CISO as a Service</a>
+      <a href="private-digital-investigations/">Private Digital Investigations</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Operations</summary>
+    <div class="nav-drawer-links">
+      <a href="cioas/">CIO as a Service</a>
+      <a href="ctoas/">CTO as a Service</a>
+      <a href="erp-solutions/">ERP Solutions</a>
+      <a href="app-development/">App Development</a>
+      <a href="reputation-management/">Reputation Management</a>
+      <a href="recycling-charity/">Recycling &amp; Charity</a>
+    </div>
+  </details>
+  <details class="nav-drawer-section">
+    <summary>Company</summary>
+    <div class="nav-drawer-links">
+      <a href="about/">About</a>
+    </div>
+  </details>
+</div>
+
+  <main id="main-content">
+  <section class="hero">
+
+    <div id="svgWrap" aria-hidden="true">
+
+
+</div>
+
+    <h1 class="hero-headline">Solutions made to make your business thrive</h1>
+
+    <div class="hero-bottom">
+      <div class="hero-intro">
+        <p class="hero-desc">Security-first IT, proactive support, and reliable infrastructure built to eliminate downtime and risk. Expert advisory, robust security, scalable cloud backups, and hands-on cabling–24/7 support to drive efficiency and eliminate risks.</p>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="/contact">Let's Talk</a>
+          <a class="btn-secondary" href="managed-it-services/">Explore Services</a>
         </div>
       </div>
-      <div class="section whymanaged">
-        <div class=col-6>
-          <h2>Why <span style=color:#f2c94c>Managed IT</span> is important</h2>
-          <p role="heading" class=light aria-level="2">Whether you have employees on-site handling IT or not – working with CGCG ensures an efficient and rapid improvement of your IT environment and processes within it. We frequently work with and augment in-place teams and have a proven track record of improving metrics that matter the most to companies.</p>
-          <div class=line></div>
-          <div class=col-12>
-            <div class=arrowLink><a href=/managed-it-services/ aria-label="Learn more about our services"><span></span><svg aria-hidden="true" fill=none height=100 role=Presentation width=100 xmlns=http://www.w3.org/2000/svg>
-                  <circle cx=50 cy=50.5 fill=#F2F2F2 r=50 />
-                  <path d="M76 51.6c.6-.6.6-1.6 0-2.2L66.6 40a1.5 1.5 0 1 0-2.1 2.1l8.5 8.5-8.5 8.5a1.5 1.5 0 1 0 2.1 2.1l9.6-9.5ZM27 52h48v-3H27v3Z" fill=#2B354E />
-                </svg>
-                <p role="heading" aria-level="2">Our IT Services</p>
-              </a></div>
-          </div>
+      <div class="stats-box">
+        <div>
+          <div class="stat-value">$30B</div>
+          <div class="stat-label">combined valuation of companies we saved from cyber attacks</div>
         </div>
-        <div class="d col-6"><img src=m/h5.svg alt=Animation loading=lazy height=800 width=800></div>
-      </div>
-      <div class="section stats">
-        <div class="col-12 line"></div>
-        <div class=col-4>
-          <h2>$30B</h2>
-          <p class="light large" role="heading" aria-level="2">combined valuation of companies we saved from cyber attacks</p>
+        <div>
+          <div class="stat-value">$20M</div>
+          <div class="stat-label">lost from cyber threats everyday</div>
         </div>
-        <div class=col-4>
-          <h2>$<span>20</span>M</h2>
-          <p class="light large">lost from cyber threats everyday</p>
+        <div>
+          <div class="stat-value">224,100,8</div>
+          <div class="stat-label">threats prevented by us since the beginning of 2025</div>
         </div>
-        <div class=col-4>
-          <h2 id=threatsCounter>200,000</h2>
-          <p class="light large">threats prevented</p>
-        </div>
-      </div>
-      <div class="section partners">
-        <div class=col-12>
-          <h2>Partners</h2>
-        </div>
-        <div class="line col-2"></div>
-        <div class=col-10>
-          <p role="heading" aria-level="2">When you're part of Cyber Guardian, we are part of your team.</p>
-        </div>
-        <div class=col-10><img src=m/h7.svg alt="Partners Logos" loading=lazy class=d><img src=m/h7m.svg alt="Partners Logos" loading=lazy class=m></div>
-      </div>
-      <div class="section contact">
-        <div class=col-6><a href=tel:+18447242424>
-            <h2>844-724-2424</h2>
-          </a>
-          <p role="heading" aria-level="2" class="bold dpin"><img role="presentation" src=m/dpin.svg loading=lazy height=32 width=32> Hudson Valley</p>
-          <p role="heading" aria-level="2" class="bold dpin"><img role="presentation" src=m/dpin.svg loading=lazy height=32 width=32> Hudson Yards</p>
-          <p role="heading" aria-level="2" class="bold dpin"><img role="presentation" src=m/dpin.svg loading=lazy height=32 width=32> Brooklyn</p><a href=mailto:hello@cgcg.biz>hello@cgcg.biz</a>
-        </div>
-        <div class=col-6>
-          <form action=https://cgnew.wpengine.com/apis/cgcg/form/home/ id=f1 method=POST onsubmit="return bts.disabled=!0"><input name=name aria-label="Your Name" placeholder="Your Name"><input name=bname aria-label="Business Name" placeholder="Business Name"><input name=phone aria-label=Phone placeholder=Phone type=tel><input name=email aria-label=Email placeholder=Email type=email><input name=message aria-label="Your Message" placeholder=Message><input name=companysize aria-label="Company Size" placeholder="Company Size" style=display:none!important><input name=bts type=submit id=subf1 value=Send></form>
-        </div>
-      </div>
-    </main>
-    <div class="section footer" role="navigation">
-      <div class=col-3><a aria-current="page" href=https://cgcg.biz/>
-          <p role="heading" aria-level="2" class=bold>Home</p>
-        </a><a href=/about/>About CGCG</a><a href=/about/>Team</a><a href=/portfolio/>Clients</a><a href="/careers/">Careers</a></div>
-      <div class=col-3><a href=/managed-it-services/>Managed IT Services</a><a href=/cybersecurity-solutions/>Cybersecurity Solutions</a><a href=/socas/>SOCaaS</a><a href=/cioas/>CIOaaS</a><a href=/ctoas/>CTOaaS</a><a href=/cisoaas/>CISOaaS</a><a href=https://filescience.io aria-label="Cloud-to-Cloud Backup (opens in a new tab)" target=_blank>Cloud-to-Cloud Backup</a><a href=https://switchboard-plus.com/ aria-label="Business Phone (opens in a new tab)" target=_blank>Business Phone</a><a href="/clio">Clio Integration</a></div>
-      <div class=col-3><a href=/low-voltage-cabling/>Low Voltage Cabling</a><a href=/app-development/>App Development</a><a href=/door-access-control/>Door Access Control</a><a href=/NaaS/>Network-as-a-service</a><a href=/cloud-based-security-cameras/>Cloud-Based Security Cameras</a><a href=/recycling-charity/>Recycling & Charity</a><a href=/reputation-management/>Reputation Management</a><a href=/private-digital-investigations/>Private Digital Investigations</a><a href="../erp-solutions/">ERP Solutions</a><a href="../healthcare-it/">Healthcare IT</a><a href="../erp-unit4/">Unit4</a></div>
-      <div class="col-3 e"></div>
-      <div class=col-12>
-        <div class=col-3><a href=/resources/>
-            <p role="heading" aria-level="2" class=bold>Resources</p>
-          </a></div>
-        <div class=col-3><a href=/lets-talk/>
-            <p role="heading" aria-level="2" class=bold>Contact</p>
-          </a></div>
       </div>
     </div>
-    <style>
-      .bold.dpin img {
-        width: 32px;
-        display: inline-block;
-        margin-bottom: -8px
-      }
 
-      .wehelp .col-7 {
-        position: relative;
-        z-index: -1
-      }
+  </section>
 
-      .section.wehelp {
-        margin: 0;
-        width: 100%;
-        padding-bottom: 0
-      }
+<section class="partners-marquee" aria-label="Certifications and Partnerships">
+  <p class="pm-label">Certifications &amp; Partnerships</p>
+  <div class="pm-viewport" aria-hidden="true">
+    <div class="pm-track">
 
-      .section.wehelp .col-12 {
-        width: 75%;
-        margin: 0 auto;
-        display: block;
-        float: unset;
-        overflow:hidden;
-      }
+      <!-- ── SET 1 ── -->
+      <div class="pm-item"><img src="imgs/logos/Frame.svg" alt="IBM" height="28" width="69"></div>
+      <div class="pm-item"><img src="imgs/logos/Vector-1.svg" alt="Amazon AWS" height="22" width="107"></div>
+      <div class="pm-item"><img src="imgs/logos/Google_2015_logo%201.svg" alt="Google Cloud" height="24" width="72"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-4.svg" alt="GoDaddy" height="28" width="55"></div>
+      <div class="pm-item"><img src="imgs/logos/Group.svg" alt="Microsoft" height="28" width="28"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-1.svg" alt="Cisco" height="36" width="63"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-5.svg" alt="U.S. Dept. of Homeland Security" height="36" width="36"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-2.svg" alt="Spectrum" height="20" width="96"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-3.svg" alt="IAPP" height="28" width="68"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-2.svg" alt="APWG" height="28" width="90"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-3.svg" alt="ISACA" height="36" width="36"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-1.svg" alt="Identity Management Institute" height="32" width="32"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-4.svg" alt="(ISC)²" height="28" width="59"></div>
+      <div class="pm-item"><img src="imgs/logos/Vector.svg" alt="ACFE" height="36" width="36"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-6.svg" alt="IIA" height="32" width="40"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-7.svg" alt="OWASP" height="36" width="37"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-8.svg" alt="WiCyS" height="28" width="65"></div>
+
+      <!-- ── SET 2 (duplicate for seamless loop) ── -->
+      <div class="pm-item"><img src="imgs/logos/Frame.svg" alt="IBM" height="28" width="69"></div>
+      <div class="pm-item"><img src="imgs/logos/Vector-1.svg" alt="Amazon AWS" height="22" width="107"></div>
+      <div class="pm-item"><img src="imgs/logos/Google_2015_logo%201.svg" alt="Google Cloud" height="24" width="72"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-4.svg" alt="GoDaddy" height="28" width="55"></div>
+      <div class="pm-item"><img src="imgs/logos/Group.svg" alt="Microsoft" height="28" width="28"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-1.svg" alt="Cisco" height="36" width="63"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-5.svg" alt="U.S. Dept. of Homeland Security" height="36" width="36"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-2.svg" alt="Spectrum" height="20" width="96"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-3.svg" alt="IAPP" height="28" width="68"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-2.svg" alt="APWG" height="28" width="90"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-3.svg" alt="ISACA" height="36" width="36"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-1.svg" alt="Identity Management Institute" height="32" width="32"></div>
+      <div class="pm-item"><img src="imgs/logos/Group-4.svg" alt="(ISC)²" height="28" width="59"></div>
+      <div class="pm-item"><img src="imgs/logos/Vector.svg" alt="ACFE" height="36" width="36"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-6.svg" alt="IIA" height="32" width="40"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-7.svg" alt="OWASP" height="36" width="37"></div>
+      <div class="pm-item"><img src="imgs/logos/Frame-8.svg" alt="WiCyS" height="28" width="65"></div>
+
+    </div>
+  </div>
+</section>
+
+
+  <section class="services">
+
+    <div class="services-left">
+      <h2>We create a <span class="accent">Unified</span> System</h2>
+      <p class="services-desc">CGCG operates as a connected system across infrastructure, security, and operations. Every request activates multiple layers at once — coordinated, monitored, and continuously optimized.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <a class="svc-card" href="infrastructure-connectivity">
+        <div class="svc-card-top">
+          <h3>Infrastructure</h3>
+          <span class="svc-arrow">↗</span>
+        </div>
+        <p>Devices, networks, and environments managed as one connected layer — stable, scalable, aligned with how your business actually runs.</p>
+      </a>
+
+      <a class="svc-card" href="cybersecurity">
+        <div class="svc-card-top">
+          <h3>Cybersecurity</h3>
+          <span class="svc-arrow">↗</span>
+        </div>
+        <p>Continuous protection across endpoints, identities, and data. Always active, never isolated, always verified.</p>
+      </a>
+
+      <a class="svc-card" href="operations">
+        <div class="svc-card-top">
+          <h3>Operations</h3>
+          <span class="svc-arrow">↗</span>
+        </div>
+        <p>Internal processes, automation, and hands-on execution working in parallel with every request you raise.</p>
+      </a>
+
+      <a class="svc-card" href="data">
+        <div class="svc-card-top">
+          <h3>Data</h3>
+          <span class="svc-arrow">↗</span>
+        </div>
+        <p>Backup, recovery, and integrity engineered into every layer — so a bad day never becomes a bad quarter.</p>
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="pulse-sec" id="guardian-pulse">
+    <div class="pulse-grid">
+
+      <div>
+        <div class="pulse-eyebrow">Live · Guardian Pulse</div>
+        <h2 class="pulse-title">Always<br><em>watching.</em><br>Always on.</h2>
+        <p class="pulse-sub">Your infrastructure sits inside four concentric defense domains — identity, endpoint, network, and cloud. Each domain is instrumented, monitored, and self-healing. Attackers don't meet one wall; they meet a system that's already moving.</p>
+        <p class="pulse-sub active-line">
+          <strong data-pulse-active-name="">Endpoint &amp; Device.</strong>
+          <span class="active-desc" data-pulse-active-desc="">EDR, AV, device posture, encryption everywhere.</span>
+        </p>
+        <div class="pulse-stats">
+          <div><div class="pulse-stat-val">247</div><div class="pulse-stat-lbl">Threats neutralized (last hour)</div></div>
+          <div><div class="pulse-stat-val">4 min</div><div class="pulse-stat-lbl">Avg. P1 response time</div></div>
+          <div><div class="pulse-stat-val">99.98%</div><div class="pulse-stat-lbl">Uptime — 12mo rolling</div></div>
+        </div>
+      </div>
+
+      <div class="pulse-stage">
+        <div class="pulse-radar">
+          <svg viewBox="0 0 600 600" aria-hidden="true">
+            <defs>
+              <radialGradient id="pulseCore" cx="50%" cy="50%">
+                <stop offset="0%"   stop-color="#C8FF47" stop-opacity="0.9"/>
+                <stop offset="60%"  stop-color="#C8FF47" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#C8FF47" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#C8FF47" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#C8FF47" stop-opacity="0.55"/>
+              </linearGradient>
+              <filter id="pulseGlow"><feGaussianBlur stdDeviation="3"/></filter>
+            </defs>
+            <g id="pulse-grid-lines"></g>
+            <g id="pulse-rings"></g>
+            <g id="pulse-sweep">
+              <path d="M 300 300 L 585 300 A 285 285 0 0 0 495 100 Z" fill="url(#sweepGrad)" opacity="0.4"/>
+              <line x1="300" y1="300" x2="585" y2="300" stroke="#C8FF47" stroke-width="1.5" opacity="0.75"/>
+            </g>
+            <g id="pulse-blips"></g>
+            <circle cx="300" cy="300" r="60" fill="url(#pulseCore)"/>
+            <circle cx="300" cy="300" r="14" fill="#C8FF47" filter="url(#pulseGlow)"/>
+            <circle cx="300" cy="300" r="6"  fill="#1E1F21"/>
+            <circle cx="300" cy="300" r="22" fill="none" stroke="#C8FF47" stroke-opacity="0.5">
+              <animate attributeName="r" from="22" to="70" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="stroke-opacity" from="0.7" to="0" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+          <div id="pulse-labels"></div>
+        </div>
+        <div class="pulse-legend">
+          <span><i class="lg-a"></i>Neutralized</span>
+          <span><i class="lg-b"></i>Flagged</span>
+          <span><i class="lg-c"></i>Under watch</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── IN THE PRESS ── -->
+  <section class="press" id="press" aria-label="In the press">
+    <div class="press-head">
+      <div>
+        <div class="press-eyebrow">In the press</div>
+        <h2 class="press-title">These prominent news outlets are <em>buzzing about us</em> and our work.</h2>
+      </div>
+      <div class="press-count"><strong>40+</strong> Features &amp; mentions</div>
+    </div>
+    <div class="press-viewport">
+      <div class="press-track" role="group" aria-label="Press quotes carousel">
+        <!-- ── SET 1 (real press, links to articles) ── -->
+        <a class="press-card" href="https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html" target="_blank" rel="noopener">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">The Independent</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>FileScience: Nick Martin's mission to secure the cloud's overlooked data</p>
+        </a>
+        <a class="press-card is-cream" href="https://www.forbes.com/councils/forbesbusinesscouncil/2025/02/03/practical-strategies-for-securing-cloud-data-and-microsoft-365/" target="_blank" rel="noopener">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">Forbes</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Practical Strategies for Securing Cloud Data and Microsoft 365</p>
+        </a>
+        <a class="press-card" href="https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901" target="_blank" rel="noopener">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">The Jerusalem Post</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365</p>
+        </a>
+        <a class="press-card is-cream" href="https://time.com/branded-content/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest-com/" target="_blank" rel="noopener">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif-old">Time</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Nick Martin Aims to Re-Imagine the Internet</p>
+        </a>
+        <a class="press-card" href="https://www.wsj.com/articles/public-officials-separate-workplace-and-personal-online-lives-hackers-dont-care-baabc078" target="_blank" rel="noopener">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">The Wall Street Journal</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Public Officials Separate Workplace and Personal Online Lives. Hackers Don't Care.</p>
+        </a>
+        <a class="press-card is-cream" href="https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html" target="_blank" rel="noopener">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-condensed">MarketWatch</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Dark-web AI models could make criminal hackers even more powerful.</p>
+        </a>
+
+        <!-- ── SET 2 (duplicate for seamless loop) ── -->
+        <a class="press-card" href="https://www.independent.co.uk/news/business/cloud-data-protection-backup-ransomware-corruption-b2635494.html" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">The Independent</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>FileScience: Nick Martin's mission to secure the cloud's overlooked data</p>
+        </a>
+        <a class="press-card is-cream" href="https://www.forbes.com/councils/forbesbusinesscouncil/2025/02/03/practical-strategies-for-securing-cloud-data-and-microsoft-365/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">Forbes</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Practical Strategies for Securing Cloud Data and Microsoft 365</p>
+        </a>
+        <a class="press-card" href="https://www.jpost.com/special-content/nick-martin-leads-in-pioneering-cybersecurity-innovations-for-identity-in-microsoft-365-823901" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">The Jerusalem Post</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Nick Martin leads in pioneering cybersecurity innovations for identity in Microsoft 365</p>
+        </a>
+        <a class="press-card is-cream" href="https://time.com/branded-content/bcc/nicholas-martin-aims-to-re-imagine-the-internet-with-worldsfastest-com/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif-old">Time</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Nick Martin Aims to Re-Imagine the Internet</p>
+        </a>
+        <a class="press-card" href="https://www.wsj.com/articles/public-officials-separate-workplace-and-personal-online-lives-hackers-dont-care-baabc078" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-serif">The Wall Street Journal</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Public Officials Separate Workplace and Personal Online Lives. Hackers Don't Care.</p>
+        </a>
+        <a class="press-card is-cream" href="https://www.marketwatch.com/video/ai-promise-or-peril/dark-web-ai-models-could-make-criminal-hackers-even-more-powerful/AC868949-E37E-43A1-BFA9-10B8A3C7C52F.html" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <div class="press-card-top">
+            <span class="press-outlet-name is-condensed">MarketWatch</span>
+            <span class="press-arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="press-quote"><span class="press-quote-open">“</span>Dark-web AI models could make criminal hackers even more powerful.</p>
+        </a>
+
       
-        .news_title {
-        font-family: n;
-        font-size: 27px;
-        line-height: 35px;
-        margin-bottom: 40px;
-        padding-bottom: 12px;
-        border-bottom: 1.33px solid #D9D9D9;
-        }
-        .news_title.m {
-          font-size:22px;
-          font-family: l, 'Open Sans', Arial;
-          padding-left:0 !important;
-        }
-        .news p {
-            font-family: l, 'Open Sans', Arial;
-            text-align: left;
-            font-size: 24px;
-            margin-top: 12px;
-        }
-      .news {
-        width: 25%;
-        padding: 12px;
-        display: block;
-        float: left;
-        overflow: hidden;
-        }
-       .news img {
-            height: auto !important;
-        }
-        
-      .news_subtitle {
-        display: block;
-        width: 100%;
-        overflow: hidden;
-      }
-      .news, .news a {
-        display: flex;
-        align-content: center;
-        min-height: 250px;
-        align-items: center;
-      }
-      .col-12.news_section {
-          color: #000;
-          border-radius: 20px;
-        }
-        .col-12.news_section.m {
-          background: #f4f4f4;
-        }
-        .section.wehelp .col-12.news_section {
-          width: 80%;
-          padding: 20px;
-        }
-        .news a {
-          display: flex;
-        }
-        .news_section h3 {
-          text-align: left;
-          font-size: 48px;
-          font-family: n;
-          color: #272727;
-          font-weight: lighter;
-          max-width: 875px;
-          float: right;
-        }
-      .col-5 div.helpspot .col-12 {
-        margin: 0
-      }
-
-      h3 {
-        font-size: 64px;
-        margin-bottom: 0
-      }
-
-      .helpspot p {
-        width: 67%
-      }
-
-      .helpspot .arrowLink p,
-      .whymanaged .arrowLink p {
-        display: inline-block;
-        vertical-align: top;
-        margin-left: 12px;
-        font-size: 30px;
-        margin-top: 0;
-        width: calc(100% - 118px)
-      }
-
-      .helpspot .arrowLink,
-      .whymanaged .arrowLink {
-        margin-top: 32px
-      }
-
-      .helpspot {
-        margin-left: -20%;
-        margin-top: 20%
-      }
-
-      .whymanaged .arrowLink p {
-        margin-top: 25px
-      }
-
-      .section.whymanaged {
-        margin-bottom: 80px
-      }
-
-      .section.stats .col-4 {
-        padding: 10px 0
-      }
-
-      .section.stats h2 {
-        margin-top: 0
-      }
-
-      .stats .large {
-        width: 60%
-      }
-
-      .testimonials {
-        min-height: 500px
-      }
-
-      .testimonial {
-        overflow: hidden;
-        clear: both;
-        position: absolute
-      }
-
-      .testimonial .line {
-        border-bottom: 3px solid #fff
-      }
-
-      .testimonial .bold,
-      .testimonial .large {
-        margin-top: 8px;
-        margin-left: 3px
-      }
-
-      .testimonials img {
-        margin-left: -120px
-      }
-
-      .section.whymanaged img {
-        max-width: 100%
-      }
-
-      .testimonial>p {
-        font-size: 38px;
-        line-height: 40px
-      }
-
-      .section.partners p {
-        margin-top: 8px;
-        margin-left: 12px
-      }
-
-      .t1 {
-        animation: d1 10s infinite
-      }
-
-      .t2 {
-        animation: d2 10s infinite
-      }
-
-      @keyframes d1 {
-        0% {
-          opacity: .1
-        }
-
-        10% {
-          opacity: .9
-        }
-
-        50% {
-          opacity: 1
-        }
-
-        60% {
-          opacity: 0
-        }
-
-        100% {
-          opacity: 0
-        }
-      }
-
-      @keyframes d2 {
-        0% {
-          opacity: 0
-        }
-
-        50% {
-          opacity: 0
-        }
-
-        60% {
-          opacity: 1
-        }
-
-        90% {
-          opacity: .9
-        }
-
-        100% {
-          opacity: 0
-        }
-      }
-
-      .section.contact h2 {
-        font-size: 55px;
-        color: #2b354e
-      }
-
-      .section.contact {
-        padding: 4% 12.5%;
-        margin: 0;
-        width: 100%;
-        background: #fff
-      }
-
-      form {
-        display: block;
-        text-align: center
-      }
-
-      .section.contact,
-      .section.contact a {
-        color: #2b354e
-      }
-
-      input {
-        width: 80%;
-        border: 0;
-        height: 48px;
-        color: #000;
-        opacity: 1;
-        font-family: 'Open Sans', Arial;
-        font-size: 24px;
-        border-bottom: 1px solid #000;
-        margin-bottom: 6px;
-        -webkit-appearance: none
-      }
-
-      .section.partners {
-        padding-bottom: 25px
-      }
-
-      .section.footer a,
-      .section.footer p {
-        width: 100%;
-        display: block;
-        margin-top: 0;
-        margin-bottom: 5px
-      }
-
-      .section.footer {
-        background-color: #000;
-        padding: 4% 12.5%;
-        margin: 0;
-        width: 100%
-      }
-
-      .section.footer .col-12 {
-        margin-top: 24px
-      }
-
-      .line+[class*=col-] p {
-        font-size: 24px
-      }
-
-      @media screen and (max-width:900px) {
-        h3 {
-          font-size: 44px
-        }
-
-        div.helpspot {
-          padding: 32px;
-          margin: 0 !important
-        }
-
-        .helpspot p,
-        .whymanaged .arrowLink p {
-          width: 100%
-        }
-
-        .helpspot svg,
-        .whymanaged svg {
-          transform: translateX(-25%) translateY(-10%) scale(.5);
-          float: left
-        }
-
-        .section.wehelp .col-12 {
-          width: 100%;
-          margin: 0 auto;
-          display: block;
-          float: unset
-        }
-        
-        .news {
-        width: 100%;
-        margin: 0 auto;
-        }
-        .news img, .news p {
-        margin: 0 auto;
-        display: block;
-        width: 353px;
-        }
-        .news_title {
-        font-size: 32px;
-        line-height: 40px;
-        }
-        .news_subtitle h3 {
-          font-size: 24px;
-          font-family: n, 'Open Sans', Arial;
-        }
-        .section.whymanaged svg+p {
-          font-size: 28px
-        }
-
-        .helpspot .arrowLink p,
-        .whymanaged .arrowLink p {
-          display: inline-block;
-          vertical-align: top;
-          margin-left: 0;
-          font-size: 18px;
-          margin-top: 0;
-          width: calc(100% - 104px)
-        }
-
-        .whymanaged .arrowLink p {
-          margin-top: 20px
-        }
-
-        .section.wehelp .col-12 h2 {
-          padding: 36px
-        }
-
-        .section.wehelp .col-12 h2 br {
-          display: none
-        }
-
-        .section.wehelp {
-          background: url(m/h4.svg);
-          background-position: 100% 0;
-          background-repeat: no-repeat
-        }
-
-        .stats .large {
-          width: 100%
-        }
-
-        .testimonial>p {
-          font-size: 32px;
-          line-height: 30px
-        }
-
-        .testimonials {
-          min-height: 800px
-        }
-
-        .testimonial {
-          max-width: 80vw
-        }
-
-        .testimonials img {
-          margin-left: -50px
-        }
-
-        .section.contact h2 {
-          font-size: 34px
-        }
-
-        form {
-          text-align: left
-        }
-
-        input {
-          width: 100%
-        }
-
-        .section.footer .col-3 {
-          margin-bottom: 18px
-        }
-
-        .section.partners p {
-          margin-left: 0
-        }
-
-        .section.contact .col-6 {
-          margin-bottom: 48px
-        }
-
-        .section.stats .line {
-          display: none
-        }
-
-        .section.whymanaged {
-          margin-bottom: 20px
-        }
-      }
-      .carousel-item span {
-          text-align: right;
-          font-size: 24px;
-          margin-top: 0;
-          color: #636161;
-          font-weight: 600;
-          font-family: l;
-        }
-      @media screen and (min-width:900px) {
-        .col-4.missionItem .bold {
-          font-size: 32px;
-          font-weight: bolder
-        }
-        
-        .carousel-quote .carousel-item {
-          background: #ffffffee;
-          padding: 6px 14px;
-          min-height: 260px;
-          margin-top: 20px;
-          z-index: 55;
-          margin-right: 0;
-        }
-        .carousel-item span {
-          text-align: right;
-          font-size: 24px;
-          margin-top: 0;
-          color: #636161;
-          font-weight: 600;
-          font-family: l;
-          margin-top: 16px;
-        }
-        .carousel-quote .carousel-item p {
-          font-size: 32px;
-          padding: 4px 12px;
-          color: black;
-          margin-top: 16px;
-          margin-bottom: 16px;
-        }
-        .col-4.missionItem p,
-        .helpspot h3+p,
-        .section.whymanaged h2+p {
-          font-size: 24px;
-          font-weight: lighter
-        }
-
-        .section.stats .line {
-          margin-bottom: 48px
-        }
-
-        .section.wehelp .col-7.d img {
-          width: 75%;
-          margin-top: 64px;
-          max-width: 580px;
-          margin: 64px auto !important;
-          display: block;
-          top: 64px;
-          position: relative
-        }
-
-        .section.whymanaged {
-          margin-top: -10px
-        }
-
-        .section.whymanaged .col-6.d img {
-          width: 80%;
-          margin: 0 auto;
-          display: block
-        }
-
-        .testimonial>p {
-          max-width: 90%
-        }
-
-        .col-4.missionItem p:not(.bold) {
-          width: 80%
-        }
-
-        .section.whymanaged .col-6.d img {
-          margin-top: 66px
-        }
-
-        .section.stats h2 {
-          font-size: 78px
-        }
-        .carousel-title {
-            margin: 0 20px;
-            padding-top: 16px;
-            color: white;
-            font-family: n;
-            font-size: 40px;
-            max-width: 627px;
-            font-size: 64px;
-            max-width: 1000px;
-        }
-
-
-      }
-
-      .section.footer a {
-        font-family: 'Open Sans', Arial
-      }
-
-      .section.footer a p.bold {
-        font-size: 26px
-      }
-
-      .section.contact p.bold {
-        font-size: 26px
-      }
-
-      .section.contact {
-        padding-top: 64px
-      }
-
-      .section.partners {
-        margin-bottom: 48px
-      }
-
-      input[type=submit] {
-        -webkit-appearance: none !important;
-        -moz-appearance: none !important;
-        appearance: none !important;
-        background-color: #f2f2f2 !important
-      }
-
-      @media screen and (min-width:900px) and (max-width:1500px) {
-        .section.whymanaged {
-          margin-top: -50px
-        }
-
-        .section.stats h2 {
-          font-size: 38px
-        }
-
-        .testimonials {
-          min-height: 700px
-        }
-
-        .nav a {
-          padding-right: 12px
-        }
-      }
-
-/* Wrapper hides overflow and sets the visible width */
-.news_carousel_wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-/* The carousel container: with 8 items (2 sets of 4), it’s 200% wide */
-.news_carousel {
-  display: flex;
-  width: 200%;
-  animation: slideCarousel 10s linear infinite;
-}
-
-/* Pause the carousel when hovered */
-.news_carousel_wrapper:hover .news_carousel {
-  animation-play-state: paused;
-}
-
-/* Animate the carousel from 0 to -50% of its width so one set slides out */
-@keyframes slideCarousel {
-  0% {
-    transform: translateX(0);
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CASE STUDIES ── -->
+  <section class="cases-sec">
+
+    <h2 class="cases-title">How We Solve<br>Real Problems.</h2>
+
+    <div class="cases-card">
+
+      <!-- Case 1 -->
+      <div class="case-row">
+        <div class="case-left">
+          <svg class="case-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- building body -->
+            <rect x="9" y="24" width="46" height="34" rx="1.5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <!-- roof -->
+            <path d="M6 24 L32 7 L58 24" stroke="#1a1a1a" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+            <!-- door -->
+            <rect x="26" y="43" width="12" height="15" rx="1" stroke="#1a1a1a" stroke-width="1.5"/>
+            <!-- windows row 1 (light up in sequence) -->
+            <rect x="12" y="29" width="9" height="8" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:0s"/>
+            <rect x="27.5" y="29" width="9" height="8" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:.6s"/>
+            <rect x="43" y="29" width="9" height="8" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:1.2s"/>
+            <!-- windows row 2 -->
+            <rect x="12" y="40" width="9" height="7" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:1.8s"/>
+            <rect x="43" y="40" width="9" height="7" rx="1" class="bwin" stroke="#1a1a1a" stroke-width="1.3" style="--wd:2.4s"/>
+          </svg>
+          <h3 class="case-name">Construction &amp;<br>Design Firm</h3>
+          <p class="case-desc">Global modular construction company with distributed teams, remote workforce, and large-scale production facilities.</p>
+        </div>
+        <div class="case-right">
+          <div class="case-block">
+            <div class="case-label">Challenges</div>
+            <p>Frequent phishing and malware attacks bypassing cloud security, an overwhelmed internal IT team, and lack of proactive infrastructure management.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Solution</div>
+            <p>Restructured IT with a co-managed model, deployed advanced endpoint protection, upgraded network infrastructure, and rolled out a multi-layered security + monitoring framework.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Impact</div>
+            <p>Email-based threats reduced to near-zero, IT workload significantly offloaded, enterprise-grade proactive environment established.</p>
+          </div>
+          <div class="case-stats">
+            <div><div class="case-stat-val">98%</div><div class="case-stat-lbl">Threats Blocked</div></div>
+            <div><div class="case-stat-val">3.2×</div><div class="case-stat-lbl">Ticket Throughput</div></div>
+            <div><div class="case-stat-val">0</div><div class="case-stat-lbl">Breaches Since</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-row">
+        <div class="case-left">
+          <svg class="case-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- heart (pulsing) -->
+            <path class="heart-ico" d="M32 35 C22 28 11 20 11 13 C11 7 17 5 22 8 C25 10 28 12 32 16 C36 12 39 10 42 8 C47 5 53 7 53 13 C53 20 42 28 32 35 Z" stroke="#1a1a1a" stroke-width="1.7" stroke-linejoin="round"/>
+            <!-- people heads -->
+            <circle cx="18" cy="44" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <circle cx="32" cy="44" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <circle cx="46" cy="44" r="5" stroke="#1a1a1a" stroke-width="1.7"/>
+            <!-- people shoulders -->
+            <path d="M10 59 L10 53 Q18 49 26 53 L26 59" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24 59 L24 53 Q32 49 40 53 L40 59" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M38 59 L38 53 Q46 49 54 53 L54 59" stroke="#1a1a1a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="case-name">Community<br>Center (Nonprofit)</h3>
+          <p class="case-desc">Regional nonprofit serving 12,000 members with limited IT staff and legacy infrastructure across four locations.</p>
+        </div>
+        <div class="case-right">
+          <div class="case-block">
+            <div class="case-label">Challenges</div>
+            <p>Aging endpoints, no centralized backup, repeated ransomware scares, and a single overloaded technician handling everything.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Solution</div>
+            <p>Full device refresh on grant-friendly lease, cloud-to-cloud backups, deployed MDR, and introduced a ticketing + escalation model.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Impact</div>
+            <p>Member-facing systems run uninterrupted, technician freed for strategic work, and the board gained board-ready security reporting.</p>
+          </div>
+          <div class="case-stats">
+            <div><div class="case-stat-val">99.9%</div><div class="case-stat-lbl">Uptime Achieved</div></div>
+            <div><div class="case-stat-val">4×</div><div class="case-stat-lbl">Tech Capacity</div></div>
+            <div><div class="case-stat-val">12k</div><div class="case-stat-lbl">Members Protected</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cases-cta">
+        <a href="case-studies" class="cases-cta-btn">Explore More Case Studies →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── How We Onboard Clients ── -->
+  <section class="process" id="process">
+
+    <div class="process-head">
+      <h2 class="process-title">How we<br>onboard clients.</h2>
+      <p class="process-sub">Most MSP relationships fall apart at handoff. Ours doesn't — because there isn't one. The team that scopes you is the team that runs you.</p>
+    </div>
+
+    <div class="process-timeline" data-process-timeline="">
+      <div class="process-line"></div>
+      <div class="process-progress" data-process-progress=""></div>
+      <div class="process-steps" data-process-steps="">
+
+        <div class="process-step" data-step="0">
+          <div class="dot"></div>
+          <p class="num">01</p>
+          <h3 class="step-title">Discovery</h3>
+          <p class="step-body">We audit your current stack, risks, and gaps — no sales pitch, just a clear picture of where you stand.</p>
+        </div>
+
+        <div class="process-step" data-step="1">
+          <div class="dot"></div>
+          <p class="num">02</p>
+          <h3 class="step-title">Plan</h3>
+          <p class="step-body">We build a 90-day roadmap with your team — prioritized by risk, sequenced by impact, and priced without surprises.</p>
+        </div>
+
+        <div class="process-step" data-step="2">
+          <div class="dot"></div>
+          <p class="num">03</p>
+          <h3 class="step-title">Deploy</h3>
+          <p class="step-body">Our engineers execute the rollout in parallel with your operations. Zero downtime is the standard, not the goal.</p>
+        </div>
+
+        <div class="process-step" data-step="3">
+          <div class="dot"></div>
+          <p class="num">04</p>
+          <h3 class="step-title">Operate</h3>
+          <p class="step-body">24/7 monitoring, patching, and response from day one. You get a named team that knows your environment.</p>
+        </div>
+
+        <div class="process-step" data-step="4">
+          <div class="dot"></div>
+          <p class="num">05</p>
+          <h3 class="step-title">Evolve</h3>
+          <p class="step-body">Quarterly reviews keep your stack ahead of threats and aligned with where your business is going — not where it was.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Industries We Serve ── -->
+  <section class="industries" id="industries">
+
+    <div class="industries-head">
+      <h2 class="industries-title">Industries<br>we serve.</h2>
+      <div>
+        <p class="industries-sub">Regulated, high-stakes, detail-heavy. We specialize where getting IT wrong means more than a bad morning.</p>
+        <a class="pill-out" href="industries">View Industry Solutions →</a>
+      </div>
+    </div>
+
+    <div class="industries-grid">
+
+      <div class="itile wide" data-tint="lime">
+        <svg class="deco" viewBox="0 0 100 100" stroke="currentColor" fill="none"><path d="M50 10v80 M10 50h80" stroke-width="2"></path></svg>
+        <div class="itile-inner">
+          <div class="num">01</div>
+          <div>
+            <h3 class="iname">Healthcare</h3>
+            <p class="iblurb">HIPAA-compliant systems that protect patient data while keeping clinical workflows uninterrupted.</p>
+          </div>
+          <div class="itile-bottom">
+            <span class="itile-tag">HIPAA · HITRUST</span>
+            <div class="itile-arrow">→</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="itile" data-tint="cream">
+        <svg class="deco" viewBox="0 0 100 100" stroke="currentColor" fill="none"><path d="M20 20h60v60h-60z M20 50h60 M50 20v60" stroke-width="2"></path></svg>
+        <div class="itile-inner">
+          <div class="num">02</div>
+          <div>
+            <h3 class="iname">Legal</h3>
+            <p class="iblurb">Privilege-first networks, matter-level access controls, and chain-of-custody-ready backups.</p>
+          </div>
+          <div class="itile-bottom">
+            <span class="itile-tag">ABA · Client confidentiality</span>
+            <div class="itile-arrow">→</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="itile" data-tint="coral">
+        <svg class="deco" viewBox="0 0 100 100" stroke="currentColor" fill="none"><circle cx="50" cy="50" r="35" stroke-width="2"></circle></svg>
+        <div class="itile-inner">
+          <div class="num">03</div>
+          <div>
+            <h3 class="iname">Real Estate</h3>
+            <p class="iblurb">Wire-fraud defenses, transaction-safe email, multi-office infrastructure that scales with your portfolio.</p>
+          </div>
+          <div class="itile-bottom">
+            <span class="itile-tag">Wire fraud · DMARC</span>
+            <div class="itile-arrow">→</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="itile" data-tint="plum">
+        <svg class="deco" viewBox="0 0 100 100" stroke="currentColor" fill="none"><rect x="20" y="20" width="12" height="60" stroke-width="2"></rect><rect x="44" y="35" width="12" height="45" stroke-width="2"></rect><rect x="68" y="12" width="12" height="68" stroke-width="2"></rect></svg>
+        <div class="itile-inner">
+          <div class="num">04</div>
+          <div>
+            <h3 class="iname">Finance</h3>
+            <p class="iblurb">SEC-aware controls, auditable logs, privileged-access workflows, and rapid incident response.</p>
+          </div>
+          <div class="itile-bottom">
+            <span class="itile-tag">SEC · FINRA</span>
+            <div class="itile-arrow">→</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="itile" data-tint="sky">
+        <svg class="deco" viewBox="0 0 100 100" stroke="currentColor" fill="none"><polygon points="50,15 85,80 15,80" stroke-width="2"></polygon></svg>
+        <div class="itile-inner">
+          <div class="num">05</div>
+          <div>
+            <h3 class="iname">Nonprofit</h3>
+            <p class="iblurb">Mission-budget IT that still punches above its weight — grant-friendly licensing, donor-data hygiene.</p>
+          </div>
+          <div class="itile-bottom">
+            <span class="itile-tag">Limited budgets · High stakes</span>
+            <div class="itile-arrow">→</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="itile wide" data-tint="cobalt">
+        <svg class="deco" viewBox="0 0 100 100" stroke="currentColor" fill="none"><polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke-width="2"></polygon></svg>
+        <div class="itile-inner">
+          <div class="num">06</div>
+          <div>
+            <h3 class="iname">Construction</h3>
+            <p class="iblurb">Field-to-office connectivity, ruggedized device fleets, jobsite Wi-Fi, and supply-chain cyber.</p>
+          </div>
+          <div class="itile-bottom">
+            <span class="itile-tag">Field · Hybrid workforce</span>
+            <div class="itile-arrow">→</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ── Questions, Answered (FAQ) ── -->
+  <section class="faq" id="faq">
+
+    <div class="faq-head">
+      <h2 class="faq-title">Questions,<br>answered.</h2>
+      <p class="faq-sub">The six things teams ask before they sign. If yours isn't here, ask us directly — we'll put it on the list.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <div class="faq-head-row">
+          <span class="faq-num">01</span>
+          <h3 class="faq-q">How fast do you respond to critical incidents?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-body"><div class="faq-body-inner"><div class="faq-body-content">Our 24/7 SOC acknowledges P1 incidents within 4 minutes on average. A named incident commander is assigned immediately, with full containment and recovery playbooks running in parallel.</div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-head-row">
+          <span class="faq-num">02</span>
+          <h3 class="faq-q">Can you co-manage with our existing IT team?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-body"><div class="faq-body-inner"><div class="faq-body-content">Yes. The Secure Growth tier is designed for this. We integrate with your existing ticketing, escalation, and on-call rotations — augmenting where you need help, not replacing people who know your business.</div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-head-row">
+          <span class="faq-num">03</span>
+          <h3 class="faq-q">What industries do you specialize in?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-body"><div class="faq-body-inner"><div class="faq-body-content">Healthcare, legal, real estate, finance, nonprofit, and construction. Regulated and compliance-heavy environments are our core expertise — HIPAA, SEC, FINRA, and CMMC-aligned practices across the fleet.</div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-head-row">
+          <span class="faq-num">04</span>
+          <h3 class="faq-q">Do you require long-term contracts?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-body"><div class="faq-body-inner"><div class="faq-body-content">Most engagements run on 12-month terms to align budgets and roadmap, but we offer month-to-month on Essential Operations for smaller teams still finding the right fit.</div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-head-row">
+          <span class="faq-num">05</span>
+          <h3 class="faq-q">How is pricing structured?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-body"><div class="faq-body-inner"><div class="faq-body-content">Per-seat with transparent add-ons. No mystery line items, no surprise "out of scope" fees. We quote after a discovery audit so the number is real, not a range.</div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-head-row">
+          <span class="faq-num">06</span>
+          <h3 class="faq-q">What happens if we're breached before onboarding is complete?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-body"><div class="faq-body-inner"><div class="faq-body-content">We run a rapid stabilization pass on day one — MFA, endpoint visibility, and backup verification — so the foundation is defensible within the first week, while the full deployment continues in parallel.</div></div></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  </main>
+
+<script nonce="a34g29914">
+(function () {
+  /* Hero SVG is a decorative, pointer-events:none background here — skip the
+     getBBox physics init and the perpetual rAF loop entirely; just keep the
+     crop correct on resize. */
+  const svg = document.querySelector('#svgWrap svg');
+  if (!svg) return;
+  function updatePAR() {
+    svg.setAttribute('preserveAspectRatio',
+      window.innerWidth <= 960 ? 'xMinYMin slice' : 'xMidYMid slice');
   }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+  updatePAR();
+  window.addEventListener('resize', updatePAR);
+})();
 
-/* Mobile tweaks: container is 80% wide and the cycle is slower (10s) */
-@media only screen and (max-width: 767px) {
-  .news_carousel_wrapper {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .news {
-    min-width: 250px;
-  }
-  .news_carousel {
-    animation-duration: 10s;
-  }
-  .carousel-quote {
-    display: none;
-  }
-}
+/* ── Services: animate in on scroll ── */
+(function () {
+  const section = document.querySelector('.services');
+  const left    = document.querySelector('.services-left');
+  const cards   = document.querySelectorAll('.svc-card');
+  if (!section) return;
 
-.news_carousel {
-  max-height: 274px !important;
-}
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    left.classList.add('in-view');
+    cards.forEach(function (c, i) {
+      setTimeout(function () { c.classList.add('in-view'); }, i * 110);
+    });
+    obs.disconnect();
+  }, { threshold: 0.12 }).observe(section);
+})();
 
+/* ── Guardian Pulse radar ── */
+(function () {
+  var root = document.getElementById('guardian-pulse');
+  if (!root) return;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
 
-    </style>
-  </body>
+  var rings = [
+    { r: 80,  name:'Identity & Access',   desc:'MFA, SSO, least-privilege, session monitoring.',     color:'#C8FF47' },
+    { r: 150, name:'Endpoint & Device',   desc:'EDR, AV, device posture, encryption everywhere.',    color:'#8AB4F8' },
+    { r: 220, name:'Network & Perimeter', desc:'Firewall, segmentation, DNS filtering, zero trust.', color:'#FF6A55' },
+    { r: 285, name:'Cloud & SaaS',        desc:'Tenant hardening, logs, cloud-to-cloud backups.',    color:'#C8FF47' }
+  ];
+  var labelAngles = [-60, 35, 140, 220];
+
+  /* grid lines */
+  var gGrid = root.querySelector('#pulse-grid-lines');
+  [0, 45, 90, 135].forEach(function (d) {
+    [1, -1].forEach(function (sgn) {
+      var ln = document.createElementNS(NS, 'line');
+      ln.setAttribute('x1', 300); ln.setAttribute('y1', 300);
+      ln.setAttribute('x2', 300 + sgn * Math.cos(d * Math.PI / 180) * 320);
+      ln.setAttribute('y2', 300 + sgn * Math.sin(d * Math.PI / 180) * 320);
+      ln.setAttribute('stroke', 'rgba(255,255,255,0.06)');
+      ln.setAttribute('stroke-width', '1');
+      ln.setAttribute('stroke-dasharray', '2 6');
+      gGrid.appendChild(ln);
+    });
+  });
+
+  /* rings */
+  var gRings = root.querySelector('#pulse-rings');
+  var ringEls = rings.map(function (r) {
+    var c = document.createElementNS(NS, 'circle');
+    c.setAttribute('cx', 300); c.setAttribute('cy', 300); c.setAttribute('r', r.r);
+    c.setAttribute('fill', 'none');
+    c.style.transition = 'all 400ms cubic-bezier(0.22,0.61,0.36,1)';
+    gRings.appendChild(c);
+    return c;
+  });
+
+  /* labels */
+  var labelsEl = root.querySelector('#pulse-labels');
+  var lblEls = rings.map(function (r, i) {
+    var a  = labelAngles[i] * Math.PI / 180;
+    var el = document.createElement('div');
+    el.className = 'pulse-ring-lbl';
+    el.style.left = (50 + Math.cos(a) * r.r / 600 * 100) + '%';
+    el.style.top  = (50 + Math.sin(a) * r.r / 600 * 100) + '%';
+    el.textContent = String(i + 1).padStart(2, '0') + ' · ' + r.name;
+    el.addEventListener('mouseenter', function () { setActive(i); });
+    el.addEventListener('click',      function () { setActive(i); });
+    labelsEl.appendChild(el);
+    return el;
+  });
+
+  /* active state */
+  var active = 1;
+  var nameEl = root.querySelector('[data-pulse-active-name]');
+  var descEl = root.querySelector('[data-pulse-active-desc]');
+
+  function setActive(i) {
+    active = i;
+    ringEls.forEach(function (el, k) {
+      var on = k === active;
+      el.setAttribute('stroke', on ? rings[k].color : 'rgba(255,255,255,0.22)');
+      el.setAttribute('stroke-width', on ? 2 : 1);
+      el.setAttribute('stroke-dasharray', on ? '0' : '3 6');
+    });
+    lblEls.forEach(function (el, k) { el.classList.toggle('hot', k === active); });
+    nameEl.textContent = rings[active].name + '.';
+    descEl.textContent = rings[active].desc;
+  }
+  setActive(1);
+
+  if (!reduced) {
+    setInterval(function () { setActive((active + 1) % rings.length); }, 2800);
+  }
+
+  /* sweep rotation */
+  var sweep       = root.querySelector('#pulse-sweep');
+  var angle       = 0;
+  var sweepRafId  = null;
+  var inView      = false;
+
+  function tick() {
+    sweepRafId = null;
+    angle = (angle + 0.6) % 360;
+    sweep.setAttribute('transform', 'rotate(' + angle + ' 300 300)');
+    if (inView) sweepRafId = requestAnimationFrame(tick);
+  }
+
+  /* blips */
+  var blipsEl = root.querySelector('#pulse-blips');
+  var blipId  = 0;
+  function spawnBlip() {
+    var r   = rings[Math.floor(Math.random() * rings.length)];
+    var th  = Math.random() * Math.PI * 2;
+    var x   = 300 + Math.cos(th) * r.r;
+    var y   = 300 + Math.sin(th) * r.r;
+    var ok  = Math.random() < 0.75;
+    var col = ok ? '#C8FF47' : '#FF6A55';
+    var g   = document.createElementNS(NS, 'g');
+    g.setAttribute('data-blip', ++blipId);
+
+    var dot = document.createElementNS(NS, 'circle');
+    dot.setAttribute('cx', x); dot.setAttribute('cy', y);
+    dot.setAttribute('r', 4); dot.setAttribute('fill', col);
+    var fd = document.createElementNS(NS, 'animate');
+    fd.setAttribute('attributeName', 'opacity');
+    fd.setAttribute('from', '1'); fd.setAttribute('to', '0');
+    fd.setAttribute('dur', '2s'); fd.setAttribute('fill', 'freeze');
+    dot.appendChild(fd); g.appendChild(dot);
+
+    var ring = document.createElementNS(NS, 'circle');
+    ring.setAttribute('cx', x); ring.setAttribute('cy', y);
+    ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', col);
+    ring.setAttribute('stroke-width', ok ? 1.5 : 1.8);
+    var ar = document.createElementNS(NS, 'animate');
+    ar.setAttribute('attributeName', 'r');
+    ar.setAttribute('from', '4'); ar.setAttribute('to', ok ? 24 : 30);
+    ar.setAttribute('dur', ok ? '1s' : '1.4s'); ar.setAttribute('fill', 'freeze');
+    var ao = document.createElementNS(NS, 'animate');
+    ao.setAttribute('attributeName', 'opacity');
+    ao.setAttribute('from', '0.9'); ao.setAttribute('to', '0');
+    ao.setAttribute('dur', ok ? '1s' : '1.4s'); ao.setAttribute('fill', 'freeze');
+    ring.appendChild(ar); ring.appendChild(ao);
+    g.appendChild(ring); blipsEl.appendChild(g);
+    setTimeout(function () { if (g.parentNode) g.parentNode.removeChild(g); }, 2200);
+  }
+
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      inView = e.isIntersecting;
+      if (inView && !reduced && !sweepRafId) sweepRafId = requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.25 }).observe(root);
+
+  if (!reduced) {
+    setInterval(function () { if (inView) spawnBlip(); }, 650);
+  }
+})();
+
+/* ── Case Studies: scroll animations + counters ── */
+(function () {
+  var sec = document.querySelector('.cases-sec');
+  if (!sec) return;
+
+  var title  = sec.querySelector('.cases-title');
+  var card   = sec.querySelector('.cases-card');
+  var rows   = Array.from(sec.querySelectorAll('.case-row'));
+  var cta    = sec.querySelector('.cases-cta');
+
+  /* ease-out cubic */
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+  /* animate a stat number from 0 → target */
+  function counter(el) {
+    var raw      = el.textContent.trim();
+    var match    = raw.match(/^([\d.]+)(.*)/);
+    if (!match) return;
+    var target   = parseFloat(match[1]);
+    var suffix   = match[2];
+    var decimals = match[1].indexOf('.') > -1 ? match[1].split('.')[1].length : 0;
+    var duration = 1500;
+    var startTs  = null;
+
+    (function step(ts) {
+      if (!startTs) startTs = ts;
+      var p = Math.min((ts - startTs) / duration, 1);
+      var v = target * easeOut(p);
+      el.textContent = (decimals > 0 ? v.toFixed(decimals) : Math.round(v)) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    obs.disconnect();
+
+    /* 1. title */
+    title.classList.add('in-view');
+
+    /* 2. card shell */
+    setTimeout(function () { card.classList.add('in-view'); }, 120);
+
+    /* 3. rows staggered */
+    rows.forEach(function (row, ri) {
+      var base   = 220 + ri * 180;
+      var left   = row.querySelector('.case-left');
+      var right  = row.querySelector('.case-right');
+      var blocks = Array.from(row.querySelectorAll('.case-block'));
+      var stats  = Array.from(row.querySelectorAll('.case-stat-val'));
+
+      setTimeout(function () {
+        left.classList.add('in-view');
+        right.classList.add('in-view');
+
+        /* 4. stagger content blocks */
+        blocks.forEach(function (b, bi) {
+          setTimeout(function () { b.classList.add('in-view'); }, bi * 100);
+        });
+
+        /* 5. kick off counters */
+        stats.forEach(function (s) { counter(s); });
+
+      }, base);
+    });
+
+    /* 6. CTA last */
+    setTimeout(function () {
+      if (cta) cta.classList.add('in-view');
+    }, 220 + rows.length * 180 + 200);
+
+  }, { threshold: 0.08 }).observe(sec);
+})();
+
+/* ── Onboarding Process: step activation + progress bar ── */
+(function () {
+  var timeline = document.querySelector('[data-process-timeline]');
+  if (!timeline) return;
+
+  var steps    = Array.from(timeline.querySelectorAll('.process-step'));
+  var progress = timeline.querySelector('[data-process-progress]');
+  var stepsWrap = timeline.querySelector('[data-process-steps]');
+  var reduced  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setActive(idx) {
+    steps.forEach(function (s, i) {
+      s.classList.toggle('active', i === idx);
+    });
+    /* progress bar: advance to centre of active dot */
+    if (progress && steps.length > 1) {
+      var fraction = idx / (steps.length - 1);
+      progress.style.width = (fraction * 100) + '%';
+    }
+  }
+
+  /* hover activates the hovered step */
+  steps.forEach(function (step, i) {
+    step.addEventListener('mouseenter', function () { setActive(i); });
+  });
+
+  /* click also activates */
+  steps.forEach(function (step, i) {
+    step.addEventListener('click', function () { setActive(i); });
+  });
+
+  /* scroll reveal: stagger steps, then start auto-walk */
+  var revealed = false;
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting || revealed) return;
+    revealed = true;
+    obs.disconnect();
+
+    /* stagger reveal each step */
+    steps.forEach(function (step, i) {
+      var delay = i * 90;
+      step.style.opacity = '0';
+      step.style.transform = 'translateY(18px)';
+      step.style.transition = reduced
+        ? 'none'
+        : 'opacity 400ms ease ' + delay + 'ms, transform 400ms ease ' + delay + 'ms';
+      setTimeout(function () {
+        step.style.opacity = '1';
+        step.style.transform = 'translateY(0)';
+      }, 40);
+      /* clear inline styles after the animation completes so they don't delay future hover transitions */
+      setTimeout(function () {
+        step.style.opacity = '';
+        step.style.transform = '';
+        step.style.transition = '';
+      }, 40 + delay + 420);
+    });
+
+    /* auto-walk through steps after reveal, unless user has already interacted */
+    var interacted = false;
+    steps.forEach(function (step) {
+      step.addEventListener('mouseenter', function () { interacted = true; }, { once: true });
+    });
+
+    if (!reduced) {
+      var autoIdx = 0;
+      setActive(0);
+      var walker = setInterval(function () {
+        if (interacted) { clearInterval(walker); return; }
+        autoIdx = (autoIdx + 1) % steps.length;
+        setActive(autoIdx);
+        if (autoIdx === steps.length - 1) { clearInterval(walker); }
+      }, 1200);
+    }
+
+  }, { threshold: 0.25 }).observe(timeline);
+})();
+
+/* ── Industries: staggered tile reveal on scroll ── */
+(function () {
+  var sec   = document.querySelector('.industries');
+  if (!sec) return;
+  var tiles = Array.from(sec.querySelectorAll('.itile'));
+
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    obs.disconnect();
+    tiles.forEach(function (tile, i) {
+      setTimeout(function () { tile.classList.add('in-view'); }, i * 80);
+    });
+  }, { threshold: 0.08 }).observe(sec);
+})();
+
+/* ── Pricing: staggered card reveal on scroll ── */
+(function () {
+  var sec   = document.querySelector('.pricing');
+  if (!sec) return;
+  var cards = Array.from(sec.querySelectorAll('.pcard'));
+
+  new IntersectionObserver(function (entries, obs) {
+    if (!entries[0].isIntersecting) return;
+    obs.disconnect();
+    cards.forEach(function (card, i) {
+      setTimeout(function () { card.classList.add('in-view'); }, i * 120);
+    });
+  }, { threshold: 0.08 }).observe(sec);
+})();
+
+/* ── Footer form submit ── */
+(function () {
+  var form = document.querySelector('.footer-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('.footer-send');
+    btn.textContent = 'SENT ✓';
+    btn.style.borderColor = 'rgba(255,255,255,0.6)';
+    btn.disabled = true;
+  });
+})();
+
+/* ── FAQ accordion ── */
+(function () {
+  var items = document.querySelectorAll('.faq .faq-item');
+  items.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var wasOpen = item.classList.contains('open');
+      items.forEach(function (o) { o.classList.remove('open'); });
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+})();
+
+/* ── Nav scroll ── */
+(function(){
+  var nav=document.getElementById('site-nav');
+  if(!nav)return;
+  function bgBrightness(el){
+    while(el&&el!==document.documentElement){
+      var bg=getComputedStyle(el).backgroundColor;
+      var m=bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?/);
+      if(m){var a=m[4]!==undefined?+m[4]:1;if(a>0.05)return +m[1]+ +m[2]+ +m[3];}
+      el=el.parentElement;
+    }
+    return 0;
+  }
+  /* Scroll: only class toggles derived from scrollY — NO layout reads, so it never
+     forces layout of the content-visibility sections (zero forced reflow). */
+  var lastScrollY=0;
+  function onScroll(){
+    var y=window.scrollY;
+    nav.classList.toggle('scrolled',y>20);
+    if(y>80){
+      if(y>lastScrollY+4){nav.classList.add('nav-hidden');}
+      else if(y<lastScrollY-4){nav.classList.remove('nav-hidden');}
+    } else {
+      nav.classList.remove('nav-hidden');
+    }
+    lastScrollY=y;
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  /* nav-light (dark text over light sections) via IntersectionObserver — each
+     section's brightness is measured once and cached; the observer flips the class
+     as a section crosses the nav line, with no per-scroll getBoundingClientRect. */
+  var secs=[].slice.call(document.querySelectorAll('section,header,.hero,.partners-marquee,.partners-strip,.partner-bar,.press'));
+  var bright=secs.map(function(s){return bgBrightness(s)>450;});
+  var io;
+  function buildIO(){
+    if(io)io.disconnect();
+    var navH=64;
+    io=new IntersectionObserver(function(entries){
+      for(var j=0;j<entries.length;j++){
+        if(entries[j].isIntersecting){
+          var i=secs.indexOf(entries[j].target);
+          if(i>-1)nav.classList.toggle('nav-light',bright[i]);
+        }
+      }
+    },{rootMargin:'-'+navH+'px 0px -'+(window.innerHeight-navH-2)+'px 0px',threshold:0});
+    for(var k=0;k<secs.length;k++)io.observe(secs[k]);
+  }
+  buildIO();
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(buildIO,200);},{passive:true});
+})();
+
+/* ── Burger / drawer ── */
+(function(){
+  var burger=document.querySelector('.nav-burger'),drawer=document.querySelector('.nav-drawer'),nav=document.getElementById('site-nav');
+  if(!burger||!drawer)return;
+  burger.addEventListener('click',function(){
+    var open=(document.getElementById('site-nav')||document.querySelector('.site-nav')).classList.toggle('nav-open');
+    drawer.classList.toggle('is-open',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+})();
+
+/* ── Mega-menu hover ── */
+(function(){
+  var li=document.querySelector('.nav-has-drop');
+  var drop=li&&li.querySelector('.nav-drop');
+  if(!li||!drop)return;
+  var t;
+  function open(){clearTimeout(t);li.classList.add('is-open')}
+  function close(){t=setTimeout(function(){li.classList.remove('is-open')},220)}
+  li.addEventListener('mouseenter',open);
+  li.addEventListener('mouseleave',close);
+  drop.addEventListener('mouseenter',open);
+  drop.addEventListener('mouseleave',close);
+})();
+</script>
+
+  <!-- ── Site Footer ── -->
+  <footer class="site-footer" id="contact">
+
+    <nav class="footer-nav">
+      <a class="footer-logo" href="./">
+        <img src="imgs/logowhite.svg" alt="CGCG" width="73" height="32">
+      </a>
+      <ul class="footer-nav-links">
+        <li><a href="services">Services</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="trust">Trust</a></li>
+        <li><a href="company">Company</a></li>
+        <li><a href="resources">Resources</a></li>
+      </ul>
+      <a class="footer-nav-contact" href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-main">
+
+      <div class="footer-info">
+        <div class="footer-contact-info">
+          <a href="tel:8447242424">844-724-2424</a>
+          <a href="mailto:hello@cgcg.biz">hello@cgcg.biz</a>
+        </div>
+        <div class="footer-locations">
+          <p>Hudson Valley</p>
+          <p>Hudson Yards</p>
+          <p>Brooklyn</p>
+        </div>
+      </div>
+
+      <form action="https://cgnew.wpengine.com/apis/cgcg/form/home/" method="POST" class="footer-form">
+        <div class="footer-field"><input type="text" name="name" placeholder="NAME" required></div>
+        <div class="footer-field"><input type="email" name="email" placeholder="EMAIL" required></div>
+        <div class="footer-field"><input type="tel" name="phone" placeholder="PHONE"></div>
+        <div class="footer-field"><input type="text" name="company" placeholder="COMPANY NAME"></div>
+        <div class="footer-field"><input type="text" name="message" placeholder="MESSAGE"></div>
+        <button type="submit" class="footer-send">SEND</button>
+      </form>
+
+    </div>
+
+    <div class="footer-bottom">
+      <a href="https://www.linkedin.com/company/cgcg" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/cgcgbiz" target="_blank" rel="noopener">Facebook</a>
+    </div>
+
+  </footer>
+
+<script nonce="a34g29914">(function(){var f=document.querySelector(".footer-form");if(!f)return;var c=f.cloneNode(true);f.parentNode.replaceChild(c,f);c.addEventListener("submit",function(){var b=c.querySelector("[type=submit],.footer-send,button");if(b)b.disabled=true;});})();</script>
+</body>
 </html>
