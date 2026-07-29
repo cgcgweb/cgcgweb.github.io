@@ -1,0 +1,5 @@
+# Cyber Guardian Consulting Group — allow all search engines to crawl & index
+User-agent: *
+Allow: /
+
+Sitemap: https://cgcg.biz/sitemap.xml
