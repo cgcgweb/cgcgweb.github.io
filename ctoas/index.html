@@ -31,7 +31,7 @@
 .nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;width:38px;height:38px;border-radius:50%;padding:0;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);cursor:pointer;-webkit-tap-highlight-color:transparent;flex-shrink:0}
 .nav-burger span{display:block;width:14px;height:1.6px;background:#fff;border-radius:2px;transition:transform .22s ease,opacity .22s ease,width .22s ease}
 .site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
-.site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0}
+.site-nav.nav-open .nav-burger span:nth-child(2){opacity:0;width:0;transform:translateX(6px) scaleX(.25)}
 .site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
 @keyframes navPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
 .nav-drawer{position:fixed;left:12px;right:12px;top:64px;bottom:12px;background:rgba(10,16,32,0.94);backdrop-filter:blur(32px) saturate(180%);border:1px solid rgba(255,255,255,0.1);border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,0.5);z-index:96;display:flex;flex-direction:column;padding:22px 22px 28px;overflow-y:auto;opacity:0;transform:translateY(20px) scale(0.98);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
@@ -135,46 +135,38 @@ img.nav-logo-full{display:none}img.nav-logo-icon{display:block;height:30px;width
     Get a free assessment
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 L15 5 M15 5 H7 M15 5 V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
-  <details class="nav-drawer-section" open>
-    <summary>Infrastructure</summary>
-    <div class="nav-drawer-links">
-      <a href="../managed-it-services/">Managed IT Services</a>
+  <div class="nav-drawer-section nav-group">
+      <button class="nav-group-btn" type="button" aria-expanded="false">Infrastructure<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../managed-it-services/">Managed IT Services</a>
       <a href="../NaaS/">Network as a Service</a>
       <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
       <a href="../cloud-security-cameras/">Cloud Security Cameras</a>
       <a href="../door-access-control/">Door Access Control</a>
-      <a href="https://switchboard-plus.com" target="_blank" rel="noopener">Business Phone (VoIP) &#x2197;</a>
+      <a href="https://switchboard-plus.com" target="_blank" rel="noopener">Business Phone (VoIP) &#x2197;</a></div></div></div>
     </div>
-  </details>
-  <details class="nav-drawer-section">
-    <summary>Cybersecurity</summary>
-    <div class="nav-drawer-links">
-      <a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
+  <div class="nav-drawer-section nav-group">
+      <button class="nav-group-btn" type="button" aria-expanded="false">Cybersecurity<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
       <a href="../socas/">SOC as a Service</a>
       <a href="../cisoaas/">CISO as a Service</a>
-      <a href="../private-digital-investigations/">Private Digital Investigations</a>
+      <a href="../private-digital-investigations/">Private Digital Investigations</a></div></div></div>
     </div>
-  </details>
-  <details class="nav-drawer-section">
-    <summary>Operations</summary>
-    <div class="nav-drawer-links">
-      <a href="../operations/">Operations &amp; Business Systems</a>
+  <div class="nav-drawer-section nav-group">
+      <button class="nav-group-btn" type="button" aria-expanded="false">Operations<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../operations/">Operations &amp; Business Systems</a>
         <a href="../cioas/">CIO as a Service</a>
       <a href="../ctoas/">CTO as a Service</a>
       <a href="../erp-solutions/">ERP Solutions</a>
       <a href="../app-development/">App Development</a>
       <a href="../reputation-management/">Reputation Management</a>
-      <a href="../recycling-charity/">Recycling &amp; Charity</a>
+      <a href="../recycling-charity/">Recycling &amp; Charity</a></div></div></div>
     </div>
-  </details>
-  <details class="nav-drawer-section">
-      <summary>Data</summary>
-      <div class="nav-drawer-links">
-        <a href="../data/">Data, Backup &amp; Compliance</a>
+  <div class="nav-drawer-section nav-group">
+      <button class="nav-group-btn" type="button" aria-expanded="false">Data<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../data/">Data, Backup &amp; Compliance</a>
         <a href="../healthcare-it/">Healthcare IT</a>
-        <a href="https://filescience.io" target="_blank" rel="noopener">Cloud-to-Cloud Backup &#8599;</a>
-      </div>
-    </details>
+        <a href="https://filescience.io" target="_blank" rel="noopener">Cloud-to-Cloud Backup &#8599;</a></div></div></div>
+    </div>
     <a class="nav-drawer-section nav-drawer-direct" href="/about/">Company</a>
 </div>
 
@@ -552,13 +544,42 @@ document.documentElement.classList.add('js');
 .site-nav .nav-burger{order:2;margin-left:auto;margin-right:0}
 .site-nav .nav-logo{order:0}
 .site-nav .nav-cta{order:1;position:absolute!important;top:50%;left:50%;transform:translate(-50%,-50%);margin:0!important;display:inline-flex!important;align-items:center;justify-content:center}
-/* drawer: full width, white 75% opaque (25% transparent), dark text */
-.nav-drawer{left:0!important;right:0!important;width:100%!important;max-width:none!important;margin:0!important;border-radius:0!important;background:rgba(255,255,255,.75)!important;backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important;border:0!important;box-shadow:0 24px 60px rgba(10,16,32,.18)!important}
-.nav-drawer a,.nav-drawer summary,.nav-drawer .nav-drawer-links a{color:#1a1a1a!important}
-.nav-drawer summary{border-color:rgba(0,0,0,.1)!important}
-.nav-drawer .nav-drawer-links a{border-color:rgba(0,0,0,.07)!important;opacity:.85}
-.nav-drawer-section{border-color:rgba(0,0,0,.1)!important}
+/* drawer: Guardian dark skin + choreography */
+.nav-drawer{left:0!important;right:0!important;top:0!important;bottom:0!important;width:100%!important;max-width:none!important;margin:0!important;border-radius:0!important;border:0!important;box-shadow:none!important;padding:96px 20px 28px!important;background:radial-gradient(circle at 82% 18%,rgba(63,124,174,.28),transparent 35%),radial-gradient(circle at 8% 84%,rgba(200,255,71,.08),transparent 27%),linear-gradient(155deg,#0c1a2d,#07101f 56%,#020711)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;opacity:0;visibility:hidden;transform:translateY(-2.6%) scale(.987)!important;transform-origin:top right;pointer-events:none;transition:opacity 210ms cubic-bezier(.77,0,.175,1),transform 220ms cubic-bezier(.77,0,.175,1),visibility 0ms linear 220ms!important;overscroll-behavior:contain}
+.nav-drawer::before{content:"";position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:38px 38px;-webkit-mask-image:linear-gradient(to bottom,#000,transparent 88%);mask-image:linear-gradient(to bottom,#000,transparent 88%);pointer-events:none}
+.nav-drawer::after{content:"";position:fixed;left:0;right:0;top:0;z-index:4;height:2px;opacity:0;background:linear-gradient(90deg,transparent,#C8FF47 28%,#f8ffe5 50%,#C8FF47 72%,transparent);box-shadow:0 0 24px rgba(200,255,71,.68),0 20px 55px rgba(200,255,71,.13);pointer-events:none}
+.nav-drawer.is-open{opacity:1;visibility:visible;transform:translateY(0) scale(1)!important;pointer-events:auto;transition:opacity 260ms cubic-bezier(.23,1,.32,1),transform 360ms cubic-bezier(.23,1,.32,1),visibility 0ms linear 0ms!important}
+.nav-drawer.is-open::after{animation:menu-scan 520ms 65ms cubic-bezier(.77,0,.175,1) both}
+.nav-drawer>*{opacity:0;transform:translateY(17px)}
+.nav-drawer.is-open>*{animation:menu-entry-in 420ms cubic-bezier(.23,1,.32,1) both}
+.nav-drawer.is-open>:nth-child(1){animation-delay:105ms}.nav-drawer.is-open>:nth-child(2){animation-delay:148ms}.nav-drawer.is-open>:nth-child(3){animation-delay:191ms}.nav-drawer.is-open>:nth-child(4){animation-delay:234ms}.nav-drawer.is-open>:nth-child(5){animation-delay:277ms}.nav-drawer.is-open>:nth-child(6){animation-delay:320ms}.nav-drawer.is-open>:nth-child(7){animation-delay:363ms}
+.nav-drawer a{color:#fff!important}
+.nav-drawer a.nav-drawer-cta{color:#0a1020!important}
+.nav-drawer-section{border-color:rgba(255,255,255,.14)!important}
+.nav-group-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:14px 4px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.14);cursor:pointer;font-family:'NB',sans-serif;font-weight:700;font-size:18px;color:#fff;text-align:left;transition:color 170ms cubic-bezier(.23,1,.32,1),border-color 170ms cubic-bezier(.23,1,.32,1),padding-left 170ms cubic-bezier(.23,1,.32,1)}
+.nav-group-btn:hover{color:#C8FF47;padding-left:5px}
+.nav-group-btn .ng-icon{font-family:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;font-size:15px;color:rgba(255,255,255,.48);transition:color 170ms cubic-bezier(.23,1,.32,1),transform 250ms cubic-bezier(.77,0,.175,1)}
+.nav-group.is-open .nav-group-btn{color:#C8FF47;border-bottom-color:rgba(200,255,71,.28)}
+.nav-group.is-open .ng-icon{color:#C8FF47;transform:rotate(180deg)}
+.nav-group-panel{display:grid;grid-template-rows:0fr;border-bottom:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.025);transition:grid-template-rows 300ms cubic-bezier(.23,1,.32,1)}
+.nav-group.is-open .nav-group-panel{grid-template-rows:1fr}
+.nav-group-inner{min-height:0;overflow:hidden}
+.nav-drawer-links{position:relative;display:flex;flex-direction:column;padding:7px 2px 15px 25px!important;margin:0!important;border:0!important}
+.nav-drawer-links::before{content:"";position:absolute;top:6px;bottom:16px;left:8px;width:1px;background:linear-gradient(to bottom,#C8FF47,rgba(200,255,71,.05));transform:scaleY(0);transform-origin:top}
+.nav-group.is-open .nav-drawer-links::before{animation:service-rail-in 280ms 35ms cubic-bezier(.23,1,.32,1) both}
+.nav-drawer .nav-drawer-links a{color:rgba(255,255,255,.6)!important;border-bottom:0!important;opacity:0;transform:translateY(8px);transition:color 150ms cubic-bezier(.23,1,.32,1)}
+.nav-drawer .nav-drawer-links a:active{color:#C8FF47!important}
+.nav-group.is-open .nav-drawer-links a{animation:service-link-in 260ms cubic-bezier(.23,1,.32,1) both}
+.nav-group.is-open .nav-drawer-links a:nth-child(1){animation-delay:0ms}.nav-group.is-open .nav-drawer-links a:nth-child(2){animation-delay:29ms}.nav-group.is-open .nav-drawer-links a:nth-child(3){animation-delay:58ms}.nav-group.is-open .nav-drawer-links a:nth-child(4){animation-delay:87ms}.nav-group.is-open .nav-drawer-links a:nth-child(5){animation-delay:116ms}.nav-group.is-open .nav-drawer-links a:nth-child(6){animation-delay:145ms}.nav-group.is-open .nav-drawer-links a:nth-child(7){animation-delay:174ms}
+.site-nav.nav-open .nav-burger{border-color:rgba(200,255,71,.78)!important;background:rgba(200,255,71,.09)!important;box-shadow:0 0 23px rgba(200,255,71,.14)}
+.nav-burger{position:relative}
+.nav-burger::before{content:"";position:absolute;inset:-1px;border:1px solid #C8FF47;border-radius:inherit;opacity:0;transform:scale(.9) rotate(-8deg);transition:opacity 180ms cubic-bezier(.23,1,.32,1),transform 260ms cubic-bezier(.23,1,.32,1);pointer-events:none}
+.site-nav.nav-open .nav-burger::before{opacity:1;transform:scale(1) rotate(0deg)}
 }
+@keyframes menu-scan{0%{opacity:0;transform:translateY(0)}15%{opacity:1}82%{opacity:.9}100%{opacity:0;transform:translateY(100dvh)}}
+@keyframes menu-entry-in{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}
+@keyframes service-link-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes service-rail-in{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 </style>
 <script nonce="a34g29914">
 (function(){
@@ -628,5 +649,40 @@ document.documentElement.classList.add('js');
 })();
 </script>
 <style nonce="a34g29914">@media(max-width:768px){input,select,textarea{font-size:16px!important}.footer-form input{letter-spacing:.08em}}@media(max-width:768px){.sec-head{grid-template-columns:1fr!important;gap:20px}}.nav-drawer-links{display:flex;flex-direction:column;padding:0 4px 12px}.nav-drawer-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:15px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);transition:color .14s ease}.nav-drawer-links a:last-child{border-bottom:none}.nav-drawer-links a:active{color:#fff}.nav-drawer-direct{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;font-family:'NB',sans-serif;font-weight:700;font-size:18px;text-decoration:none}</style>
+<script nonce="a34g29914">
+(function(){
+var drawer=document.querySelector('.nav-drawer');
+var burger=document.querySelector('.nav-burger');
+if(!drawer||!burger)return;
+var groups=[].slice.call(drawer.querySelectorAll('.nav-group'));
+function closeGroup(g){var b=g.querySelector('.nav-group-btn'),p=g.querySelector('.nav-group-panel');
+  g.classList.remove('is-open');if(b)b.setAttribute('aria-expanded','false');
+  if(p){p.setAttribute('aria-hidden','true');[].forEach.call(p.querySelectorAll('a'),function(a){a.tabIndex=-1;});}}
+function openGroup(g){groups.forEach(function(o){if(o!==g)closeGroup(o);});
+  var b=g.querySelector('.nav-group-btn'),p=g.querySelector('.nav-group-panel');
+  g.classList.add('is-open');if(b)b.setAttribute('aria-expanded','true');
+  if(p){p.setAttribute('aria-hidden','false');[].forEach.call(p.querySelectorAll('a'),function(a){a.tabIndex=0;});}}
+groups.forEach(function(g){
+  [].forEach.call(g.querySelectorAll('.nav-group-panel a'),function(a){a.tabIndex=-1;});
+  var b=g.querySelector('.nav-group-btn');
+  if(b)b.addEventListener('click',function(){g.classList.contains('is-open')?closeGroup(g):openGroup(g);});});
+function isOpen(){return drawer.classList.contains('is-open');}
+burger.addEventListener('click',function(){groups.forEach(closeGroup);});
+function closeDrawer(){var nav=document.getElementById('site-nav')||document.querySelector('.site-nav');
+  if(nav)nav.classList.remove('nav-open');drawer.classList.remove('is-open');document.body.style.overflow='';
+  groups.forEach(closeGroup);burger.setAttribute('aria-label','Open menu');
+  setTimeout(function(){try{burger.focus({preventScroll:true});}catch(e){burger.focus();}},10);}
+document.addEventListener('keydown',function(e){
+  if(!isOpen())return;
+  if(e.key==='Escape'){e.preventDefault();closeDrawer();return;}
+  if(e.key!=='Tab')return;
+  var f=[burger].concat([].slice.call(drawer.querySelectorAll('a[href],button:not([disabled])')).filter(function(el){
+    var p=el.closest('.nav-group-panel');return !p||p.getAttribute('aria-hidden')==='false';}));
+  var first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+})();
+</script>
 </body>
 </html>
