@@ -131,12 +131,11 @@ img.nav-logo-full{display:none}img.nav-logo-icon{display:block;height:30px;width
   <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer">
-  <a class="nav-drawer-cta" href="/contact">
-    Get a free assessment
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 L15 5 M15 5 H7 M15 5 V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
+  <div class="nav-drawer-intro"><span class="ndi-label"><i aria-hidden="true"></i>Guardian navigation</span><span class="ndi-note">Choose a system.</span></div>
+  <a class="nav-row-link" href="/about/"><span class="nav-index">01</span><span class="nav-row-label">About Us</span><span class="nav-row-icon" aria-hidden="true">&#8599;</span></a>
+  
   <div class="nav-drawer-section nav-group">
-      <button class="nav-group-btn" type="button" aria-expanded="false">Infrastructure<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <button class="nav-group-btn" type="button" aria-expanded="false"><span class="nav-index">02</span><span class="nav-row-label">Infrastructure</span><span class="ng-icon" aria-hidden="true">&#8964;</span></button>
       <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../managed-it-services/">Managed IT Services</a>
       <a href="../NaaS/">Network as a Service</a>
       <a href="../low-voltage-cabling/">Low Voltage Cabling</a>
@@ -145,14 +144,14 @@ img.nav-logo-full{display:none}img.nav-logo-icon{display:block;height:30px;width
       <a href="https://switchboard-plus.com" target="_blank" rel="noopener">Business Phone (VoIP) &#x2197;</a></div></div></div>
     </div>
   <div class="nav-drawer-section nav-group">
-      <button class="nav-group-btn" type="button" aria-expanded="false">Cybersecurity<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <button class="nav-group-btn" type="button" aria-expanded="false"><span class="nav-index">03</span><span class="nav-row-label">Cybersecurity</span><span class="ng-icon" aria-hidden="true">&#8964;</span></button>
       <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../cybersecurity-solutions/">Cybersecurity Solutions</a>
       <a href="../socas/">SOC as a Service</a>
       <a href="../cisoaas/">CISO as a Service</a>
       <a href="../private-digital-investigations/">Private Digital Investigations</a></div></div></div>
     </div>
   <div class="nav-drawer-section nav-group">
-      <button class="nav-group-btn" type="button" aria-expanded="false">Operations<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <button class="nav-group-btn" type="button" aria-expanded="false"><span class="nav-index">04</span><span class="nav-row-label">Operations</span><span class="ng-icon" aria-hidden="true">&#8964;</span></button>
       <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../operations/">Operations &amp; Business Systems</a>
         <a href="../cioas/">CIO as a Service</a>
       <a href="../ctoas/">CTO as a Service</a>
@@ -162,12 +161,12 @@ img.nav-logo-full{display:none}img.nav-logo-icon{display:block;height:30px;width
       <a href="../recycling-charity/">Recycling &amp; Charity</a></div></div></div>
     </div>
   <div class="nav-drawer-section nav-group">
-      <button class="nav-group-btn" type="button" aria-expanded="false">Data<span class="ng-icon" aria-hidden="true">&#8964;</span></button>
+      <button class="nav-group-btn" type="button" aria-expanded="false"><span class="nav-index">05</span><span class="nav-row-label">Data</span><span class="ng-icon" aria-hidden="true">&#8964;</span></button>
       <div class="nav-group-panel" aria-hidden="true"><div class="nav-group-inner"><div class="nav-drawer-links"><a href="../data/">Data, Backup &amp; Compliance</a>
         <a href="../healthcare-it/">Healthcare IT</a>
         <a href="https://filescience.io" target="_blank" rel="noopener">Cloud-to-Cloud Backup &#8599;</a></div></div></div>
     </div>
-    <a class="nav-drawer-section nav-drawer-direct" href="/about/">Company</a>
+    <div class="nav-drawer-contact"><div class="ndc-line"><span class="ndi-label"><i aria-hidden="true"></i>Response line active</span><a class="ndc-phone" href="tel:8447242424">844-724-2424</a></div><a class="ndc-action" href="/contact"><span>Talk to an engineer</span><span aria-hidden="true">&#8594;</span></a></div>
 </div>
 
 
@@ -320,9 +319,9 @@ document.documentElement.classList.add('js');
 .nav-drawer a{color:#fff!important}
 .nav-drawer a.nav-drawer-cta{color:#0a1020!important}
 .nav-drawer-section{border-color:rgba(255,255,255,.14)!important}
-.nav-group-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:14px 4px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.14);cursor:pointer;font-family:'NB',sans-serif;font-weight:700;font-size:18px;color:#fff;text-align:left;transition:color 170ms cubic-bezier(.23,1,.32,1),border-color 170ms cubic-bezier(.23,1,.32,1),padding-left 170ms cubic-bezier(.23,1,.32,1)}
+.nav-group-btn,.nav-row-link{display:grid;grid-template-columns:39px 1fr auto;gap:10px;align-items:center;width:100%;min-height:68px;padding:10px 4px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.14);cursor:pointer;color:#fff;text-align:left;text-decoration:none;transition:color 170ms cubic-bezier(.23,1,.32,1),border-color 170ms cubic-bezier(.23,1,.32,1),padding-left 170ms cubic-bezier(.23,1,.32,1)}.nav-group-btn:hover,.nav-row-link:hover{color:#C8FF47;padding-left:9px}.nav-index{font-family:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.31)}.nav-row-label{font-family:'NB',sans-serif;font-weight:700;font-size:clamp(26px,7vw,38px);letter-spacing:-.02em;line-height:.95;text-transform:uppercase;overflow:hidden}.nav-row-icon{font-size:20px;line-height:1;color:rgba(255,255,255,.48);transition:color 170ms cubic-bezier(.23,1,.32,1),transform 250ms cubic-bezier(.77,0,.175,1)}.nav-drawer-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:17px}.ndi-label{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45)}.ndi-label i{width:6px;height:6px;border-radius:50%;background:#C8FF47;box-shadow:0 0 12px rgba(200,255,71,.7)}.ndi-note{font-family:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)}.nav-drawer-contact{display:grid;gap:20px;margin-top:auto;padding:21px;border:1px solid rgba(255,255,255,.14);background:rgba(2,7,17,.56)}.nav-group:last-of-type{margin-bottom:28px}.ndc-line{display:flex;flex-direction:column;align-items:flex-start;gap:10px}.nav-drawer a.ndc-phone{font-family:'NB',sans-serif;font-weight:700;font-size:29px;line-height:1;color:#fff!important;text-decoration:none}.nav-drawer a.ndc-action{display:flex;align-items:center;justify-content:space-between;min-height:53px;padding:0 17px;background:#C8FF47;color:#07101f!important;font-family:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;transition:transform 160ms cubic-bezier(.23,1,.32,1),background 160ms cubic-bezier(.23,1,.32,1)}.nav-drawer a.ndc-action:active{transform:scale(.98)}
 .nav-group-btn:hover{color:#C8FF47;padding-left:5px}
-.nav-group-btn .ng-icon{font-family:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;font-size:15px;color:rgba(255,255,255,.48);transition:color 170ms cubic-bezier(.23,1,.32,1),transform 250ms cubic-bezier(.77,0,.175,1)}
+.nav-group-btn .ng-icon{font-family:"JetBrains Mono","Menlo","Consolas",ui-monospace,monospace;font-size:20px;color:rgba(255,255,255,.48);transition:color 170ms cubic-bezier(.23,1,.32,1),transform 250ms cubic-bezier(.77,0,.175,1)}
 .nav-group.is-open .nav-group-btn{color:#C8FF47;border-bottom-color:rgba(200,255,71,.28)}
 .nav-group.is-open .ng-icon{color:#C8FF47;transform:rotate(180deg)}
 .nav-group-panel{display:grid;grid-template-rows:0fr;border-bottom:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.025);transition:grid-template-rows 300ms cubic-bezier(.23,1,.32,1)}
