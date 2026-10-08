@@ -185,6 +185,7 @@ button{font-family:inherit;letter-spacing:inherit;border:0;background:none}
 .plat-logos{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .plat-logo-item{display:flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:background .14s ease,border-color .14s ease;cursor:default}
 .plat-logo-item:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+.plat-logo-item{min-height:66px}.plat-logo-item img{display:block;width:auto}.plat-logo-mono{filter:brightness(0) invert(1)}.plat-logo-d365{gap:10px}.plat-logo-d365 span{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:15px;color:rgba(255,255,255,.9);letter-spacing:-.2px}
 /* Beyond */
 .beyond{background:var(--navy-deep);color:#fff;padding:130px 100px;position:relative;overflow:hidden}
 .beyond-head{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:end;margin-bottom:80px;position:relative;z-index:2}
@@ -444,55 +445,14 @@ button{font-family:inherit;letter-spacing:inherit;border:0;background:none}
 <section class="plat-strip reveal">
   <div class="plat-strip-head">Platforms We Work With</div>
   <div class="plat-logos">
-    <div class="plat-logo-item">
-      <svg width="72" height="36" viewBox="0 0 72 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SAP">
-        <rect width="72" height="36" rx="5" fill="#0070F3"/>
-        <text x="36" y="24" text-anchor="middle" fill="white" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="17" letter-spacing="-.5">SAP</text>
-      </svg>
-    </div>
-    <div class="plat-logo-item">
-      <svg width="100" height="36" viewBox="0 0 100 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oracle">
-        <ellipse cx="50" cy="18" rx="50" ry="18" fill="#C74634"/>
-        <text x="50" y="23" text-anchor="middle" fill="white" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="11" letter-spacing="1.8">ORACLE</text>
-      </svg>
-    </div>
-    <div class="plat-logo-item">
-      <svg width="148" height="36" viewBox="0 0 148 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Dynamics 365">
-        <rect x="0" y="7" width="10" height="10" rx="1.5" fill="#f25022"/>
-        <rect x="12" y="7" width="10" height="10" rx="1.5" fill="#7fba00"/>
-        <rect x="0" y="19" width="10" height="10" rx="1.5" fill="#00a4ef"/>
-        <rect x="12" y="19" width="10" height="10" rx="1.5" fill="#ffb900"/>
-        <text x="28" y="23" fill="rgba(255,255,255,0.9)" font-family="Arial,Helvetica,sans-serif" font-weight="600" font-size="12.5" letter-spacing="-.2">Dynamics 365</text>
-      </svg>
-    </div>
-    <div class="plat-logo-item">
-      <svg width="90" height="36" viewBox="0 0 90 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NetSuite">
-        <text x="2" y="25" fill="rgba(255,255,255,0.9)" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="18" letter-spacing="-.4">Net<tspan fill="#009FDA">Suite</tspan></text>
-      </svg>
-    </div>
-    <div class="plat-logo-item">
-      <svg width="70" height="36" viewBox="0 0 70 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sage">
-        <circle cx="16" cy="18" r="15" fill="#00D639"/>
-        <path d="M10 18c0-3.3 2.7-6 6-6 2 0 3.7.9 4.8 2.3" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-        <path d="M22 18c0 3.3-2.7 6-6 6-2 0-3.7-.9-4.8-2.3" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-        <text x="36" y="25" fill="rgba(255,255,255,0.9)" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="16">Sage</text>
-      </svg>
-    </div>
-    <div class="plat-logo-item">
-      <svg width="76" height="36" viewBox="0 0 76 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Epicor">
-        <text x="2" y="26" fill="rgba(255,255,255,0.88)" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="18" letter-spacing="-.3">epic<tspan fill="#009CDE">or</tspan></text>
-      </svg>
-    </div>
-    <div class="plat-logo-item">
-      <svg width="58" height="36" viewBox="0 0 58 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Infor">
-        <text x="2" y="26" fill="rgba(255,255,255,0.88)" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="20" letter-spacing="-.3">I<tspan fill="#DE5A14">nfor</tspan></text>
-      </svg>
-    </div>
-    <div class="plat-logo-item">
-      <svg width="66" height="36" viewBox="0 0 66 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Unit4">
-        <text x="2" y="26" fill="rgba(255,255,255,0.88)" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="18" letter-spacing="-.4">unit<tspan fill="#7B4FBE">4</tspan></text>
-      </svg>
-    </div>
+    <div class="plat-logo-item"><img src="../partner-logos/sap.svg" alt="SAP" height="32"></div>
+    <div class="plat-logo-item"><img src="../partner-logos/oracle.svg" alt="Oracle" height="18"></div>
+    <div class="plat-logo-item plat-logo-d365"><img src="../partner-logos/microsoft-dynamics-365-icon.svg" alt="" height="32"><span>Dynamics 365</span></div>
+    <div class="plat-logo-item"><img class="plat-logo-mono" src="../partner-logos/oracle-netsuite.svg" alt="Oracle NetSuite" height="30"></div>
+    <div class="plat-logo-item"><img src="../partner-logos/sage.svg" alt="Sage" height="26"></div>
+    <div class="plat-logo-item"><img src="../partner-logos/epicor.svg" alt="Epicor" height="15"></div>
+    <div class="plat-logo-item"><img src="../partner-logos/infor.svg" alt="Infor" height="32"></div>
+    <div class="plat-logo-item"><img src="../partner-logos/Unit_4_logo.svg" alt="Unit4" height="24"></div>
   </div>
 </section>
 
